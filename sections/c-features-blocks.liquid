@@ -1,0 +1,191 @@
+<style>
+  #{{ section.id }}.c-fb-section {
+    background: {{ section.settings.section_bg }};
+    color: {{ section.settings.section_text_color }};
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    font-size: 20px;
+  }
+
+  #{{ section.id }} .c-fb-container { 
+    text-align: center;
+    background: {{ section.settings.features_bg }};
+    padding: 40px;
+    border-radius: 32px;
+    max-width: 900px;
+    margin: 0 auto;
+    border: 2px solid #084D93;
+  }
+
+  #{{ section.id }} .c-fb-title {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 120%;
+    margin-bottom: 16px;
+    color: {{ section.settings.section_text_color }};
+  }
+
+  #{{ section.id }} .c-fb-subtitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: {{ section.settings.section_text_color }};
+  }
+
+  #{{ section.id }} .c-fb-features {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    color: {{ section.settings.section_text_color }};
+  }
+
+  #{{ section.id }} .c-fb-feature {
+    display: flex;
+    align-items: start;
+    gap: 24px;
+    text-align: left;
+  }
+
+  #{{ section.id }} .c-fb-icon {
+    height: 48px;
+    width: auto;
+    max-width: auto;
+  }
+
+  #{{ section.id }} .c-fb-feature-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: {{ section.settings.section_text_color }};
+  }
+
+  #{{ section.id }} .c-fb-feature-description {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  @media (max-width: 768px) {
+
+    #{{ section.id }} .c-fb-container { 
+      padding: 40px 20px;
+    }
+
+    #{{ section.id }} .c-fb-feature {
+      flex-direction: column;
+    }
+
+    #{{ section.id }} .c-fb-title {
+      font-size: 32px;
+    }
+
+    #{{ section.id }} .c-fb-subtitle, #{{ section.id }} .c-fb-feature-title, #{{ section.id }} .c-fb-feature-description {
+      font-size: 18px;
+    }
+  }
+</style>
+
+<section id="{{ section.id }}" class="c-fb-section">
+  <div class="page-width">
+    <div class="c-fb-container">
+      <h2 class="c-fb-title">{{ section.settings.title }}</h2>
+      <p class="c-fb-subtitle">{{ section.settings.subtitle }}</p>
+      <div class="c-fb-features">
+        {% for block in section.blocks %}
+          <div class="c-fb-feature" id="{{ block.id }}">
+            {{ block.settings.icon | image_url: width: 750 | image_tag: loading: 'lazy', height: 'auto', class: 'c-fb-icon' }}
+            <div class="c-fb-content">
+              <h3 class="c-fb-feature-title">{{ block.settings.title }}
+                <span class="c-fb-feature-description">{{ block.settings.description }}</span>
+              </h3>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "C Features Items",
+   "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Feature Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Feature Description"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_bg",
+      "label": "Section Background Color",
+      "default": "linear-gradient(180deg, #F0F8FF 0%, #FFF 100%)"
+    },
+    {
+      "type": "text",
+      "id": "features_bg",
+      "label": "Features Background Color",
+      "default": "linear-gradient(90deg, #0E83F9 0%, #084D93 100%)"
+    },
+    {
+      "type": "color",
+      "id": "section_text_color",
+      "label": "Section Text Color",
+      "default": "#fff"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Features"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Features Subtitle"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Features Items"
+    }
+  ]
+}
+{% endschema %}

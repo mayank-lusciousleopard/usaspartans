@@ -1,0 +1,660 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "c_tailwind_RXKbcr": {
+      "type": "c-tailwind",
+      "settings": {}
+    },
+    "c_banner_new_year_pyimWf": {
+      "type": "c-banner-new-year",
+      "custom_css": [
+        ".c-coundtdown {display: none;}"
+      ],
+      "settings": {
+        "headline": "Market Leader In All-In-One Cold Plunge Setups",
+        "section_red_heading": "",
+        "section_green_heading": "",
+        "end_date": "2024-12-31",
+        "section_bottom_heading": "New Year, New You: Become The Best Version Of Yourself",
+        "description_banner": "Limited-time offers on cold plunge bundles to help you achieve your 2025 goals. Shop now before they're gone!",
+        "image": "shopify:\/\/shop_images\/224.png",
+        "button_text_1": "CHECK ALL BUNDLES",
+        "button_text_2": "CHECK ALL CHILLERS",
+        "button_url_1": "shopify:\/\/collections\/bundles",
+        "button_url_2": "shopify:\/\/collections\/water-chillers-for-ice-baths"
+      }
+    },
+    "c_blocks_NcWGU7": {
+      "type": "c-blocks",
+      "blocks": {
+        "item_9dYqNG": {
+          "type": "Item",
+          "settings": {
+            "block_heading": "FREE 2 Years extended warranty",
+            "block_icon": "shopify:\/\/shop_images\/health_and_safety_d556bf3a-2437-44d9-9984-7a8b28dc3c01.png"
+          }
+        },
+        "item_HBCCnP": {
+          "type": "Item",
+          "settings": {
+            "block_heading": "60 Days Risk-Free Trial",
+            "block_icon": "shopify:\/\/shop_images\/assured_workload_ac511f0d-627d-49a1-b672-109f98e1efc7.png"
+          }
+        },
+        "item_Ri7hCb": {
+          "type": "Item",
+          "settings": {
+            "block_heading": "free & fast us shipping",
+            "block_icon": "shopify:\/\/shop_images\/local_shipping_53a0118f-b9c6-48c5-b385-7ed32365aae1.png"
+          }
+        },
+        "item_cDKma7": {
+          "type": "Item",
+          "settings": {
+            "block_heading": "24\/7 support",
+            "block_icon": "shopify:\/\/shop_images\/Headset_6647071c-1c32-48b0-9798-3bad2a4b2651.png"
+          }
+        }
+      },
+      "block_order": [
+        "item_9dYqNG",
+        "item_HBCCnP",
+        "item_Ri7hCb",
+        "item_cDKma7"
+      ],
+      "custom_css": [
+        ".c-section {background: linear-gradient(180deg, #fff 0%, #f0f8ff 100%);}",
+        ".c-b-item {flex-direction: row; gap: 16px;}",
+        ".c-b-item-content h3 {color: black; font-weight: 400; text-align: left; text-shadow: none;}",
+        "@media (max-width: 768px) {.c-b-grid {grid-template-columns: 1fr 1fr; align-items: start; } .c-b-item {flex-direction: column; align-items: center; } .c-b-item-content h3 {text-align: center; } .c-b-item-icon {min-width: 30px !important; width: 42px !important; } .c-section {padding: 32px 0; }}"
+      ],
+      "settings": {
+        "blocks_direction": "vertical",
+        "blocks_alignment": "left",
+        "icon_width": 3,
+        "section_container": "page-width",
+        "use_separator_boder": false,
+        "columns": 4,
+        "mobile_columns": 1
+      }
+    },
+    "scrolling_banner_yNNNGR": {
+      "type": "scrolling-banner",
+      "custom_css": [
+        ".c-background {background: linear-gradient( 270deg, #edc967 0%, #d2ac47 36%, #f7ef8a 73%, #ae8625 100% );}",
+        ".c-text {color: black;}"
+      ],
+      "settings": {
+        "christmas_styles": true,
+        "main_text": "Start 2025 Strong",
+        "sub_text": "Limited Stock",
+        "main_text_2": "New Year's Exclusive Offer",
+        "sub_text_2": "Secure Your VIP Bundles and Save 15%"
+      }
+    },
+    "c_banner_mobile_YU7YRV": {
+      "type": "c-banner-mobile",
+      "custom_css": [
+        "* {display: none;}",
+        ".c-background {background: linear-gradient(90deg, #0e83f9 0%, #084d93 100%); height: 54px; width: 100%;}",
+        ".c-div {width: 100%;}",
+        "@media (max-width: 768px) {* {display: flex; } style {display: none; }}"
+      ],
+      "settings": {
+        "christmas_styles": true,
+        "main_text": "$100 Digital Gift Card Included"
+      }
+    },
+    "product_details_hWm3MQ": {
+      "type": "product-details",
+      "blocks": {
+        "variant_picker_XCCJtb": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "judge_me_reviews_preview_badge_homepage_7UkfD3": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge_homepage\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "product": "wifi-waterchiller-xl-tub-bundle"
+          }
+        }
+      },
+      "block_order": [
+        "variant_picker_XCCJtb",
+        "judge_me_reviews_preview_badge_homepage_7UkfD3"
+      ],
+      "custom_css": [
+        ".c-marquee-diagonal {background: linear-gradient(90deg, #0e83f9 0%, #084d93 100%); color: white;}",
+        ".product-form__input input[type=\"radio\"] + label {border-radius: 6px;}",
+        ".product-form__input input[type=\"radio\"] + label:hover {border-radius: 6px; border-color: #0e83f9;}",
+        ".product-form__input input[type=\"radio\"]:checked + label {background: black; border: 1px solid black;}",
+        ".product-form__input input[type=\"radio\"]:checked + label:hover {background: black; border-color: black;}"
+      ],
+      "settings": {
+        "discount_mobile": true,
+        "gold_div": true,
+        "main_image": "shopify:\/\/shop_images\/warriormaxsmartwaterchillerbundle_f83335ab-70a0-4a57-8794-2b283a05a90b_1__enhanced_1.png",
+        "bundle": "wifi-waterchiller-xl-tub-bundle",
+        "button_text_1": "ADD TO CART",
+        "button_url_1": "#",
+        "product_description": "",
+        "small_image": "shopify:\/\/shop_images\/icon4Ativo_1_4.png",
+        "show_ratings": true,
+        "show_view_more_button": true,
+        "view_more_button": "View More"
+      }
+    },
+    "c_rich_text_v2_b7JX6d": {
+      "type": "c-rich-text-v2",
+      "custom_css": [
+        "@media (max-width: 768px) {* {display: none; }}"
+      ],
+      "settings": {
+        "blocks_alignment": "Center",
+        "row_icon": "shopify:\/\/shop_images\/Vector_19.png",
+        "row_text": "Michael Johnson. Verified Customer",
+        "section_width": 100,
+        "overlay": 0.5,
+        "bg_color": "#ffffff",
+        "text_color": "#000000",
+        "section_top_subheading": "",
+        "section_top_heading": "“Perfect Cold Therapy Setup”",
+        "section_top_paragraph": "<p>The 1HP Wi-Fi chiller paired with the  XL Ice Bath is a game-changer. It cools the water quickly, and I can control everything from my phone, making it super convenient.<\/p>",
+        "section_top_alignment": "center",
+        "text_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 4
+      }
+    },
+    "scrolling_banner_riYjzT": {
+      "type": "scrolling-banner",
+      "custom_css": [
+        ".c-background {background: linear-gradient( 270deg, #edc967 0%, #d2ac47 36%, #f7ef8a 73%, #ae8625 100% );}",
+        ".c-text {color: black;}"
+      ],
+      "settings": {
+        "christmas_styles": true,
+        "main_text": "Secure Your VIP Bundles and Save 15%",
+        "sub_text": "Limited Stock",
+        "main_text_2": "Secure Your VIP Bundles and Save 15%",
+        "sub_text_2": "Limited Stock"
+      }
+    },
+    "c_banner_mobile_fUMGVJ": {
+      "type": "c-banner-mobile",
+      "custom_css": [
+        "* {display: none;}",
+        ".c-background {background: linear-gradient(90deg, #0e83f9 0%, #084d93 100%); height: 54px; width: 100%;}",
+        ".c-div {width: 100%;}",
+        "@media (max-width: 768px) {* {display: flex; } style {display: none; }}"
+      ],
+      "settings": {
+        "christmas_styles": true,
+        "main_text": "$100 Digital Gift Card Included"
+      }
+    },
+    "product_details_igDfM9": {
+      "type": "product-details",
+      "blocks": {
+        "judge_me_reviews_preview_badge_homepage_YkR8tj": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge_homepage\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "product": "warrior-pro-chiller-xl-plunge-bath"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_preview_badge_homepage_YkR8tj"
+      ],
+      "custom_css": [
+        ".c-marquee-diagonal {background: linear-gradient(90deg, #0e83f9 0%, #084d93 100%); color: white;}",
+        ".product-form__input input[type=\"radio\"] + label {border-radius: 6px;}",
+        ".product-form__input input[type=\"radio\"] + label:hover {border-radius: 6px; border-color: #0e83f9;}",
+        ".product-form__input input[type=\"radio\"]:checked + label {background: black; border: 1px solid black;}",
+        ".product-form__input input[type=\"radio\"]:checked + label:hover {background: black; border-color: black;}"
+      ],
+      "settings": {
+        "discount_mobile": true,
+        "gold_div": true,
+        "main_image": "shopify:\/\/shop_images\/warriormaxsmartwaterchillerbundle_f83335ab-70a0-4a57-8794-2b283a05a90b_1__enhanced_1_1.png",
+        "bundle": "warrior-pro-chiller-xl-plunge-bath",
+        "button_text_1": "ADD TO CART",
+        "button_url_1": "#",
+        "product_description": "The bundle contains an XL ice bathtub with a PRO chiller for ice-less cold plunging. The chiller cools water down to 40s without putting any ice. The special filter minimizes the necessity for frequent water changes, making it less hassle for you. Perfect for newbies and pro cold plungers looking to upgrade their recovery routine.",
+        "small_image": "shopify:\/\/shop_images\/icon4Ativo_1_4.png",
+        "show_ratings": true,
+        "show_view_more_button": true,
+        "view_more_button": "View More"
+      }
+    },
+    "c_rich_text_v2_MNWXUT": {
+      "type": "c-rich-text-v2",
+      "custom_css": [
+        "@media (max-width: 768px) {* {display: none; }}"
+      ],
+      "settings": {
+        "blocks_alignment": "Center",
+        "row_icon": "shopify:\/\/shop_images\/Vector_19.png",
+        "row_text": "Richard Young. Verified Customer",
+        "section_width": 100,
+        "overlay": 0.5,
+        "bg_color": "#ffffff",
+        "text_color": "#000000",
+        "section_top_subheading": "",
+        "section_top_heading": "“This bundle is everything I hoped for in cold therapy”",
+        "section_top_paragraph": "<p>This bundle is everything I hoped for in cold therapy. The ice bath is spacious, and the chiller keeps the water at a perfect temperature. Great setup for anyone serious about recovery.<\/p>",
+        "section_top_alignment": "center",
+        "text_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 4
+      }
+    },
+    "scrolling_banner_r7qFHd": {
+      "type": "scrolling-banner",
+      "custom_css": [
+        ".c-background {background: linear-gradient( 270deg, #edc967 0%, #d2ac47 36%, #f7ef8a 73%, #ae8625 100% );}",
+        ".c-text {color: black;}"
+      ],
+      "settings": {
+        "christmas_styles": true,
+        "main_text": "Secure Your VIP Bundles and Save 15%",
+        "sub_text": "Limited Stock",
+        "main_text_2": "Secure Your VIP Bundles and Save 15%",
+        "sub_text_2": "Limited Stock"
+      }
+    },
+    "c_banner_mobile_q7y38C": {
+      "type": "c-banner-mobile",
+      "custom_css": [
+        "* {display: none;}",
+        ".c-background {background: linear-gradient(90deg, #0e83f9 0%, #084d93 100%); height: 54px; width: 100%;}",
+        ".c-div {width: 100%;}",
+        "@media (max-width: 768px) {* {display: flex; } style {display: none; }}"
+      ],
+      "settings": {
+        "christmas_styles": true,
+        "main_text": "$100 Digital Gift Card Included"
+      }
+    },
+    "product_details_xRpyPe": {
+      "type": "product-details",
+      "blocks": {
+        "judge_me_reviews_preview_badge_homepage_aMmDUp": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge_homepage\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "product": "spartan-water-chiller-pro-bundle"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_preview_badge_homepage_aMmDUp"
+      ],
+      "custom_css": [
+        ".c-marquee-diagonal {background: linear-gradient(90deg, #0e83f9 0%, #084d93 100%); color: white;}",
+        ".product-form__input input[type=\"radio\"] + label {border-radius: 6px;}",
+        ".product-form__input input[type=\"radio\"] + label:hover {border-radius: 6px; border-color: #0e83f9;}",
+        ".product-form__input input[type=\"radio\"]:checked + label {background: black; border: 1px solid black;}",
+        ".product-form__input input[type=\"radio\"]:checked + label:hover {background: black; border-color: black;}"
+      ],
+      "settings": {
+        "discount_mobile": true,
+        "gold_div": true,
+        "main_image": "shopify:\/\/shop_images\/image_22.png",
+        "bundle": "spartan-water-chiller-pro-bundle",
+        "button_text_1": "ADD TO CART",
+        "button_url_1": "#",
+        "product_description": "The best solution for a compact and budget-friendly ice bath experience. With this cold plunge PRO chiller, you can cool water to an exhilarating 39°F without adding ice. Whether you're indoors or outdoors, this energy-efficient water chiller will enhance your cold plunge, providing unmatched performance. Take your wellness journey to new heights with the Spartan water chiller, offering superior results and unparalleled convenience.",
+        "small_image": "shopify:\/\/shop_images\/icon4Ativo_1_4.png",
+        "show_ratings": true,
+        "show_view_more_button": true,
+        "view_more_button": "View More"
+      }
+    },
+    "c_rich_text_v2_Q6XYtN": {
+      "type": "c-rich-text-v2",
+      "custom_css": [
+        "@media (max-width: 768px) {* {display: none; }}"
+      ],
+      "settings": {
+        "blocks_alignment": "Center",
+        "row_icon": "shopify:\/\/shop_images\/Vector_19.png",
+        "row_text": "Cole Stone. Verified Customer",
+        "section_width": 100,
+        "overlay": 0.5,
+        "bg_color": "#ffffff",
+        "text_color": "#000000",
+        "section_top_subheading": "",
+        "section_top_heading": "“This Portable Ice Bath and chiller bundle is perfect”",
+        "section_top_paragraph": "<p>This Portable Ice Bath and chiller bundle is perfect for my needs. The 1\/2 HP chiller cools quickly, and the accessories make setup a breeze.<\/p>",
+        "section_top_alignment": "center",
+        "text_alignment": "center",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
+    "scrolling_banner_4pcVDA": {
+      "type": "scrolling-banner",
+      "custom_css": [
+        ".c-background {background: linear-gradient( 270deg, #edc967 0%, #d2ac47 36%, #f7ef8a 73%, #ae8625 100% );}",
+        ".c-text {color: black;}"
+      ],
+      "settings": {
+        "christmas_styles": true,
+        "main_text": "Secure Your VIP Bundles and Save 15%",
+        "sub_text": "Limited Stock",
+        "main_text_2": "Secure Your VIP Bundles and Save 15%",
+        "sub_text_2": "Limited Stock"
+      }
+    },
+    "c_banner_mobile_8XMGaf": {
+      "type": "c-banner-mobile",
+      "custom_css": [
+        "* {display: none;}",
+        ".c-background {background: linear-gradient(90deg, #0e83f9 0%, #084d93 100%); height: 54px; width: 100%;}",
+        ".c-div {width: 100%;}",
+        "@media (max-width: 768px) {* {display: flex; } style {display: none; }}"
+      ],
+      "settings": {
+        "christmas_styles": true,
+        "main_text": "$100 Digital Gift Card Included"
+      }
+    },
+    "product_details_baf3Xf": {
+      "type": "product-details",
+      "blocks": {
+        "judge_me_reviews_preview_badge_homepage_74tNgq": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge_homepage\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "product": "warrior-max-1-hp-wifi-barrel-bundle"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_preview_badge_homepage_74tNgq"
+      ],
+      "custom_css": [
+        ".c-marquee-diagonal {background: linear-gradient(90deg, #0e83f9 0%, #084d93 100%); color: white;}",
+        ".product-form__input input[type=\"radio\"] + label {border-radius: 6px;}",
+        ".product-form__input input[type=\"radio\"] + label:hover {border-radius: 6px; border-color: #0e83f9;}",
+        ".product-form__input input[type=\"radio\"]:checked + label {background: black; border: 1px solid black;}",
+        ".product-form__input input[type=\"radio\"]:checked + label:hover {background: black; border-color: black;}"
+      ],
+      "settings": {
+        "discount_mobile": true,
+        "gold_div": true,
+        "main_image": "shopify:\/\/shop_images\/image_23.png",
+        "bundle": "warrior-max-1-hp-wifi-barrel-bundle",
+        "button_text_1": "ADD TO CART",
+        "button_url_1": "#",
+        "product_description": "All-in-one solution for a hassle-free cold plunge routine. The chiller cools the water to 37 degrees with a press of a button. Double filtration keeps your water clean and saves you time. The Barrel bundle is suitable for both indoor and outdoor use. It comfortably fits one person up to 6'11\" \/ 300 lbs. The barrel's diameter is 37\". ",
+        "small_image": "shopify:\/\/shop_images\/icon4Ativo_1_4.png",
+        "show_ratings": true,
+        "show_view_more_button": true,
+        "view_more_button": "View More"
+      }
+    },
+    "c_rich_text_v2_BpxEBm": {
+      "type": "c-rich-text-v2",
+      "custom_css": [
+        "@media (max-width: 768px) {* {display: none; }}"
+      ],
+      "settings": {
+        "blocks_alignment": "Center",
+        "row_icon": "shopify:\/\/shop_images\/Vector_19.png",
+        "row_text": "James Whitaker. Verified Customer",
+        "section_width": 100,
+        "overlay": 0.5,
+        "bg_color": "#ffffff",
+        "text_color": "#000000",
+        "section_top_subheading": "",
+        "section_top_heading": "“Great product!”",
+        "section_top_paragraph": "<p>Great product! The chiller cools down the ice bath to my desired temperature fast, and the whole setup is sturdy and easy to maintain.<\/p>",
+        "section_top_alignment": "center",
+        "text_alignment": "center",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
+    "c_banner_bf_footer_christmas_L4d4MD": {
+      "type": "c-banner-bf-footer-christmas",
+      "custom_css": [
+        ".c-top-heading {color: black;}",
+        ".c-description {color: black;}",
+        ".c-button {padding-top: 1.25rem; padding-bottom: 1.25rem; padding-left: 2.5rem; padding-right: 2.5rem; gap: 0.625rem; border-radius: 10px; opacity: 1; background: linear-gradient(90deg, #0e83f9 0%, #084d93 100%) !important; color: white; font-weight: bold; display: flex; align-items: center; justify-content: center;}",
+        ".c-button:hover {background: linear-gradient(90deg, #084d93 0%, #084d93 100%) !important;}"
+      ],
+      "settings": {
+        "section_top_heading": "",
+        "section_bottom_heading": "Unlock Your New Year Potential with 15% Off Premium Bundles!",
+        "description_banner": "Discount applied automatically, no discount code needed",
+        "button_text_1": "CHECK ALL BUNDLES",
+        "button_url_1": "shopify:\/\/collections\/bundles",
+        "button_text_2": "CHECK ALL CHILLERS",
+        "button_url_2": "",
+        "image": "shopify:\/\/shop_images\/Group_65_2.png"
+      }
+    },
+    "c_faqs_aYFhbp": {
+      "type": "c-faqs",
+      "blocks": {
+        "faq_LcGLPz": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "How does the Warrior Willpower cold plunge systems work?",
+            "faq_answer": "<p><strong>This bundles are easy, quick to set up, and take just 5-10 minutes.<\/strong><\/p><p>Simply inflate the ice bath with the included pump. Then, connect the hoses to the Chiller using our fittings. Turn on the chiller. It will self-prime, chill, and filter the water to 37°F (if set to the lowest temperature using Wi-Fi chiller).<\/p><p>The Wi-Fi chiller has a built-in pump. No need for extra purchases.<\/p><p>The touch-control panel is designed for ease of use. Control the temperature remotely via our app on iOS or Android devices.<\/p>"
+          }
+        },
+        "faq_FrqYcr": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "Why choose Warrior Willpower for your cold plunge over others?",
+            "faq_answer": "<p>At Warrior Willpower, we understand that buying a cold plunge setup is a big decision. We're here to make it easier and more reassuring for you. Here's why many customers trust us. And, why you'll love Warrior Willpower:<\/p><p><strong>Extended 2 Years Warranty<\/strong>: Unlike other companies that charge $200-300 for a 2-year warranty, we offer it for free. Our confidence in our product quality is unmatched.<\/p><p><strong>Top Quality & Performance<\/strong> Our Wi-Fi chillers are powerful, quickly dropping temperatures to 37°F . They feature advanced sanitation and cooling systems.<\/p><p><strong>60-Day Trial Risk-Free<\/strong> We offer a 60-day trial. Not satisfied? We'll replace, repair, or refund you.<\/p><p><strong>Positive Customer Support and After Sales:<\/strong> Our team is dedicated to helping you with anything. We're here from product choice to post-purchase queries, installation, and maintenance. Our customer service team is quick and knowledgeable, earning consistent praise. You can count on us for troubleshooting, usage guidance, and maintenance help.<\/p><p><strong>Guaranteed Repairs & Replacements<\/strong> If something breaks, we replace it. We're committed to getting you a working product.<\/p><p><strong>Easy Return Policy<\/strong> Our refund policy is simple and fair. Major issues? You can get a refund or replacement.<\/p><p><strong>Market Leaders In Water Chillers:<\/strong> You get more than a cold plunge tub; you gain a complete recovery system. Enjoy Wi-Fi for temperature control, UV disinfection for crystal-clean water, and a solid design for efficient cooling and heating. Our system eliminates the need for frequent water changes and ice packs. It works for you.<\/p><p><strong>Fast & Free Shipping<\/strong> from California - We offer the fastest compared to competitors. Other companies are shipping the chillers from China with a 1-2 months shipping time.<\/p><p>In short, choosing Warrior Willpower means a reliable cold plunge. It has a supportive team and cutting-edge tech. Enjoy a seamless experience. Focus on your recovery and wellness. We'll handle the rest.<\/p>"
+          }
+        },
+        "faq_fRfAh4": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "What are the benefits of using a water chiller for ice baths?",
+            "faq_answer": "<p>A water chiller keeps your ice bath consistently cold without the hassle of manually adding ice. <strong>It saves you time and effort, offering phone control, UV sanitization, and filtration to maintain a clean, cold plunge experience.<\/strong> Ideal for recovery, reducing inflammation, and improving overall well-being, it’s the perfect solution for consistent cold therapy.<\/p>"
+          }
+        },
+        "faq_9jrnTf": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "How long does it take the chiller to cool down water?",
+            "faq_answer": "<p>Cooling times vary by model, temperature, water volume, and environment. Here's a quick estimate for each model:<\/p><ul><li>0.5 HP Chiller: For 66 gallons; cools from 72°F to 40°F in 8-10 hours.<\/li><li>1 HP Chiller: For 92 gallons; cools from 72°F to 37°F in 3-6 hours.<\/li><li>1.5 HP Chiller: For 119 gallons; cools from 72°F to 36°F in 2-4 hours.<\/li><\/ul><p>These estimates assume an ambient temperature of 86°F. Larger volumes or higher temperatures will take longer. Smaller volumes might cool faster. Insulating your tub can improve efficiency. <\/p><p>Most competitors chillers take 7-12 hours. The Warrior Willpower <strong>Wi-Fi chiller is about 3 times faster.<\/strong> It matches or beats the specs and materials of chillers costing up to 4 times more.<\/p>"
+          }
+        },
+        "faq_hmhWYj": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "Are your water chillers easy to set up?",
+            "faq_answer": "<p>Yes, our water chillers are designed to be <strong>user-friendly and come with clear instructions. <\/strong>With plug-and-play functionality, you can easily set them up at home. Plus, with Wi-Fi controls, managing your chiller remotely makes it even simpler to operate.<\/p>"
+          }
+        },
+        "faq_cpGQmP": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "What temperatures can the Wi-Fi chiller maintain?",
+            "faq_answer": "<p>The Wi-Fi Chiller keeps water at <strong>37-40F or warms it up to 104F<\/strong>. It also filters and cleans the water. Its built-in thermostat automatically maintains the desired temperature. <\/p><p>The chiller saves power by turning off when not needed. If the temperature rises by more than 3F, it turns back on to cool the water.<\/p>"
+          }
+        },
+        "faq_MV7Px4": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "Can the unit run (24\/7) and what are the estimated energy costs?",
+            "faq_answer": "<p>Don't worry, the chiller won't hike up your electricity bill. It uses the same <strong>efficient technology<\/strong> and compressor as your fridge. It's meant to run all day, every day. <\/p><p>Energy costs depend on the model and conditions:<\/p><ul><li>0.5 HP: 0.3 kW\/h<\/li><li>1 HP: 0.8 kW\/h<\/li><li>1.5 HP: 1.2 kW\/h<\/li><\/ul><p>These estimates are for a 95°F room, cooling water from 72°F to 37°F, in 70-100 gallon tubs.<\/p><p>After cooling down, it works like an air conditioner. It only turns on to maintain temperature, especially in insulated tubs. This saves energy.<\/p><p>Monthly costs are about:<\/p><ul><li>0.5 HP Chiller: $12<\/li><li>1 HP Chiller: $33<\/li><li>1.5 HP Chiller: $49<\/li><\/ul><p>These figures include high initial cooling costs, then lower ones as it cycles on and off. This design keeps energy use efficient and manageable.<\/p><p>Compared to ice packs and expensive cold plunge systems? It's not even a contest.<\/p>"
+          }
+        },
+        "faq_WAhrTd": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "Are your chillers easy to maintain?",
+            "faq_answer": "<p><strong>Maintenance is simple!<\/strong> Our water chillers come with a built-in filtration system that keeps the water crystal-clean and sanitized. When the filter turns brown, you have to replace it which is usually once every 1 - 2 months. The replacement is very easy and we include filters with each chiller.<\/p>"
+          }
+        },
+        "faq_HrQwbW": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "Are your chillers noisy?",
+            "faq_answer": "<p>The water chiller is designed for <strong>quiet operation.<\/strong> We've prioritized ensuring that your cold plunge sessions are as peaceful as possible. Thanks to our advanced engineering, the chiller operates with minimal noise, allowing you to relax and rejuvenate without any disruptions, making it a top choice for both indoor and outdoor settings.<\/p>"
+          }
+        },
+        "faq_EYp9CE": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "Is the chiller compatible with my ice tub (ice barrel or others)?",
+            "faq_answer": "<p><strong>Our chiller works with all ice bath tubs<\/strong> on the market, including all Ice Barrel models. Each unit includes standard pipe reducers and coupling parts. These are made to fit most tubs' inlets and outlets. For unique or custom tubs, a simple plumbing connection from a store like Home Depot is all you need.<\/p><p>Many customers use our chillers with setups ranging from jacuzzis to large DIY tubs. They've given us great feedback on the chillers' seamless integration. Our system is designed to work effectively in nearly any arrangement, whether it's a standard tub or a creative plunge solution.<\/p>"
+          }
+        },
+        "faq_aGg8di": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "How often should I change the water?",
+            "faq_answer": "<p>Change the water every 4-8 weeks. Use SPA-rated chemicals. <\/p><p>Chillers have <strong>filters and UV disinfection. This keeps the water clean.<\/strong> <\/p><p>Always keep the tub lid on when not in use. This prevents debris. Clean the tub's inside with soap during water changes.<\/p>"
+          }
+        },
+        "faq_d3HaJH": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "Do the chillers come with filters?",
+            "faq_answer": "<p>Yes, our chiller has a 20-micron filtration system and all of them <strong>have filters included. <\/strong><\/p><p>It continuously removes impurities like hair, skin flakes, leaves, and sand. This ensures a clean, ready-to-use ice bath. Regular filter maintenance is key. <\/p><p><strong>It's easy<\/strong>: unscrew, remove, and change the filter. We suggest replacing the filter every 1-2 months to avoid damage from low water flow.<\/p>"
+          }
+        },
+        "faq_UTYnnB": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "Can the tub and chiller be used outdoors?",
+            "faq_answer": "<p>Yes, both products are <strong>waterproof and ideal for outdoor use. <\/strong>Unlike others, the Warrior Willpower Wi-Fi Chiller stands out. It's specifically certified for outdoor use and is waterproof.<\/p><p>This unit has an IPX4 rating, making it suitable for outdoor settings. While a cover isn't needed, placing it in a shaded, well-ventilated area is recommended.<\/p><p>When temperatures are below freezing, it is better to keep the chiller inside.<\/p>"
+          }
+        },
+        "faq_fP84pi": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "What should I consider when choosing a water chiller?",
+            "faq_answer": "<p>When selecting a water chiller, consider factors like cooling power, tub compatibility, and features like Wi-Fi control and filtration. <\/p><p>For large tubs or frequent use, our 1HP chiller is the perfect choice for optimal cooling and convenience.<\/p><p>If you are not sure which chiller is the best for your, take our quiz and find out in less than a minute: <a href=\"https:\/\/warriorwillpower.com\/pages\/water-chiller-quiz\" title=\"https:\/\/warriorwillpower.com\/pages\/water-chiller-quiz\">https:\/\/warriorwillpower.com\/pages\/water-chiller-quiz<\/a><\/p>"
+          }
+        },
+        "faq_8Upkfy": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "What is your shipping policy? Do you have stock?",
+            "faq_answer": "<p>We offer <strong>fast & free<\/strong>, reliable shipping across the USA. Shipping time is <strong>2 - 6 business days from our California warehouse.<\/strong><\/p><p>As it is a bulky shipment, you’ll be saving at least $300 from shipping only!<\/p><p>For Black Friday deals, please allow for potential additional processing time due to high demand.<\/p><p><strong>We have stock<\/strong> for all products on our website!<\/p>"
+          }
+        },
+        "faq_Nyw4Lh": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "Can I return my water chiller if I’m not satisfied?",
+            "faq_answer": "<p>Absolutely. We offer an extended <strong>60 day satisfaction guarantee<\/strong>. If you're not fully satisfied with your water chiller, contact us for a return, and we'll assist you with the process.<\/p>"
+          }
+        },
+        "faq_cVNMqp": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "What is covered under the warranty for the Warrior Water Chiller?",
+            "faq_answer": "<p>Our water chillers come with a comprehensive warranty that covers defects in materials and workmanship. If you experience any issues within the warranty period, we’ll repair or replace the unit to ensure your complete satisfaction.<\/p>"
+          }
+        },
+        "faq_raxBkd": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "Do I need to add ice to my ice bath?",
+            "faq_answer": "<p>No, with our water chillers, there’s no need to add ice. Our smart chillers keep the water at your desired temperature for as long as you need, eliminating the need for constant ice refills.<\/p>"
+          }
+        },
+        "faq_GXkdHN": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "How long should I stay in cold water?",
+            "faq_answer": "<p>Cold water therapy is most effective with the right time and temperature. For instance, in 50°F water, limit your stay to 2-3 minutes.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_LcGLPz",
+        "faq_FrqYcr",
+        "faq_fRfAh4",
+        "faq_9jrnTf",
+        "faq_hmhWYj",
+        "faq_cpGQmP",
+        "faq_MV7Px4",
+        "faq_WAhrTd",
+        "faq_HrQwbW",
+        "faq_EYp9CE",
+        "faq_aGg8di",
+        "faq_d3HaJH",
+        "faq_UTYnnB",
+        "faq_fP84pi",
+        "faq_8Upkfy",
+        "faq_Nyw4Lh",
+        "faq_cVNMqp",
+        "faq_raxBkd",
+        "faq_GXkdHN"
+      ],
+      "custom_css": [
+        ".c-f-card {border: none;}",
+        ".c-f-card-top {border-bottom: 1px solid black; padding: 12px o;}",
+        ".c-f-answer {border: none;}",
+        "@media (max-width: 768px) {.c-section-top {margin-bottom: 64px; }}",
+        "p {margin-bottom: 8px;}",
+        "li {list-style-type: disc; margin-left: 32px;}",
+        "li:last-child {margin-bottom: 8px;}"
+      ],
+      "settings": {
+        "use_grid": true,
+        "side": true,
+        "heading": "<p>Frequently Asked Questions<\/p>",
+        "paragraph": "<p>Have you got questions? We've got answers!<\/p>",
+        "button_text": "Buy Now",
+        "button_url": "",
+        "button_style": "c-b1",
+        "accent_color": "#000000",
+        "card_background": "transparent",
+        "faq_text_border": "#000000",
+        "bg_color": "#ffffff",
+        "text_color": "#000000",
+        "section_top_subheading": "FAQ",
+        "section_top_heading": "Need Help? We’ve Got You Covered",
+        "section_top_paragraph": "<p>Dive into our FAQ section to learn more about the benefits, features, and usage of our products to better meet your needs.<\/p>",
+        "section_top_alignment": "center",
+        "text_alignment": "center",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    }
+  },
+  "order": [
+    "main",
+    "c_tailwind_RXKbcr",
+    "c_banner_new_year_pyimWf",
+    "c_blocks_NcWGU7",
+    "scrolling_banner_yNNNGR",
+    "c_banner_mobile_YU7YRV",
+    "product_details_hWm3MQ",
+    "c_rich_text_v2_b7JX6d",
+    "scrolling_banner_riYjzT",
+    "c_banner_mobile_fUMGVJ",
+    "product_details_igDfM9",
+    "c_rich_text_v2_MNWXUT",
+    "scrolling_banner_r7qFHd",
+    "c_banner_mobile_q7y38C",
+    "product_details_xRpyPe",
+    "c_rich_text_v2_Q6XYtN",
+    "scrolling_banner_4pcVDA",
+    "c_banner_mobile_8XMGaf",
+    "product_details_baf3Xf",
+    "c_rich_text_v2_BpxEBm",
+    "c_banner_bf_footer_christmas_L4d4MD",
+    "c_faqs_aYFhbp"
+  ]
+}

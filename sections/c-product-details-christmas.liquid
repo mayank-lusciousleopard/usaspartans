@@ -1,0 +1,260 @@
+{% assign bundle = section.settings.bundle %}
+{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+{{ 'product-new.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+<section id="{{ section.id }}" class="tw-bg-custom-gradient-background tw-relative tw-z-0 tw-overflow-hidden">
+  <div class="tw-absolute md:tw-block tw-hidden lg:tw-top-[47px] lg:tw-right-[-96px] md:tw-top-[30px] md:tw-right-[-123px] tw-p-2">
+    <div class="tw-w-[354.93px] lg:tw-h-[70px] md:tw-h-[65px] tw-p-2.5 lg:tw-rotate-[40.98deg] md:tw-rotate-[50deg] tw-bg-custom-christmas-red-gradient tw-flex tw-items-center tw-justify-center">
+      <p class="tw-font-montserrat lg:tw-text-[18px] md:tw-text-[15px] tw-font-bold tw-leading-[25.2px] tw-text-center tw-max-w-[158.31px] tw-text-white">
+        $200 Digital Gift Card Included
+      </p>
+    </div>
+  </div>
+
+  <div class="tw-flex tw-mx-auto tw-flex-col tw-items-center md:tw-flex-row lg:tw-gap-20 md:tw-gap-5 tw-gap-1 tw-p-5 lg:tw-py-14 lg:tw-px-16 md:tw-p-8 lg:!tw-mx-auto tw-justify-center">
+    <div class="tw-w-full md:tw-w-1/2 lg:tw-max-w-[500px] tw-h-auto tw-rounded-3xl tw-relative">
+      {% if section.settings.main_image != blank %}
+        <img
+          src="{{ section.settings.main_image | image_url: width: 2160 }}"
+          alt="{{ bundle.title }}"
+          width="full"
+          height="full"
+          class="tw-object-cover tw-rounded-3xl tw-w-full tw-h-full"
+        >
+      {% else %}
+        <img
+          src="{{ bundle.featured_image | image_url: width: 2160 }}"
+          alt="{{ bundle.title }}"
+          width="auto"
+          height="auto"
+          class="tw-object-cover tw-rounded-3xl tw-w-full tw-h-full"
+        >
+      {% endif %}
+      <div class="tw-absolute md:tw-top-[30px] md:tw-right-[10px] tw-right-[28px] tw-top-[28px] tw-w-[75px] md:tw-w-[89px] tw-h-[75px] md:tw-h-[89px] tw-transform tw-translate-y-[-50%] tw-translate-x-[50%] tw-z-10">
+        <img
+          src="{{section.settings.small_image | image_url: width: 2160 }}"
+          alt="insignia"
+          class="tw-w-full tw-h-full tw-object-cover tw-rounded-full"
+        >
+      </div>
+    </div>
+    <div class="tw-block tw-w-[115%] tw-h-[70px] tw-mt-2 md:tw-hidden">
+      <div class=" tw-h-full  tw-w-full tw-bg-custom-christmas-red-gradient tw-flex tw-items-center tw-justify-center">
+        <p class="tw-max-w-full tw-text-black tw-font-montserrat tw-text-[18px] tw-font-bold tw-text-center tw-text-white">
+          $200 Digital Gift Card Included
+        </p>
+      </div>
+    </div>
+    <div class="tw-w-full md:tw-w-1/2 lg:tw-w-[735px] tw-p-5 lg:tw-pr-20 md:tw-pr-10 tw-flex tw-gap-6 tw-flex-col tw-justify-center md:tw-justify-start">
+      {% if section.settings.show_ratings %}
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when '@app' -%}
+              {% render block %}
+          {% endcase %}
+        {% endfor %}
+      {% endif %}
+      <h2 class="lg:tw-text-4xl tw-mt-0 lg:tw-mt-0 md:tw-mt-[45px] tw-text-3xl tw-font-bold">{{ bundle.title }}</h2>
+      {% assign first_paragraph = bundle.content | split: '<p>' | last | split: '</p>' | first %}
+      {% if section.settings.product_description != blank %}
+        {{ section.settings.product_description }}
+      {% else %}
+        {{ first_paragraph }}
+      {% endif %}
+      {% assign discount_percentage = settings.sitewide_discount_percentage %}
+      {% assign extra_discount = bundle.price | times: discount_percentage | divided_by: 100 %}
+      {% assign discounted_price = bundle.price | minus: extra_discount %}
+      {% assign savings = bundle.compare_at_price | minus: discounted_price %}
+      <div class="tw-flex tw-flex-col tw-gap-1 md:tw-gap-2 lg:tw-gap-3 xl:tw-flex-row xl:tw-items-center">
+        <div class="tw-flex tw-w-full md:tw-w-auto tw-gap-2 tw-items-center">
+          <span class="tw-line-through tw-text-base md:tw-text-[16px] tw-text-black">
+            {{- bundle.compare_at_price | money_with_currency -}}
+          </span>
+          {% comment %} <span class="tw-line-through tw-text-base md:tw-text-[18px] tw-text-black">{{ bundle.price | money_with_currency }}</span> {% endcomment %}
+          <span class="tw-font-bold md:tw-text-[20px] tw-text-base tw-text-black">
+            {{- discounted_price | money_with_currency -}}
+          </span>
+        </div>
+        {% comment %}
+          <div class="tw-flex tw-w-full md:tw-w-auto tw-gap-2 tw-items-center">
+              <span class="tw-font-bold md:tw-text-[20px] tw-text-base tw-text-black">{{ discounted_price | money_with_currency }}</span>
+              <div class="tw-bg-custom-gradient-black tw-border-[3px] tw-rounded-[7px] tw-p-[8px]" style="border-color: #EC860E;">
+                  <span class="md:tw-text-[18px] tw-text-base tw-font-bold tw-text-transparent" style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text;">EXTRA 20% OFF</span>
+              </div>
+          </div>
+        {% endcomment %}
+      </div>
+      <div class="tw-bg-custom-christmas-green-gradient tw-p-2 tw-rounded-md tw-w-fit">
+        <p
+          class="tw-text-[18px] tw-font-bold tw-text-white"
+          style="background: linear-gradient(90deg, #000000 0%, #484848 100%); background-clip: text;"
+        >
+          YOU SAVE {{ savings | money_with_currency }}
+        </p>
+      </div>
+      {% assign button_text = section.settings.button_text_1 %}
+      {% assign formatted_price = discounted_price | money_with_currency %}
+      {% assign text_button = button_text | append: ' - ' | append: formatted_price %}
+      {%- assign product_form_id = 'product-form-' | append: section.id -%}
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'variant_picker' -%}
+            {% render 'product-variant-picker',
+              product: bundle,
+              block: block,
+              product_form_id: product_form_id,
+              div_class: 'tw-flex tw-gap-2 tw-items-center',
+              label_class: 'tw-font-semibold tw-text-[18px]',
+              select_class: 'tw-rounded-sm tw-border-2 tw-focus:bg-tw-bg-custom-gradient-orange'
+            %}
+        {% endcase %}
+      {% endfor %}
+      <div class="tw-flex tw-items-center tw-flex-wrap tw-gap-4">
+        {%- render 'buy-buttons',
+          product: bundle,
+          product_form_id: product_form_id,
+          section_id: section.id,
+          show_pickup_availability: true,
+          product_button_text: text_button,
+          custom_classes: 'tw-py-4 tw-px-6 tw-gap-2.5 tw-rounded-[10px] tw-opacity-100 tw-bg-custom-christmas-red-gradient tw-text-white md:tw-text-[20px] tw-text-base tw-font-bold tw-flex tw-items-center tw-justify-center md:tw-w-fit tw-w-full hover:!tw-bg-custom-christmas-red-gradient-hover'
+        -%}
+        {% if section.settings.show_view_more_button %}
+          <a
+            class="!tw-rounded-[10px] tw-py-4 tw-px-6 tw-gap-2.5 tw-bg-none tw-font-bold tw-flex tw-bg-[#ffffff59] tw-items-center tw-justify-center tw-border-[#a32424] tw-border-2 hover:tw-border-[#EA2C2C]"
+            href="{{ bundle.url }}"
+          >
+            <span class="tw-block tw-text-center tw-bg-custom-christmas-red-gradient tw-bg-clip-text tw-text-transparent tw-uppercase">
+              {{ section.settings.view_more_button }}
+            </span>
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function isIE() {
+      const ua = window.navigator.userAgent;
+      const msie = ua.indexOf('MSIE ');
+      const trident = ua.indexOf('Trident/');
+
+      return msie > 0 || trident > 0;
+    }
+
+    if (!isIE()) return;
+    const hiddenInput = document.querySelector('#{{ product_form_id }} input[name="id"]');
+    const noScriptInputWrapper = document.createElement('div');
+    const variantSwitcher =
+      document.querySelector('variant-radios[data-section="{{ section.id }}"]') ||
+      document.querySelector('variant-selects[data-section="{{ section.id }}"]');
+    noScriptInputWrapper.innerHTML = document.querySelector(
+      '.product-form__noscript-wrapper-{{ section.id }}'
+    ).textContent;
+    variantSwitcher.outerHTML = noScriptInputWrapper.outerHTML;
+
+    document.querySelector('#Variants-{{ section.id }}').addEventListener('change', function (event) {
+      hiddenInput.value = event.currentTarget.value;
+    });
+  });
+</script>
+
+{%- liquid
+  if bundle.selected_or_first_available_variant.featured_media
+    assign seo_media = bundle.selected_or_first_available_variant.featured_media
+  else
+    assign seo_media = bundle.featured_media
+  endif
+-%}
+
+{% schema %}
+{
+  "name": "C Product Details",
+  "blocks": [
+    {
+      "type": "variant_picker",
+      "name": "t:sections.main-product.blocks.variant_picker.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "select",
+          "id": "picker_type",
+          "options": [
+            {
+              "value": "dropdown",
+              "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.options__1.label"
+            },
+            {
+              "value": "button",
+              "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.options__2.label"
+            }
+          ],
+          "default": "button",
+          "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.label"
+        }
+      ]
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Product image"
+    },
+    {
+      "type": "product",
+      "id": "bundle",
+      "label": "Bundle"
+    },
+    {
+      "type": "text",
+      "id": "button_text_1",
+      "label": "Button Text 1"
+    },
+    {
+      "type": "text",
+      "id": "button_url_1",
+      "label": "Button URL 1",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "id": "product_description",
+      "label": "Product Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "small_image",
+      "label": "Small Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_ratings",
+      "label": "Show Ratings",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_more_button",
+      "label": "Show View More Button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "view_more_button",
+      "label": "View More Button",
+      "default": "View More"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Product Details Christmas"
+    }
+  ]
+}
+{% endschema %}

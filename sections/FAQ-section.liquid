@@ -1,0 +1,119 @@
+<section class="faq">
+  <div class="w-layout-blockcontainer container w-container">
+   {% if section.settings.btn-text != blank %}
+    <div class="faq-action">
+      <a href="{{ section.settings.btn-link }}" class="btn-primary w-button">{{ section.settings.btn-text }}</a>
+    </div>
+    {% endif %}
+    <div class="faq-row">
+      <div class="faq-content-col">
+        <h2 class="faq-title">{{ section.settings.heading }}</h2>
+        <div class="faq-content-wrap">
+          {% assign faq_block = section.blocks | where: 'type', 'faq-block' %}
+          {% for block in faq_block %}
+          <div data-w-id="ecb69779-1595-1462-052a-ba8817f1c1ae" class="question-wrapper-f44 f1">
+            <div class="question-f44-3">
+              <div class="text-question-f44 f1">{{ block.settings.faq_que }}<br></div>
+              <div class="icon-wrapper-f44-2">
+                <img loading="lazy" alt="" src="https://cdn.shopify.com/s/files/1/0740/3195/6281/files/arrow-down1.svg?v=1694611483" class="arrow-black-f44-3">
+              </div>
+            </div>
+            <div style="height:0PX" class="answer-f44-2">
+              <div class="faq-content-p">{{ block.settings.faq_ans }}</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="faq-reviews-col">
+        <div class="faq-reviews-slider">
+          {% assign faq_reviews = section.blocks | where: 'type', 'faq-reviews' %}
+          {% for block in faq_reviews %}
+          <div class="faq-review-item">
+            <img src="https://cdn.shopify.com/s/files/1/0740/3195/6281/files/quote-icon.svg?v=1694611787" loading="lazy" alt="" class="faq-reviews-quote-icon">
+            <div class="faq-reviews-title">{{ block.settings.reviews-title }}</div>
+            <div class="faq-reviews-desc">{{ block.settings.reviews-text }}</div>
+            <div class="faq-review-author-row">
+              <div class="faq-review-author-line"></div>
+              <div class="faq-review-author-name">{{ block.settings.author }}</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %} 
+  { 
+    "name": "FAQ Section",
+    "settings": [
+      { 
+         "type": "url",
+         "id":"btn-link",
+         "label": "FAQ Btn Link" 
+       },
+       { 
+         "type": "text",
+         "id":"btn-text",
+         "label": "FAQ Btn Text" 
+       },
+       {  
+         "type": "text",
+         "id":"heading",
+         "label": "FAQ Heading" 
+        }
+    ],
+    "blocks": [
+      {
+        "type": "faq-block",
+        "name": "Faq Block",
+        "settings": [
+          {
+            "type": "text",
+            "id":   "faq_que",
+            "label": "Section Faq Question"
+          },
+		  {
+            "type": "richtext",
+            "id":   "faq_ans",
+            "label": "Section Faq Answer"
+          }
+      	]	
+      },
+      {
+        "type": "faq-reviews",
+        "name": "Faq Reviews",
+        "settings": [
+          {
+            "type": "text",
+            "id":   "reviews-title",
+            "label": "Reviews Title"
+          },
+		  {
+            "type": "richtext",
+            "id":   "reviews-text",
+            "label": "Reviews Text"
+          },
+          {
+            "type": "text",
+            "id":   "author",
+            "label": "Reviews Author"
+          }
+      	]	
+      }
+    ],
+    "presets":[
+      {
+        "name":"FAQ Section" 
+      } 
+    ] 
+  } 
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

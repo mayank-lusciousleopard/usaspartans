@@ -1,0 +1,660 @@
+{{ 'component-product-gallery.css' | asset_url | stylesheet_tag }}
+
+<div class="product-hero-section">
+  <div class="product-hero-container">
+    <!-- Product Gallery -->
+    <div class="product-gallery-wrapper">
+      {% if section.settings.show_sale_badge and product.compare_at_price > product.price %}
+      <div class="sale-badge">
+        {{ section.settings.sale_badge_text }}
+      </div>
+      {% endif %}
+
+      <div class="product-gallery">
+        <!-- Main Image Display -->
+        <div class="gallery-main">
+          <div class="gallery-viewport">
+            <div class="gallery-container" id="mainGallery">
+              {% for image in product.images %}
+              <div class="gallery-slide">
+                <img 
+                  src="{{ image | img_url: '800x800' }}" 
+                  alt="{{ image.alt | escape }}"
+                  loading="lazy"
+                  class="gallery-image"
+                  onclick="openZoom({{ forloop.index0 }})"
+                >
+                <button class="zoom-button" onclick="openZoom({{ forloop.index0 }})" aria-label="Zoom image">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.3-4.3"></path>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </button>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          
+          <button class="gallery-nav gallery-nav-prev" id="prevBtn" aria-label="Previous image">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button class="gallery-nav gallery-nav-next" id="nextBtn" aria-label="Next image">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+
+          <div class="gallery-counter">
+            <span id="currentSlide">1</span> / <span id="totalSlides">{{ product.images.size }}</span>
+          </div>
+        </div>
+
+        <!-- Thumbnail Navigation -->
+        <div class="gallery-thumbs">
+          <div class="thumbs-viewport">
+            <div class="thumbs-container" id="thumbGallery">
+              {% for image in product.images %}
+              <button class="thumb-slide {% if forloop.first %}thumb-active{% endif %}" onclick="goToSlide({{ forloop.index0 }})" data-index="{{ forloop.index0 }}">
+                <img 
+                  src="{{ image | img_url: '150x150' }}" 
+                  alt="{{ image.alt | escape }}"
+                  loading="lazy"
+                >
+              </button>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Info -->
+    <div class="product-info-wrapper">
+      <div class="product-info">
+        {% if section.settings.show_rating %}
+        <div class="product-rating">
+          <div class="rating-stars">
+            <span>★★★★★</span>
+          </div>
+          <span class="rating-count">{{ section.settings.rating_count }} Reviews</span>
+        </div>
+        {% endif %}
+
+        <h1 class="product-title">{{ product.title }}</h1>
+        
+        <div class="product-price">
+          {% if product.compare_at_price > product.price %}
+            <span class="price-compare">${{ product.compare_at_price | money_without_currency }}</span>
+          {% endif %}
+          <span class="price-current">${{ product.price | money_without_currency }}</span>
+        </div>
+
+        {% if section.settings.show_financing %}
+        <p class="financing-text">{{ section.settings.financing_text }}</p>
+        {% endif %}
+
+        <div class="product-description">
+          {{ product.description }}
+        </div>
+
+        {% form 'product', product %}
+          <div class="product-variants">
+            {% unless product.has_only_default_variant %}
+              {% for option in product.options_with_values %}
+                <div class="variant-selector">
+                  <label>{{ option.name }}</label>
+                  <select name="options[{{ option.name }}]" class="variant-select">
+                    {% for value in option.values %}
+                      <option value="{{ value }}">{{ value }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              {% endfor %}
+            {% endunless %}
+          </div>
+
+          <div class="product-actions">
+            <button type="submit" name="add" class="btn-primary btn-add-to-cart">
+              <span>Add to Cart</span>
+            </button>
+            <button type="button" class="btn-secondary">
+              <span>Learn More</span>
+            </button>
+          </div>
+        {% endform %}
+
+        <div class="trust-badges">
+          <div class="trust-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Free Shipping</span>
+          </div>
+          <div class="trust-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>3-Year Warranty</span>
+          </div>
+          <div class="trust-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>FDA Registered</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Zoom Modal -->
+  <div id="zoomModal" class="zoom-modal">
+    <button class="zoom-close" onclick="closeZoom()" aria-label="Close zoom">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="zoom-content">
+      <div class="zoom-viewport" id="zoomGallery">
+        {% for image in product.images %}
+        <div class="zoom-slide">
+          <img 
+            src="{{ image | img_url: '1200x1200' }}" 
+            alt="{{ image.alt | escape }}"
+            loading="lazy"
+          >
+        </div>
+        {% endfor %}
+      </div>
+      <button class="zoom-nav zoom-nav-prev" onclick="zoomPrev()" aria-label="Previous image">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      <button class="zoom-nav zoom-nav-next" onclick="zoomNext()" aria-label="Next image">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+      <div class="zoom-counter">
+        <span id="zoomCurrent">1</span> / <span id="zoomTotal">{{ product.images.size }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .product-hero-section {
+    background: hsl(var(--background));
+    padding: 3rem 1rem;
+  }
+
+  .product-hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .product-gallery-wrapper {
+    position: relative;
+  }
+
+  .sale-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: hsl(var(--destructive));
+    color: hsl(var(--destructive-foreground));
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    z-index: 10;
+  }
+
+  .gallery-main {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: hsl(var(--muted));
+    margin-bottom: 1rem;
+  }
+
+  .gallery-viewport {
+    overflow: hidden;
+  }
+
+  .gallery-container {
+    display: flex;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-slide {
+    flex: 0 0 100%;
+    position: relative;
+  }
+
+  .gallery-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: zoom-in;
+  }
+
+  .zoom-button {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background: hsl(var(--background) / 0.9);
+    border: 1px solid hsl(var(--border));
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .zoom-button:hover {
+    background: hsl(var(--accent));
+  }
+
+  .gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: hsl(var(--background) / 0.9);
+    border: 1px solid hsl(var(--border));
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    z-index: 10;
+  }
+
+  .gallery-nav:hover {
+    background: hsl(var(--accent));
+  }
+
+  .gallery-nav-prev {
+    left: 1rem;
+  }
+
+  .gallery-nav-next {
+    right: 1rem;
+  }
+
+  .gallery-counter {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background: hsl(var(--background) / 0.9);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .gallery-thumbs {
+    overflow: hidden;
+  }
+
+  .thumbs-container {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .thumb-slide {
+    flex: 0 0 auto;
+    width: 80px;
+    height: 80px;
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .thumb-slide:hover,
+  .thumb-active {
+    border-color: hsl(var(--primary));
+  }
+
+  .thumb-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .product-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .rating-stars {
+    color: hsl(45 100% 51%);
+  }
+
+  .product-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: hsl(var(--foreground));
+  }
+
+  .product-price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .price-compare {
+    text-decoration: line-through;
+    color: hsl(var(--muted-foreground));
+  }
+
+  .price-current {
+    font-weight: 700;
+    color: hsl(var(--primary));
+  }
+
+  .financing-text {
+    color: hsl(var(--muted-foreground));
+  }
+
+  .product-description {
+    color: hsl(var(--muted-foreground));
+    line-height: 1.6;
+  }
+
+  .variant-selector {
+    margin-bottom: 1rem;
+  }
+
+  .variant-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid hsl(var(--border));
+    border-radius: 0.5rem;
+    background: hsl(var(--background));
+    margin-top: 0.5rem;
+  }
+
+  .product-actions {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    flex: 1;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+  }
+
+  .btn-primary {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+
+  .btn-primary:hover {
+    opacity: 0.9;
+  }
+
+  .btn-secondary {
+    background: hsl(var(--secondary));
+    color: hsl(var(--secondary-foreground));
+    border: 1px solid hsl(var(--border));
+  }
+
+  .trust-badges {
+    display: flex;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid hsl(var(--border));
+  }
+
+  .trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: hsl(var(--muted-foreground));
+  }
+
+  .zoom-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: hsl(var(--background) / 0.95);
+    z-index: 1000;
+  }
+
+  .zoom-modal.active {
+    display: block;
+  }
+
+  .zoom-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: hsl(var(--background));
+    border: 1px solid hsl(var(--border));
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .zoom-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .zoom-viewport {
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: hidden;
+  }
+
+  .zoom-slide {
+    display: none;
+  }
+
+  .zoom-slide.active {
+    display: block;
+  }
+
+  .zoom-slide img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+  }
+
+  .zoom-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: hsl(var(--background));
+    border: 1px solid hsl(var(--border));
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .zoom-nav-prev {
+    left: 2rem;
+  }
+
+  .zoom-nav-next {
+    right: 2rem;
+  }
+
+  .zoom-counter {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: hsl(var(--background));
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .product-hero-container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .product-actions {
+      flex-direction: column;
+    }
+
+    .trust-badges {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<script>
+  let currentSlide = 0;
+  let zoomSlide = 0;
+  const totalSlides = {{ product.images.size }};
+
+  function updateGallery() {
+    const gallery = document.getElementById('mainGallery');
+    gallery.style.transform = `translateX(-${currentSlide * 100}%)`;
+    
+    document.getElementById('currentSlide').textContent = currentSlide + 1;
+    
+    document.querySelectorAll('.thumb-slide').forEach((thumb, index) => {
+      thumb.classList.toggle('thumb-active', index === currentSlide);
+    });
+  }
+
+  function goToSlide(index) {
+    currentSlide = index;
+    updateGallery();
+  }
+
+  document.getElementById('prevBtn').addEventListener('click', () => {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateGallery();
+  });
+
+  document.getElementById('nextBtn').addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateGallery();
+  });
+
+  function openZoom(index) {
+    zoomSlide = index;
+    document.getElementById('zoomModal').classList.add('active');
+    updateZoom();
+  }
+
+  function closeZoom() {
+    document.getElementById('zoomModal').classList.remove('active');
+  }
+
+  function updateZoom() {
+    document.querySelectorAll('.zoom-slide').forEach((slide, index) => {
+      slide.classList.toggle('active', index === zoomSlide);
+    });
+    document.getElementById('zoomCurrent').textContent = zoomSlide + 1;
+  }
+
+  function zoomPrev() {
+    zoomSlide = (zoomSlide - 1 + totalSlides) % totalSlides;
+    updateZoom();
+  }
+
+  function zoomNext() {
+    zoomSlide = (zoomSlide + 1) % totalSlides;
+    updateZoom();
+  }
+
+  document.getElementById('zoomModal').addEventListener('click', (e) => {
+    if (e.target.id === 'zoomModal') closeZoom();
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Product Hero",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_sale_badge",
+      "label": "Show sale badge",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "sale_badge_text",
+      "label": "Sale badge text",
+      "default": "SPECIAL OFFER"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "label": "Show rating",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "rating_count",
+      "label": "Rating count",
+      "default": "2,847"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_financing",
+      "label": "Show financing text",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "financing_text",
+      "label": "Financing text",
+      "default": "or 4 interest-free payments of $2,499.75"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Hero"
+    }
+  ]
+}
+{% endschema %}

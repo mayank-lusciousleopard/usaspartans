@@ -1,0 +1,48 @@
+<section class="announcement">
+  <div data-w-id="c0264f39-2945-c54c-01dc-0fbef44fdb53" class="auto-scroll-text-wrap">
+    <div class="auto-scroll-text-loop-container">
+      <div class="auto-scroll-text-content-holder">
+        {% assign horizontal_text = section.blocks | where: 'type', 'horizontal-text' %} 
+        {% for block in horizontal_text %}
+        <div class="auto-scroll-text">{{ block.settings.horizontal_text }}</div>
+        {% endfor %}
+      </div>
+      <div class="auto-scroll-text-content-holder">
+        {% assign horizontal_text = section.blocks | where: 'type', 'horizontal-text' %} 
+        {% for block in horizontal_text %}
+        <div class="auto-scroll-text">{{ block.settings.horizontal_text }}</div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %} 
+  { 
+    "name": "Horizontal Scroll Section",
+     "blocks": [ 
+       { 
+         "type": "horizontal-text",
+         "name": "Horizontal Text Block",
+         "settings": [ 
+           { 
+             "type": "text",
+             "id":"horizontal_text",
+             "label": "Horizontal Text" 
+           }
+         ] 
+       } 
+     ], 
+    "presets":[
+      {
+        "name":"Horizontal Scroll Section" 
+      } 
+    ] 
+  } 
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

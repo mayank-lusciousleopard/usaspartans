@@ -1,0 +1,409 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    background-color: {{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }};
+  }
+  .new-footer-wrapper {
+    font-family: 'TT Hoves Pro Trial Regular';
+    max-width: {{ settings.page_width | default: 1200 }}px;
+    margin: 0 auto;
+    padding: 0 5rem;
+  }
+
+  .new-footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Typography & Elements */
+  .footer-logo {
+    display: block;
+    margin-bottom: 24px;
+    height: auto;
+  }
+
+  .footer-contact-text {
+    margin-bottom: 24px;
+  }
+  
+  .footer-contact-text p {
+    margin: 0 0 10px;
+    line-height: 1.6;
+    font-size: 14px;
+    color: inherit;
+  }
+
+  /* Social Icons */
+  .footer-social-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+  }
+
+  .footer-social-item a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .footer-social-item a:hover {
+    opacity: 0.8;
+  }
+
+  .footer-social-item svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Menu Columns */
+  .footer-col-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-heading {
+    font-size: 18px;
+    margin-bottom: 15px;
+    margin-top: 0;
+    color: #111827;
+    font-family: 'TT Hoves Pro Trial Medium';
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+  .footer-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-menu-item {
+    margin-bottom: 10px;
+  }
+
+  .footer-menu-item a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 13px;
+    transition: opacity 0.2s;
+    opacity: 0.8;
+  }
+
+  .footer-menu-item a:hover {
+    text-decoration: underline;
+    opacity: 1;
+  }
+
+  /* Footer Bottom */
+  .footer-bottom {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 0.5px solid #000;
+    text-align: center;
+    font-size: 14px;
+    color: #777777;
+}
+
+  /* Desktop Responsive */
+  @media screen and (min-width: 990px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    
+    .new-footer-grid {
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+   .new-footer-wrapper {
+    padding: 0 2rem;
+  }
+}
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-padding">
+  <div class="new-footer-wrapper">
+    <div class="new-footer-grid">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'brand_info' -%}
+            <div class="footer-col-brand" {{ block.shopify_attributes }}>
+              {%- if block.settings.logo != blank -%}
+                {{ block.settings.logo | image_url: width: block.settings.logo_width | image_tag: loading: 'lazy', class: 'footer-logo', style: 'max-width: 100%;' }}
+              {%- else -%}
+                <h2 class="h3" style="margin-bottom: 20px;">{{ shop.name }}</h2>
+              {%- endif -%}
+              
+              {%- if block.settings.contact_text != blank -%}
+                <div class="footer-contact-text">
+                  {{ block.settings.contact_text }}
+                </div>
+              {%- endif -%}
+
+              {%- if block.settings.show_social -%}
+                <ul class="footer-social-list">
+                  {%- if settings.social_facebook_link != blank -%}
+                    <li class="footer-social-item">
+                      <a href="{{ settings.social_facebook_link }}" target="_blank" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <g clip-path="url(#clip0_691_3833)">
+    <path d="M10 0C4.48602 0 0 4.48602 0 10C0 15.5136 4.48602 20 10 20C15.5136 20 20 15.5136 20 10C20 4.48602 15.5144 0 10 0ZM12.4869 10.352H10.86V16.1508H8.44921V10.352H7.30323V8.30259H8.44921V6.97696C8.44921 6.02755 8.90035 4.54403 10.8821 4.54403L12.6686 4.55087V6.54032H11.3719C11.1609 6.54032 10.8608 6.64585 10.8608 7.09861V8.30299H12.6976L12.4869 10.352Z" fill="black"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_691_3833">
+      <rect width="20" height="20" fill="white"/>
+    </clipPath>
+  </defs>
+</svg>    
+                    </a>
+                    </li>
+                  {%- endif -%}
+                  {%- if settings.social_instagram_link != blank -%}
+                    <li class="footer-social-item">
+                      <a href="{{ settings.social_instagram_link }}" target="_blank" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <g clip-path="url(#clip0_691_3836)">
+    <path d="M11.9141 10C11.9141 11.0571 11.0571 11.9141 10 11.9141C8.94289 11.9141 8.08594 11.0571 8.08594 10C8.08594 8.94289 8.94289 8.08594 10 8.08594C11.0571 8.08594 11.9141 8.94289 11.9141 10Z" fill="black"/>
+    <path d="M14.4763 6.61394C14.3843 6.36453 14.2375 6.1389 14.0468 5.95367C13.8616 5.76293 13.636 5.61615 13.3865 5.52414C13.1842 5.44559 12.8803 5.35203 12.3204 5.32656C11.7148 5.29895 11.5332 5.29297 10 5.29297C8.46664 5.29297 8.28508 5.29879 7.67961 5.32641C7.11977 5.35203 6.81562 5.44555 6.61348 5.52414C6.36402 5.61611 6.13838 5.76289 5.9532 5.95367C5.76246 6.13891 5.61564 6.36453 5.52351 6.61394C5.44496 6.81629 5.35141 7.12039 5.32594 7.68023C5.29832 8.2857 5.29234 8.46727 5.29234 10.0006C5.29234 11.5338 5.29832 11.7154 5.32594 12.321C5.35141 12.8809 5.44496 13.1848 5.52351 13.3871C5.61558 13.6366 5.76235 13.8622 5.95305 14.0474C6.13825 14.2382 6.36388 14.3849 6.61332 14.477C6.81566 14.5557 7.11977 14.6492 7.67961 14.6747C8.28508 14.7023 8.46648 14.7081 9.99984 14.7081C11.5334 14.7081 11.7149 14.7023 12.3202 14.6747C12.8801 14.6492 13.1842 14.5557 13.3865 14.477C13.6342 14.3814 13.8591 14.2351 14.0468 14.0474C14.2345 13.8597 14.3808 13.6348 14.4763 13.3871C14.5549 13.1848 14.6484 12.8809 14.6741 12.321C14.7017 11.7154 14.7075 11.5338 14.7075 10.0006C14.7075 8.46727 14.7017 8.2857 14.6741 7.68023C14.6486 7.12039 14.555 6.81625 14.4763 6.61394ZM10 12.9491C8.37144 12.9491 7.05125 11.629 7.05125 10.0005C7.05125 8.37191 8.37144 7.05187 10 7.05187C11.6284 7.05187 12.9486 8.37191 12.9486 10.0005C12.9486 11.629 11.6284 12.9491 10 12.9491ZM13.0652 7.62437C12.6846 7.62437 12.3761 7.31582 12.3761 6.93531C12.3761 6.5548 12.6846 6.24621 13.0652 6.24621C13.4457 6.24621 13.7543 6.55473 13.7543 6.93527C13.7541 7.31582 13.4457 7.62437 13.0652 7.62437Z" fill="black"/>
+    <path d="M10 0C4.47801 0 0 4.47801 0 10C0 15.522 4.47801 20 10 20C15.522 20 20 15.522 20 10C20 4.47801 15.522 0 10 0ZM15.7075 12.3674C15.6798 12.9787 15.5826 13.396 15.4407 13.7613C15.2931 14.1427 15.0676 14.4892 14.7784 14.7784C14.4892 15.0676 14.1427 15.2931 13.7613 15.4407C13.3961 15.5826 12.9787 15.6796 12.3675 15.7075C11.7552 15.7355 11.5596 15.7422 10.0002 15.7422C8.44055 15.7422 8.24508 15.7355 7.63258 15.7075C7.02148 15.6796 6.60402 15.5826 6.23883 15.4407C5.85563 15.2965 5.50852 15.0705 5.22172 14.7783C4.92964 14.4915 4.70364 14.1444 4.55949 13.7613C4.41758 13.3961 4.32039 12.9787 4.29262 12.3675C4.26437 11.755 4.25781 11.5595 4.25781 10C4.25781 8.44055 4.26438 8.24492 4.29246 7.63262C4.3202 7.02133 4.41727 6.60402 4.55918 6.23871C4.70338 5.85554 4.92947 5.50847 5.22168 5.22172C5.50844 4.92954 5.85553 4.70348 6.23871 4.55934C6.60402 4.41742 7.02133 4.32039 7.63262 4.29246C8.24492 4.26453 8.44055 4.25781 10 4.25781C11.5595 4.25781 11.7551 4.26453 12.3674 4.29258C12.9787 4.32039 13.396 4.41742 13.7613 4.55918C14.1445 4.7034 14.4916 4.92949 14.7785 5.22168C15.0706 5.50848 15.2965 5.85557 15.4407 6.23871C15.5827 6.60402 15.6798 7.02133 15.7077 7.63262C15.7356 8.24492 15.7422 8.44055 15.7422 10C15.7422 11.5595 15.7356 11.7551 15.7075 12.3674Z" fill="black"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_691_3836">
+      <rect width="20" height="20" fill="white"/>
+    </clipPath>
+  </defs>
+</svg>
+                      </a>
+                    </li>
+                  {%- endif -%}
+                  {%- if settings.social_youtube_link != blank -%}
+                    <li class="footer-social-item">
+                      <a href="{{ settings.social_youtube_link }}" target="_blank" aria-label="YouTube">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <g clip-path="url(#clip0_691_3841)">
+    <path d="M8.61316 11.613L11.3868 10.0038L8.61316 8.38672V11.613Z" fill="black"/>
+    <path d="M10 0C8.02219 0 6.08879 0.58649 4.4443 1.6853C2.79981 2.78412 1.51809 4.3459 0.761209 6.17317C0.00433282 8.00043 -0.193701 10.0111 0.192152 11.9509C0.578004 13.8907 1.53041 15.6725 2.92894 17.0711C4.32746 18.4696 6.10929 19.422 8.0491 19.8079C9.98891 20.1937 11.9996 19.9957 13.8268 19.2388C15.6541 18.4819 17.2159 17.2002 18.3147 15.5557C19.4135 13.9112 20 11.9778 20 10C20 7.34784 18.9464 4.8043 17.0711 2.92893C15.1957 1.05357 12.6522 0 10 0ZM15.2632 11.7697C15.2633 12.0313 15.212 12.2903 15.112 12.532C15.012 12.7737 14.8654 12.9933 14.6805 13.1783C14.4957 13.3633 14.2761 13.51 14.0345 13.6102C13.7929 13.7103 13.5339 13.7618 13.2724 13.7618H6.72764C6.46609 13.7618 6.20711 13.7103 5.96549 13.6102C5.72387 13.51 5.50435 13.3633 5.31947 13.1783C5.13459 12.9933 4.98798 12.7737 4.88801 12.532C4.78804 12.2903 4.73667 12.0313 4.73685 11.7697V8.23026C4.73667 7.96872 4.78804 7.7097 4.88801 7.46802C4.98798 7.22633 5.13459 7.00671 5.31947 6.82171C5.50435 6.63671 5.72387 6.48995 5.96549 6.38982C6.20711 6.2897 6.46609 6.23816 6.72764 6.23816H13.2724C13.5339 6.23816 13.7929 6.2897 14.0345 6.38982C14.2761 6.48995 14.4957 6.63671 14.6805 6.82171C14.8654 7.00671 15.012 7.22633 15.112 7.46802C15.212 7.7097 15.2633 7.96872 15.2632 8.23026V11.7697Z" fill="black"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_691_3841">
+      <rect width="20" height="20" fill="white"/>
+    </clipPath>
+  </defs>
+</svg>    
+                    </a>
+                    </li>
+                  {%- endif -%}
+                  {%- if settings.social_pinterest_link != blank -%}
+                    <li class="footer-social-item">
+                      <a href="{{ settings.social_pinterest_link }}" target="_blank" aria-label="Pinterest">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <g clip-path="url(#clip0_691_3847)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0239 0.53418C4.6702 0.53418 0.320312 4.85203 0.320312 10.214C0.320312 15.5757 4.6702 19.8935 10.0239 19.8935C15.3776 19.8935 19.6797 15.5756 19.6797 10.214C19.6797 4.85203 15.3776 0.53418 10.0239 0.53418ZM10.7887 12.8236C10.0717 12.7761 9.78488 12.3967 9.21129 12.0645C8.92449 13.6776 8.54207 15.1959 7.44266 16.0026C7.10805 13.5828 7.92066 11.7798 8.30309 9.83426C7.63387 8.74293 8.39867 6.46543 9.78488 7.03473C11.5057 7.6991 8.30308 11.2103 10.4541 11.6372C12.7486 12.1118 13.6568 7.6991 12.2705 6.27555C10.2151 4.23519 6.3432 6.22805 6.82125 9.16988C6.96461 9.8818 7.68168 10.1189 7.15586 11.1155C5.81742 10.8308 5.435 9.78672 5.48281 8.45824C5.5784 6.22805 7.49043 4.66215 9.45027 4.42504C11.8881 4.14039 14.1826 5.32652 14.4694 7.60402C14.8518 10.214 13.37 13.0135 10.7887 12.8236Z" fill="black"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_691_3847">
+      <rect width="20" height="20" fill="white"/>
+    </clipPath>
+  </defs>
+</svg>
+                    </a>
+                    </li>
+                  {%- endif -%}
+                  {%- if settings.social_tiktok_link != blank -%}
+                     <li class="footer-social-item">
+                      <a href="{{ settings.social_tiktok_link }}" target="_blank" aria-label="TikTok">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <g clip-path="url(#clip0_691_3850)">
+    <path d="M10 0C8.02219 0 6.08879 0.58649 4.4443 1.6853C2.79981 2.78412 1.51809 4.3459 0.761209 6.17317C0.00433282 8.00043 -0.193701 10.0111 0.192152 11.9509C0.578004 13.8907 1.53041 15.6725 2.92894 17.0711C4.32746 18.4696 6.10929 19.422 8.0491 19.8079C9.98891 20.1937 11.9996 19.9957 13.8268 19.2388C15.6541 18.4819 17.2159 17.2002 18.3147 15.5557C19.4135 13.9112 20 11.9778 20 10C20 7.34784 18.9464 4.8043 17.0711 2.92893C15.1957 1.05357 12.6522 0 10 0ZM14.5079 8.88553C13.6158 8.98421 12.8513 8.63158 12.0868 8.18158C12.0868 8.25526 12.1092 10.5395 12.0711 11.6289C12.0329 12.7487 11.6329 13.7342 10.7553 14.4697C8.89474 16.0316 6.25395 15.1882 5.62369 12.8C5.28158 11.4987 5.57895 10.3263 6.6 9.39868C7.175 8.87237 7.88421 8.63816 8.64474 8.54079C8.8079 8.51974 8.97237 8.51053 9.14869 8.49474V10.2632C8.925 10.3184 8.69869 10.3671 8.47632 10.4329C8.32205 10.4774 8.17158 10.5342 8.02632 10.6026C7.82367 10.6938 7.64473 10.8303 7.50335 11.0018C7.36198 11.1732 7.26197 11.3749 7.21107 11.5911C7.16018 11.8074 7.15977 12.0325 7.20988 12.249C7.25998 12.4655 7.35925 12.6675 7.5 12.8395C7.66926 13.0735 7.89946 13.2566 8.16557 13.3689C8.43167 13.4812 8.72347 13.5183 9.00922 13.4763C9.58422 13.4066 9.94474 13.0447 10.1579 12.525C10.3053 12.1137 10.3692 11.6771 10.3461 11.2408C10.3382 9.09342 10.3382 6.94737 10.3342 4.8C10.3361 4.77792 10.3391 4.75595 10.3434 4.73421H12.0605C12.2526 6.17105 12.9816 7.08158 14.5079 7.21053V8.88553Z" fill="black"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_691_3850">
+      <rect width="20" height="20" fill="white"/>
+    </clipPath>
+  </defs>
+</svg>
+                       </a>
+                    </li>
+                  {%- endif -%}
+                   
+                </ul>
+              {%- endif -%}
+            </div>
+          {%- when 'menu_column' -%}
+            <div class="footer-col-menu" {{ block.shopify_attributes }}>
+              {%- if block.settings.heading != blank -%}
+                <h3 class="footer-heading">{{ block.settings.heading }}</h3>
+              {%- endif -%}
+              {%- if block.settings.menu != blank -%}
+                <ul class="footer-menu-list">
+                  {%- for link in block.settings.menu.links -%}
+                    <li class="footer-menu-item">
+                      <a href="{{ link.url }}">{{ link.title }}</a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+    
+    <div class="footer-bottom">
+      <small>&copy; {{ 'now' | date: "%Y" }} {{ shop.name }}. All rights reserved.</small>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "New Footer",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#F9F9F9"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#121212"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top Desktop",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom Desktop",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top Mobile",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom Mobile",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "brand_info",
+      "name": "Brand Info",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        },
+        {
+          "type": "range",
+          "id": "logo_width",
+          "min": 50,
+          "max": 300,
+          "step": 5,
+          "unit": "px",
+          "label": "Logo Width",
+          "default": 120
+        },
+        {
+          "type": "richtext",
+          "id": "contact_text",
+          "label": "Contact Text",
+          "default": "<p>Email: support@example.com<br>Phone: 123-456-7890<br>Monday - Sunday : 9AM - 5PM EST</p>"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_social",
+          "label": "Show Social Media",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "menu_column",
+      "name": "Menu Column",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Heading"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "New Footer",
+      "blocks": [
+        {
+          "type": "brand_info"
+        },
+        {
+          "type": "menu_column",
+          "settings": {
+            "heading": "Shop & Explore"
+          }
+        },
+        {
+          "type": "menu_column",
+          "settings": {
+             "heading": "Customer Support"
+          }
+        },
+        {
+          "type": "menu_column",
+           "settings": {
+             "heading": "Company & Legal"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

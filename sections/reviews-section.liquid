@@ -1,0 +1,41 @@
+<section class="reviews">
+  <div class="w-layout-blockcontainer container w-container">
+    <div class="heading center">
+      <h2 class="title-section mrg">{{ section.settings.heading }}</h2>
+      <div>
+        {%- for block in section.blocks -%}
+          {% render block %}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %} 
+  { 
+    "name": "Reviews Section",
+    "settings": [
+      { 
+         "type": "text",
+         "id":"heading",
+         "label": "Reviews Heading" 
+      }
+    ],
+    "blocks": [
+      {
+        "type": "@app"
+      }
+    ],
+    "presets":[
+      {
+        "name":"Reviews Section" 
+      } 
+    ] 
+  } 
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

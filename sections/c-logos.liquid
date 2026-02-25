@@ -1,0 +1,239 @@
+ 
+<section id="{{ section.id }}" class="c-section">
+  <div class="c-l-wrapper">
+    {% for i in (1..2) %}
+      <div class="c-l-marquee-content" {% if forloop.index == 2 %}aria-hidden="true"{% endif %}>
+        {% for block in section.blocks %}
+          <div class="c-l-image-div" style="width: 308px; height: 302px;" {{ block.shopify_attributes }}>
+            {% if block.settings.block_image %}
+              <img 
+                src="{{ block.settings.block_image | image_url: width: 500 }}" 
+                alt="{{ block.settings.text }}" 
+                class="c-l-image" 
+                onclick="openModal('{{ block.settings.block_video}}')" 
+              />
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- Modal -->
+  <div id="videoModal" class="modal">
+    <div class="modal-content-wrapper">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <video  id="modalVideo" class="modal-content" controls="true" autoplay="true" muted="true">
+
+        <source id="video_source" type="video/mp4">
+
+      </video>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Estilos de la Sección */
+  #{{ section.id }} {
+    padding: 0;
+    margin: 0 !important;
+    overflow: hidden;
+  }
+
+  #{{ section.id }} .c-l-wrapper {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+  }
+
+  #{{ section.id }} .c-l-marquee-content {
+    display: flex;
+    flex-shrink: 0;
+    min-width: 100%;
+    animation: {{ section.id }}-scroll 60s linear infinite;
+  }
+
+  #{{ section.id }} .c-l-image-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 308px;
+    height: 302px;
+    overflow: hidden;
+  }
+
+  #{{ section.id }} .c-l-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  #{{ section.id }} .c-l-image:hover {
+    transform: scale(1.05);
+  }
+
+  /* Keyframes del Carrusel */
+  @keyframes {{ section.id }}-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+  }
+
+  /* Estilos del Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    animation: fadeIn 0.4s ease;
+  }
+
+  .modal-content-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .modal-content {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .close:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+  }
+
+  /* Animaciones */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @media (max-width: 768px) {
+    .modal-content {
+      max-width: 100%;
+      max-height: 80%;
+    }
+
+    .close {
+      font-size: 20px;
+      width: 28px;
+      height: 28px;
+    }
+  }
+</style>
+
+<script>
+  // Abre el modal y carga el video seleccionado
+  function openModal(videoUrl) {
+
+    const modal_source =  document.getElementById('video_source');
+
+    const modal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+    modal.style.display = 'block';
+    modal_source.src = videoUrl;
+  }
+
+  // Cierra el modal y limpia el video
+  function closeModal() {
+    
+    const modal_source =  document.getElementById('video_source');
+
+    const modal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+    modal.style.display = 'none';
+    modal_source.src = ''; // Limpia el video
+  }
+
+  // Cierra el modal si se hace clic fuera del contenido
+  window.onclick = function(event) {
+    const modal = document.getElementById('videoModal');
+    if (event.target == modal) {
+      closeModal();
+    }
+  }
+</script>
+
+{% schema %}
+{
+  "name": "C Logos",
+  "blocks": [
+    {
+      "name": "Media",
+      "type": "Media",
+      "limit": 50,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "block_image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "block_video",
+          "label": "Video Upload"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "range",
+      "id": "image_gap",
+      "label": "Images gap",
+      "min": 0,
+      "max": 9,
+      "step": 0.1,
+      "default": 1,
+      "unit": "em"
+    },
+    {
+      "type": "range",
+      "id": "marquee_speed",
+      "label": "Marquee Speed",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 60,
+      "unit": "sec"
+    }
+  ]
+}
+{% endschema %}

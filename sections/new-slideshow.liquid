@@ -1,0 +1,546 @@
+{% schema %}
+{
+  "name": "New Slideshow",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "height_desktop",
+      "min": 400,
+      "max": 1000,
+      "step": 10,
+      "unit": "px",
+      "label": "Desktop Height",
+      "default": 750
+    },
+    {
+      "type": "range",
+      "id": "height_mobile",
+      "min": 300,
+      "max": 800,
+      "step": 10,
+      "unit": "px",
+      "label": "Mobile Height",
+      "default": 600
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Default Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Enable Autoplay",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "unit": "s",
+      "label": "Autoplay Speed",
+      "default": 5
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Desktop Background Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Mobile Background Image"
+        },
+        {
+          "type": "header",
+          "content": "Layout"
+        },
+        {
+           "type": "select",
+           "id": "content_alignment",
+           "label": "Content Alignment (Desktop)",
+           "options": [
+             { "value": "left", "label": "Left" },
+             { "value": "center", "label": "Center" },
+             { "value": "right", "label": "Right" }
+           ],
+           "default": "center"
+        },
+        {
+            "type": "range",
+            "id": "content_max_width",
+            "min": 400,
+            "max": 1200,
+            "step": 20,
+            "unit": "px",
+            "label": "Content Max Width",
+            "default": 800
+        },
+        {
+          "type": "header",
+          "content": "Text Content"
+        },
+        {
+          "type": "text",
+          "id": "badge_text",
+          "label": "Badge Text"
+        },
+        {
+          "type": "color",
+          "id": "badge_bg",
+          "label": "Badge Background",
+          "default": "#6C91F9"
+        },
+        {
+          "type": "color",
+          "id": "badge_color",
+          "label": "Badge Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Recovery starts with oxygen."
+        },
+        {
+          "type": "range",
+          "id": "heading_size",
+          "min": 20,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Heading Size (Desktop)",
+          "default": 60
+        },
+        {
+          "type": "richtext",
+          "id": "subheading",
+          "label": "Subheading",
+          "default": "<p>A home use hyperbaric chamber for athletes who take recovery as seriously as training.</p>"
+        },
+        {
+          "type": "header",
+          "content": "Buttons"
+        },
+        {
+          "type": "text",
+          "id": "btn_1_text",
+          "label": "Button 1 Text",
+          "default": "SHOP IN HOUSE RECOVERY"
+        },
+        {
+          "type": "url",
+          "id": "btn_1_link",
+          "label": "Button 1 Link"
+        },
+        {
+          "type": "text",
+          "id": "btn_2_text",
+          "label": "Button 2 Text"
+        },
+        {
+          "type": "url",
+          "id": "btn_2_link",
+          "label": "Button 2 Link"
+        },
+        {
+          "type": "header",
+          "content": "USP Icons"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_usps",
+          "label": "Show USP Icons",
+          "default": true
+        },
+        {
+          "type": "html",
+          "id": "usp_icon_1",
+          "label": "USP Icon 1 (SVG)"
+        },
+        {
+          "type": "text",
+          "id": "usp_text_1",
+          "label": "USP Text 1",
+          "default": "Set Temperature"
+        },
+        {
+          "type": "html",
+          "id": "usp_icon_2",
+          "label": "USP Icon 2 (SVG)"
+        },
+        {
+          "type": "text",
+          "id": "usp_text_2",
+          "label": "USP Text 2",
+          "default": "Ready Anytime"
+        },
+        {
+          "type": "html",
+          "id": "usp_icon_3",
+          "label": "USP Icon 3 (SVG)"
+        },
+        {
+          "type": "text",
+          "id": "usp_text_3",
+          "label": "USP Text 3",
+          "default": "Easy Setup"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "new slideshow",
+      "blocks": [
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% style %}
+.ns-content-inner * {
+    --font-body-family: 'TT Hoves Pro Trial Regular', sans-serif;
+    font-family: var(--font-body-family);
+}
+  .ns-slideshow-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .ns-swiper {
+    width: 100%;
+    height: {{ section.settings.height_mobile }}px;
+  }
+  @media screen and (min-width: 768px) {
+    .ns-swiper {
+      height: {{ section.settings.height_desktop }}px;
+    }
+  }
+  .ns-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+  }
+  .ns-slide-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
+  div.ns-slide-bg{
+    display: block;
+  }
+  div.ns-slide-bg.mobile-img {
+      display: none;
+  }
+  .ns-content-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    max-width: var(--page-width, 1300px);
+    margin: 0 auto;
+    padding: 0 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .ns-content-inner {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  /* Alignment Classes */
+  .text-left .ns-content-inner { align-items: flex-start; text-align: left; }
+  .text-center .ns-content-inner { align-items: center; text-align: center; }
+  .text-right .ns-content-inner { align-items: flex-end; text-align: right; }
+
+  .ns-content-inner .ns-heading {
+    margin: 0 0 15px;
+    line-height: 1.1;
+    font-family: 'Zalando Sans Expanded' !important;
+    /* letter-spacing: -0.02em; */
+  }
+  .ns-subheading {
+    margin: 0 0 25px;
+    font-size: 15.5px;
+    line-height: 1.5;
+    max-width: 500px;
+    letter-spacing: 0;
+}
+  .ns-subheading p {
+    margin: 0;
+    color: inherit;
+  }
+  .ns-content-inner .ns-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    font-family: 'TT Hoves Pro Trial Medium' !important;
+}
+  .ns-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  .ns-content-inner .ns-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 20px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'TT Hoves Pro Trial Medium' !important;
+}
+  .ns-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+  /* USP Icons */
+  .ns-usps {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+  }
+  .ns-content-inner .ns-usp-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-family: 'TT Hoves Pro Trial Medium' !important;
+    padding-right: 1.5rem;
+    border-right: 2px solid #fff;
+}
+.ns-usp-item:last-child {
+    border-right: none;
+}
+  .ns-usp-icon svg {
+    width: 16px;
+    height: 16px;
+    fill: none;
+  }
+
+  /* Swiper Pagination */
+  .ns-slideshow-container .swiper-pagination-bullet {
+    background: #fff;
+    opacity: 0.5;
+    width: 10px;
+    height: 10px;
+  }
+  .ns-slideshow-container .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #fff;
+  }
+  .ns-slideshow-container .swiper-pagination {
+      bottom: 25px !important;
+  }
+
+  @media screen and (max-width: 767px) {
+    div.ns-slide-bg.desktop-img { display: none; }
+    div.ns-slide-bg.mobile-img { display: block; }
+    
+    .ns-heading {
+      font-size: 28px !important; 
+    }
+    .ns-content-wrapper {
+          padding: 0 2rem;
+        justify-content: flex-start;
+        padding-top: 160px;
+        text-align: center !important;
+    }
+    .ns-content-inner {
+        align-items: center !important;
+        text-align: center !important;
+    }
+    .ns-subheading {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    .ns-btn {
+        /* width: 100%; */
+    }
+    .ns-usps {
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 25px;
+    }
+    .ns-badge {
+        margin-bottom: 15px;
+    }
+    .ns-usp-item {
+    font-size: 13px;
+    letter-spacing: 0;
+}
+.ns-btn {
+    font-size: 12px;
+    padding: 8px 14px;
+}
+  }
+{% endstyle %}
+
+<div class="ns-slideshow-container" id="NsSlideshow-{{ section.id }}">
+  <div class="swiper ns-swiper">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="swiper-slide ns-slide" {{ block.shopify_attributes }}>
+          {% comment %} Background Images {% endcomment %}
+          {% if block.settings.image != blank %}
+             <div class="ns-slide-bg desktop-img" style="background-image: url('{{ block.settings.image | image_url: width: 2000 }}');"></div>
+          {% else %}
+             <div class="ns-slide-bg desktop-img" style="background-color: #065367;"></div>
+          {% endif %}
+          
+          {% if block.settings.image_mobile != blank %}
+             <div class="ns-slide-bg mobile-img" style="background-image: url('{{ block.settings.image_mobile | image_url: width: 800 }}');"></div>
+          {% elsif block.settings.image != blank %}
+             <div class="ns-slide-bg mobile-img" style="background-image: url('{{ block.settings.image | image_url: width: 800 }}');"></div>
+          {% else %}
+             <div class="ns-slide-bg mobile-img" style="background-color: #065367;"></div>
+          {% endif %}
+
+          <div class="ns-content-wrapper text-{{ block.settings.content_alignment }}" style="color: {{ section.settings.text_color }}">
+            <div class="ns-content-inner" style="width: {{ block.settings.content_max_width }}px;">
+              
+              {% if block.settings.badge_text != blank %}
+                <div class="ns-badge" style="background-color: {{ block.settings.badge_bg }}; color: {{ block.settings.badge_color }}">
+                  {{ block.settings.badge_text }}
+                </div>
+              {% endif %}
+
+              {% if block.settings.heading != blank %}
+                <h2 class="ns-heading" style="font-size: {{ block.settings.heading_size }}px; color: inherit;">
+                  {{ block.settings.heading }}
+                </h2>
+              {% endif %}
+
+              {% if block.settings.subheading != blank %}
+                <div class="ns-subheading">
+                  {{ block.settings.subheading }}
+                </div>
+              {% endif %}
+
+              {% if block.settings.show_usps %}
+                <div class="ns-usps">
+                   {% comment %} USP 1 {% endcomment %}
+                   {% if block.settings.usp_text_1 != blank %}
+                     <div class="ns-usp-item">
+                        <span class="ns-usp-icon">
+                            {% if block.settings.usp_icon_1 != blank %}
+                                {{ block.settings.usp_icon_1 }}
+                            {% else %}
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path></svg>
+                            {% endif %}
+                        </span>
+                        <span>{{ block.settings.usp_text_1 }}</span>
+                     </div>
+                   {% endif %}
+                   {% comment %} USP 2 {% endcomment %}
+                   {% if block.settings.usp_text_2 != blank %}
+                     <div class="ns-usp-item">
+                        <span class="ns-usp-icon">
+                            {% if block.settings.usp_icon_2 != blank %}
+                                {{ block.settings.usp_icon_2 }}
+                            {% else %}
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            {% endif %}
+                        </span>
+                        <span>{{ block.settings.usp_text_2 }}</span>
+                     </div>
+                   {% endif %}
+                   {% comment %} USP 3 {% endcomment %}
+                   {% if block.settings.usp_text_3 != blank %}
+                     <div class="ns-usp-item">
+                        <span class="ns-usp-icon">
+                            {% if block.settings.usp_icon_3 != blank %}
+                                {{ block.settings.usp_icon_3 }}
+                            {% else %}
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                            {% endif %}
+                        </span>
+                        <span>{{ block.settings.usp_text_3 }}</span>
+                     </div>
+                   {% endif %}
+                </div>
+              {% endif %}
+
+              <div class="ns-buttons">
+                {% if block.settings.btn_1_text != blank %}
+                  <a href="{{ block.settings.btn_1_link }}" class="ns-btn">
+                    {{ block.settings.btn_1_text }}
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 8px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
+                {% endif %}
+                {% if block.settings.btn_2_text != blank %}
+                  <a href="{{ block.settings.btn_2_link }}" class="ns-btn">
+                    {{ block.settings.btn_2_text }}
+                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 8px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    new Swiper('#NsSlideshow-{{ section.id }} .swiper', {
+      slidesPerView: 1,
+      loop: true,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      autoplay: {
+        delay: {{ section.settings.autoplay_speed | times: 1000 }},
+        disableOnInteraction: false,
+      },
+      {% unless section.settings.autoplay %}
+      autoplay: false,
+      {% endunless %}
+      pagination: {
+        el: '#NsSlideshow-{{ section.id }} .swiper-pagination',
+        clickable: true,
+      },
+    });
+  });
+</script>

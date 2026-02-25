@@ -1,0 +1,113 @@
+<section class="benefits">
+  <div class="w-layout-blockcontainer container w-container">
+    <div class="benefit-box">
+      <div class="heading center">
+        <div class="subtitle-section">{{ section.settings.title }}</div>
+        <h2 class="title-section">{{ section.settings.heading }}</h2>
+      </div>
+      <div class="benefit-box-row">
+        <div class="benefit-img-col">
+          {% if section.settings.text != blank %}
+          <div class="benefit-info-wrap">
+            <div class="benefit-info-text">{{ section.settings.text }}</div>
+            <img src="https://cdn.shopify.com/s/files/1/0740/3195/6281/files/arrow-down.svg?v=1694589798" loading="lazy" alt="">
+          </div>
+          {% endif %}
+          <img src="{{ section.settings.benefit-img | image_url }}" loading="lazy" alt="" class="benefit-img">
+        </div>
+        <div class="benefit-content-col">
+          <div class="benefit-content-wrap">
+            {% for block in section.blocks %}
+            <div class="benefit-item {% if forloop.index == 1 %}benefit-active{% endif %}">
+              <div class="benefit-item-icon-wrap">
+                <img src="{{ block.settings.faq-icon | image_url }}" loading="lazy" alt="" class="benefit-content-icon b{{ forloop.index }}">
+              </div>
+              <div class="benefit-content-inner-col">
+                <div class="benefit-content-title">{{ block.settings.faq_que }}</div>
+                <div class="benefit-content-p">{{ block.settings.faq_ans }}</div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          {% if section.settings.btn-text != blank %}
+          <div class="benefit-action">
+            <a href="{{ section.settings.btn-link }}" class="btn-primary full-width-mobile w-button">{{ section.settings.btn-text }}</a>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %} 
+  { 
+    "name": "Benefits Section",
+    "settings": [
+      { 
+         "type": "text",
+         "id":"title",
+         "label": "Benefits Title" 
+      },
+      { 
+         "type": "text",
+         "id":"heading",
+         "label": "Benefits Heading" 
+      },
+      { 
+         "type": "text",
+         "id":"text",
+         "label": "Benefits Text" 
+      },
+      { 
+         "type": "image_picker",
+         "id":"benefit-img",
+         "label": "Benefits Image" 
+       },
+       { 
+         "type": "url",
+         "id":"btn-link",
+         "label": "Benefits Btn Link" 
+       },
+       { 
+         "type": "text",
+         "id":"btn-text",
+         "label": "Benefits Btn Text" 
+       }
+    ],
+    "blocks": [ 
+       { 
+         "type": "benefits-faq",
+         "name": "Benefits Faq Block",
+         "settings": [ 
+           {
+              "type": "image_picker",
+              "id":   "faq-icon",
+              "label": "Benefits Faq Icon"
+           },
+           {
+              "type": "text",
+              "id":   "faq_que",
+              "label": "Benefits Faq Question"
+            },
+            {
+              "type": "richtext",
+              "id":   "faq_ans",
+              "label": "Benefits Faq Answer"
+            } 
+         ] 
+       } 
+     ], 
+    "presets":[
+      {
+        "name":"Benefits Section" 
+      } 
+    ] 
+  } 
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

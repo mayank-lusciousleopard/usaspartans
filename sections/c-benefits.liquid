@@ -1,0 +1,144 @@
+<section
+  id="{{ section.id }}"
+  class="tw-px-5 tw-py-10 md:tw-px-[64px] md:tw-py-14 lg:tw-py-20 tw-relative tw-bg-cover tw-bg-center tw-overflow-hidden tw-flex tw-flex-col tw-justify-center tw-items-center tw-gap-10 md:tw-gap-20"
+>
+  <!-- Background image -->
+
+  {% if section.settings.section_background_image != empty %}
+    <div
+      class="tw-absolute tw-inset-0 tw-w-[100%] tw-h-auto tw-bg-cover tw-bg-y-[15%] tw-z-[-1]"
+      style="background-image: url('{{ section.settings.section_background_image | image_url: width: 2160 }}');"
+    ></div>
+  {% endif %}
+
+  <!-- Header container -->
+  <div class="tw-flex tw-flex-col tw-gap-6 tw-justify-center tw-items-center tw-mx-auto tw-max-w-[768px] tw-z-10">
+    {% if section.settings.section_heading != empty %}
+      <span class="tw-text-[#0E83F9] tw-font-bold tw-text-base">{{ section.settings.section_heading }}</span>
+    {% endif %}
+    {% if section.settings.heading_first_part != empty or section.settings.heading_second_part != empty %}
+      <h2 class="tw-text-center tw-flex tw-flex-col tw-gap-2">
+        <span class="tw-text-center tw-text-3xl md:tw-text-[48px] tw-font-bold tw-text-black tw-block">
+          {{- section.settings.heading_first_part -}}
+        </span>
+        <span class="tw-text-center tw-text-3xl md:tw-text-[48px] tw-font-bold tw-bg-custom-gradient tw-bg-clip-text tw-text-transparent tw-mt-3">
+          {{- section.settings.heading_second_part -}}
+        </span>
+      </h2>
+    {% endif %}
+    {% if section.settings.description_heading != empty %}
+      <p class="tw-font-[500] tw-text-base md:tw-text-lg tw-text-black !tw-text-center">
+        {{ section.settings.description_heading }}
+      </p>
+    {% endif %}
+  </div>
+
+  <!-- Benefits container -->
+  <div class="tw-rounded-[32px] tw-bg-white/80 tw-z-0">
+    <div class="tw-grid tw-gap-6 md:tw-grid-cols-2 tw-grid-cols-1 tw-rounded-[32px] tw-p-4 md:tw-p-10">
+      {% for block in section.blocks %}
+        <div class="tw-flex tw-gap-6 tw-items-start tw-justify-start tw-z-10">
+          {% if block.settings.benefit_icon != empty %}
+            <img
+              src="{{ block.settings.benefit_icon | image_url: width: 400 }}"
+              alt="icon"
+              class="md:tw-w-[39px] tw-w-[30px] tw-h-auto tw-mt-2"
+            >
+          {% endif %}
+          <div class="tw-flex tw-flex-col tw-items-start blue">
+            {% if block.settings.benefit_title != empty %}
+              <h3 class="tw-text-[#084D93] tw-font-bold tw-text-lg md:tw-text-2xl">
+                {{ block.settings.benefit_title }}
+              </h3>
+            {% endif %}
+            {% if block.settings.benefit_description != empty %}
+              <p class="tw-font[500] !tw-text-[#084D93] tw-text-sm">
+                {{ block.settings.benefit_description }}
+              </p>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% if section.settings.button_text_1 != empty %}
+    <a
+      class="tw-py-3 tw-w-fit tw-px-6 tw-gap-2.5 tw-rounded-[10px] tw-opacity-100 tw-bg-custom-gradient tw-text-white tw-font-bold tw-flex tw-items-center tw-justify-center hover:!tw-bg-custom-gradient-hover"
+      href="{{ section.settings.button_url_1 | default: '#' }}"
+    >
+      {{ section.settings.button_text_1 }}
+    </a>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "C Benefits",
+  "blocks": [
+    {
+      "name": "Benefit",
+      "type": "Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "benefit_title",
+          "label": "Benefit",
+          "default": "My heading"
+        },
+        {
+          "type": "text",
+          "id": "benefit_description",
+          "label": "Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "benefit_icon",
+          "label": "Icon"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_first_part",
+      "label": "Title First Part"
+    },
+    {
+      "type": "text",
+      "id": "heading_second_part",
+      "label": "Title Second Part"
+    },
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "description_heading",
+      "label": "Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "section_background_image",
+      "label": "Section Background Image"
+    },
+    {
+      "type": "text",
+      "id": "button_text_1",
+      "label": "Button Text 1"
+    },
+    {
+      "type": "url",
+      "id": "button_url_1",
+      "label": "Button URL 1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Benefits"
+    }
+  ]
+}
+{% endschema %}

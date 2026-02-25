@@ -1,0 +1,209 @@
+{% style %}
+
+#{{ section.id }} .c-coundtdown {
+  display:flex;
+}
+
+@media (max-width: 768px) {
+
+
+  #{{ section.id }} .c-heading {
+    font-size:36px;
+  }
+
+  #{{ section.id }} .c-buttons-div {
+    width:100%;
+  }
+} 
+
+{% endstyle %}
+
+<section id="{{ section.id }}" class="tw-p-5 md:tw-p-6 lg:tw-pb-14  tw-relative">
+  {% if section.settings.image %}
+    <div
+      class="tw-absolute !tw-block tw-inset-0 tw-bg-cover tw-h-full tw-w-full tw-bg-center"
+      style="background-image: linear-gradient(180deg, #FFFFFF 17.76%, rgba(255, 255, 255, 0) 100%), url('{{ section.settings.image | image_url: width: 2160 }}');"
+    ></div>
+  {% endif %}
+
+  <div class="tw-relative tw-flex tw-flex-col tw-mx-auto tw-items-center tw-gap-8 tw-max-w-[1240px] tw-z-10">
+    <div class="tw-flex tw-flex-col tw-items-center tw-gap-[6px] tw-w-fit">
+      <!-- Estrellas SVG -->
+      <div class="tw-flex tw-gap-1" style="align-items: center;">
+        {% for i in (1..5) %}
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3.6123 15.4427C3.22586 15.6413 2.78829 15.2942 2.86609 14.8508L3.69582 10.1213L0.173489 6.76462C-0.155692 6.45092 0.0147086 5.87737 0.455698 5.81472L5.35417 5.11885L7.53829 0.792305C7.73504 0.402565 8.26801 0.402565 8.46476 0.792305L10.6489 5.11885L15.5474 5.81472C15.9883 5.87737 16.1587 6.45092 15.8296 6.76462L12.3072 10.1213L13.137 14.8508C13.2148 15.2942 12.7772 15.6413 12.3908 15.4427L8.00153 13.1868L3.6123 15.4427Z" fill="#F9B70E"/>
+          </svg>
+        {% endfor %}
+        <span style="color:black;"><strong>(12,741+ Reviews)</strong></span>
+      </div>
+      <span class="tw-text-lg tw-font-bold tw-items-center tw-text-center md:tw-text-left" style="color:black;">
+        {{ section.settings.headline }}
+      </span>
+
+      <div id="countdown-{{ section.id }}" class="c-coundtdown tw-text-4xl tw-font-black tw-text-gray-800 tw-flex tw-gap-0 tw-display-none md:tw-display-block" style="padding-top:20px !important;">
+        <div class="tw-flex tw-flex-col tw-items-center">
+          <div class="tw-p-[12px] md:tw-p-[24px]"  >
+            <span id="days-{{ section.id }}" class="tw-text-[24px] md:tw-text-[32px] tw-text-black tw-font-semibold tw-border-[3px] tw-border-[#0E83F9] tw-rounded-full tw-p-[12px] md:tw-p-[24px]" style="font-weight:600 !important;">00</span>            
+          </div>
+          <span class=" tw-text-[#000000] tw-font-normal md:tw-font-semibold tw-text-[12px] md:tw-text-[16px]" style=" color:black">Days</span>
+        </div>
+        <div class="tw-flex tw-flex-col tw-items-center">
+          <div class="tw-p-[12px] md:tw-p-[24px]"  >
+            <span id="hours-{{ section.id }}"  class="tw-text-[24px] md:tw-text-[32px] tw-text-black tw-font-semibold tw-border-[3px] tw-border-[#0E83F9] tw-rounded-full tw-p-[12px] md:tw-p-[24px]" style="font-weight:600 !important;">00</span>
+          </div>
+          <span class=" tw-text-[#000000] tw-font-normal md:tw-font-semibold tw-text-[12px] md:tw-text-[16px]" style=" color:black">Hours</span>
+        </div>
+        <div class="tw-flex tw-flex-col tw-items-center">
+          <div class="tw-p-[12px] md:tw-p-[24px]" >
+            <span id="minutes-{{ section.id }}" class="tw-text-[24px] md:tw-text-[32px] tw-text-black tw-font-semibold tw-border-[3px] tw-border-[#0E83F9] tw-rounded-full tw-p-[12px] md:tw-p-[24px]" style="font-weight:600 !important;">00</span>
+          </div>
+          <span class=" tw-text-[#000000] tw-font-normal md:tw-font-semibold tw-text-[12px] md:tw-text-[16px]" style=" color:black">Minutes</span>
+        </div>
+        <div class="tw-flex tw-flex-col tw-items-center">
+          <div class="tw-p-[12px] md:tw-p-[24px]" >
+            <span id="seconds-{{ section.id }}"class="tw-text-[24px] md:tw-text-[32px] tw-text-black tw-font-semibold tw-border-[3px] tw-border-[#0E83F9] tw-rounded-full tw-p-[12px] md:tw-p-[24px] " style="font-weight:600 !important;">00</span>
+          </div>
+          <span class=" tw-text-[#000000] tw-font-normal md:tw-font-semibold tw-text-[12px] md:tw-text-[16px]" style=" color:black">Seconds</span>
+        </div>
+      </div>
+     
+    </div>
+    <div class="tw-flex tw-flex-col tw-items-center tw-gap-6">
+      <div class="tw-flex tw-flex-col tw-gap-6">
+        <h2 class="c-heading tw-text-center tw-text-[40px] md:tw-text-[56px] tw-font-bold tw-leading-[120%] tw-capitalize">
+          {{ section.settings.section_bottom_heading }}
+        </h2>
+      </div>
+      <p class="tw-max-w-6xl tw-font-semibold tw-text-xl tw-text-center tw-text-black ">
+        {{ section.settings.description_banner }}
+      </p>
+    </div>
+    <div class="c-buttons-div tw-flex md:tw-flex-row tw-flex-col tw-w-fit tw-gap-2">
+      <a
+        class="tw-py-5 tw-px-10 tw-gap-2.5 tw-rounded-[10px] tw-opacity-100 tw-bg-custom-gradient tw-text-white tw-font-bold tw-flex tw-items-center tw-justify-center hover:!tw-bg-custom-gradient-hover"
+        href="{{ section.settings.button_url_1 | default: '#' }}"
+      >
+        {{ section.settings.button_text_1 | default: 'CHECK ALL BUNDLES' }}
+      </a>
+
+      <a
+        class="!tw-rounded-[10px] tw-py-5 tw-px-10 tw-gap-2.5 tw-bg-none tw-font-bold tw-flex tw-bg-[#ffffff59] tw-items-center tw-justify-center tw-border-[#0E83F9] tw-border-2 hover:tw-border-[#084D93]"
+        href="{{ section.settings.button_url_2 | default: '#' }}"
+      >
+        <span class="tw-block tw-text-center tw-bg-custom-gradient tw-bg-clip-text tw-text-transparent">
+          {{ section.settings.button_text_2 | default: 'CHECK ALL CHILLERS' }}
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const countdown = document.getElementById('countdown-{{ section.id }}');
+    const endDate = new Date("{{ section.settings.end_date }}"); // Configurado en el editor de Shopify
+
+    function startCountdown() {
+      const interval = setInterval(() => {
+        const currentTime = new Date();
+        const timeDifference = endDate - currentTime;
+
+        if (timeDifference <= 0) {
+          clearInterval(interval);
+          return;
+        }
+
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+        document.getElementById('days-{{ section.id }}').textContent = days.toString().padStart(2, '0');
+        document.getElementById('hours-{{ section.id }}').textContent = hours.toString().padStart(2, '0');
+        document.getElementById('minutes-{{ section.id }}').textContent = minutes.toString().padStart(2, '0');
+        document.getElementById('seconds-{{ section.id }}').textContent = seconds.toString().padStart(2, '0');
+      }, 1000);
+    }
+
+    startCountdown();
+  });
+</script>
+
+{% schema %}
+{
+  "name": "C Hero Section New Year",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Title",
+      "default": "The Number One Water Chiller For Ice Bath"
+    },
+    {
+      "type": "text",
+      "id": "section_red_heading",
+      "label": "Red Heading",
+      "default": "Get Bundles"
+    },
+    {
+      "type": "text",
+      "id": "section_green_heading",
+      "label": "Green Heading",
+      "default": "& Save 15%"
+    },
+    {
+      "type": "text",
+      "id": "end_date",
+      "label": "End Date (YYYY-MM-DD)",
+      "default": "2024-12-31",
+      "info": "Enter the end date in the format YYYY-MM-DD"
+    },
+    {
+      "type": "text",
+      "id": "section_bottom_heading",
+      "label": "Heading",
+      "default": "on Black Friday VIP Sale!"
+    },
+    {
+      "type": "text",
+      "id": "description_banner",
+      "label": "Description",
+      "default": "Take advantage of our best Black Friday deals with VIP bundles featuring the 1HP Water Chiller, XL Tub, and more. Stock is limited—get your complete ice bath setup now and save big!"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "background image"
+    },
+    {
+      "type": "text",
+      "id": "button_text_1",
+      "label": "Button Text 1",
+      "default": "CHECK ALL BUNDLES"
+    },
+    {
+      "type": "text",
+      "id": "button_text_2",
+      "label": "Button Text 2",
+      "default": "CHECK ALL CHILLERS"
+    },
+    {
+      "type": "url",
+      "id": "button_url_1",
+      "label": "Button URL 1"
+    },
+    {
+      "type": "url",
+      "id": "button_url_2",
+      "label": "Button URL 2"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Hero Section New Year",
+      "category": "custom"
+    }
+  ]
+}
+{% endschema %}

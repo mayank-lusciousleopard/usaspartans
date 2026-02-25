@@ -1,0 +1,940 @@
+{
+  "sections": {
+    "c_sticky_atc_Dkg3MV": {
+      "type": "c-sticky-atc",
+      "settings": {
+        "use_custom_product": false,
+        "product": "",
+        "padding_top": 2,
+        "padding_bottom": 2
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "9c311809-92f0-4edb-80cf-4608579e895f": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "afterpay_on_site_messaging_payments_messaging_8yVXRf": {
+          "type": "shopify:\/\/apps\/afterpay-on-site-messaging\/blocks\/payments-messaging\/f45a5524-d177-4475-bf59-281efd2215a8",
+          "settings": {
+            "text_align": "inherit",
+            "margin_top": 16,
+            "margin_bottom": 16,
+            "color": "",
+            "size": "md",
+            "intro_text": "Or",
+            "show_interest_free": true,
+            "payment_amount_is_bold": true,
+            "show_with": true,
+            "logo_type": "compact-badge",
+            "logo_theme": "black-on-mint",
+            "modal_link_style": "learn-more-text",
+            "modal_theme": "mint",
+            "breakpoint": 749,
+            "text_align_mobile": "inherit",
+            "margin_top_mobile": 16,
+            "margin_bottom_mobile": 16,
+            "show_lower_limit": true,
+            "show_upper_limit": true,
+            "show_if_outside_limits": true,
+            "product": "{{product}}"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "4be5a123-6886-4d77-baa1-ec6130051a7c": {
+          "type": "iconic_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/check-symbol-4795.png",
+            "text": "Improves overall health"
+          }
+        },
+        "5ad6cb90-d947-461f-9eb9-a432fb4bdacd": {
+          "type": "iconic_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/check-symbol-4795.png",
+            "text": "Perfect for indoors and outdoors (quiet operation)"
+          }
+        },
+        "839db4ea-0928-48cb-829a-7190e3e64182": {
+          "type": "iconic_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/check-symbol-4795.png",
+            "text": "Hassle-free crystal clean water with UV disinfection"
+          }
+        },
+        "iconic_text_VyGnAH": {
+          "type": "iconic_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/check-symbol-4795.png",
+            "text": "Low maintenance (change the filter once per month)"
+          }
+        },
+        "52e7dbd4-d527-471f-abbd-4579f8377fca": {
+          "type": "iconic_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/check-symbol-4795.png",
+            "text": "Bonuses today - x5 chiller filters, thermometer, water absorbent mat, 100 chlorine tablets with dispenser"
+          }
+        },
+        "iconic_text_zVCjJt": {
+          "type": "iconic_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/check-symbol-4795.png",
+            "text": "Fast 2 - 6 business days local US shipping"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "premium_info_3wL7Fg": {
+          "type": "premium_info",
+          "settings": {
+            "heading": "HSA \/ FSA Eligible",
+            "text": "<p>save an average of 30% with pre tax funds Choose flex at checkout<\/p>",
+            "info_hover_text": "Use your HSA\/FSA card to pay for this item.",
+            "bg_color": "#f5f8f0",
+            "text_color": "#000000",
+            "icon_color": "#39b856",
+            "margin_top": 0,
+            "margin_bottom": 16
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "62950366-91e6-4329-853a-819a493380a1": {
+          "type": "payment_icon",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "19a58bcf-33df-40a3-bfcd-8e1ba687156c": {
+          "type": "icon-with-text",
+          "settings": {
+            "custom_class": "",
+            "layout": "horizontal",
+            "icon_1": "check_mark",
+            "heading_1": "1 Year Warranty",
+            "icon_2": "return",
+            "heading_2": "No-Risk 60 Days Trial",
+            "icon_3": "truck",
+            "heading_3": "Free & Fast Shipping"
+          }
+        },
+        "b63a9dcf-2828-4d7e-ba67-9fba4afb1b71": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What is included",
+            "icon": "box",
+            "content": "<p><strong>Today Bonuses ($500 as gifts):<\/strong><\/p><ul><li>5 Water Chiller filters<\/li><li>Water Thermometer<\/li><li>Water Absorbent Mat<\/li><li>100 Chlorine Tablets + Dispenser<\/li><li>1 Year warranty<\/li><li>$100 gift card<\/li><\/ul><p><strong>Warrior Max 1 HP Chiller\/Heater:<\/strong><\/p><ul><li>1 HP Smart Wi-Fi Water Chiller\/Heater<\/li><li>Filter 20 Microns<\/li><li>x2 Black Hoses<\/li><li>x4 Wheels With Brakes<\/li><li>x4 Clamps<\/li><li>x4 3\/4 Male Pagoda Stainless Steel Connectors<\/li><li>x2 1\/2\" Male to 3\/4\" Female Stainless Steel Connectors<\/li><li>x2 1\/2\" Female to 3\/4\" Female Stainless Steel Connectors<\/li><\/ul><p><strong>Spartan\/Warrior Pro XL Ice Bath:<\/strong><\/p><ul><li>Warrior PRO XL Ice Bath<\/li><li>Inflatable top cover<\/li><li>Double action hand pump<\/li><li>Repair kit<\/li><li>Carry bag<\/li><\/ul>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "e4b3bd11-239a-4d6e-b1fb-c008fb82cdb6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Water Chiller Specifications",
+            "icon": "snowflake",
+            "content": "<ul><li>Easily set temperature and schedule from your phone<\/li><li>Cools the water down to 37 - 39 F<\/li><li>Heats the water up to 104 F<\/li><li>130 gallons maximum water volume<\/li><li>Works with all ice bath models<\/li><li>Easy to use and set up - plug and play<\/li><li>Perfect for indoor and outdoor use (waterproof)<\/li><li>Advanced step filtration (20 micron filter)<\/li><li>UV sterilization<\/li><li>Wi-Fi enabled temperature control system with timer function<\/li><li>Safety shutoff<\/li><li>Industrial grade high-quality components<\/li><\/ul><p><strong>Specifications<\/strong>:<\/p><ul><li>Power: 1 HP (9,000 BTU\/hr)<\/li><li>Refrigerating Capacity: 2600 W<\/li><li>Heating Power: 3300 W<\/li><li>Pump Power: 80 W<\/li><li>Pump Lift: 53 ft \/ 16 m<\/li><li>Pump Flow: 634 gallons per hour<\/li><li>Refrigerant Fluid: R410A (Eco friendly)<\/li><li>Input Current: 7.3A<\/li><li>Input Power: 850W<\/li><li>Weight: 100 lbs<\/li><li>Size: 24.4 x 16.53 x 18.9 inches<\/li><li>Voltage: 110V \/ 60hz (US Standard)<\/li><li>Noise ≤ 60DB (A)<\/li><li>One year warranty<\/li><\/ul>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "9e64bf03-e0c7-4091-99f1-5569ed2d8dcc": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "XL Ice Bath Specifications",
+            "icon": "eye",
+            "content": "<ul><li>Dimensions: 60\"L x 31\"W x 26\"H<\/li><li>High-quality, drop stitch skin-friendly material built for durability<\/li><li>120 gal water capacity<\/li><li>Designed for indoor and outdoor use<\/li><li>Suitable heights up to 6'9\"<\/li><li>Sized up to 2 people<\/li><li>High pressure structure - 8 PSI \/ 0.55 Bar<\/li><li>Tub weight: 15 lbs<\/li><li>1\/2\" water inlet and outlet<\/li><\/ul>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_eiUdVK": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "icon": "truck",
+            "content": "<p><strong>Fast & free<\/strong> US local shipping.<\/p><p>Delivery in <strong>2 - 6 business days<\/strong> to mainland US from California warehouse.<\/p><p>Shipping to Canada takes place in 7 - 14 business days.<br\/><br\/><strong>Returns:<\/strong> Should the Water Chiller not meet your expectations, you can return it within 60 days for a refund. <\/p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "9c311809-92f0-4edb-80cf-4608579e895f",
+        "afterpay_on_site_messaging_payments_messaging_8yVXRf",
+        "price",
+        "4be5a123-6886-4d77-baa1-ec6130051a7c",
+        "5ad6cb90-d947-461f-9eb9-a432fb4bdacd",
+        "839db4ea-0928-48cb-829a-7190e3e64182",
+        "iconic_text_VyGnAH",
+        "52e7dbd4-d527-471f-abbd-4579f8377fca",
+        "iconic_text_zVCjJt",
+        "variant_picker",
+        "premium_info_3wL7Fg",
+        "buy_buttons",
+        "62950366-91e6-4329-853a-819a493380a1",
+        "description",
+        "19a58bcf-33df-40a3-bfcd-8e1ba687156c",
+        "b63a9dcf-2828-4d7e-ba67-9fba4afb1b71",
+        "e4b3bd11-239a-4d6e-b1fb-c008fb82cdb6",
+        "9e64bf03-e0c7-4091-99f1-5569ed2d8dcc",
+        "collapsible_tab_eiUdVK"
+      ],
+      "custom_css": [],
+      "settings": {
+        "cstm_class": "",
+        "date": "",
+        "enable_sticky_info": true,
+        "overlay_width_d": 104,
+        "overlay_width_m": 80,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "2497026c-2b2d-44f0-a5cb-121f92ec2900": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<!-- Trust Badge created and verified by https:\/\/www.brandpush.co --> <div style=\"width:100%;margin-top:10px;all:unset;\"><style scoped> .brandpush-logo-container-item { height: auto; width: 100%; position: relative; padding: 25px 50px; } .brandpush-vertical-center { height: inherit; display: flex; align-content: center; flex-wrap: wrap; flex-direction: row; justify-content: center; align-content: center; align-items: center; } .brandpush-vertical-center img.brandpush-news-logo{ max-width: 100px; max-height: 66px; min-width: 50px; min-height: 14px; height: auto; width: auto; margin: 7px 10px; overflow: visible; } .brandpush-trust-badge, .brandpush-title, .brandpush-footer{ font-family: sans-serif !important; } .brandpush-title:before, .brandpush-title:after { content: \"\"; flex: 1 1; border-bottom: 1px solid #d8d8d8; margin: auto; width: 27%; display: block; position: relative; } .brandpush-title:before{ margin-left: 30px; top:12px; } .brandpush-title:after{ margin-right: 30px; top: -13px; } @media screen and (min-width: 585px) { .brandpush-logo-container{padding: 0 20px;} } @media screen and (max-width: 584px) { .brandpush-news-logo {max-width:70px !important;} .brandpush-title {font-size: 15px;top: -5px;letter-spacing: 6px;} .brandpush-title:before, .brandpush-title:after{border-bottom:none !important;} .brandpush-leaf{display:none !important;} } @media screen and (max-width: 340px) { .brandpush-title-hr {display:none !important;} .brandpush-title {font-size:14px;padding:0 !important;} .brandpush-footer {font-size:11px !important;margin:20px 0 25px 0 !important;letter-spacing: 2px !important;} .brandpush-news-logo{max-width:50px !important;} } .brandpush-logo-container{ text-align: center; margin: 0 auto 0 auto; display: flex; align-content: center; justify-content: space-between; align-items: center; flex-wrap: nowrap; flex-direction: row; } .brandpush-newslogos { display:inline-block; position:relative; } <\/style><div id=\"brandpush-trust-badge\" style=\"position: relative;width:100%;background:#ffffff;border-radius:10px;min-height:180px;margin-left: auto;margin-right: auto;padding-bottom:12px;\"><div style=\"text-align:center;padding:0px 5px 10px 5px;font-size: 18px;font-family: sans-serif;font-weight: 600;letter-spacing: 8px;line-height: 1.3;\"><div style=\"height: 58px;\"><span class=\"brandpush-title\" style=\"z-index: 1; position: relative; padding: 0 20px;margin:0;color:#0e0e0e;\">AS SEEN ON<\/span><\/div><div class=\"brandpush-logo-container\"><img class=\"brandpush-leaf\" alt=\"Trust Reef\" style=\"position:absolute;height: 110px;left: 25px;margin:0;padding:0;z-index: 0;opacity: 0.2;\" src=\"https:\/\/www.brandpush.co\/cdn-cgi\/imagedelivery\/gKm6BYVdHCj_SVQET_Msrw\/3fb10293-8878-4ce5-5496-cef376fe9300\/public\"><img class=\"brandpush-leaf\" alt=\"Trust Reef\" style=\"position:absolute;height: 110px;right: 25px;margin:0;padding:0;z-index: 0;opacity: 0.2;-webkit-transform: scaleX(-1);transform: scaleX(-1);\" src=\"https:\/\/www.brandpush.co\/cdn-cgi\/imagedelivery\/gKm6BYVdHCj_SVQET_Msrw\/3fb10293-8878-4ce5-5496-cef376fe9300\/public\"><div class=\"brandpush-logo-container-item\"><div class=\"brandpush-vertical-center\"><img alt=\"Featured on Business Insider\" class=\"brandpush-news-logo\" style=\"margin-right: 14px;\" src=\"https:\/\/www.brandpush.co\/cdn-cgi\/imagedelivery\/gKm6BYVdHCj_SVQET_Msrw\/ea272993-a87c-4e0e-48bd-6ca4d5b1ea00\/public\"><img alt=\"Featured on Newsmax\" class=\"brandpush-news-logo\" style=\"margin-right: 14px;\" src=\"https:\/\/www.brandpush.co\/cdn-cgi\/imagedelivery\/gKm6BYVdHCj_SVQET_Msrw\/92dc65b2-fac1-4862-0e17-f438af238000\/public\"><img alt=\"Featured on FOX 40\" class=\"brandpush-news-logo\" style=\"margin-right: 14px;\" src=\"https:\/\/www.brandpush.co\/cdn-cgi\/imagedelivery\/gKm6BYVdHCj_SVQET_Msrw\/3fc4af63-e906-4112-d141-d504c6ea5c00\/public\"><img alt=\"Featured on MSN\" class=\"brandpush-news-logo\" style=\"margin-right: 14px;\" src=\"https:\/\/www.brandpush.co\/cdn-cgi\/imagedelivery\/gKm6BYVdHCj_SVQET_Msrw\/0ea9bf43-0b66-4db2-09e1-fe2321581600\/public\"><\/div><\/div><\/div><div style=\"margin-top:0px;font-family: sans-serif !important;\"><span class=\"brandpush-footer\" style=\" text-align: center; padding: 0 20px; font-size: 13px; font-family: sans-serif; font-weight: 600; letter-spacing: 3px; position: relative; width: 100%; margin: 0 0 8px 0; display: inline-block; color: #a5a5a5;\">AND OVER 500 NEWS SITES<\/span><div style=\"color:#717171;font-size:10px;letter-spacing:0;height: 15px;margin: 3px 0 0 0;display: flex;justify-content: center;align-content: center;align-items: center;\"><img style=\"width:12px;margin:0 3px 0 0;\" src=\"https:\/\/www.brandpush.co\/cdn-cgi\/imagedelivery\/gKm6BYVdHCj_SVQET_Msrw\/5e5b9b47-6288-4640-2b2a-cd2459605c00\/public\"><span style=\"font-family: sans-serif !important;\">Verified <\/span><\/div><\/div><\/div><\/div><\/div><!-- End of BrandPush Trust Badge -->",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "why_choose_ice_bath_BawmJW": {
+      "type": "why-choose-ice-bath",
+      "blocks": {
+        "benefit_pJcpEy": {
+          "type": "benefit",
+          "settings": {
+            "label": "Accelerates recovery",
+            "icon": "shopify:\/\/shop_images\/stars_8c539901-a52d-4b3a-89e6-d4e4f7a648da.svg"
+          }
+        },
+        "benefit_jdYJYB": {
+          "type": "benefit",
+          "settings": {
+            "label": "Builds mental resilience",
+            "icon": "shopify:\/\/shop_images\/smile.svg"
+          }
+        },
+        "benefit_nVp4bK": {
+          "type": "benefit",
+          "settings": {
+            "label": "Relieves muscle pain",
+            "icon": "shopify:\/\/shop_images\/heart.svg"
+          }
+        },
+        "benefit_8ADhdQ": {
+          "type": "benefit",
+          "settings": {
+            "label": "Easy to use & maintain",
+            "icon": "shopify:\/\/shop_images\/like.svg"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_pJcpEy",
+        "benefit_jdYJYB",
+        "benefit_nVp4bK",
+        "benefit_8ADhdQ"
+      ],
+      "name": "Why choose an ice bath",
+      "settings": {
+        "heading": "Why choose an ice bath?",
+        "text": "<p>Ice baths reduce inflammation, speed up recovery, and build mental toughness. A proven way to boost your health, fitness, and strength.<\/p>",
+        "cta_label": "Discover all benefits",
+        "cta_link": "",
+        "cta_new_tab": false,
+        "image": "shopify:\/\/shop_images\/ice-bath.png",
+        "image_alt": "",
+        "padding_top": 32,
+        "padding_bottom": 0,
+        "padding_top_desktop": 72,
+        "padding_bottom_desktop": 0
+      }
+    },
+    "174076842188df4d50": {
+      "type": "apps",
+      "blocks": {
+        "reelup_shoppable_videos_reels_reelup_playlist_RCNQjf": {
+          "type": "shopify:\/\/apps\/reelup-shoppable-videos-reels\/blocks\/reelup_playlist\/a8ec9e4d-d192-44f7-9c23-595f9ee7dd5b",
+          "settings": {
+            "playlist_id": ""
+          }
+        }
+      },
+      "block_order": [
+        "reelup_shoppable_videos_reels_reelup_playlist_RCNQjf"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "8a29706a-4dde-42c4-b560-8ff1c3579da7": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18003130515744__8a29706a-4dde-42c4-b560-8ff1c3579da7-16773542141e3728c3-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Cold & Clean Water With The Press of a Button",
+            "heading_size": "h1"
+          }
+        },
+        "template--18003130515744__8a29706a-4dde-42c4-b560-8ff1c3579da7-16773542141e3728c3-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The smart water chiller can cool the water down to 37. No more buying ice or wasting time freezing water bottles. You have more important things to do rather than dealing with fetching ice or constantly replacing dirty water.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--18003130515744__8a29706a-4dde-42c4-b560-8ff1c3579da7-16773542141e3728c3-0",
+        "template--18003130515744__8a29706a-4dde-42c4-b560-8ff1c3579da7-16773542141e3728c3-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/MobileAppControl_a7f131e8-74de-4dba-a766-bbbc602c6897.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "b1898b11-2c5a-413d-a902-c65c8b666dad": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18003130515744__b1898b11-2c5a-413d-a902-c65c8b666dad-167734931895fa7474-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ready For You Each Morning Without Hassle",
+            "heading_size": "h1"
+          }
+        },
+        "template--18003130515744__b1898b11-2c5a-413d-a902-c65c8b666dad-167734931895fa7474-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Control the temperature from anywhere with our mobile app. Easily adjust temperature and schedule automatic on\/off for ice cold ready water in the morning.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--18003130515744__b1898b11-2c5a-413d-a902-c65c8b666dad-167734931895fa7474-0",
+        "template--18003130515744__b1898b11-2c5a-413d-a902-c65c8b666dad-167734931895fa7474-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/water_chiller_for_ice_bath.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "a6934842-7238-4199-9035-8d64612a106e": {
+      "type": "custom-product-compare",
+      "blocks": {
+        "825b4444-0786-4774-994a-602b48d8e294": {
+          "type": "item_block",
+          "settings": {
+            "info": "Ice Bath Structure",
+            "own_text": "Super Sturdy",
+            "other_text": "Cheap and unstable tub"
+          }
+        },
+        "010ceca0-066c-4ef6-abee-9c285868e277": {
+          "type": "item_block",
+          "settings": {
+            "info": "Tub Size",
+            "own_text": "Fits Up To 2 People",
+            "other_text": "Fits 1"
+          }
+        },
+        "5dc46a3c-2900-4191-a4aa-0697ba263c71": {
+          "type": "item_block",
+          "settings": {
+            "info": "Ease Of Setup",
+            "own_text": "Plug and Play Design",
+            "other_text": "Heavy, difficult to move or transport"
+          }
+        },
+        "571cec14-fec6-4027-bf7b-8794caec9d93": {
+          "type": "item_block",
+          "settings": {
+            "info": "Fits Users Up To 6'9\"",
+            "own_text": "Yes",
+            "other_text": "No"
+          }
+        },
+        "dba4a67f-aec6-4993-a8f2-79b476295b7c": {
+          "type": "item_block",
+          "settings": {
+            "info": "Suitable For Outdoor And Indoor",
+            "own_text": "Yes",
+            "other_text": "Yes"
+          }
+        },
+        "85f65d21-58b9-4a6c-a89b-edf68810df33": {
+          "type": "item_block",
+          "settings": {
+            "info": "Chiller Phone Control",
+            "own_text": "Yes",
+            "other_text": "No"
+          }
+        },
+        "06a050a8-3ddd-4da1-8dc8-351d2a8cb7f5": {
+          "type": "item_block",
+          "settings": {
+            "info": "Chiller Capabilities",
+            "own_text": "Cooling + Heating",
+            "other_text": "Cooling only"
+          }
+        },
+        "f835aecd-c903-4ec9-b04a-c29fecdefea0": {
+          "type": "item_block",
+          "settings": {
+            "info": "Easy Setup",
+            "own_text": "Yes",
+            "other_text": "Yes"
+          }
+        }
+      },
+      "block_order": [
+        "825b4444-0786-4774-994a-602b48d8e294",
+        "010ceca0-066c-4ef6-abee-9c285868e277",
+        "5dc46a3c-2900-4191-a4aa-0697ba263c71",
+        "571cec14-fec6-4027-bf7b-8794caec9d93",
+        "dba4a67f-aec6-4993-a8f2-79b476295b7c",
+        "85f65d21-58b9-4a6c-a89b-edf68810df33",
+        "06a050a8-3ddd-4da1-8dc8-351d2a8cb7f5",
+        "f835aecd-c903-4ec9-b04a-c29fecdefea0"
+      ],
+      "settings": {
+        "heading": "Warrior vs Other Guys",
+        "description": "<p>You have more important things to do than dealing with ice or cleaning your ice bath tub every week<\/p>",
+        "logo": "shopify:\/\/shop_images\/warrior_willpower_logo_black_red_2b97e691-fa9d-4c20-9c14-76448c169963.png",
+        "other_title": "<p>Other Guys<\/p>",
+        "heading_color": "#ffffff",
+        "desc_color": "#ffffff",
+        "info_color": "#ffffff",
+        "own_color": "#000000",
+        "other_color": "#ffffff",
+        "own_bg": "#ffffff",
+        "other_title_color": "#ffffff",
+        "border_color": "#ffffff"
+      }
+    },
+    "671e1de3-4dcb-44d5-a6a6-9483b7b3bd88": {
+      "type": "image-with-text",
+      "blocks": {
+        "54d52f24-f598-4ed4-985d-9b3ea268b92e": {
+          "type": "heading",
+          "settings": {
+            "heading": "Plug & Play Setup",
+            "heading_size": "h1"
+          }
+        },
+        "9260f5bb-bf8f-47d3-9f6f-9b1d571567c8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Plug the pump and inflate, that is all you have to do. No tools required. Easy to deflate and carry with the included backpack. Pump included too.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "54d52f24-f598-4ed4-985d-9b3ea268b92e",
+        "9260f5bb-bf8f-47d3-9f6f-9b1d571567c8"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/warrior_willpower_ice_bath.webp",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "5bccb9a6-5dcc-4e38-b638-15033072bfa1": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18385956471097__5bccb9a6-5dcc-4e38-b638-15033072bfa1-1680259644d401e914-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unbreakable",
+            "heading_size": "h1"
+          }
+        },
+        "template--18385956471097__5bccb9a6-5dcc-4e38-b638-15033072bfa1-1680259644d401e914-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Spartan\/Warrior XL Ice bath is designed with the highest quality materials. The tub is more durable than any other inflatable cold plunge on the market and does not leak. Avoid the cheap ice baths that will leak after a month of use.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--18385956471097__5bccb9a6-5dcc-4e38-b638-15033072bfa1-1680259644d401e914-0",
+        "template--18385956471097__5bccb9a6-5dcc-4e38-b638-15033072bfa1-1680259644d401e914-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/warrior_ice_bath_durability_test.webp",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "cfec8b9b-6450-44bd-bded-c8d9d613ab0f": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_XaMFUM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is your shipping time?",
+            "icon": "question_mark",
+            "row_content": "<p><strong>Fast & free<\/strong> US local shipping.<\/p><p>Delivery in <strong>2 - 6 business days<\/strong> to mainland US from California warehouse.<\/p><p>Shipping to Canada takes place in 7 - 14 business days.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_xCFnJY": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is this going to hike up my bill?",
+            "icon": "question_mark",
+            "row_content": "<p>No, the chiller will not rack up high energy bills. It uses the same technology as your fridge\/freezer at home, which is very economical.<\/p><p>The exact power usage varies based on climate but expect to spend around $0.5-$1.5 per day in electricity (10  - 15 times less than buying ice if you plunge regularly!).<\/p><p><strong>One of the best investments you can make for your health and your family.<\/strong><\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_QKqQnJ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How often I should change the water filter?",
+            "icon": "question_mark",
+            "row_content": "<p>We recommend changing the water filter once every 1 - 2 months. You can purchase extra filters from the Accessories page.<\/p>",
+            "page": ""
+          }
+        },
+        "33c9cfa5-8950-4f13-a486-fd6a8d2e5d0b": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use the chiller outdoors?",
+            "icon": "question_mark",
+            "row_content": "<p>Definitely! We engineered the chiller to be weather and UV resistant, so you can set it up inside or outside.<\/p><p>The chiller is waterproof, so you can freely use it outside and don't have to cover it with anything.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_h8e6yd": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What temperatures can the water chiller achieve?",
+            "icon": "question_mark",
+            "row_content": "<p>The Water Chiller can cool water to an exhilarating 37 without the need for adding ice.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_8TgrTK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is the water chiller noisy?",
+            "icon": "question_mark",
+            "row_content": "<p>The water chiller is designed for quiet operation. We've prioritized ensuring that your cold plunge sessions are as peaceful as possible. Thanks to our advanced engineering, the chiller operates with minimal noise, allowing you to relax and rejuvenate without any disruptions, making it a top choice for both indoor and outdoor use.<\/p>",
+            "page": ""
+          }
+        },
+        "template--18003130515744__cfec8b9b-6450-44bd-bded-c8d9d613ab0f-1677349302a9e347fd-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How cold or warm the chiller can keep the water?",
+            "icon": "question_mark",
+            "row_content": "<p>The Warrior\/Spartan Max chiller can keep the water at a steady 37 - 40 F whilst filtering and keeping your water clean. It can warm it up to 104 F.<\/p>",
+            "page": ""
+          }
+        },
+        "template--18003130515744__cfec8b9b-6450-44bd-bded-c8d9d613ab0f-1677349302a9e347fd-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long it takes to cool down the water?",
+            "icon": "question_mark",
+            "row_content": "<p>The chiller cools down the water in 1 - 3 hours. It depends how much water volume there is inside the tub and your climate as well.<\/p>",
+            "page": ""
+          }
+        },
+        "1060d4b5-cb2c-48d1-b412-c855c34632f5": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is it easy to setup?",
+            "icon": "question_mark",
+            "row_content": "<p>The ice bath assembly takes less than 10 minutes and is super easy. Just inflate it with the pump and you are ready. <\/p><p>The chiller takes about 10 minutes as well - plug the hoses in the ice bath and that is it. We include a video setup guide with your purchase.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6arPNF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the ice bath size?",
+            "icon": "question_mark",
+            "row_content": "<ul><li>Dimensions: 60\"L x 31\"W x 26\"H<\/li><li>130 gal water capacity<\/li><li>Suitable for up to 6'9\"<\/li><li>Sized up to 2 people at the same time<\/li><\/ul>",
+            "page": ""
+          }
+        },
+        "template--18003130515744__cfec8b9b-6450-44bd-bded-c8d9d613ab0f-1677349302a9e347fd-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does the ice bath come with a lid?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes, it does!<\/p><p>It comes complete with an insulated inflatable lid. You will find it carefully folded inside the box.<\/p>",
+            "page": ""
+          }
+        },
+        "c7f823e2-62c3-4d1c-93cb-7da1d55a592d": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can you fit 2 people in the XL ice bath?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes, you can!<\/p><p>You can comfortably fit two in the bath at the same time, facing each other.<\/p>",
+            "page": ""
+          }
+        },
+        "3627007b-6243-42aa-b0fd-37c525df3b8b": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I am over 6ft, will I fit?",
+            "icon": "question_mark",
+            "row_content": "<p>We've designed our bath to fit anyone up to 6'9\".<\/p>",
+            "page": ""
+          }
+        },
+        "db9ceae5-e1eb-47a9-bd0e-16c6745c7370": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I drain the ice bath?",
+            "icon": "question_mark",
+            "row_content": "<p>The Spartan\/Warrior XL Ice Bath has a drain tap at the bottom, so you can easily drain it. Just unplug the chiller if it is connected and the water will be drained.<\/p><p>We also include a tap so you can stop the water if you don't want to use the chiller.<\/p>",
+            "page": ""
+          }
+        },
+        "2dbe76fe-e4ae-4e98-aecc-a2247f667bba": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How often should I change the water?",
+            "icon": "question_mark",
+            "row_content": "<p>Whenever you notice that it is dirty. Usually once every 3 - 6. We recommend washing the inside surfaces with warm soapy water or mild disinfectant after you drain it. <\/p><p>Also, we recommend washing your legs before taking a cold plunge and keeping the ice bath lid on when not using.<\/p>",
+            "page": ""
+          }
+        },
+        "template--18003130515744__cfec8b9b-6450-44bd-bded-c8d9d613ab0f-1677349302a9e347fd-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I keep the water clean for longer?",
+            "icon": "question_mark",
+            "row_content": "<p>Always keep the lid on when not in use, to help prevent any debris from falling in. <\/p><p>Also, you can apply hydrogen peroxide and chlorine tablets or water sanitizer.<\/p>",
+            "page": ""
+          }
+        },
+        "7e548cc5-42d0-4796-92cd-8d58fabff096": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the recommended water temperature for cold plunge?",
+            "icon": "question_mark",
+            "row_content": "<p>We recommend starting out at around 59 F (15°C) if it's your first time, and then slowly lowering the temperature and duration for each session. That way your body will get acclimated to the cold.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_XaMFUM",
+        "collapsible_row_xCFnJY",
+        "collapsible_row_QKqQnJ",
+        "33c9cfa5-8950-4f13-a486-fd6a8d2e5d0b",
+        "collapsible_row_h8e6yd",
+        "collapsible_row_8TgrTK",
+        "template--18003130515744__cfec8b9b-6450-44bd-bded-c8d9d613ab0f-1677349302a9e347fd-3",
+        "template--18003130515744__cfec8b9b-6450-44bd-bded-c8d9d613ab0f-1677349302a9e347fd-2",
+        "1060d4b5-cb2c-48d1-b412-c855c34632f5",
+        "collapsible_row_6arPNF",
+        "template--18003130515744__cfec8b9b-6450-44bd-bded-c8d9d613ab0f-1677349302a9e347fd-0",
+        "c7f823e2-62c3-4d1c-93cb-7da1d55a592d",
+        "3627007b-6243-42aa-b0fd-37c525df3b8b",
+        "db9ceae5-e1eb-47a9-bd0e-16c6745c7370",
+        "2dbe76fe-e4ae-4e98-aecc-a2247f667bba",
+        "template--18003130515744__cfec8b9b-6450-44bd-bded-c8d9d613ab0f-1677349302a9e347fd-1",
+        "7e548cc5-42d0-4796-92cd-8d58fabff096"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "FAQ",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "169619951643a20f88": {
+      "type": "apps",
+      "blocks": {
+        "4d2b0362-61e7-45af-a31b-a7447a098c3e": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "4d2b0362-61e7-45af-a31b-a7447a098c3e"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "549ef67a-45ec-4796-8171-9d6037ff6460": {
+      "type": "collapsible-content",
+      "blocks": {
+        "d656e7a4-9da6-491f-83a1-5522cf51bdd0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Enhances Your Physical Recovery",
+            "icon": "lightning_bolt",
+            "row_content": "<p>A meta-analysis of cold-water immersion effects on recovery found that cold exposure can be a highly effective recovery tool after high-intensity exercise or endurance training. Short interval (&lt; 5 mins), cold water immersion demonstrated positive outcomes for muscle power, perceived recovery, and decreased muscle soreness (in part due to a reduction in circulating creatine kinases).<\/p>",
+            "page": ""
+          }
+        },
+        "template--18003130515744__549ef67a-45ec-4796-8171-9d6037ff6460-1677349302a9e347fd-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Elevates Your Mood And Energy",
+            "icon": "eye",
+            "row_content": "<p>Cold exposure causes the prolonged release of <strong>dopamine<\/strong>. Dopamine is a powerful molecule capable of elevating mood, enhancing focus, attention, goal-directed behavior, etc. Even short bouts of cold exposure can cause a lasting increase in dopamine and sustained elevation of mood, energy, and focus.<\/p>",
+            "page": ""
+          }
+        },
+        "25824cbb-e74f-47fd-8867-ef2c2829c9e1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Increases Your Metabolism",
+            "icon": "fire",
+            "row_content": "<p>Cold exposure <strong>increases metabolism <\/strong>as the body has to burn calories to increase core body temperature. The conversion of white fat (energy storage) to beige or brown fat (which are highly metabolically active) can be beneficial for triggering further and more sustained increases in metabolism<\/p>",
+            "page": ""
+          }
+        },
+        "623334b9-a687-4fc3-bf7a-100420ee463e": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Reduces Stress",
+            "icon": "heart",
+            "row_content": "<p>By forcing yourself to embrace the stress of cold exposure as a meaningful self-directed challenge (i.e., stressor), you exert what is called 'top-down control' over deeper brain centers that regulate reflexive states. This top-down control process involves your prefrontal cortex – an area of your brain involved in planning and suppressing impulsivity. That 'top-down' control is the basis of what people refer to when they talk about \"resilience and grit.\" Importantly, it is a skill that carries over to situations outside of the deliberate cold environment, allowing you to cope better and maintain a calm, clear mind when confronted with real-world stressors. In other words, deliberate cold exposure is great training for the mind.<\/p>",
+            "page": ""
+          }
+        },
+        "009d1d81-bbf7-4295-9e02-b87329ab486d": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Improves The Quality Of Your Sleep",
+            "icon": "star",
+            "row_content": "<p>Cold exposure can have significant effects on your circadian rhythm and quality of sleep. The circadian rhythm is the body's natural internal clock that regulates sleep and wakefulness. Exposure to cold can help regulate the circadian rhythm by promoting the release of the hormone melatonin, which is critical for the sleep-wake cycle. In terms of sleep quality, exposure to cold temperatures can increase the amount of slow-wave sleep, which is the deep, restorative sleep that is critical for physical and mental health<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "d656e7a4-9da6-491f-83a1-5522cf51bdd0",
+        "template--18003130515744__549ef67a-45ec-4796-8171-9d6037ff6460-1677349302a9e347fd-0",
+        "25824cbb-e74f-47fd-8867-ef2c2829c9e1",
+        "623334b9-a687-4fc3-bf7a-100420ee463e",
+        "009d1d81-bbf7-4295-9e02-b87329ab486d"
+      ],
+      "custom_css": [
+        ".color-accent-2.gradient {max-width: 1100px; margin: 0 auto;}"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Health Benefits of Ice Baths",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "accent-2",
+        "container_color_scheme": "accent-1",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "f74ea555-4d13-43f2-afa4-c52b2686e798": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18385956471097__f74ea555-4d13-43f2-afa4-c52b2686e798-168025963449b0275b-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h1>Why Choose Us<\/h1>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--18385956471097__f74ea555-4d13-43f2-afa4-c52b2686e798-168025963449b0275b-0"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 32,
+        "custom_class": ""
+      }
+    },
+    "e51462bf-052e-4a93-89f3-4fb4299dfbac": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--18385956471097__e51462bf-052e-4a93-89f3-4fb4299dfbac-168026041319a0bf04-0": {
+          "type": "column",
+          "settings": {
+            "title": "60 DAY TRIAL",
+            "text": "<p>If you are not happy with our product we will take it back and refund you, no questions asked. Easy returns with pre-paid labels and home pick-up arranged.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18385956471097__e51462bf-052e-4a93-89f3-4fb4299dfbac-168026041319a0bf04-1": {
+          "type": "column",
+          "settings": {
+            "title": "1 YEAR WARRANTY",
+            "text": "<p>We stand behind the integrity of our products and offer a warranty for 1 year. You get full support even outside the warranty period.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18385956471097__e51462bf-052e-4a93-89f3-4fb4299dfbac-168026041319a0bf04-2": {
+          "type": "column",
+          "settings": {
+            "title": "FREE SHIPPING & 24\/7 CUSTOMER SUPPORT",
+            "text": "<p>Fast shipping in 2 - 6 business days to US mainland. Best in class customer support, ready to help you via email, live chat and text message.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18385956471097__e51462bf-052e-4a93-89f3-4fb4299dfbac-168026041319a0bf04-0",
+        "template--18385956471097__e51462bf-052e-4a93-89f3-4fb4299dfbac-168026041319a0bf04-1",
+        "template--18385956471097__e51462bf-052e-4a93-89f3-4fb4299dfbac-168026041319a0bf04-2"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 32
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "c_sticky_atc_Dkg3MV",
+    "main",
+    "2497026c-2b2d-44f0-a5cb-121f92ec2900",
+    "why_choose_ice_bath_BawmJW",
+    "174076842188df4d50",
+    "8a29706a-4dde-42c4-b560-8ff1c3579da7",
+    "b1898b11-2c5a-413d-a902-c65c8b666dad",
+    "a6934842-7238-4199-9035-8d64612a106e",
+    "671e1de3-4dcb-44d5-a6a6-9483b7b3bd88",
+    "5bccb9a6-5dcc-4e38-b638-15033072bfa1",
+    "cfec8b9b-6450-44bd-bded-c8d9d613ab0f",
+    "169619951643a20f88",
+    "549ef67a-45ec-4796-8171-9d6037ff6460",
+    "f74ea555-4d13-43f2-afa4-c52b2686e798",
+    "e51462bf-052e-4a93-89f3-4fb4299dfbac",
+    "related-products"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "parent": "product.water-chiller-ice-bath.json",
+  "context": {
+    "market": "us"
+  },
+  "sections": {
+    "featured_product_BdEEq": {
+      "type": "featured-product",
+      "blocks": {
+        "title_JBcbW": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_daQTi": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_7Tnjk": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "buy_buttons_w3dzL": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        }
+      },
+      "block_order": [
+        "title_JBcbW",
+        "price_daQTi",
+        "variant_picker_7Tnjk",
+        "buy_buttons_w3dzL"
+      ],
+      "settings": {
+        "product": "warrior-pro-chiller-xl-plunge-bath",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "none",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "aae778b3-6bc3-40d4-95f2-62a68ce2062a",
+    "549ef67a-45ec-4796-8171-9d6037ff6460",
+    "afe0a8e7-7113-4293-8ebc-1ed8ba8de29a",
+    "28343725-726e-4920-9da6-cbe9cae869d9",
+    "7b07b451-f820-44ac-bdd8-94c07944627f",
+    "020b5491-704c-4446-8696-d2684fab6344",
+    "f74ea555-4d13-43f2-afa4-c52b2686e798",
+    "e51462bf-052e-4a93-89f3-4fb4299dfbac",
+    "9e23445b-f777-4c6e-b9f0-f0ed1014f4f4",
+    "featured_product_BdEEq"
+  ]
+}

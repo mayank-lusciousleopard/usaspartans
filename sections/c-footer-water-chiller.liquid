@@ -1,0 +1,66 @@
+<section id="{{ section.id }}" class=" tw-p-5 md:tw-px-16 md:tw-pb-14 md:tw-pt-0"
+style="background:linear-gradient(0deg, #F0F8FF 0%, #FFF 100%);"
+>
+<div class="tw-flex tw-flex-col md:tw-flex-row">
+    <div class="tw-flex tw-flex-col tw-py-4 md:tw-p-12 md:tw-w-1/2 tw-gap-4 tw-self-center">
+        <h2 class="tw-text-4xl tw-font-bold">{{ section.settings.section_heading }}</h2>
+        <p class="tw-text-lg tw-font-[500]">{{ section.settings.description_footer }}</p>
+        <a
+            class="tw-py-3 tw-w-fit tw-px-6 tw-gap-2.5 tw-rounded-[10px] tw-opacity-100 tw-bg-custom-gradient tw-text-white tw-font-bold tw-flex tw-items-center tw-justify-center hover:!tw-bg-custom-gradient-hover"
+            href="{{ section.settings.button_url_1 | default: '#' }}"
+          >
+            {{ section.settings.button_text_1 }}
+          </a>
+    </div>
+    <div class="md:tw-w-1/2">
+        <img 
+            src="{{ section.settings.image | image_url: width: 2160 }}" 
+            alt="picture" 
+            width="auto" 
+            height="auto" 
+            class="tw-object-cover tw-rounded-3xl tw-w-full tw-h-full"
+        >
+    </div>
+</div>
+</section>
+  
+  {% schema %}
+  {
+    "name": "C Footer Water Chiller",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section_heading",
+        "label": "Heading",
+      },
+      {
+        "type": "text",
+        "id": "description_footer",
+        "label": "Description",
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Picture"
+      },
+      {
+        "type": "text",
+        "id": "button_text_1",
+        "label": "Button Text 1",
+        "default": "Start Quiz"
+      },
+      {
+        "type": "url",
+        "id": "button_url_1",
+        "label": "Button URL 1"
+      },
+    ],
+    "presets": [
+      {
+        "name": "C Footer Water Chiller",
+        "category": "custom"
+      }
+    ]
+  }
+  {% endschema %}
+  

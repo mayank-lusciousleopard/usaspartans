@@ -1,0 +1,845 @@
+{
+  "sections": {
+    "c_tailwind_CPDFXf": {
+      "type": "c-tailwind",
+      "settings": {}
+    },
+    "q4_collection_banner_aHYkxm": {
+      "type": "q4-collection-banner",
+      "disabled": true,
+      "name": "Q4 Collection Banner",
+      "settings": {
+        "eyebrow": "Spend More",
+        "title": "Save More",
+        "subtitle": "Tiered savings up to $550 — Ends Nov 10",
+        "gradient_start": "#143549",
+        "gradient_end": "#065367",
+        "image_bg_mobile": "shopify:\/\/shop_images\/wwp-q4-col-m_e227ca75-0106-4b0f-bde7-26b307cd01c7.png",
+        "image_bg_desktop": "shopify:\/\/shop_images\/wwp-q4-col-d_517b9192-51e8-4a38-993d-63a10da88793.png"
+      }
+    },
+    "c_banner_water_chiller_GBLrjK": {
+      "type": "c-banner-water-chiller",
+      "disabled": true,
+      "custom_css": [
+        "h2 {text-align: left; margin-bottom: 0px !important;}",
+        ".tw-z-10 {z-index: 2;}"
+      ],
+      "settings": {
+        "padding_top": 4,
+        "padding_bottom": 4,
+        "section_span_heading_first_part": "Home",
+        "section_span_heading_second_part": "\/ Water Chillers",
+        "section_heading": "",
+        "description_banner": ""
+      }
+    },
+    "collection_banner_RCyPJV": {
+      "type": "collection-banner",
+      "name": "Collection Banner New",
+      "settings": {
+        "background_image_des": "shopify:\/\/shop_images\/banner-bckg-des.png",
+        "background_image_mobile": "shopify:\/\/shop_images\/banner-bckg-mob.png"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "custom_css": [
+        ".collection-hero__title {font-size: 2em;}",
+        "@media (min-width: 750px) {.collection-hero__title {font-size: 3em; }}"
+      ],
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "disabled": true,
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": false,
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "new_breadcrumbs_A8CmRe": {
+      "type": "new-breadcrumbs",
+      "name": "New Breadcrumbs",
+      "settings": {}
+    },
+    "ll_collection_banner_kMHGFX": {
+      "type": "ll-collection-banner",
+      "name": "LL Collection Banner",
+      "settings": {
+        "image": "{{ collection.metafields.custom.ll_banner_desktop.value }}",
+        "max_width": 1200,
+        "image_height": 0,
+        "image_height_mobile": 0,
+        "object_fit": "cover",
+        "bg_color": "#ffffff",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_left": 0,
+        "margin_right": 0,
+        "margin_top_m": 0,
+        "margin_bottom_m": 0,
+        "margin_left_m": 0,
+        "margin_right_m": 0
+      }
+    },
+    "c_collection_page_pn8Yrt": {
+      "type": "c-collection-page",
+      "custom_css": [
+        ".facets__disclosure-vertical {margin-top: 24px; border-top: 1px solid #084d93;}",
+        ".bold {font-weight: bold;}",
+        "@media (max-width: 750px) {.active-facets {display: none; } .active-facets__button {padding: 0 !important; }}",
+        ".field:after {box-shadow: none; border-radius: 10px;}",
+        ".field:before {border: 1px solid #084d93; border-radius: 10px; z-index: 1;}",
+        ".facet-checkbox > svg {display: none;}",
+        ".facet-checkbox > input {border: 1px solid black; border-radius: 4px; position: static; margin-right: 12px; -webkit-appearance: 1;}",
+        ".card__content {padding: 0px;}"
+      ],
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "c_table_section_cjpJFa": {
+      "type": "c-table-section",
+      "blocks": {
+        "image_products_REjbyb": {
+          "type": "image_products",
+          "settings": {
+            "title_1": "",
+            "paragraph_1": "",
+            "button_url_2": "https:\/\/warriorwillpower.com\/products\/spartan-water-chiller-for-ice-bath-cold-plunge-water-chiller?variant=46779461337427",
+            "button_text_2": "LEARN MORE",
+            "image_2": "shopify:\/\/shop_images\/waterchillericebath_566d1581-3150-4e09-9215-6b96302fc40c.jpg",
+            "title_2": "0.5 HP PRO",
+            "paragraph_2": "",
+            "button_url_3": "shopify:\/\/products\/warrior-max-1-hp-wi-fi-water-chiller-heater",
+            "button_text_3": "LEARN MORE",
+            "image_3": "shopify:\/\/shop_images\/1.5hpwaterchiller.jpg",
+            "title_3": "1 HP Wi-Fi",
+            "paragraph_3": "",
+            "button_url_4": "shopify:\/\/products\/water-chiller-for-ice-bath-1-hp",
+            "button_text_4": "LEARN MORE",
+            "image_4": "shopify:\/\/shop_images\/water-chiller-ice-bath.jpg",
+            "title_4": "1 HP Standard",
+            "paragraph_4": "",
+            "background_active": false,
+            "background_color": ""
+          }
+        },
+        "block_title_8Ptre6": {
+          "type": "block_title",
+          "settings": {
+            "title": "Cooling Power",
+            "alignment": "left"
+          }
+        },
+        "product_table_c88WHq": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Range",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "Cools down to 39-45ºF\n<br>\nNo heating",
+            "title_3": "",
+            "paragraph_3": "Cools down to 37ºF\n<br>\nHeats up to 104ºF",
+            "title_4": "",
+            "paragraph_4": "Cools down to 39ºF\n<br>\nNo heating",
+            "background_active": false,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "product_table_iU6VkJ": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Water Capacity",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "Up to 80 gallons",
+            "title_3": "",
+            "paragraph_3": "Up to 130 gallons",
+            "title_4": "",
+            "paragraph_4": "Up to 90 gallons",
+            "background_active": true,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "product_table_MN4GpC": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Ambient Temp",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "< 85°F",
+            "title_3": "",
+            "paragraph_3": "< 110°F",
+            "title_4": "",
+            "paragraph_4": "< 90°F",
+            "background_active": false,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "block_title_3Gy4gX": {
+          "type": "block_title",
+          "settings": {
+            "title": "Performance",
+            "alignment": "left"
+          }
+        },
+        "product_table_Yrt3pe": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Compressor",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "X2 Faster Cooling\n<br>Than Competitors",
+            "title_3": "",
+            "paragraph_3": "X4 Faster Cooling\n<br>Than Competitors",
+            "title_4": "",
+            "paragraph_4": "X2.5 Faster Cooling\n<br>Than Competitors",
+            "background_active": true,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "product_table_ifLi6b": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "UV Disinfection",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "",
+            "icon_2": "shopify:\/\/shop_images\/x-icon_2c35e6b6-8eae-405a-87a3-c8bd0b45483a.png",
+            "title_3": "",
+            "paragraph_3": "",
+            "icon_3": "shopify:\/\/shop_images\/check_circle_2.png",
+            "title_4": "",
+            "paragraph_4": "",
+            "icon_4": "shopify:\/\/shop_images\/x-icon_2c35e6b6-8eae-405a-87a3-c8bd0b45483a.png",
+            "background_active": false,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "product_table_VzKgaH": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Filtration",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "Single filter",
+            "title_3": "",
+            "paragraph_3": "Double filter",
+            "title_4": "",
+            "paragraph_4": "Single filter",
+            "background_active": true,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "product_table_jHPyeV": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Pump type",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "External",
+            "title_3": "",
+            "paragraph_3": "Built-in Internal",
+            "title_4": "",
+            "paragraph_4": "External",
+            "background_active": false,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "product_table_97KmYJ": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "App Control",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "",
+            "icon_2": "shopify:\/\/shop_images\/x-icon_2c35e6b6-8eae-405a-87a3-c8bd0b45483a.png",
+            "title_3": "",
+            "paragraph_3": "",
+            "icon_3": "shopify:\/\/shop_images\/check_circle_2.png",
+            "title_4": "",
+            "paragraph_4": "",
+            "icon_4": "shopify:\/\/shop_images\/x-icon_2c35e6b6-8eae-405a-87a3-c8bd0b45483a.png",
+            "background_active": true,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "product_table_xzCbyf": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Scheduling Feature",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "",
+            "icon_2": "shopify:\/\/shop_images\/x-icon_2c35e6b6-8eae-405a-87a3-c8bd0b45483a.png",
+            "title_3": "",
+            "paragraph_3": "",
+            "icon_3": "shopify:\/\/shop_images\/check_circle_2.png",
+            "title_4": "",
+            "paragraph_4": "",
+            "icon_4": "shopify:\/\/shop_images\/x-icon_2c35e6b6-8eae-405a-87a3-c8bd0b45483a.png",
+            "background_active": false,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "product_table_graTwh": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "On\/Off Timer",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "",
+            "icon_2": "shopify:\/\/shop_images\/x-icon_2c35e6b6-8eae-405a-87a3-c8bd0b45483a.png",
+            "title_3": "",
+            "paragraph_3": "",
+            "icon_3": "shopify:\/\/shop_images\/check_circle_2.png",
+            "title_4": "",
+            "paragraph_4": "",
+            "icon_4": "shopify:\/\/shop_images\/x-icon_2c35e6b6-8eae-405a-87a3-c8bd0b45483a.png",
+            "background_active": true,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "product_table_wGya8D": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Auto-Defrost Funcionality",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "",
+            "icon_2": "shopify:\/\/shop_images\/x-icon_2c35e6b6-8eae-405a-87a3-c8bd0b45483a.png",
+            "title_3": "",
+            "paragraph_3": "",
+            "icon_3": "shopify:\/\/shop_images\/check_circle_2.png",
+            "title_4": "",
+            "paragraph_4": "",
+            "icon_4": "shopify:\/\/shop_images\/x-icon_2c35e6b6-8eae-405a-87a3-c8bd0b45483a.png",
+            "background_active": false,
+            "background_color": "#f0f0f0"
+          }
+        },
+        "product_table_HaELFP": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Fits Any Ice Bath",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "",
+            "icon_2": "shopify:\/\/shop_images\/check_circle_2.png",
+            "title_3": "",
+            "paragraph_3": "",
+            "icon_3": "shopify:\/\/shop_images\/check_circle_2.png",
+            "title_4": "",
+            "paragraph_4": "",
+            "icon_4": "shopify:\/\/shop_images\/check_circle_2.png",
+            "background_active": true,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "block_title_PgnGEn": {
+          "type": "block_title",
+          "settings": {
+            "title": "Build & Durability",
+            "alignment": "left"
+          }
+        },
+        "product_table_ieCPaG": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Waterproof",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "",
+            "icon_2": "shopify:\/\/shop_images\/x-icon_2c35e6b6-8eae-405a-87a3-c8bd0b45483a.png",
+            "title_3": "",
+            "paragraph_3": "",
+            "icon_3": "shopify:\/\/shop_images\/check_circle_2.png",
+            "title_4": "",
+            "paragraph_4": "",
+            "icon_4": "shopify:\/\/shop_images\/x-icon_2c35e6b6-8eae-405a-87a3-c8bd0b45483a.png",
+            "background_active": false,
+            "background_color": "#f0f0f0"
+          }
+        },
+        "product_table_Kt9BJm": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Easy Maintenance",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "",
+            "icon_2": "shopify:\/\/shop_images\/check_circle_2.png",
+            "title_3": "",
+            "paragraph_3": "",
+            "icon_3": "shopify:\/\/shop_images\/check_circle_2.png",
+            "title_4": "",
+            "paragraph_4": "",
+            "icon_4": "shopify:\/\/shop_images\/check_circle_2.png",
+            "background_active": true,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "product_table_hW9ddR": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Silent Performance",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "",
+            "icon_2": "shopify:\/\/shop_images\/check_circle_2.png",
+            "title_3": "",
+            "paragraph_3": "",
+            "icon_3": "shopify:\/\/shop_images\/check_circle_2.png",
+            "title_4": "",
+            "paragraph_4": "",
+            "icon_4": "shopify:\/\/shop_images\/check_circle_2.png",
+            "background_active": false,
+            "background_color": "#f0f0f0"
+          }
+        },
+        "block_title_E3kjxY": {
+          "type": "block_title",
+          "settings": {
+            "title": "Extras & Pricing",
+            "alignment": "left"
+          }
+        },
+        "product_table_6qtdqw": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Price",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "$1,200",
+            "title_3": "",
+            "paragraph_3": "$2,000",
+            "title_4": "",
+            "paragraph_4": "$1,500",
+            "background_active": true,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "product_table_pPCPyt": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Bonuses",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "No",
+            "title_3": "",
+            "paragraph_3": "Free filters\n<br>Free thermometer\n<br>Free timer",
+            "title_4": "",
+            "paragraph_4": "No",
+            "background_active": false,
+            "background_color": "#f0f0f0"
+          }
+        }
+      },
+      "block_order": [
+        "image_products_REjbyb",
+        "block_title_8Ptre6",
+        "product_table_c88WHq",
+        "product_table_iU6VkJ",
+        "product_table_MN4GpC",
+        "block_title_3Gy4gX",
+        "product_table_Yrt3pe",
+        "product_table_ifLi6b",
+        "product_table_VzKgaH",
+        "product_table_jHPyeV",
+        "product_table_97KmYJ",
+        "product_table_xzCbyf",
+        "product_table_graTwh",
+        "product_table_wGya8D",
+        "product_table_HaELFP",
+        "block_title_PgnGEn",
+        "product_table_ieCPaG",
+        "product_table_Kt9BJm",
+        "product_table_hW9ddR",
+        "block_title_E3kjxY",
+        "product_table_6qtdqw",
+        "product_table_pPCPyt"
+      ],
+      "settings": {
+        "padding_top": 4,
+        "padding_bottom": 4,
+        "text_color": "#000000",
+        "accent_color": "#000000",
+        "section_top_alignment": "center",
+        "section_container": "page-width",
+        "section_top_subheading": "",
+        "section_top_heading": "",
+        "section_top_paragraph": "<p>Compare key features, cooling performance, and durability to choose the right fit for you<\/p>",
+        "text_alignment": "center"
+      }
+    },
+    "c_blocks_home_drEcVq": {
+      "type": "c-blocks-home",
+      "settings": {
+        "blocks_direction": "vertical",
+        "blocks_alignment": "left",
+        "icon_width": 3,
+        "section_container": "page-width",
+        "use_separator_boder": false,
+        "columns": 3,
+        "mobile_columns": 2,
+        "accent_color": "#5d3be4",
+        "bg_color": "#ffffff",
+        "bg_color_gradient": "linear-gradient(180deg, rgba(14, 131, 249, 0.10) 0%, rgba(14, 131, 249, 0.00) 100%)",
+        "text_color": "#000000",
+        "section_top_subheading": "Proven Recovery Results",
+        "section_top_heading": "Cold Plunge Chillers for Cold & Filtrated Water 24\/7",
+        "section_top_paragraph": "<p>Cold water therapy reduces inflammation, speeds up recovery and improves you mentally. Keeping water cold is inconvenient as it requires constantly adding ice and time wasting maintenance. Our <strong>water chillers<\/strong> solve this problem by keeping your ice bath at the perfect temperature, ensuring you focus on recovering throughout your session. No more wasted time in maintenance.<\/p>",
+        "section_top_alignment": "center",
+        "text_alignment": "center",
+        "padding_top": 2,
+        "padding_bottom": 0
+      }
+    },
+    "1740217653c4aadc0e": {
+      "type": "apps",
+      "blocks": {
+        "reelup_shoppable_videos_reels_reelup_playlist_AptkCq": {
+          "type": "shopify:\/\/apps\/reelup-shoppable-videos-reels\/blocks\/reelup_playlist\/a8ec9e4d-d192-44f7-9c23-595f9ee7dd5b",
+          "settings": {
+            "playlist_id": ""
+          }
+        }
+      },
+      "block_order": [
+        "reelup_shoppable_videos_reels_reelup_playlist_AptkCq"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "c_features_blocks_aDEYKT": {
+      "type": "c-features-blocks",
+      "blocks": {
+        "feature_7Qqyjn": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/water_icon_655447b2-fec0-4bf4-b47c-104a8d9e5fea.png",
+            "title": "Warrior Willpower Wi-Fi Technology",
+            "description": "– Cools your ice bath water up to 4X faster than competing cold plunge chillers."
+          }
+        },
+        "feature_wnEM3K": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Clock_icon_1387ff98-714a-4b48-b601-07647463d64b.png",
+            "title": "Built for Longevity",
+            "description": "– Military-grade construction ensures long-lasting durability, even in hot weather up to 120 F."
+          }
+        },
+        "feature_RLFPnc": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/wifi_icon_5c1c9ec7-b4c3-4e74-ae35-e7e95d558ad2.png",
+            "title": "Convenient Features",
+            "description": "– Control your ice bath chiller remotely with a phone app, including temperature adjustments, scheduling, and on\/off controls."
+          }
+        },
+        "feature_eU6Q3c": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/light_bulb_icon_07ac3d01-0271-4810-a71f-89adbdd5f522.png",
+            "title": "Energy-Efficient Cooling",
+            "description": "– Cut energy costs with CryBoost™ technology, optimizing cooling power while maintaining peak efficiency."
+          }
+        }
+      },
+      "block_order": [
+        "feature_7Qqyjn",
+        "feature_wnEM3K",
+        "feature_RLFPnc",
+        "feature_eU6Q3c"
+      ],
+      "settings": {
+        "section_bg": "linear-gradient(180deg, #F0F8FF 0%, #FFF 100%)",
+        "features_bg": "linear-gradient(90deg, #0E83F9 0%, #084D93 100%)",
+        "section_text_color": "#ffffff",
+        "title": "Why Choose Our Ice Bath Chillers?",
+        "subtitle": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "c_footer_water_chiller_WrxAkx": {
+      "type": "c-footer-water-chiller",
+      "settings": {
+        "section_heading": "8 Step Guide To Choosing The Best Water Chiller",
+        "description_footer": "Read our comprehensive blog post about choosing the best water chiller for your ice bath",
+        "image": "shopify:\/\/shop_images\/water_chiller_ice_bath.png",
+        "button_text_1": "Read Guide",
+        "button_url_1": "https:\/\/warriorwillpower.com\/blogs\/ice-bath\/8-step-guide-to-choosing-the-best-water-chiller-for-your-ice-bath"
+      }
+    },
+    "rich_text_Y9FgQ3": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_mKYGcB": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>What to Look for in a Water Chiller for Ice Bath?<\/p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mKYGcB"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom_class": ""
+      }
+    },
+    "image_with_text_thAQP4": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_WpNXre": {
+          "type": "heading",
+          "settings": {
+            "heading": "Horsepower",
+            "heading_size": "h1"
+          }
+        },
+        "text_6DfeKR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Chillers range from 1\/3 HP for smaller setups to 1.5 HP for larger baths. Higher HP units cool water faster.<\/p><p>Small Tubs (50-80 gallons): A 1\/3 HP or 1\/2 HP chiller is usually sufficient.<\/p><p>Medium to Large Tubs (80-140 gallons): Opt for a 1 HP or 1.5 HP water chiller.<\/p><p>If you are looking for hassle-free ice bath recovery, getting the 1 HP Wi-Fi version is the best.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WpNXre",
+        "text_6DfeKR"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/ice-bath-water-chiller.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_LLG878": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_9U7P6B": {
+          "type": "heading",
+          "settings": {
+            "heading": "Noise levels & Energy Efficiency",
+            "heading_size": "h1"
+          }
+        },
+        "text_3kNNDE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ensure the chiller is less than 65 dB. Chillers with high Energy Efficiency help save on electricity while keeping your bath cold 24\/7. Noise level is also essential, primarily if you use the chiller indoors. All Warrior Willpower models are energy efficient and operate silently for peaceful recovery sessions. <\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9U7P6B",
+        "text_3kNNDE"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/water_chiller.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "c_footer_water_chiller_AkRjPU": {
+      "type": "c-footer-water-chiller",
+      "settings": {
+        "section_heading": "Not Sure Which Chiller is Right for You?",
+        "description_footer": "Find your perfect match in less than a minute - take our quick quiz now!",
+        "image": "shopify:\/\/shop_images\/water-chiller-quiz.webp",
+        "button_text_1": "Start Quiz",
+        "button_url_1": "shopify:\/\/pages\/water-chiller-quiz"
+      }
+    },
+    "c_home_faqs_6eq9pD": {
+      "type": "c-home-faqs",
+      "blocks": {
+        "faq_KKHeVA": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "What is an ice bath water chiller?",
+            "faq_answer": "<p>It is a machine that keeps your ice bath water cold and crystal clear, so you don’t need to add ice or change the water frequently. This saves you a lot of time and costs long term.<\/p>"
+          }
+        },
+        "faq_wDetTf": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "How do I clean and maintain it?",
+            "faq_answer": "<ul><li><strong>Check filters:<\/strong> Easily replace the filter when it becomes dirty to keep water fresh.<\/li><li><strong>Keep it away from the wall:<\/strong> Make sure there is at least a 20” distance between the chiller fan and the wall so it can easily exhaust the heated air.<\/li><\/ul>"
+          }
+        },
+        "faq_JQnE4h": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "Can I use a water chiller at home?",
+            "faq_answer": "<p>Yes! Warrior Willpower chillers are great for outdoor and indoor home use and make recovery simple.<\/p>"
+          }
+        },
+        "faq_iqpJ7q": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "Are these chillers energy-efficient?",
+            "faq_answer": "<p>Yes! Our chillers use patented CryBoost™ technology, which is up to 247% more energy efficient than competitors' versions.<\/p>"
+          }
+        },
+        "faq_hkGdPU": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "How noisy is the chiller?",
+            "faq_answer": "<p>Don’t worry about noise! Warrior Willpower chillers run quietly so you can relax during your ice bath. More than 40% of our customers use the chillers inside their garage with no complains about noise.<\/p>"
+          }
+        },
+        "faq_QxyXPL": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "How quickly does the water cool down?",
+            "faq_answer": "<p>Our chillers cool the water fast, usually in 2 - 3 hours, depending on the ambient temperatures and the tub size.<\/p><p>However, beware of the cheap models on the market - they sell chillers that are 1\/3 hp and take more than 12 hours to cool the water.<\/p>"
+          }
+        },
+        "faq_P8jGKC": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "Does the water chiller include accessories?",
+            "faq_answer": "<p>Yes! It includes all the essentials you need to get started, like connectors for easy setup, filters and setup videos.<\/p>"
+          }
+        },
+        "faq_aVkUkd": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "What’s the warranty policy?",
+            "faq_answer": "<p>Our warranty is valid for 1 year. We are confident in the quality of our products and offer free replacement if anything happens.<br\/><br\/>If you have any questions about this warranty or our products. Do not hesitate to contact our customer support team.<\/p><p>Read more in the <a href=\"https:\/\/warriorwillpower.com\/pages\/warranty-policy\" title=\"https:\/\/warriorwillpower.com\/pages\/warranty-policy\">warranty page.<\/a><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_KKHeVA",
+        "faq_wDetTf",
+        "faq_JQnE4h",
+        "faq_iqpJ7q",
+        "faq_hkGdPU",
+        "faq_QxyXPL",
+        "faq_P8jGKC",
+        "faq_aVkUkd"
+      ],
+      "settings": {
+        "use_grid": true,
+        "side": true,
+        "heading": "<p>Frequently Asked Questions<\/p>",
+        "paragraph": "<p>Have you got questions? We've got answers!<\/p>",
+        "button_text": "Buy Now",
+        "button_url": "",
+        "button_style": "c-b1",
+        "accent_color": "#000000",
+        "card_background": "linear-gradient(90deg, rgba(14, 131, 249, 1), rgba(9, 79, 149, 1) 100%, rgba(93, 59, 228, 0.3) 100%)",
+        "faq_text_border": "#ffffff",
+        "bg_color": "#ffffff",
+        "bg_color_gradient": "linear-gradient(180deg, #F0F8FF 0%, #FFF 100%);",
+        "text_color": "#000000",
+        "section_top_subheading": "Ice Bath Chiller FAQs",
+        "section_top_heading": "Need Help? We’ve Got You Covered",
+        "section_top_paragraph": "<p>Dive into our FAQ section to learn more about the benefits, features, and usage of our <strong>cold plunge chillers<\/strong> to better meet your needs.<\/p>",
+        "section_top_alignment": "center",
+        "text_alignment": "center",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    }
+  },
+  "order": [
+    "c_tailwind_CPDFXf",
+    "q4_collection_banner_aHYkxm",
+    "c_banner_water_chiller_GBLrjK",
+    "collection_banner_RCyPJV",
+    "banner",
+    "product-grid",
+    "new_breadcrumbs_A8CmRe",
+    "ll_collection_banner_kMHGFX",
+    "c_collection_page_pn8Yrt",
+    "c_table_section_cjpJFa",
+    "c_blocks_home_drEcVq",
+    "1740217653c4aadc0e",
+    "c_features_blocks_aDEYKT",
+    "c_footer_water_chiller_WrxAkx",
+    "rich_text_Y9FgQ3",
+    "image_with_text_thAQP4",
+    "image_with_text_LLG878",
+    "c_footer_water_chiller_AkRjPU",
+    "c_home_faqs_6eq9pD"
+  ]
+}

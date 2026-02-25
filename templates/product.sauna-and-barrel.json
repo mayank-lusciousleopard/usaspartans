@@ -1,0 +1,999 @@
+{
+  "layout": "theme.petko-water-lpd",
+  "sections": {
+    "c_sticky_atc_Dkg3MV": {
+      "type": "c-sticky-atc",
+      "settings": {
+        "use_custom_product": false,
+        "product": "",
+        "padding_top": 2,
+        "padding_bottom": 2
+      }
+    },
+    "85d87e5a-decb-4848-8e2d-67cc9e7c7446": {
+      "type": "horizontal-scroll-section",
+      "blocks": {
+        "36a64e2e-cf65-41b5-904b-c16b27f570ca": {
+          "type": "horizontal-text",
+          "settings": {
+            "horizontal_text": "Free Insured Shipping"
+          }
+        },
+        "5fabdbe4-85d7-4458-94f2-f6530c2e5e81": {
+          "type": "horizontal-text",
+          "settings": {
+            "horizontal_text": "1-YR WARRANTY"
+          }
+        },
+        "6b59f9b3-344b-4664-9a1f-b63336fa41b7": {
+          "type": "horizontal-text",
+          "settings": {
+            "horizontal_text": "MONEY BACK GUARANTEE"
+          }
+        }
+      },
+      "block_order": [
+        "36a64e2e-cf65-41b5-904b-c16b27f570ca",
+        "5fabdbe4-85d7-4458-94f2-f6530c2e5e81",
+        "6b59f9b3-344b-4664-9a1f-b63336fa41b7"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "aff76ae0-349c-410a-b075-784d9083fc15": {
+      "type": "cover-main-product",
+      "blocks": {
+        "b4422261-813c-45e7-8fd6-d0e6ab7b1315": {
+          "type": "title",
+          "settings": {}
+        },
+        "a51e43ff-ae60-4943-90b7-53a686b41780": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        },
+        "1b44937d-3f3d-4ba0-9a4b-166b78b00a80": {
+          "type": "price",
+          "settings": {}
+        },
+        "4f88e2c7-2309-4513-bea2-0964726646aa": {
+          "type": "description",
+          "settings": {}
+        },
+        "8e63bec9-67d5-42a9-aa57-73f7536692db": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "8adf70cf-a183-47a6-9e5d-768b8dfd87fe": {
+          "type": "quantity_title",
+          "disabled": true,
+          "settings": {}
+        },
+        "30f42dd0-f8f5-4a71-b9d2-6faefeb46886": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+            "qt_img": "shopify:\/\/shop_images\/q1.jpg",
+            "discount_text": "",
+            "quantity": "1"
+          }
+        },
+        "e4b82172-609f-45d1-8743-6618031f2dfe": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+            "qt_img": "shopify:\/\/shop_images\/q1.jpg",
+            "discount_text": "Save 10%",
+            "quantity": "2"
+          }
+        },
+        "1da5dd8e-f63b-43cc-bcba-26955186e3d4": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+            "qt_img": "shopify:\/\/shop_images\/q1.jpg",
+            "discount_text": "Save 20%",
+            "quantity": "3"
+          }
+        },
+        "9d24df4d-524b-47e5-8654-104e82e839aa": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+            "qt_img": "shopify:\/\/shop_images\/q1.jpg",
+            "discount_text": "Save 30%",
+            "quantity": "4"
+          }
+        },
+        "premium_info_AXTDHc": {
+          "type": "premium_info",
+          "settings": {
+            "heading": "HSA \/ FSA Eligible",
+            "text": "<p>save an average of 30% with pre tax funds Choose flex at checkout<\/p>",
+            "info_hover_text": "Use your HSA\/FSA card to pay for this item.",
+            "bg_color": "#f4f9f4",
+            "text_color": "#121212",
+            "icon_color": "#2e8b57",
+            "margin_top": 0,
+            "margin_bottom": 16
+          }
+        },
+        "c6468536-ee29-406c-b010-9846f659d408": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "11b8667c-8486-4268-82d2-7275fc38f93c": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "spartan-floating-chlorine-dispenser-100-tablets"
+          }
+        },
+        "32b382d2-a50b-4fd0-8df6-88f07fe79f05": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "big-cube-ice-tray-2-pack"
+          }
+        },
+        "fece741d-9b67-41a7-8b83-efbc8122632e": {
+          "type": "benefits-block",
+          "settings": {
+            "benefits-icon": "shopify:\/\/shop_images\/b1.svg",
+            "benefits-title": "Free Shipping"
+          }
+        },
+        "8ede9dc5-cc9a-4fd0-a448-fd633babacf1": {
+          "type": "benefits-block",
+          "settings": {
+            "benefits-icon": "shopify:\/\/shop_images\/b2.svg",
+            "benefits-title": "30 Day Return"
+          }
+        },
+        "451be1a8-6d83-4b40-b684-16ed48d658c1": {
+          "type": "benefits-block",
+          "settings": {
+            "benefits-icon": "shopify:\/\/shop_images\/b3.svg",
+            "benefits-title": "1 Year Warranty"
+          }
+        },
+        "0969c030-3108-4b59-9a36-cf12e48955b0": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "What's Included",
+            "faq_ans": "<p><strong>Sauna:<\/strong><\/p><ul><li>Spartan Portable Steam Sauna<\/li><li>Foldable seat<\/li><li>Steam sauna device<\/li><li>Remote control<\/li><li>Structure poles<\/li><li>Sweat absorbent mat<\/li><\/ul><p><strong>Ice bath:<\/strong><\/p><ul><li>Spartan Barrel<\/li><li>Spartan Barrel Insulated Lid<\/li><li>Double action pump<\/li><li>Backpack<\/li><li>Repair Kit<\/li><\/ul>"
+          }
+        },
+        "d627fa16-2dcf-4b46-93f8-927dc9bf100c": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "Specifications",
+            "faq_ans": "<p><strong>Spartan Sauna:<\/strong><\/p><ul><li>Size: Height 6'1 x 35\" Width<\/li><li>7 Heat Levels<\/li><li>Max temperature 120 F<\/li><li>Time Settings: 0 - 60 minutes<\/li><li>Control: SmartSteam unit and remote control<\/li><li>Water capacity: 0.8 Gallons<\/li><li>Voltage: 110 V<\/li><li>Non-Toxin materials<\/li><li>Warranty: 1 year<\/li><\/ul><p><strong>Spartan Barrel:<\/strong><\/p><ul><li>Diameter: 37\"<\/li><li>Height: 30\"<\/li><li>Capacity: 130 gallons<\/li><li>Fits up to 6'11<\/li><\/ul>"
+          }
+        },
+        "f37d3a50-fbe2-46cd-a288-939426decfa7": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "How do I clean the sauna?",
+            "faq_ans": "<p>The inside of the heat-insulated cover is designed to help prevent mold and bacteria build-up.<\/p><p>After use, we recommend leaving the door flap open to air out and wiping down the water vapor on the inside walls.<\/p>"
+          }
+        },
+        "d25a90a0-cd76-4bc0-bcbc-2acabdb2c2bd": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "Shipping and Returns",
+            "faq_ans": "<p>Shipping is FREE to the USA and Canada, taking between 7 - 14 business days after dispatch. We dispatch all orders within 2 - 5 business days.<\/p><p>You have 30 days to return the product. Return policy applies. Please check the return policy page.<\/p>"
+          }
+        },
+        "22dac0a3-2748-431f-8c30-c1cc30fd8d32": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "Satisfaction Guaranteed",
+            "faq_ans": "<p>Your satisfaction is our priority. If you are not happy with the product, we will take it back and fully refund you, no questions asked. We stand behind the integrity of our products and offer a 1-year warranty. In case of malfunction issues, you will receive a free replacement. Additionally, we provide 24\/7 customer support, ready to assist you via email, live chat, and SMS.<\/p>"
+          }
+        },
+        "950649e6-a3aa-4c9e-be33-884d377a7fe5": {
+          "type": "variant_popup1",
+          "disabled": true,
+          "settings": {
+            "popup_heaing1": "",
+            "popup1": "",
+            "popup_image": "shopify:\/\/shop_images\/Popup.jpg",
+            "content_popup": ""
+          }
+        },
+        "c604fa9b-d84f-4731-a548-c7d19ac7cb85": {
+          "type": "variant_popup2",
+          "disabled": true,
+          "settings": {
+            "popup_heaing2": "Upgrade Your Experience",
+            "popup2": "Opt for the Spartan Ice Bath bundle and receive a complimentary lid. Dive deeper into cold therapy with added value."
+          }
+        }
+      },
+      "block_order": [
+        "b4422261-813c-45e7-8fd6-d0e6ab7b1315",
+        "a51e43ff-ae60-4943-90b7-53a686b41780",
+        "1b44937d-3f3d-4ba0-9a4b-166b78b00a80",
+        "4f88e2c7-2309-4513-bea2-0964726646aa",
+        "8e63bec9-67d5-42a9-aa57-73f7536692db",
+        "8adf70cf-a183-47a6-9e5d-768b8dfd87fe",
+        "30f42dd0-f8f5-4a71-b9d2-6faefeb46886",
+        "e4b82172-609f-45d1-8743-6618031f2dfe",
+        "1da5dd8e-f63b-43cc-bcba-26955186e3d4",
+        "9d24df4d-524b-47e5-8654-104e82e839aa",
+        "premium_info_AXTDHc",
+        "c6468536-ee29-406c-b010-9846f659d408",
+        "11b8667c-8486-4268-82d2-7275fc38f93c",
+        "32b382d2-a50b-4fd0-8df6-88f07fe79f05",
+        "fece741d-9b67-41a7-8b83-efbc8122632e",
+        "8ede9dc5-cc9a-4fd0-a448-fd633babacf1",
+        "451be1a8-6d83-4b40-b684-16ed48d658c1",
+        "0969c030-3108-4b59-9a36-cf12e48955b0",
+        "d627fa16-2dcf-4b46-93f8-927dc9bf100c",
+        "f37d3a50-fbe2-46cd-a288-939426decfa7",
+        "d25a90a0-cd76-4bc0-bcbc-2acabdb2c2bd",
+        "22dac0a3-2748-431f-8c30-c1cc30fd8d32",
+        "950649e6-a3aa-4c9e-be33-884d377a7fe5",
+        "c604fa9b-d84f-4731-a548-c7d19ac7cb85"
+      ],
+      "settings": {
+        "date": "",
+        "overlay_width_d": 70,
+        "overlay_width_m": 32,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "2f598482-3d45-4778-b99c-688c5f7f0c10": {
+      "type": "featured-logos",
+      "blocks": {
+        "99ba62a8-9e50-4827-969a-06badef8a3f6": {
+          "type": "featured-logo",
+          "settings": {
+            "client-logo": "shopify:\/\/shop_images\/l1.png"
+          }
+        },
+        "d673a62b-d3e1-46f4-97ff-6d49747c7572": {
+          "type": "featured-logo",
+          "settings": {
+            "client-logo": "shopify:\/\/shop_images\/l2.svg"
+          }
+        },
+        "a0c18d80-7196-4dd9-9690-592902ce074b": {
+          "type": "featured-logo",
+          "settings": {
+            "client-logo": "shopify:\/\/shop_images\/l3.svg"
+          }
+        },
+        "68a07755-fee2-492b-a72a-0fd686ec6ec6": {
+          "type": "featured-logo",
+          "settings": {
+            "client-logo": "shopify:\/\/shop_images\/l4.svg"
+          }
+        }
+      },
+      "block_order": [
+        "99ba62a8-9e50-4827-969a-06badef8a3f6",
+        "d673a62b-d3e1-46f4-97ff-6d49747c7572",
+        "a0c18d80-7196-4dd9-9690-592902ce074b",
+        "68a07755-fee2-492b-a72a-0fd686ec6ec6"
+      ],
+      "settings": {
+        "heading": "AS SEEN ON"
+      }
+    },
+    "31209ae7-aad5-46e4-92e8-e808edc210be": {
+      "type": "customers-section",
+      "blocks": {
+        "df996ad5-aee9-44f5-a156-988b812ef73b": {
+          "type": "customers-review",
+          "settings": {
+            "star-ico": "shopify:\/\/shop_images\/stars.svg",
+            "text": "There is no ice chiller that can come close to Spartan Ice Bath!",
+            "author-img": "shopify:\/\/shop_images\/c1.png",
+            "author": "- Thomas G.",
+            "location": "Toronto, Canada"
+          }
+        },
+        "0e6fa25f-634a-47b7-9c82-9f555d284f7d": {
+          "type": "customers-review",
+          "settings": {
+            "star-ico": "shopify:\/\/shop_images\/stars.svg",
+            "text": "Game changer! Fresh cold water without the hassle, noise, and cost of ice.",
+            "author-img": "shopify:\/\/shop_images\/c2.png",
+            "author": "- Mike Duval",
+            "location": "Newport, California"
+          }
+        },
+        "8fcf4989-4d8c-40cd-9c04-780bad04b4e6": {
+          "type": "customers-review",
+          "settings": {
+            "star-ico": "shopify:\/\/shop_images\/stars.svg",
+            "text": "Breeze to set up, super quiet, and a lifesaver during hot months; no more buying ice!",
+            "author-img": "shopify:\/\/shop_images\/c3.png",
+            "author": "- Sarah Thompson",
+            "location": "Phoenix, Arizona"
+          }
+        }
+      },
+      "block_order": [
+        "df996ad5-aee9-44f5-a156-988b812ef73b",
+        "0e6fa25f-634a-47b7-9c82-9f555d284f7d",
+        "8fcf4989-4d8c-40cd-9c04-780bad04b4e6"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "c1b218cd-8b8c-40f7-8568-b9c2c77b6637": {
+      "type": "benefits-section",
+      "blocks": {
+        "38f1c8fc-1b83-474a-8dc2-7ac940e45d2a": {
+          "type": "benefits-faq",
+          "settings": {
+            "faq-icon": "shopify:\/\/shop_images\/smile-1.svg",
+            "faq_que": "Enhanced Recovery and Detoxification",
+            "faq_ans": "<p>Alternating between the cold of the ice bath and the warmth of the steam sauna can create a therapeutic cycle. The ice bath reduces inflammation and muscle soreness, while the steam sauna promotes detoxification and skin cleansing. This combination is excellent for athletes or anyone looking to improve physical recovery and remove toxins from the body.<\/p>"
+          }
+        },
+        "f040f0d4-64d7-408c-affb-8dd7fb7109ee": {
+          "type": "benefits-faq",
+          "settings": {
+            "faq-icon": "shopify:\/\/shop_images\/thunderbolt-1.svg",
+            "faq_que": "Stress Relief and Mental Resilience",
+            "faq_ans": "<p>Both the ice bath and steam sauna offer mental health benefits. The ice bath challenges your mental toughness and can increase endorphin levels, while the steam sauna provides a relaxing and stress-relieving environment. This combination helps in managing stress, improving mood, and enhancing overall mental well-being.<\/p>"
+          }
+        },
+        "695d3560-08b8-4766-bff9-bc1452e71909": {
+          "type": "benefits-faq",
+          "settings": {
+            "faq-icon": "shopify:\/\/shop_images\/sleep-mode-1.svg",
+            "faq_que": "Improved Circulation and Skin Health",
+            "faq_ans": "<p>The contrasting temperatures from the ice bath and steam sauna can stimulate blood flow. The cold constricts blood vessels and reduces inflammation, while the heat expands them, enhancing circulation. This not only aids in muscle recovery but also improves skin health by promoting better nutrient delivery and cleansing.<\/p>"
+          }
+        },
+        "5abe8d42-b252-4f22-916e-24693c645663": {
+          "type": "benefits-faq",
+          "settings": {
+            "faq-icon": "shopify:\/\/shop_images\/flower-1.svg",
+            "faq_que": "Respiratory Health and Immune System Boost",
+            "faq_ans": "<p>The steam sauna can help clear sinuses and improve respiratory function, which is beneficial for those with asthma or allergies. In contrast, the cold exposure from the ice bath can boost the immune system by stimulating the lymphatic system. This combination can lead to better respiratory health and a stronger immune response.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "38f1c8fc-1b83-474a-8dc2-7ac940e45d2a",
+        "f040f0d4-64d7-408c-affb-8dd7fb7109ee",
+        "695d3560-08b8-4766-bff9-bc1452e71909",
+        "5abe8d42-b252-4f22-916e-24693c645663"
+      ],
+      "settings": {
+        "title": "",
+        "heading": "The benefits of using sauna and ice baths",
+        "text": "Contrast therapy",
+        "benefit-img": "shopify:\/\/shop_images\/ice_bath_and_sauna.jpg",
+        "btn-link": "#header-product",
+        "btn-text": "ADD TO CART"
+      }
+    },
+    "023bd30b-e059-43e8-bd94-bbd32763a06a": {
+      "type": "science-section",
+      "blocks": {
+        "4e302bcc-dfc8-430b-ae5d-0ef6acc4d2fc": {
+          "type": "Science-Benefits",
+          "settings": {
+            "benefit-ico": "shopify:\/\/shop_images\/b1_1.svg",
+            "title": "Research-Driven Results"
+          }
+        },
+        "8aacb351-b3d4-43e0-8346-a132e8f3197a": {
+          "type": "Science-Benefits",
+          "settings": {
+            "benefit-ico": "shopify:\/\/shop_images\/b2_1.svg",
+            "title": "Neuroscience-Endorsed Benefits"
+          }
+        },
+        "838d1d89-03d0-4511-98ed-e5cc2e44b842": {
+          "type": "Science-Benefits",
+          "settings": {
+            "benefit-ico": "shopify:\/\/shop_images\/b3_1-1.svg",
+            "title": "Verified Health Boosts"
+          }
+        },
+        "baed60fb-8b36-45fb-a225-201998b11980": {
+          "type": "Science-Benefits",
+          "settings": {
+            "benefit-ico": "shopify:\/\/shop_images\/b4.svg",
+            "title": "Proven Performance Enhancements"
+          }
+        }
+      },
+      "block_order": [
+        "4e302bcc-dfc8-430b-ae5d-0ef6acc4d2fc",
+        "8aacb351-b3d4-43e0-8346-a132e8f3197a",
+        "838d1d89-03d0-4511-98ed-e5cc2e44b842",
+        "baed60fb-8b36-45fb-a225-201998b11980"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "THE ICE MAN",
+        "heading": "Cold Ice Therapy, extreme wellness",
+        "text": "WIM HOF, 65-YRS OLD!",
+        "main-title": "Backed by science",
+        "main-text": "<p>The Spartan Water Chiller isn't just about the chill—it's a wellness tool grounded in scientific research. Numerous studies have validated the benefits of cold water immersion. It's been shown to trigger dopamine release, the \"feel-good\" neurotransmitter, enhancing mood and focus. Athletes and researchers alike vouch for its role in accelerating muscle recovery after intense workouts. Backed by neuroscience, it helps build resilience against stress. Dive in, and experience a scientifically-proven boost to your health and mood.<\/p>",
+        "number1": "93%",
+        "text1": "Users reported a boost in recovery speed and enhanced mood benefits.",
+        "number2": "4\/5",
+        "text2": "Was rated as top wellness tool",
+        "benefit-img": "shopify:\/\/shop_images\/science-img.jpg"
+      }
+    },
+    "8988bd47-f45d-4c76-a73a-7f4136f95f03": {
+      "type": "performance-section",
+      "blocks": {
+        "47fb17d2-d56c-42e4-af4b-146a85a5458e": {
+          "type": "performance-block",
+          "settings": {
+            "performance-img": "shopify:\/\/shop_images\/portable_sauna_135a8452-7828-4312-a89b-5559d5862945.jpg",
+            "title": "Easy To Setup",
+            "text": "<p>The Spartan sauna takes about 10-15 minutes to set up and 5 minutes to take down.<\/p><p>After you do it once, it gets easier to do it quickly - we compare it to setting up a small camping tent.<\/p>"
+          }
+        },
+        "7a643778-41ea-4158-9aea-92abe052983d": {
+          "type": "performance-block",
+          "settings": {
+            "performance-img": "shopify:\/\/shop_images\/home_sauna.jpg",
+            "title": "How Does It Work?",
+            "text": "<p>The sauna kit is ready to use right out of the box. The sauna takes about 5-10 minutes to set up fully. Distilled or purified water is then poured into the steam device chamber, and within 10 minutes, steam begins flowing from the chamber into the insulated tent.<\/p><p>Now, it's time to step into your personal oasis and experience the unparalleled benefits of heat therapy.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "47fb17d2-d56c-42e4-af4b-146a85a5458e",
+        "7a643778-41ea-4158-9aea-92abe052983d"
+      ],
+      "settings": {
+        "title": "",
+        "heading": "The Spartan Sauna",
+        "btn-link": "#header-product",
+        "btn-text": ""
+      }
+    },
+    "30d060e7-21c5-4803-829d-ccc9a286e60e": {
+      "type": "performance-section",
+      "blocks": {
+        "2a905a68-d2f6-40d1-9ce7-fc6693a9ca1d": {
+          "type": "performance-block",
+          "settings": {
+            "performance-img": "shopify:\/\/shop_images\/spartan_barrel_ice_bath_5f85a72c-e512-4460-90b5-9f4b2df2c847.webp",
+            "title": "Premium Quality",
+            "text": "<p>We understand the importance of reliability. That's why our product is engineered with the highest quality materials. Dive into an experience that's not just about durability but also about maximizing your potential.<\/p>"
+          }
+        },
+        "d733b58d-137c-4d3a-89c8-f93225b2ed91": {
+          "type": "performance-block",
+          "settings": {
+            "performance-img": "shopify:\/\/shop_images\/spartan_barrel_50151485-053d-4a11-9614-0aac881ed32c.webp",
+            "title": "5 Minute Setup",
+            "text": "<p>Plug the pump and inflate. No tools required. Easy to deflate and carry with the included backpack. <\/p><p>Low maintenance - only change the water when it becomes dirty using the drain tap on the bottom.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "2a905a68-d2f6-40d1-9ce7-fc6693a9ca1d",
+        "d733b58d-137c-4d3a-89c8-f93225b2ed91"
+      ],
+      "settings": {
+        "title": "",
+        "heading": "The Spartan Barrel",
+        "btn-link": "#header-product",
+        "btn-text": ""
+      }
+    },
+    "c1071597-ee8a-4383-85ef-97b4528e9299": {
+      "type": "video-section",
+      "blocks": {
+        "2561fd14-731c-4a21-a82a-f8bbaa204c06": {
+          "type": "video-block",
+          "settings": {
+            "play": "shopify:\/\/shop_images\/play-button.svg",
+            "main-img": "shopify:\/\/shop_images\/t1.jpg",
+            "video_url": "4FdwZK6pL1M"
+          }
+        },
+        "c6fac1be-540a-4906-a3a0-38dde8d2b8e3": {
+          "type": "video-block",
+          "settings": {
+            "play": "shopify:\/\/shop_images\/play-button.svg",
+            "main-img": "shopify:\/\/shop_images\/t1.jpg",
+            "video_url": "4FdwZK6pL1M"
+          }
+        },
+        "562024b2-ac13-48a2-b5c0-1b52f1e6ab06": {
+          "type": "video-block",
+          "settings": {
+            "play": "shopify:\/\/shop_images\/play-button.svg",
+            "main-img": "shopify:\/\/shop_images\/t1.jpg",
+            "video_url": "4FdwZK6pL1M"
+          }
+        },
+        "1fc4b231-5182-4da2-a315-885e78af483f": {
+          "type": "video-block",
+          "settings": {
+            "play": "shopify:\/\/shop_images\/play-button.svg",
+            "main-img": "shopify:\/\/shop_images\/t1.jpg",
+            "video_url": "4FdwZK6pL1M"
+          }
+        },
+        "45890473-ad35-4baf-96ea-2352b2668218": {
+          "type": "video-block",
+          "settings": {
+            "play": "shopify:\/\/shop_images\/play-button.svg",
+            "main-img": "shopify:\/\/shop_images\/t1.jpg",
+            "video_url": "4FdwZK6pL1M"
+          }
+        }
+      },
+      "block_order": [
+        "2561fd14-731c-4a21-a82a-f8bbaa204c06",
+        "c6fac1be-540a-4906-a3a0-38dde8d2b8e3",
+        "562024b2-ac13-48a2-b5c0-1b52f1e6ab06",
+        "1fc4b231-5182-4da2-a315-885e78af483f",
+        "45890473-ad35-4baf-96ea-2352b2668218"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "5,000+ CUSTOMERS",
+        "heading": "One Plunge a day, Every Day",
+        "star": "shopify:\/\/shop_images\/stars.svg"
+      }
+    },
+    "b5b9b629-eeac-4541-b67c-63565825b1a0": {
+      "type": "compare-section",
+      "blocks": {
+        "035d21ff-e86f-455c-aa88-96c01342bf1c": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-symbol-1.png",
+            "content": "Other Brands"
+          }
+        },
+        "a6a23be3-5ce6-4780-8a79-28b6d1f67cd4": {
+          "type": "compare",
+          "settings": {
+            "text": "Affordable",
+            "select_option": "Yes",
+            "select_option1": "No"
+          }
+        },
+        "23977961-4584-4be2-b8d2-3234954969e8": {
+          "type": "compare",
+          "settings": {
+            "text": "Easy To Setup",
+            "select_option": "Yes",
+            "select_option1": "No"
+          }
+        },
+        "190ea4e6-36d9-43a1-af35-3f72fcb985a5": {
+          "type": "compare",
+          "settings": {
+            "text": "Toxic-Free",
+            "select_option": "Yes",
+            "select_option1": "No"
+          }
+        },
+        "71dda345-4b45-46a2-bfd9-f545fbede758": {
+          "type": "compare",
+          "settings": {
+            "text": "High-Quality",
+            "select_option": "Yes",
+            "select_option1": "No"
+          }
+        },
+        "e089e318-804e-4c1e-a36b-27721d4c3db2": {
+          "type": "compare",
+          "settings": {
+            "text": "BPA-free",
+            "select_option": "Yes",
+            "select_option1": "No"
+          }
+        },
+        "d27c8b7f-f0db-447e-b9dd-710af4e8e3a1": {
+          "type": "compare",
+          "settings": {
+            "text": "Compact",
+            "select_option": "Yes",
+            "select_option1": "No"
+          }
+        }
+      },
+      "block_order": [
+        "035d21ff-e86f-455c-aa88-96c01342bf1c",
+        "a6a23be3-5ce6-4780-8a79-28b6d1f67cd4",
+        "23977961-4584-4be2-b8d2-3234954969e8",
+        "190ea4e6-36d9-43a1-af35-3f72fcb985a5",
+        "71dda345-4b45-46a2-bfd9-f545fbede758",
+        "e089e318-804e-4c1e-a36b-27721d4c3db2",
+        "d27c8b7f-f0db-447e-b9dd-710af4e8e3a1"
+      ],
+      "settings": {
+        "title": "We Are Better, This Is Sparta",
+        "heading": "Enjoy from the comfort of your own home without expensive memberships"
+      }
+    },
+    "c56f950b-90ac-4e39-b183-aa28f25855c7": {
+      "type": "reviews-section",
+      "blocks": {
+        "f765397b-b06b-4138-b413-fd1e7d0c1ffc": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "f765397b-b06b-4138-b413-fd1e7d0c1ffc"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Our Users love us"
+      }
+    },
+    "c49caf58-3a7e-41f1-92ee-4386281598eb": {
+      "type": "risk-free-section",
+      "blocks": {
+        "aff4c6ea-06fd-42ca-85b9-da3f6643f954": {
+          "type": "risk-free-block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/90-days-1_430x_1b2be9ec-55ee-4e7a-bc69-8f779ad14ac8.png",
+            "title": "30-Day Money Back Guarantee",
+            "text": "Not completely satisfied? No worries! You have 30 days to return and get a refund."
+          }
+        },
+        "ca696368-2c36-40bb-abc1-5a3429d2bd07": {
+          "type": "risk-free-block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/warranty-1.svg",
+            "title": "1-Year Warranty Assurance",
+            "text": "Trust in our quality! We offer a 1-year warranty, ensuring your product stands the test of time."
+          }
+        },
+        "3750a331-96a2-475e-9377-dad1650adcb7": {
+          "type": "risk-free-block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/b3_1.svg",
+            "title": "Hassle-Free Shipping & Returns",
+            "text": "We make it easy! Benefit from seamless shipping, and hassle-free return procedures to ensure a smooth experience."
+          }
+        }
+      },
+      "block_order": [
+        "aff4c6ea-06fd-42ca-85b9-da3f6643f954",
+        "ca696368-2c36-40bb-abc1-5a3429d2bd07",
+        "3750a331-96a2-475e-9377-dad1650adcb7"
+      ],
+      "settings": {
+        "heading": "Try Risk-Free Today."
+      }
+    },
+    "7207bec8-af1d-4f7e-a74a-f5a07e75c3fe": {
+      "type": "FAQ-section",
+      "blocks": {
+        "75cf07cb-ccd5-4bb4-9f98-e2784415f48a": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "How hot does the sauna get?",
+            "faq_ans": "<p>The Spartan Sauna can heat up internally to 115°F - 120ºF with nearly 100% humidity it reaches similar effects as a 160° dry sauna.<\/p><p>Why? Water has a higher heat capacity than air. When you're in a steam sauna, the air is saturated with water vapor which carries more heat energy to your body than dry air would at the same temperature.<\/p>"
+          }
+        },
+        "a7691750-e9c8-46c6-a733-1dd6f401b43d": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "How do I drain the ice bath?",
+            "faq_ans": "<p>The Spartan Barrel drain tap at the bottom, so you can easily drain it.<\/p>"
+          }
+        },
+        "89b039e7-72ca-418c-9ee8-d712d995d2b1": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "I am over 6ft, will I fit in the ice bath?",
+            "faq_ans": "<p>We've designed our bath to fit anyone up to 6'11\" \/ 300 lbs.<\/p>"
+          }
+        },
+        "c90713b5-b037-48ee-8291-865680675ae2": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "How do I clean the sauna?",
+            "faq_ans": "<p>The inside of the heat-insulated cover is designed to help prevent mold and bacteria build-up.<\/p><p>After use, we recommend leaving the door flap open to air out and wiping down the water vapor on the inside walls.<\/p>"
+          }
+        },
+        "844c180f-588b-4167-a7fc-1cb0f9001c43": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "Can I use this indoors and outdoors?",
+            "faq_ans": "<p>The Spartan Sauna™ can be used both indoors and outdoors. If you leave it outdoors, we recommend having an appropriate cover, such as a canopy, balcony, tarp, etc.<\/p><p>The sauna is NOT weatherproof. Leaving it outside for a long period of time will cause exterior cosmetic damage.<\/p>"
+          }
+        },
+        "03f77bc4-b1a1-42b6-a6f6-b6bae7f16516": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "Is it NON-Toxic?",
+            "faq_ans": "<p>Your safety is paramount. We provided you with a product that meets the highest industry standards.<\/p><p>• BPA Free - Our commitment to your well-being means that every material used in the Spartan Saunais BPA-free, ensuring your health is never compromised.<\/p><p>• Micro-plastics Free - No micro-plastics were found during our third-party testing. Safeguarding both your health and the environment.<\/p><p>• ROHS Compliance - Proudly ROHS compliant, meeting rigorous standards for the restriction of hazardous substances and offering you peace of mind.<\/p>"
+          }
+        },
+        "4d26d8eb-411b-4615-9d29-0b7083eb4597": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "Does it need a power source?",
+            "faq_ans": "<p>Yes, it requires a standard 110 or 120V outlet.<\/p>"
+          }
+        },
+        "8a40e6a7-7d73-44d0-b5cd-7994162fa9c6": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "Is the entire sauna tent machine-washable?",
+            "faq_ans": "<p>No, all of the fabric is not machine-washable - it comes with an absorbent mat for the floor that is machine-washable.<\/p>"
+          }
+        },
+        "5bfdf328-0605-4662-b660-ade3143a2f67": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "How long does shipping take and is it free?",
+            "faq_ans": "<p>Shipping is FREE to the USA and Canada, and it typically takes between 7 - 14 business days after dispatch.<\/p>"
+          }
+        },
+        "dff0c365-b2b2-47a3-a29b-413e04356aad": {
+          "type": "faq-reviews",
+          "settings": {
+            "reviews-title": "Game changer!",
+            "reviews-text": "<p>Great addition to my morning routine! 2 minutes in the cold plunge then 20 minutes in the sauna and ready to start my day!<\/p>",
+            "author": "Kara L."
+          }
+        },
+        "d5cf4aeb-d5c3-44bb-ae3c-d1bb62d58550": {
+          "type": "faq-reviews",
+          "settings": {
+            "reviews-title": "Great combo with ice baths",
+            "reviews-text": "<p>Easy to setup and cleaning is easy. I use it every day and I love it!<\/p>",
+            "author": "Brandon A."
+          }
+        }
+      },
+      "block_order": [
+        "75cf07cb-ccd5-4bb4-9f98-e2784415f48a",
+        "a7691750-e9c8-46c6-a733-1dd6f401b43d",
+        "89b039e7-72ca-418c-9ee8-d712d995d2b1",
+        "c90713b5-b037-48ee-8291-865680675ae2",
+        "844c180f-588b-4167-a7fc-1cb0f9001c43",
+        "03f77bc4-b1a1-42b6-a6f6-b6bae7f16516",
+        "4d26d8eb-411b-4615-9d29-0b7083eb4597",
+        "8a40e6a7-7d73-44d0-b5cd-7994162fa9c6",
+        "5bfdf328-0605-4662-b660-ade3143a2f67",
+        "dff0c365-b2b2-47a3-a29b-413e04356aad",
+        "d5cf4aeb-d5c3-44bb-ae3c-d1bb62d58550"
+      ],
+      "settings": {
+        "btn-link": "#header-product",
+        "btn-text": "BUY NOW",
+        "heading": "Frequently asked questions"
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "f1b619ef-8684-416a-b153-bbc831334606": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "Free Gift: \"Beginner's Guide To Cold Water Therapy\" E-book",
+            "text_style": "body"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "5ad6cb90-d947-461f-9eb9-a432fb4bdacd": {
+          "type": "iconic_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/check-symbol-4795.png",
+            "text": "Instantly recover after a workout"
+          }
+        },
+        "4be5a123-6886-4d77-baa1-ec6130051a7c": {
+          "type": "iconic_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/check-symbol-4795.png",
+            "text": "Boosts your energy and mood"
+          }
+        },
+        "52e7dbd4-d527-471f-abbd-4579f8377fca": {
+          "type": "iconic_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/check-symbol-4795.png",
+            "text": "Reduces stress & anxiety"
+          }
+        },
+        "839db4ea-0928-48cb-829a-7190e3e64182": {
+          "type": "iconic_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/check-symbol-4795.png",
+            "text": "Strengthens your immune system"
+          }
+        },
+        "d6440d0f-8107-4e73-a3fd-6c5560bca784": {
+          "type": "text",
+          "settings": {
+            "text": "Questions? Message us at 833-213-2115",
+            "text_style": "body"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "62950366-91e6-4329-853a-819a493380a1": {
+          "type": "payment_icon",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "19a58bcf-33df-40a3-bfcd-8e1ba687156c": {
+          "type": "icon-with-text",
+          "settings": {
+            "custom_class": "",
+            "layout": "horizontal",
+            "icon_1": "check_mark",
+            "heading_1": "1 Year Warranty",
+            "icon_2": "return",
+            "heading_2": "90 Day Return Policy",
+            "icon_3": "truck",
+            "heading_3": "Free Shipping"
+          }
+        },
+        "9e64bf03-e0c7-4091-99f1-5569ed2d8dcc": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Specifications",
+            "icon": "none",
+            "content": "<ul><li>29.5 inches diameter<\/li><li>29.5 inches in height<\/li><li>300-liter capacity<\/li><li>Suitable heights up to 6'7\"<\/li><li>3 x thermal insulated TPE layers<\/li><li>Polyester fabric strengthened layers<\/li><li>UV-resistant skin-friendly PVC inner lining<\/li><li>Lid to keep the water at a steady temperature<\/li><li>6.61 lbs \/ 3 kg empty weight<\/li><\/ul>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "e4b3bd11-239a-4d6e-b1fb-c008fb82cdb6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What's included?",
+            "icon": "none",
+            "content": "<ul><li>x 1 Spartan Willpower Ice Bath<\/li><li>x 1 Free Thermo Lid<\/li><li>x 6 Durable Support Legs<\/li><li>x 1 Hand Pump<\/li><li>x 1 Drain Hose \/ Drain Spout<\/li><li>x 1 Repair Patch<\/li><li>x 1 User Manual<\/li><li>x 1 Cushion<\/li><li>x 1 All Weather Cover (Optional)<\/li><\/ul>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "b63a9dcf-2828-4d7e-ba67-9fba4afb1b71": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How long should I stay in the cold water?",
+            "icon": "none",
+            "content": "<p>Consider doing deliberate cold exposure for 11 minutes per week in total. Not per session, but rather, 2-4 sessions lasting 1-5 mins each distributed across the week. Again, the water temperature should be uncomfortably cold yet safe to stay in for a few minutes. You can do more, but this should be the minimum to achieve the benefits of cold exposure. You can do very cold, very brief exposures for adrenaline release too, but the 11 minutes is based on a recent study that explored a range of effects and is a good solid, basic protocol for ongoing use.<\/p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "f1b619ef-8684-416a-b153-bbc831334606",
+        "title",
+        "vendor",
+        "price",
+        "5ad6cb90-d947-461f-9eb9-a432fb4bdacd",
+        "4be5a123-6886-4d77-baa1-ec6130051a7c",
+        "52e7dbd4-d527-471f-abbd-4579f8377fca",
+        "839db4ea-0928-48cb-829a-7190e3e64182",
+        "d6440d0f-8107-4e73-a3fd-6c5560bca784",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "62950366-91e6-4329-853a-819a493380a1",
+        "description",
+        "19a58bcf-33df-40a3-bfcd-8e1ba687156c",
+        "9e64bf03-e0c7-4091-99f1-5569ed2d8dcc",
+        "e4b3bd11-239a-4d6e-b1fb-c008fb82cdb6",
+        "b63a9dcf-2828-4d7e-ba67-9fba4afb1b71"
+      ],
+      "disabled": true,
+      "settings": {
+        "cstm_class": "",
+        "date": "",
+        "enable_sticky_info": true,
+        "overlay_width_d": 104,
+        "overlay_width_m": 80,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "c_sticky_atc_Dkg3MV",
+    "85d87e5a-decb-4848-8e2d-67cc9e7c7446",
+    "aff76ae0-349c-410a-b075-784d9083fc15",
+    "2f598482-3d45-4778-b99c-688c5f7f0c10",
+    "31209ae7-aad5-46e4-92e8-e808edc210be",
+    "c1b218cd-8b8c-40f7-8568-b9c2c77b6637",
+    "023bd30b-e059-43e8-bd94-bbd32763a06a",
+    "8988bd47-f45d-4c76-a73a-7f4136f95f03",
+    "30d060e7-21c5-4803-829d-ccc9a286e60e",
+    "c1071597-ee8a-4383-85ef-97b4528e9299",
+    "b5b9b629-eeac-4541-b67c-63565825b1a0",
+    "c56f950b-90ac-4e39-b183-aa28f25855c7",
+    "c49caf58-3a7e-41f1-92ee-4386281598eb",
+    "7207bec8-af1d-4f7e-a74a-f5a07e75c3fe",
+    "main",
+    "related-products"
+  ]
+}

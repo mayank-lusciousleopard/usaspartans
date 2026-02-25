@@ -1,0 +1,251 @@
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "settings": {}
+    },
+    "bd5b21b8-6352-464e-b69b-638b9cf72d41": {
+      "type": "custom-announcement-bar",
+      "blocks": {
+        "text_KpJRM7": {
+          "type": "text",
+          "settings": {
+            "text": "24\/7 Customer Support"
+          }
+        },
+        "87e00fac-9de3-4533-b43d-473ed4b52d1c": {
+          "type": "text",
+          "settings": {
+            "text": "Free & Fast US Shipping"
+          }
+        },
+        "text_mgnKA3": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "One-Day Sale: Get 12% Off Everything on 12.12 — Use Code GET12”"
+          }
+        },
+        "c1fdcf1d-8af8-49e9-b2d1-cc8b057de2b6": {
+          "type": "text",
+          "settings": {
+            "text": "Up to 2-Year Warranty"
+          }
+        }
+      },
+      "block_order": [
+        "text_KpJRM7",
+        "87e00fac-9de3-4533-b43d-473ed4b52d1c",
+        "text_mgnKA3",
+        "c1fdcf1d-8af8-49e9-b2d1-cc8b057de2b6"
+      ],
+      "custom_css": [],
+      "settings": {
+        "background_color": "#000000",
+        "text_color": "#ffffff",
+        "ticker_speed": "30"
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "item_BJp8Wi": {
+          "type": "Item",
+          "settings": {
+            "product": "warrior-max-1-hp-wi-fi-water-chiller-heater",
+            "button_text": "VIEW MORE",
+            "button_url": "shopify:\/\/products\/warrior-max-1-hp-wi-fi-water-chiller-heater"
+          }
+        },
+        "item_LDxcLn": {
+          "type": "Item",
+          "settings": {
+            "product": "wifi-waterchiller-xl-tub-bundle",
+            "button_text": "VIEW MORE",
+            "button_url": "shopify:\/\/products\/wifi-waterchiller-xl-tub-bundle"
+          }
+        },
+        "item_iQ466J": {
+          "type": "Item",
+          "settings": {
+            "product": "warrior-pro-chiller-xl-plunge-bath",
+            "button_text": "VIEW MORE",
+            "button_url": "shopify:\/\/products\/warrior-pro-chiller-xl-plunge-bath"
+          }
+        },
+        "mega_menu_item_X7Ltic": {
+          "type": "MegaMenuItem",
+          "settings": {
+            "parent_name": "Shop",
+            "parent_url": "",
+            "child_1_text": "Bundles",
+            "child_1_url": "shopify:\/\/collections\/bundles",
+            "child_1_collection": "bundles",
+            "child_2_text": "Water Chillers",
+            "child_2_url": "shopify:\/\/collections\/water-chillers-for-ice-baths",
+            "child_2_collection": "water-chillers-for-ice-baths",
+            "child_3_text": "Ice Baths",
+            "child_3_url": "shopify:\/\/collections\/best-ice-bath",
+            "child_3_collection": "best-ice-bath",
+            "child_4_text": "Saunas",
+            "child_4_url": "shopify:\/\/collections\/saunas",
+            "child_4_collection": "saunas",
+            "child_5_text": "Accesories",
+            "child_5_url": "shopify:\/\/collections\/ice-bath-accessories",
+            "child_5_collection": "ice-bath-accessories",
+            "child_6_text": "PEMF Mat",
+            "child_6_url": "shopify:\/\/products\/warrior-pro-infrared-pemf-healing-mat",
+            "child_6_collection": ""
+          }
+        },
+        "mega_menu_image_dzU7NR": {
+          "type": "MegaMenuImage",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bundle_mega_menu.png",
+            "title": "Bundles (Big Savings)"
+          }
+        },
+        "mega_menu_image_zYxkFe": {
+          "type": "MegaMenuImage",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mega_menu_chiller.png",
+            "title": "Water Chillers"
+          }
+        },
+        "mega_menu_image_tRCXzW": {
+          "type": "MegaMenuImage",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mega_menu_bath.png",
+            "title": "Ice Baths"
+          }
+        },
+        "mega_menu_image_7eTae6": {
+          "type": "MegaMenuImage",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mega_menu_chamber.png",
+            "title": "Hyperbaric Chambers"
+          }
+        },
+        "mega_menu_image_LaV6je": {
+          "type": "MegaMenuImage",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mega_menu_accesories.png",
+            "title": "Accessories"
+          }
+        },
+        "mega_menu_image_YqR9iK": {
+          "type": "MegaMenuImage",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mega_menu_sauna.png",
+            "title": "Saunas"
+          }
+        },
+        "mega_menu_image_yjpJax": {
+          "type": "MegaMenuImage",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/5.png",
+            "title": "PEMF Mat"
+          }
+        },
+        "mega_menu_image_db4VWe": {
+          "type": "MegaMenuImage",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mega_menu_creatine.png",
+            "title": "Creatine Gummies"
+          }
+        },
+        "partner_logo_DqRBcc": {
+          "type": "partner_logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/NBA_logo.png"
+          }
+        },
+        "partner_logo_paVhU8": {
+          "type": "partner_logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/a_logo_of_a_football_team.png"
+          }
+        },
+        "partner_logo_3fPeMN": {
+          "type": "partner_logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Fifa_world_cup_logo_2x_9b86b2a3-30a7-4a67-9cfe-a02c877efcc5.png"
+          }
+        },
+        "partner_logo_Er3HXi": {
+          "type": "partner_logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/a_white_vase_with_red_white_and_blue_text_2x_129dcf21-9411-438d-9af1-bb61ecf6e526.png"
+          }
+        }
+      },
+      "block_order": [
+        "item_BJp8Wi",
+        "item_LDxcLn",
+        "item_iQ466J",
+        "mega_menu_item_X7Ltic",
+        "mega_menu_image_dzU7NR",
+        "mega_menu_image_zYxkFe",
+        "mega_menu_image_tRCXzW",
+        "mega_menu_image_7eTae6",
+        "mega_menu_image_LaV6je",
+        "mega_menu_image_YqR9iK",
+        "mega_menu_image_yjpJax",
+        "mega_menu_image_db4VWe",
+        "partner_logo_DqRBcc",
+        "partner_logo_paVhU8",
+        "partner_logo_3fPeMN",
+        "partner_logo_Er3HXi"
+      ],
+      "custom_css": [],
+      "settings": {
+        "transparent_header": true,
+        "use_recommended_product": true,
+        "button_text": "VIEW MORE!",
+        "upsell_title": "Bestsellers",
+        "upsell_products": [
+          "1-5hp-wifi-water-chiller",
+          "warrior-max-1-hp-wi-fi-water-chiller-heater",
+          "the-spartan-barrel",
+          "hyperbaric-oxygen-chamber"
+        ],
+        "color_scheme": "background-1",
+        "logo_position": "middle-left",
+        "menu": "mega-menu",
+        "menu_type_desktop": "mega",
+        "sticky_header_type": "on-scroll-up",
+        "show_line_separator": false,
+        "mobile_logo_position": "center",
+        "margin_bottom": 0,
+        "strip_bg": "#ffffff",
+        "text_color": "#000000",
+        "tp_name": "Trustpilot",
+        "review_text": "RATED \"EXCELLENT\" 15,000+ 5-STAR REVIEWS",
+        "trusted_text": "TRUSTED BY PRO ATHLETES FROM :",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "sale_announcement_bar_qXTGza": {
+      "type": "sale-announcement-bar",
+      "disabled": true,
+      "name": "Sale announcement bar",
+      "settings": {
+        "label_text": "15% Sitewide",
+        "pill_icon": "",
+        "heading_prefix": "Receive $150 Off Orders Over $1,000",
+        "heading_suffix_mobile": "",
+        "heading_suffix_desktop": "",
+        "timer_label": "End in"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "bd5b21b8-6352-464e-b69b-638b9cf72d41",
+    "header",
+    "sale_announcement_bar_qXTGza"
+  ]
+}

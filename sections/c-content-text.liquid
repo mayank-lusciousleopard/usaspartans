@@ -1,0 +1,975 @@
+<style>
+    #{{ section.id }}.c-section {
+      font-size: 16px;
+      padding-top: {{ section.settings.padding_top }}em !important;
+      padding-bottom: {{ section.settings.padding_bottom }}em !important;
+      background-color: {{ section.settings.bg_color }};
+    }
+
+    #{{ section.id }} .page-width {
+      margin: 0 auto;
+      max-width: 1300px;
+      padding: 0;
+    }
+
+    #{{ section.id }} strong {
+      background: none !important;
+      background-clip: border-box !important;
+      -webkit-background-clip: border-box !important;
+      -webkit-text-fill-color: initial !important;
+    }
+
+    #{{ section.id }} .c-ct-grid1 {
+      {% if section.settings.use_gradient_background_grid1 == true %}
+        background: linear-gradient(90deg, #084D93 0%, #0E83F9 100%);
+      {% endif %}
+      padding: 9% 12%;
+      border-top-right-radius: 32px;
+      border-bottom-right-radius: 32px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      {% if section.settings.use_box_shadow == true %}
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+      {% endif %}
+      {% if section.settings.flip == true %}
+        order: 1;
+      {% endif %}
+      {%  if section.settings.center_content == true %}
+        justify-content: center;
+        gap: 3em;
+      {% endif %}
+    }
+
+    #{{ section.id }} .c-ct-grid {
+      display: grid;
+      grid-template-columns: {{ section.settings.grid_proportion }};
+      gap: 0em;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      z-index: 1
+    }
+
+    #{{ section.id }} .c-ct-para p {
+      font-size:20px;
+      line-height: 120%;
+    }
+
+    #{{ section.id }} .c-ct-grid h2 {
+      color: {{ section.settings.heading_color }};
+      margin: 0;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%; /* 48px */
+    }
+
+    #{{ section.id }} .c-ct-grid > *,
+    #{{ section.id }} .c-buttons-div {
+      display: flex;
+      align-items: {{ section.settings.alignment }};
+      text-align: {{ section.settings.text_alignment }};
+      flex-direction: column;
+    }
+
+    #{{ section.id }} .c-ct-para {
+      color: {{ section.settings.paragraph_color }};
+      font-size: clamp(14px, 1rem + 1vw, 18px);
+      font-style: normal;
+      line-height: 150%; /* 27px */
+    }
+
+
+    #{{ section.id }} .c-ct-para a {
+      text-decoration: underline;
+    }
+
+    #{{ section.id }} .c-ct-benefits {
+      display: flex;
+      flex-direction: column;
+
+      align-items: {{ section.settings.section_top_alignment }};
+      gap: 0.75em;
+    }
+
+    #{{ section.id }} .c-ct-benefit {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.6em;
+      font-size: 1.125em;
+    }
+
+    #{{ section.id }} .c-ct-benefit svg {
+      width: 1.5em;
+      min-width: 1.5em;
+    }
+
+    #{{ section.id }} .c-ct-small-image {
+      width: 10em;
+    }
+
+    #{{ section.id }} .c-ct-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      max-height: 100vh;
+      border-radius: 32px 0 0 32px;
+    }
+
+    #{{ section.id }} .h1 {
+      font-size: 3.5em;
+      font-weight: 700;
+    }
+
+    #{{ section.id }} .c-buttons-div {
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    #{{ section.id }} .c-button {
+      padding: 0.5em 1em;
+      font-size: 1.125em;
+      text-align: center;
+      text-transform: capitalize;
+      font-weight: 700;
+      border-radius: 0;
+      background-color: {{ section.settings.button_bg_color }};
+      color: {{ section.settings.button_text_color }};
+      text-decoration: none;
+    }
+
+    #{{ section.id }} .c-b3 {
+      background-color: #fff;
+      color: #000;
+      font-size: 20px;
+    }
+
+    #{{ section.id }} .c-promo-badge {
+      display: inline-flex;
+      padding: 8px 16px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 30px;
+      background: #DFD7C8;
+      font-size: 14px;
+    }
+
+    #{{ section.id }} .c-promotion {
+      font-size: 24px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 12px;
+    }
+
+    .c-section-header {
+      padding: 0 60rem;
+    }
+
+    #{{ section.id }} .c-ct-para {
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+     #{{ section.id }} a:hover {
+      text-decoration: underline;
+      cursor: pointer;
+     }
+
+    #{{ section.id }} .c-ct-para-blue {
+      background: linear-gradient(90deg, #0E83F9 0%, #084D93 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    #{{ section.id }} .c-ct-para-normal {
+      color: #000;
+    }
+
+    @media (max-width: 768px) {
+      #{{ section.id }} {
+        padding-bottom: 2em;
+      }
+
+      #{{ section.id }} .c-ct-grid {
+        grid-template-columns: 1fr;
+        gap: 0em;
+        width: 100%;
+        padding: 0 2rem;
+      }
+
+
+      #{{ section.id }} .c-ct-grid1 {
+        padding: {{ section.settings.padding_mobile }};
+        order: 1;
+        align-items: flex-start;
+      }
+      #{{ section.id }} .c-ct-grid h2 {
+        font-size: 32px;
+      }
+
+      #{{ section.id }} .c-ct-para p {
+        font-size: 16px;
+        line-height: 120%;
+      }
+
+      #{{ section.id }} .h1 {
+        font-size: 2em;
+      }
+
+
+    }
+
+    .c-section-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      margin: 60px auto;
+      padding: 0;
+    }
+
+    .c-section-d {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0.06rem;
+      line-height: 120%; /* 24px */
+      color: #000;
+    }
+
+    #{{ section.id }} .c-dynamic-stats {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      width: 100%;
+      color: white;
+      gap: 24px;
+    }
+
+  #{{ section.id }} .c-dynamic-stat .stat-value {
+    font-size: clamp(28px, 2rem + 1vw, 40px);
+    font-weight: bold;
+  }
+
+  #{{ section.id }} .c-dynamic-stat .stat-text {
+    font-size: clamp(14px, 1rem + 0.5vw, 16px);
+    line-height: normal;
+  }
+
+  #{{ section.id }} .c-cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+    gap: 25px;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  #{{ section.id }} .c-card {
+    background-color: #fff;
+    border-radius: 16px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 20%;
+    padding: 16px 24px ;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 164px;
+  }
+
+  #{{ section.id }} .c-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  #{{ section.id }} .c-card-title {
+    text-align: center;
+    font-size: clamp(18px, 1.2rem + 1vw, 20px);
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    #{{ section.id }} {
+      padding-top: {{ section.settings.padding_top | times: 0.5 }}em;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 }}em;
+    }
+
+    #{{ section.id }} .c-ct-grid {
+      grid-template-columns: 1fr;
+      gap: 0em;
+      width: 100%;
+      {%  if section.settings.center_content == true %}
+        justify-content: start;
+        gap:2em;
+      {% endif %}
+    }
+
+    #{{ section.id }} .c-ct-grid1 {
+      padding: {{ section.settings.padding_mobile }};
+      order: 1;
+      align-items: flex-start;
+      border-radius: 32px;
+      justify-content: start;
+      gap: 2em;
+      {% if section.settings.mobile_text_first == true %}
+        order: 1;
+      {% endif %}
+    }
+
+
+    #{{ section.id }} .c-ct-grid2 {
+      border-radius: 32px;
+      overflow: hidden;
+      {% if section.settings.mobile_text_first == true %}
+        order: 2;
+      {% endif %}
+    }
+
+
+    #{{ section.id }} .h1 {
+      font-size: 2em;
+    }
+
+    #{{ section.id }} .c-dynamic-stats {
+      flex-direction: column;
+       margin-top: 1rem;
+      gap: 15px;
+    }
+
+    #{{ section.id }} .c-cards-container {
+      flex-direction: column;
+      gap: 15px;
+      top: 2.5rem;
+    }
+
+    #{{ section.id }} .c-card {
+      width: 80%;
+    }
+  }
+
+    #{{ section.id }} .c-card {
+      width: 80%;
+    }
+  }
+
+  #{{ section.id }} .c-ct-grid2 {
+    border-top-left-radius: 32px;
+    border-bottom-left-radius: 32px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    overflow: hidden;
+  }
+
+  .padding__extreme {
+    padding: 0 24rem;
+  }
+
+  @media (max-width: 768px) {
+    .padding__extreme {
+      padding: 0 1rem;
+    }
+  }
+</style>
+
+{% assign benefit_blocks = section.blocks | where: 'type', 'Item' %}
+{% assign button_blocks = section.blocks | where: 'type', 'Button' %}
+
+<section id="{{ section.id }}" class="c-section" style="margin-top: 0 !important;">
+  <div class="c-section-header">
+    {%- if section.settings.subheading != empty -%}
+      <p class="c-section-top-subheading text__lightblue">{{ section.settings.subheading }}</p>
+    {%- endif -%}
+
+    {%- if section.settings.main_heading != empty -%}
+      <h2 class="new__header">
+        {{ section.settings.main_heading }}
+        <span style="color: {{ section.settings.heading_highlight_color }}">
+          {{- section.settings.heading_highlight -}}
+        </span>
+      </h2>
+    {%- endif -%}
+
+    {%- if section.settings.description != empty -%}
+      <p class="c-section-d padding__extreme">{{ section.settings.description }}</p>
+    {%- endif -%}
+  </div>
+
+  <div class="{% if section.settings.full_width == false %}container{% endif %}">
+    <div class="page-width">
+      <div class="c-ct-grid">
+        <div class="c-ct-grid1">
+          {% if section.settings.small_image %}
+            {{
+              section.settings.small_image
+              | image_url: width: 750
+              | image_tag: loading: 'lazy', height: 'auto', class: 'c-ct-small-image'
+            }}
+          {% endif %}
+
+          {% if section.settings.heading != empty %}
+            <{{ section.settings.heading_tag }} class="c-ct-heading {% if section.settings.heading_tag == 'h1' %} h1 {% endif %}">
+              {{- section.settings.heading -}}
+            </{{ section.settings.heading_tag }}>
+          {% endif %}
+          {% if section.settings.add_promotion_badge %}
+            <span class="c-promotion">
+              {{- section.settings.promotion_text }}
+              <span class="c-promo-badge">{{ section.settings.badge_text }}</span>
+            </span>
+          {% endif %}
+          {% if section.settings.paragraph != empty %}
+            <div class="c-ct-para">{{ section.settings.paragraph }}</div>
+          {% endif %}
+          {% if section.settings.blue_text != empty or section.settings.normal_text != empty %}
+            <a href="{{ section.settings.link }}" class="c-ct-para">
+              {% if section.settings.blue_text != empty %}
+                <span class="c-ct-para-blue">{{ section.settings.blue_text }}</span>
+              {% endif %}
+              {% if section.settings.normal_text != empty %}
+                <span class="c-ct-para-normal">{{ section.settings.normal_text }}</span>
+              {% endif %}
+              {% if section.settings.use_arrow %}
+                <span class="c-ct-para-arrow">→</span>
+              {% endif %}
+            </a>
+          {% endif %}
+          {% if section.settings.show_dynamic_stats %}
+          <div class="c-dynamic-stats">
+            <div class="c-dynamic-stat">
+              <div class="stat-value">{{ section.settings.stat_percentage | default: '93%' }}</div>
+              <div class="stat-text">
+                {{
+                  section.settings.stat_text_1
+                  | default: 'Users reported a boost in recovery speed and enhanced mood benefits.'
+                }}
+              </div>
+            </div>
+            <div class="c-dynamic-stat">
+              <div class="stat-value">{{ section.settings.stat_fraction | default: '4/5' }}</div>
+              <div class="stat-text">
+                {{ section.settings.stat_text_2 | default: 'Was rated as top wellness tool' }}
+              </div>
+            </div>
+          </div>
+          {% endif %}
+
+          {% if benefit_blocks != blank %}
+            <div class="c-ct-benefits">
+              {% for block in section.blocks %}
+                {% case block.type %}
+                  {% when 'Item' %}
+                    <div class="c-ct-benefit">
+                      {% render 'c-icon-check' %}
+                      <div>{{ block.settings.block_heading }}</div>
+                    </div>
+                {% endcase %}
+              {% endfor %}
+            </div>
+          {% endif %}
+          {% if button_blocks != blank %}
+            <div class="c-buttons-div">
+              {% for block in section.blocks %}
+                {% case block.type %}
+                  {% when 'Button' %}
+                    <a class="c-button {{ block.settings.button_style }}" href="{{ block.settings.button_url }}">
+                      {{- block.settings.button_text -}}
+                    </a>
+                {% endcase %}
+              {% endfor %}
+            </div>
+          {% endif %}
+
+          {% if section.settings.add_social_proof %}
+            <div class="c-ct-social-proof-wrapper">
+              <p style="margin-bottom: 0.5em;">As featured in:</p>
+              <div
+                class="c-social-proof"
+                style="display:flex; justify-content: flex-start; align-items: center; gap: 8px; flex-flow: row wrap;"
+              >
+                {% for block in section.blocks %}
+                  {% case block.type %}
+                    {% when 'logo' %}
+                      {{
+                        block.settings.logo
+                        | image_url: height: 27
+                        | image_tag: class: 'c-social-proof-logo', loading: 'lazy', height: 27
+                      }}
+                  {% endcase %}
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
+          {% if section.settings.show_variants_information %}
+            <div class="c-ct-variant-information-wrapper">
+              <p style="margin-bottom: 0.5em;">Available in four different finishes:</p>
+              <div
+                class="c-ct-variant-swatches"
+                style="display:flex; justify-content: flex-start; align-items: center; gap: 8px; flex-direction: row wrap;"
+              >
+                {% for block in section.blocks %}
+                  {% case block.type %}
+                    {% when 'swatch' %}
+                      <a
+                        href="#product-section"
+                        class="c-ct-variant-swatches__swatch"
+                        style="{% if block.settings.swatch_color_image != blank%} background: url({{block.settings.swatch_color_image | image_url: width: 64}}) {% else %} background-color: {{ block.settings.swatch_color }}{% endif %}"
+                        onclick="document.querySelector('label[data-swatch=\'{{block.settings.swatch_name}}\']').click()"
+                      ></a>
+                  {% endcase %}
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
+        </div>
+        <div class="c-ct-grid2">
+          {% if section.settings.image %}
+            {{
+              section.settings.image
+              | image_url: width: 1500
+              | image_tag: loading: 'lazy', height: 'auto', class: 'c-ct-image'
+            }}
+          {% endif %}
+          {% if section.settings.video %}
+            {{
+              section.settings.video
+              | video_tag:
+                autoplay: false,
+                loop: true,
+                muted: false,
+                controls: true,
+                class: 'c-ct-image',
+                image_size: 'master',
+                image_ratio: 'auto',
+                image_position: 'middle',
+                image_align: 'center'
+            }}
+          {% endif %}
+        </div>
+      </div>
+      <div class="c-cards-container">
+        {% for block in section.blocks %}
+          {% if block.type == 'Card' %}
+            <div class="c-card">
+              {% if block.settings.card_icon %}
+                {{ block.settings.card_icon | image_url: width: 750 | image_tag: loading: 'lazy', width: '50' }}
+              {% endif %}
+              <div class="c-card-title">{{ block.settings.card_title }}</div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "C Content Text",
+  "class": "c-content-text",
+  "blocks": [
+    {
+      "name": "Card",
+      "type": "Card",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "card_icon",
+          "label": "Card Icon"
+        },
+        {
+          "type": "text",
+          "id": "card_title",
+          "label": "Card Title",
+          "default": "Card Title"
+        }
+      ]
+    },
+    {
+      "name": "Item",
+      "type": "Item",
+      "limit": 50,
+      "settings": [
+        {
+          "type": "text",
+          "id": "block_heading",
+          "label": "Block heading",
+          "default": "Text here"
+        }
+      ]
+    },
+    {
+      "name": "Logo",
+      "type": "logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        }
+      ]
+    },
+    {
+      "name": "Swatch",
+      "type": "swatch",
+      "settings": [
+        {
+          "type": "color",
+          "id": "swatch_color",
+          "label": "Swatch color"
+        },
+        {
+          "type": "image_picker",
+          "id": "swatch_color_image",
+          "label": "Swatch color image"
+        },
+        {
+          "type": "text",
+          "id": "swatch_name",
+          "label": "Swatch name"
+        }
+      ]
+    },
+    {
+      "name": "Button",
+      "type": "Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text",
+          "default": "Buy Now"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button Link"
+        },
+        {
+          "type": "text",
+          "id": "button_style",
+          "label": "Button style",
+          "default": "c-b1"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 10,
+      "step": 0.5,
+      "unit": "em",
+      "label": "Padding top",
+      "default": 7
+    },
+    {
+      "type": "range", 
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 10,
+      "step": 0.5,
+      "unit": "em",
+      "label": "Padding bottom",
+      "default": 7
+    },
+    {
+      "type": "text",
+      "id": "padding_mobile",
+      "label": "Mobile padding",
+      "default": "2em"
+    },
+    {
+      "type": "checkbox", 
+      "id": "use_box_shadow",
+      "label": "Use box shadow",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_text_first",
+      "label": "Mobile text first",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "use_gradient_background_grid1",
+      "label": "Use gradient background grid1",
+      "default": true
+    },
+
+    {
+      "type": "checkbox",
+      "id": "show_dynamic_stats",
+      "label": "Show dynamic stats",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "center_content",
+      "label": "Center content",
+      "default": false
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link URL"
+    },
+    {
+      "type": "text",
+      "id": "blue_text",
+      "label": "Blue text"
+    },
+    {
+      "type": "text", 
+      "id": "normal_text",
+      "label": "Normal text"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_arrow",
+      "label": "Use arrow",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "small_image",
+      "label": "Small image"
+    },
+
+    {
+      "type": "checkbox",
+      "id": "add_stars",
+      "label": "Add stars",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star color",
+      "default": "#ccc"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "subheading"
+    },
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Main Heading",
+      "default": "Cold Ice Therapy"
+    },
+    {
+      "type": "text",
+      "id": "heading_highlight",
+      "label": "Highlighted Text",
+      "default": "Extreme Wellness"
+    },
+    {
+      "type": "color",
+      "id": "heading_highlight_color",
+      "label": "Highlighted Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "paragraph_color",
+      "label": "Paragraph Color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "It's not just an opinion, ice therapy is based on science. Check what the scientific research says about the benefits of cold water immersion."
+    },
+
+
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading tag",
+      "default": "h2",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "My heading"
+    },
+    {
+      "type": "richtext",
+      "id": "paragraph",
+      "label": "Paragraph",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Video Upload"
+    },
+    {
+      "type": "checkbox",
+      "id": "add_social_proof",
+      "label": "Add social proof",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "add_promotion_badge",
+      "label": "Add promotion badge"
+    },
+    {
+      "type": "text",
+      "id": "promotion_text",
+      "label": "Promotion text",
+      "default": "Promotion"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge text",
+      "default": "Badge"
+    },
+    {
+      "type": "checkbox",
+      "id": "flip",
+      "label": "Flip",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width?",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "grid_proportion",
+      "label": "Grid proportion",
+      "default": "1fr 1fr",
+      "options": [
+        {
+          "value": "1fr 1fr",
+          "label": "1 | 1"
+        },
+        {
+          "value": "1fr 0.75fr",
+          "label": "1 | 0.75"
+        },
+        {
+          "value": "0.75fr 1fr",
+          "label": "0.75 | 1"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Content alignment",
+      "default": "flex-start",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Content Text"
+    }
+  ]
+}
+{% endschema %}

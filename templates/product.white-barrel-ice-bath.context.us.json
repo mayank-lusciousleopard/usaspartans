@@ -1,0 +1,7 @@
+{
+  "parent": "product.white-barrel-ice-bath.json",
+  "context": {
+    "market": "us"
+  },
+  "sections": {}
+}

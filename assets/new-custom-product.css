@@ -1,0 +1,377 @@
+.product.grid{
+    --font-body-family: 'TT Hoves Pro Trial Regular', sans-serif;
+    font-family: var(--font-body-family);
+}
+.section+.section, .section {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+.custom_product_class {
+    background: #eeeeee;
+}
+.product__info-container p.product__text {
+    color: #4B5563;
+    letter-spacing: 0;
+}
+.product.grid .product-form__quantity .form__label {
+    font-family: 'TT Hoves Pro Trial Medium' !important;
+    color: #111827;
+    font-size: 18px;
+    letter-spacing: 0;
+}
+.product__info-container quantity-input.quantity {
+    border-radius: 13px;
+    border: 1px solid #F0F0F0;
+    background: #FAFAFA;
+}
+.product__info-container quantity-input.quantity button.quantity__button {
+    background: transparent;
+}
+.product__info-container quantity-input.quantity:after, .product__info-container quantity-input.quantity:before {
+    display: none;
+}
+.product__info-container quantity-input.quantity button.quantity__button svg {
+    stroke-width: 1px;
+    stroke: #191919;
+}
+.product.grid .product__info-container quantity-input.quantity input.quantity__input {
+    font-size: 20px;
+    font-family: 'TT Hoves Pro Trial Medium' !important;
+}
+.product.grid .product__info-container .price {
+    letter-spacing: 0;
+    color: #141414;
+    font-size: 22px;
+    font-family: 'TT Hoves Pro Trial Medium' !important;
+    margin-bottom: 2rem !important;
+}
+.product__info-container .price .price__container .price__sale {
+    display: flex;
+    flex-direction: row !important;
+    padding: 0 !important;
+}
+.product.grid .product__info-container .price .price__container .price__sale .price-item.price-item--regular {
+    font-size: 16px;
+    color: #666666;
+    font-family: 'TT Hoves Pro Trial Regular' !important;
+}
+.product__info-container .price .badge {
+    background: #000000 !important;
+    letter-spacing: 0;
+    padding: 10px 20px !important;
+    border-radius: 100px !important;
+}
+.product.grid.product-form__buttons button.product-form__submit {
+    background: #516DC2 !important;
+    font-family: 'TT Hoves Pro Trial Medium' !important;
+    font-size: 16px;
+    font-weight: 100;
+}
+.product-form__buttons button.product-form__submit:after, .product-form__buttons button.product-form__submit:before {
+    display: none;
+}
+shopify-accelerated-checkout {
+    --shopify-accelerated-checkout-button-box-shadow: none !important;
+    --buttons-radius-outset: 12px !important;
+    --shopify-accelerated-checkout-button-border-radius: 12px !important;
+}
+.product-new .product__info-wrapper .methods-of-payment {
+    padding: 0 1rem;
+    gap: 1rem !important;
+}
+.product-new .product__info-wrapper .methods-of-payment img {
+    width: 100%;
+}
+body .c-low-stocks {
+    border-radius: 40px 40px 0 0;
+    background: rgba(200, 32, 47, 0.05);
+    padding: 2rem 1rem;
+    color: #101010;
+    letter-spacing: 0;
+    padding-bottom: 5rem;
+}
+.product__info-container .icon-with-text {
+    margin: 0 !important;
+    border-radius: 40px;
+    background: #f6f6f6;
+    padding: 2rem 1rem;
+    color: #101010;
+    letter-spacing: 0;
+    margin-top: -5rem !important;
+}
+.product.grid .product__info-container .icon-with-text .h4 {
+    color: #4B5563;
+    font-family: 'TT Hoves Pro Trial Regular' !important;
+    font-weight: 100;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+}
+body .product.grid .reelUp_cards_carousel .reelUp_slider_heading {
+    color: #0F0F0F !important;
+    letter-spacing: 0.2px;
+    font-size: 18px !important;
+    font-family: 'TT Hoves Pro Trial Medium' !important;
+    margin-bottom: 15px;
+}
+body .product__accordion details {
+    padding: 0;
+    border: none !important;
+    outline: none;
+    box-shadow: none;
+}
+body .product__accordion.accordion {
+    border: none !important;
+}
+body .product.grid .product__accordion summary h2 {
+    font-size: 18px;
+    font-family: 'TT Hoves Pro Trial Medium' !important;
+    font-weight: 100;
+    letter-spacing: -0.5px;
+}
+.product--thumbnail_slider .slider-mobile-gutter .slider-button {
+    position: absolute;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.80);
+    z-index: 2;
+}
+.product--thumbnail_slider .slider-mobile-gutter .slider-button.slider-button--prev {
+    left: -1.5rem;
+}
+.product--thumbnail_slider .slider-mobile-gutter .slider-button.slider-button--next {
+    right: -1.5rem;
+}
+.product--thumbnail_slider .slider-mobile-gutter .slider-button svg {
+    stroke: #313131;
+    stroke-width: 0.5px;
+    width: 16px;
+    height: 16px;
+    color: #313131 !important;
+}
+/* Testimonial Block Styles */
+  .testimonial-card {
+    background: #fff;
+    border: 0;
+    border-radius: 16px;
+    padding: 14px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    box-sizing: border-box;
+    height: auto;
+}
+.my-testimonials-slider {
+    border-top: 1px solid #DADADA;
+    padding-top: 2rem !important;
+    margin-top: 2rem !important;
+    border-bottom: 1px solid #DADADA;
+    padding-bottom: 4rem !important;
+    margin-bottom: 2rem !important;
+}
+  .testimonial-image {
+    flex: 0 0 140px;
+    width: 140px;
+    height: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+  .testimonial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .testimonial-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .testimonial-stars {
+    color: #FDD264;
+    font-size: 24px;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+  .testimonial-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #2C2C2C;
+    letter-spacing: 0;
+}
+  .testimonial-author {
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: rgba(var(--color-foreground), 1);
+  }
+  .verified-badge {
+    color: #007bff;
+    display: inline-flex;
+  }
+  .my-testimonials-slider {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .my-testimonials-slider .swiper-pagination-bullet-active {
+    background: rgba(var(--color-foreground), 1);
+  }
+  .product.grid .my-logos-block h3.h4 {
+    font-weight: 100 !important;
+    font-family: 'TT Hoves Pro Trial Medium' !important;
+    font-size: 18px !important;
+}
+.my-testimonials-slider.swiper-horizontal>.swiper-pagination-bullets, .my-testimonials-slider.swiper-pagination-horizontal.swiper-pagination-bullets {
+    bottom: 1rem;
+}
+.product.grid .my-description-block h3.h4 {
+    font-weight: 100 !important;
+    font-family: 'TT Hoves Pro Trial Medium' !important;
+    font-size: 18px !important;
+    letter-spacing: 0 !important;
+}
+.my-logo-card {
+    aspect-ratio: 3 / 1.5 !important;
+    padding: 10px 30px !important;
+}
+.desk_hide_ll {
+    display: none !important;
+}
+.product-new__mobile {
+    display: none !important;
+}
+.q4-sale-badge-container--pdp-gallery {
+    display: none !important;
+}
+.product.grid .product__title h1{
+    font-family: 'Zalando Sans Expanded' !important;
+}
+fieldset.product-form__input .form__label, .tpo_option-label-container .form__label {
+    font-family: TT Hoves Pro Trial Medium !important;
+    color: #111827;
+    font-size: 18px;
+    letter-spacing: 0;
+    font-weight: 100;
+}
+.product-form__input input[type=radio]+label {
+    border-radius: 8px !important;
+    border-color: #D1D5DB !important;
+    letter-spacing: 0 !important;
+    font-family: 'TT Hoves Pro Trial Medium';
+    font-weight: 500;
+    background: #fff !important;
+    color: #111827 !important;
+    padding: 1rem 2rem !important;
+    width: calc(50% - 0.75rem) !important;
+}
+.product-form__input input[type=radio]:checked+label {
+    background: #EFF6FF !important;
+    border-color: #2563EB !important;
+}
+.product__info-container variant-radios fieldset.product-form__input:last-of-type {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.product__info-container variant-radios {
+    margin-bottom: 0 !important;
+}
+.product-form__input input[type=radio]:checked+label:last-child {
+    margin-right: 0 !important;
+}
+.product__info-container variant-radios fieldset.product-form__input:last-of-type label {
+    margin-bottom: 0 !important;
+}
+/* .product-form__input:has(input[type=radio]:first-of-type:checked+label)+.product-form__input:last-of-type input[type=radio]:checked+label:last-child {
+    margin-bottom: -5px!important;
+    border-radius: 8px 8px 0 0!important;
+    border-bottom: none;
+    line-height: 1.6;
+} */
+.product-form__input:last-of-type input[type=radio]:checked+label:last-child {
+    margin-bottom: -5px!important;
+    border-radius: 8px 8px 0 0!important;
+    border-bottom: none;
+    line-height: 1.6;
+}
+
+@media screen and (min-width: 750px) {
+    .product__info-wrapper.grid__item {
+        padding: 0 0 0 5rem !important;
+    }
+}
+
+@media screen and (max-width: 749px){
+    .my-testimonials-slider .swiper-wrapper {
+    height: max-content !important;
+}
+.desk_hide_ll {
+    display: block !important;
+}
+.mob_hide_ll {
+    display: none !important;
+}
+body .product-new .product__title {
+    display: block !important;
+}
+body .product-new .product__title a.product__title {
+    display: none !important;
+}
+.product-new .product__info-wrapper .shopify-app-block:has(.jdgm-prev-badge) {
+    display: block !important;
+}
+.product-new .product__info-wrapper .price__badge-sale {
+    display: inline-flex !important;
+}
+.product-new .product__info-wrapper .c-low-stocks {
+    display: flex !important;
+}
+.product-new .product__info-wrapper .methods-of-payment {
+    gap: 1rem!important;
+}
+.my-logos-grid {
+    display: flex !important;
+}
+.my-logo-card {
+    padding: 5px 20px!important;
+}
+.my-testimonials-slider.swiper-horizontal>.swiper-pagination-bullets, .my-testimonials-slider.swiper-pagination-horizontal.swiper-pagination-bullets {
+    bottom: 2rem;
+}
+.product-form__input input[type=radio]+label {
+    width: unset !important;
+}
+.magic-box-wrapper {
+    max-width: calc(100% - 0.5px) !important;
+}
+.nm-column {
+        width: 100% ;
+        border-right: none;
+        padding: 2rem 2rem 2rem !important;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #e7e7e7;
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+    .nm-card-header {
+    justify-content: center !important;
+}
+
+.nm-card-text {
+    text-align: center !important;
+}
+.tp-card-content {
+    height: 100%;
+    justify-content: center;
+
+}
+.tp-user {
+    margin-top: 0 !important;
+}
+.willpower-image-col {
+        min-height: 0 !important;
+}
+
+}

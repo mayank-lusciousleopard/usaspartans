@@ -1,0 +1,586 @@
+<style>
+      #{{ section.id }} {
+        font-size: 16px;
+        padding-top: {{ section.settings.padding_top }}em;
+        padding-bottom: {{ section.settings.padding_bottom }}em;
+        background-color: {{ section.settings.bg_color }};
+        margin: 0 auto;
+      }
+
+      #{{ section.id }} .c-section-top-subheading,
+      #{{ section.id }} div,
+      #{{ section.id }} h2,
+      #{{ section.id }} h3 {
+        color: {{ section.settings.text_color }};
+      }
+
+
+      .bg_main__card
+      {
+        border-radius: 40px;
+        background: linear-gradient(0deg, #0E83F9 0%, #0E83F9 100%), url(<path-to-image>) lightgray 50% / cover no-repeat;
+        background-blend-mode: screen, normal;
+
+      }
+
+      #{{ section.id }} .c-section-top {
+        align-items: {{ section.settings.section_top_alignment }};
+        text-align: {{ section.settings.section_top_text_alignment }};
+      }
+
+      #{{ section.id }} h2 {
+        color: {{ section.settings.accent_color }};
+      }
+
+
+
+      #{{ section.id }} .c-tc-triggers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        margin-bottom: 2em;
+      }
+
+      #{{ section.id }} .c-tc-trigger {
+        cursor: pointer;
+        transform: scale(1); /* Estado inicial */
+        padding: 0.75em 1em 0.75em 1em;
+      }
+
+      #{{ section.id }} .c-tc-trigger.c-active {
+        font-weight: bold;
+        background:   linear-gradient(90deg, #0E83F9 0%, #084D93 100%);
+
+        transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+        background-color: #084D93; /* Fondo con gradiente más oscuro */
+        color: #ffffff !important;
+        transition: all 0.1s ease-in-out; /* Transición suave */
+      }
+
+      #{{ section.id }} .bg-card
+      {
+        border-radius: 24px !important;
+        backdrop-filter: blur(30px); /* Ajusta la cantidad de desenfoque */
+        background-color: rgba(255, 255, 255, 0.55);
+
+      }
+
+      .c-image-container {
+        background: linear-gradient(90deg, #0E83F9 0%, #084D93 100%);
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      .c-tc-trigger.c-active .c-image-container {
+        background: #ffffff; /* Cambia a fondo blanco */
+      }
+
+      #{{ section.id }} .c-tc-card {
+        display: grid;
+        grid-template-columns: 1fr   ;  /* Dos columnas iguales */
+         /* Header ocupa una fila, seguido del contenido */
+        gap: 1em;
+        width: 100%;
+        display: none;
+      }
+
+      #{{ section.id }} .c-tc-card.c-active {
+        display: grid;
+      }
+
+      #{{ section.id }} .c-tc-card-left {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1em;
+      }
+
+      #{{ section.id }} .c-tc-card-paragraph {
+        font-size: clamp(16px, 2vw, 24px);
+        font-style: normal;
+
+
+      }
+
+      #{{ section.id }} .c-tc-benefits {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0.75em;
+      }
+
+      #{{ section.id }} .c-tc-benefit {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.3em;
+        font-weight: bold;
+      }
+
+      #{{ section.id }} .c-tc-card-header h2{
+        font-size: clamp(24px, 5vw, 40px);
+        text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 48px */
+  text-transform: capitalize;
+      }
+
+
+
+      #{{ section.id }} .c-tc-benefit svg {
+        width: 1.5em;
+        min-width: 1.5em;
+        color: {{ section.settings.accent_color }};
+      }
+
+      #{{ section.id }} .c-tc-card-right {
+        display: flex;
+      }
+
+      #{{ section.id }} .c-tc-card-right > * {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .new__header{
+        color: #000;
+
+
+    font-size: clamp(32px, 4vw, 48px) !important;
+
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 57.6px */
+    text-transform: capitalize;
+
+     margin: 1rem 0;
+
+      }
+
+
+  .text__lightblue{
+    color: #0E83F9 !important; /* Color específico para el párrafo */
+  }
+
+  #{{ section.id }} strong
+  {
+
+  }
+
+  #{{ section.id }} .c-section-top .c-t-80 {
+
+    font-size: clamp(16px, 1.8vw, 18px);
+
+
+    line-height: 120%; /* 24px */
+    text-transform: capitalize;
+    margin-bottom: 1.5em;
+  }
+
+
+
+      @media (max-width: {{ settings.c_breakpoint3 }}px) {
+        #{{ section.id }} .c-tc-triggers {
+          flex-direction: column;
+          gap: 0em;
+        }
+
+        #{{ section.id }} .c-tc-trigger {
+          padding: 0.5em 1em;
+        }
+
+        #{{ section.id }} .c-tc-trigger.c-active {
+          border-bottom: none;
+          color: white !important;
+
+        }
+
+        #{{ section.id }} .c-tc-card {
+          grid-template-columns: 1fr;
+          gap: 2em;
+
+        }
+      }
+
+      .c-tc-trigger.c-active .svg-wrapper svg {
+        opacity: 0.8;
+        filter: brightness(0) saturate(100%) invert(18%) sepia(95%) saturate(3826%) hue-rotate(191deg) brightness(93%) contrast(92%);
+      }
+</style>
+
+<section id="{{ section.id }}" class="c-section">
+  <div class="page-width">
+    <div class="c-section-top tw-flex tw-flex-wrap tw-justify-center tw--mx-2 ">
+      <div class="tw-w-full md:tw-w-8/12">
+        {%- if section.settings.section_top_subheading != empty -%}
+          <p class="c-section-top-subheading text__lightblue">{{ section.settings.section_top_subheading }}</p>
+        {%- endif -%}
+      </div>
+      <div class="tw-w-full md:tw-w-7/12">
+        {%- if section.settings.section_top_heading != empty -%}
+          <h2 class="new__header">{{ section.settings.section_top_heading }}</h2>
+        {%- endif -%}
+      </div>
+      <div class="tw-w-full md:tw-w-7/12">
+        {%- if section.settings.section_top_paragraph != empty -%}
+          <div class="c-t-80">{{ section.settings.section_top_paragraph }}</div>
+        {%- endif -%}
+      </div>
+    </div>
+    <div class="c-tc-wrapper tw-my-[80px] tw-mx-auto">
+      <div class="tw-grid tw-grid-cols-2 md:tw-flex tw-mx-auto tw-self-start !tw-justify-center !tw-items-start tw-flex-wrap tw-gap-4"
+      >
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'Item' %}
+              <div
+                class="{% if forloop.last %}tw-col-span-2 tw-justify-center{% endif %} c-tc-trigger tw-rounded-xl  tw-w-full tw-h-fit md:t-h-full md:tw-w-2/12 md:tw-p-5 tw-p-2 tw-mb-4 tw-flex tw-flex-col tw-items-center {% if forloop.index == 1 %} c-active {% endif %}"
+                {{ block.shopify_attributes }}
+              >
+                <!-- Contenedor de la Imagen en Círculo -->
+                <div class="c-image-container tw-w-[100px] lg:tw-w-32 tw-h-[100px] lg:tw-h-32 tw-flex tw-justify-center tw-items-center tw-overflow-hidden tw-rounded-full tw-mb-4 tw-bg-blue-500">
+                  {% if block.settings.svg_code %}
+                    <div class="svg-wrapper">
+                      {{ block.settings.svg_code }}
+                      <!-- Renderiza el código SVG -->
+                    </div>
+                  {% endif %}
+                </div>
+
+                <div class="tw-w-full tw-h-full">
+                  <p class="tw-text-center tw-text-sm lg:tw-text-base tw-font-bold">{{ block.settings.block_text }}</p>
+                </div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+      
+      <div class="c-tc-content tw-my-5"
+      id="product-info"
+      >
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'Item' %}
+              <div
+                style="background-image:  url('{{ block.settings.card_background_image | image_url: width: 1200 }}'); background-blend-mode: screen, normal; background-size: cover;"
+                class="tw-rounded-[40px] tw-border-[5px] tw-border-[#0E83F9] tw-bg-lightgray tw-bg-cover tw-bg-center tw-bg-no-repeat tw-relative c-tc-card {% if forloop.index == 1 %} c-active{% endif %}"
+              >
+                <div class="tw-p-[2rem] md:tw-p-[5rem] tw-overflow-hidden tw-rounded-[40px]">
+                  <div class="tw-flex tw-flex-wrap bg-card tw-p-2 md:tw-p-3 tw-justify-around">
+                    <!-- Header que ocupa toda la primera fila -->
+                    <div class="c-tc-card-header tw-w-full tw-mb-3 md:tw-mb-5">
+                      <h2>{{ block.settings.block_heading }}</h2>
+                    </div>
+
+                    <!-- Sección derecha (Imagen + Botón) -->
+                    <div class="c-tc-card-right tw-w-full md:tw-w-6/12 tw-px-2 tw-mb-4 md:tw-mb-0 tw-flex tw-flex-col">
+                      {% if block.settings.block_image %}
+                        {{
+                          block.settings.block_image
+                          | image_url: width: 1080
+                          | image_tag:
+                            class: 'tw-block tw-object-contain tw-object-center tw-max-w-full tw-h-auto tw-rounded-lg'
+                        -}}
+                      {% endif %}
+
+                      {% if section.settings.button_text != empty %}
+                        <a
+                          href="{{ block.settings.button_url }}"
+                          class="c-cta-button tw-w-full md:tw-w-10/12 tw-bg-gradient-to-r tw-from-blue-500 tw-to-blue-800 tw-text-white tw-font-semibold tw-text-center tw-py-3 tw-px-4 md:tw-px-6 tw-rounded-lg tw-shadow-md tw-hover:shadow-lg tw-transition tw-duration-300 tw-ease-in-out {{ section.settings.button_style }}"
+                        >
+                          {{ block.settings.button_text }}
+                        </a>
+                      {% endif %}
+                    </div>
+
+                    <!-- Sección izquierda (Texto) -->
+                    <div class="c-tc-card-left tw-w-full md:tw-w-5/12">
+                      <p class="c-section-top-subheading">{{ block.settings.block_subheading }}</p>
+                      <div class="c-tc-card-paragraph">{{ block.settings.block_paragraph }}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+    // Asegura que todos los tabs y contenidos estén correctamente seleccionados
+  // Asegura que todos los tabs y contenidos estén correctamente seleccionados
+  document.querySelectorAll("#{{ section.id }} .c-tc-trigger").forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+      // Desactivar todas las tarjetas activas
+      document.querySelectorAll("#{{ section.id }} .c-tc-card").forEach((content) => {
+        content.classList.remove("c-active");
+      });
+
+      // Desactivar todas las pestañas activas
+      document.querySelectorAll("#{{ section.id }} .c-tc-trigger").forEach((tab) => {
+        tab.classList.remove("c-active");
+      });
+
+      // Activar la tarjeta y pestaña seleccionadas
+      const selectedCard = document.querySelectorAll("#{{ section.id }} .c-tc-card")[index];
+      const selectedTab = document.querySelectorAll("#{{ section.id }} .c-tc-trigger")[index];
+
+      if (selectedCard && selectedTab) {
+        selectedCard.classList.add("c-active");
+        selectedTab.classList.add("c-active");
+        if (window.innerWidth <= 768) { // Solo en dispositivos móviles
+          const target = document.getElementById(`product-info`);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      }
+    });
+  });
+
+  // Asegura que las animaciones con GSAP se apliquen correctamente
+  let myTl{{ section.id | replace: '-', '_' }} = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#{{ section.id }} .c-tc-card",
+      pin: false,
+      markers: false,
+      toggleActions: "play none none none",
+      start: "0% 90%",
+      end: "100% 70%"
+    }
+  }).fromTo(
+    "#{{ section.id }} .c-tc-card > *",
+    { y: "100%", opacity: 0 },
+    { y: "0%", opacity: 1, stagger: 0.3 }
+  );
+
+</script>
+
+{% schema %}
+{
+  "name": "C Tabs Content",
+  "blocks": [
+    {
+      "name": "Item",
+      "type": "Item",
+      "limit": 50,
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "svg_code",
+          "label": "SVG Code"
+        },
+
+        {
+          "type": "image_picker",
+          "id": "card_background_image",
+          "label": "Card Background Image"
+        },
+        {
+          "type": "text",
+          "id": "card_block_image_alt",
+          "label": "Card Image Alt Text",
+          "default": "Card Image Description"
+        },
+
+        {
+          "type": "text",
+          "id": "block_text",
+          "label": "Text",
+          "default": "Block text Here"
+        },
+        {
+          "type": "text",
+          "id": "block_subheading",
+          "label": "Subheading",
+          "default": "Block subheading here"
+        },
+        {
+          "type": "text",
+          "id": "block_heading",
+          "label": "Heading",
+          "default": "Block Heading Here"
+        },
+        {
+          "type": "richtext",
+          "id": "block_paragraph",
+          "label": "Paragraph",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>"
+        },
+        {
+          "type": "text",
+          "id": "block_item1",
+          "label": "Item1",
+          "default": "Block item text"
+        },
+        {
+          "type": "text",
+          "id": "block_item2",
+          "label": "Item2",
+          "default": "Block item text"
+        },
+        {
+          "type": "text",
+          "id": "block_item3",
+          "label": "Item3",
+          "default": "Block item text"
+        },
+        {
+          "type": "image_picker",
+          "id": "block_image",
+          "label": "Image"
+        },
+        {
+          "type": "header",
+          "content": "Button"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Shop Now"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "button_style",
+      "label": "Button style",
+      "default": "c-b1"
+    },
+
+    {
+      "type": "header",
+      "content": "Section Colors"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#5d3be4"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+
+    {
+      "type": "header",
+      "content": "Section Top"
+    },
+    {
+      "type": "text",
+      "id": "section_top_subheading",
+      "label": "Subheading",
+      "default": "subheading"
+    },
+    {
+      "type": "text",
+      "id": "section_top_heading",
+      "label": "Heading",
+      "default": "Section Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "section_top_paragraph",
+      "label": "Paragraph",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>"
+    },
+    {
+      "type": "select",
+      "id": "section_top_alignment",
+      "label": "Section Top Alignment",
+      "default": "center",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "section_top_text_alignment",
+      "label": "Text alignment",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "default": 4,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "default": 4,
+      "unit": "rem"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Tabs Content",
+      "blocks": [
+        {
+          "type": "Item"
+        },
+        {
+          "type": "Item"
+        },
+        {
+          "type": "Item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

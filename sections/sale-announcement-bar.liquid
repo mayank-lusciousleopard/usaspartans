@@ -1,0 +1,88 @@
+{% liquid
+  assign bg_start = settings.sale_q4_bg_start | default: '#143549'
+  assign bg_end = settings.sale_q4_bg_end | default: '#065367'
+  assign text_color = settings.sale_q4_text_color | default: '#FFFFFF'
+  assign timer_mode = settings.sale_timer_mode | default: 'date'
+  assign timer_text = settings.sale_timer_date | default: '2025-11-14T00:00:00'
+%}
+
+{{ 'section-sale-announcement-bar.css' | asset_url | stylesheet_tag }}
+
+<style>
+  #sale-announcement-{{ section.id }} {
+    --sale-announcement-bg-start: {{ bg_start }};
+    --sale-announcement-bg-end: {{ bg_end }};
+    --sale-announcement-text: {{ text_color }};
+  }
+</style>
+
+<div id="sale-announcement-{{ section.id }}" class="sale-announcement">
+  <div class="sale-announcement__top">
+    <div class="sale-announcement__pill">
+      <div class="sale-announcement__icon" aria-hidden="true">{{ section.settings.pill_icon }}</div>
+      <span class="sale-announcement__pill-text">{{ section.settings.label_text }}</span>
+    </div>
+    <div class="sale-announcement__heading">
+      <span class="sale-announcement__heading-prefix">{{ section.settings.heading_prefix }}</span>
+      <span class="sale-announcement__space"> </span>
+      <span class="sale-announcement__heading-suffix sale-announcement__heading-suffix--mobile">{{ section.settings.heading_suffix_mobile }}</span>
+      <span class="sale-announcement__heading-suffix sale-announcement__heading-suffix--desktop">{{ section.settings.heading_suffix_desktop }}</span>
+    </div>
+  </div>
+
+  <div class="sale-announcement__bottom">
+    <div class="sale-announcement__timer-label">{{ section.settings.timer_label }}</div>
+    <div class="sale-announcement__timer">
+      {% render 'timer', timer_class: 'sale-announcement__timer-instance', timer_text: timer_text, timer_mode: timer_mode %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Sale announcement bar",
+  "class": "section-sale-announcement-bar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label_text",
+      "label": "Label pill text",
+      "default": "Save up to $300"
+    },
+    {
+      "type": "textarea",
+      "id": "pill_icon",
+      "label": "Pill icon"
+    },
+    {
+      "type": "textarea",
+      "id": "heading_prefix",
+      "label": "Heading prefix",
+      "default": "Discount Season"
+    },
+    {
+      "type": "text",
+      "id": "heading_suffix_mobile",
+      "label": "Heading suffix (mobile)",
+      "default": "Started!"
+    },
+    {
+      "type": "text",
+      "id": "heading_suffix_desktop",
+      "label": "Heading suffix (desktop)",
+      "default": "Starts Now!"
+    },
+    {
+      "type": "text",
+      "id": "timer_label",
+      "label": "Timer label",
+      "default": "End in"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sale announcement bar"
+    }
+  ]
+}
+{% endschema %}

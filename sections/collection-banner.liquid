@@ -1,0 +1,61 @@
+{{ 'collection-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="collection-banner-container">
+  {% if section.settings.background_image_des != blank %}
+    {{ section.settings.background_image_des | image_url: width: 2000 | image_tag: class: 'collection-banner__background-desktop' }}
+  {% endif %}
+
+  {% if section.settings.background_image_mobile != blank %}
+    {{ section.settings.background_image_mobile | image_url: width: 1000 | image_tag: class: 'collection-banner__background-mobile' }}
+  {% endif %}
+  <div class="collection-banner-wrapper page-width">
+    <div class="collection-banner">
+      <div class="collection-banner__content">
+        {% if collection.metafields.custom.collection_banner_title.value != blank %}
+          <h1 class="collection-banner__title">{{ collection.metafields.custom.collection_banner_title.value }}</h1>
+        {% else %}
+          <h1 class="collection-banner__title">{{ collection.title }}</h1>
+        {% endif %}
+
+        {% if collection.metafields.custom.collection_banner_description.value != blank %}
+          <div class="collection-banner__description">{{ collection.metafields.custom.collection_banner_description.value }}</div>
+        {% else %}
+          <div class="collection-banner__description">{{ collection.description }}</div>
+        {% endif %}
+      </div>
+
+      <div class="collection-banner__images">
+        {% if collection.metafields.custom.collection_banner_image_desktop.value != blank %}
+          {{ collection.metafields.custom.collection_banner_image_desktop.value | image_url: width: 1200 | image_tag: class: 'collection-banner__image-desktop' }}
+        {% endif %}
+
+        {% if collection.metafields.custom.collection_banner_image_mobile.value != blank %}
+          {{ collection.metafields.custom.collection_banner_image_mobile.value | image_url: width: 800 | image_tag: class: 'collection-banner__image-mobile' }}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collection Banner New",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image_des",
+      "label": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_mobile",
+      "label": "Background Image (Mobile)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Banner New"
+    }
+  ]
+}
+{% endschema %}

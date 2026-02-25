@@ -1,0 +1,139 @@
+<section class="compare">
+  <div class="w-layout-blockcontainer container w-container">
+    <div class="heading center">
+      <div class="subtitle-section">{{ section.settings.title }}</div>
+      <h2 class="title-section">{{ section.settings.heading }}</h2>
+    </div>
+    <div class="compare-table-wrap">
+      {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'image_with_text' %}
+      <div class="compare-top-row">
+        <div class="compare-top-content-col"></div>
+        <div class="compare-top-featured-col">
+          <img src="{{ block.settings.image | image_url }}" loading="lazy" alt="" class="compare-top-featured-icon">
+        </div>
+        <div class="compare-top-other-col">
+          <div class="compare-top-other-title">{{ block.settings.content }}</div>
+        </div>
+      </div>
+      {% when 'compare' %}
+      <div class="compare-content-row">
+        <div class="compare-content-col">
+          <div>{{ block.settings.text }}</div>
+        </div>
+        <div class="compare-content-featured-col">
+          {% if block.settings.select_option == 'Yes' %}
+          <img src="https://cdn.shopify.com/s/files/1/0740/3195/6281/files/simple-line-icons_check.svg?v=1694604960" loading="lazy" alt="" class="reasons-content-icon">
+          {% else %}
+          <img src="https://cdn.shopify.com/s/files/1/0740/3195/6281/files/system-uicons_cross-circle.svg?v=1694604960" loading="lazy" alt="" class="reasons-content-icon">
+          {% endif %}
+        </div>
+        <div class="compare-content-other-col">
+          {% if block.settings.select_option1 == 'Yes' %}
+            <img src="https://cdn.shopify.com/s/files/1/0740/3195/6281/files/simple-line-icons_check.svg?v=1694604960" loading="lazy" alt="" class="reasons-content-icon">
+          {% else %}
+            <img src="https://cdn.shopify.com/s/files/1/0740/3195/6281/files/system-uicons_cross-circle.svg?v=1694604960" loading="lazy" alt="" class="reasons-content-icon">
+          {% endif %}
+        </div>
+      </div>
+      {% endcase %}
+      {% endfor %}
+      <div class="compare-content-row">
+        <div class="compare-content-col"></div>
+        <div class="compare-content-featured-col last"></div>
+        <div class="compare-content-other-col ala"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Compares Section",
+    "settings": [
+      { 
+         "type": "text",
+         "id":"title",
+         "label": "Compares Title" 
+      },
+      { 
+         "type": "text",
+         "id":"heading",
+         "label": "Compares Heading" 
+      }
+    ],
+    "blocks": [
+    {
+      "type": "image_with_text",
+      "name": "Image With Text",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "name": "Compare",
+      "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Heading"
+          },
+          {
+            "type": "select",
+            "id": "select_option",
+            "options": [
+              {
+                "value": "Yes",
+                "label": "Yes"
+              },
+              {
+                "value": "No",
+                "label": "No"
+              }
+            ],
+            "default": "Yes",
+            "label": "Select Option"
+          },
+          {
+            "type": "select",
+            "id": "select_option1",
+            "options": [
+              {
+                "value": "Yes",
+                "label": "Yes"
+              },
+              {
+                "value": "No",
+                "label": "No"
+              }
+            ],
+            "default": "Yes",
+            "label": "Select Option"
+          }
+        ] 
+      }
+    ],
+    "presets": [
+      {
+        "name": "Compares Section"
+      }
+    ]
+  } 
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

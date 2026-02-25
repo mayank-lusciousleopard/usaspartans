@@ -1,0 +1,41 @@
+<div class="methods-of-payment_container" style="margin:0 auto;">
+  <span class="methods-of-payment">
+    {% comment %}
+      <img src="{{ 'visa' | payment_type_img_url }}" height="35" alt="visa" />
+      <img src="{{ 'master' | payment_type_img_url }}" height="35" alt="master" />
+      <img src="{{ 'apple_pay' | payment_type_img_url }}" height="35" alt="apple pay" />
+      <img src="{{ 'american_express' | payment_type_img_url }}" height="35" alt="american express" />
+      <img src="{{ 'paypal' | payment_type_img_url }}" height="35" alt="paypal" />
+    {% endcomment %}
+    <img
+      src="https://cdn.shopify.com/s/files/1/0740/3195/6281/files/payments.png?v=1733234397"
+      alt="payment methods"
+      style="max-width:90%; height: auto; margin:0 auto;"
+    >
+  </span>
+  <p>Guaranteed Safe & Secure Checkout</p>
+</div>
+<style>
+  span.methods-of-payment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .methods-of-payment_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+  .product__info-container .methods-of-payment_container {
+    margin: -15px 0 -15px !important;
+  }
+  .methods-of-payment_container p {
+    display: none;
+  }
+  {% comment %} .methods-of-payment img { padding: 0.2em; } {% endcomment %}
+  .lt-ie9 .methods-of-payment, .ie8 .methods-of-payment, .oldie .methods-of-payment { display: none; }
+</style>

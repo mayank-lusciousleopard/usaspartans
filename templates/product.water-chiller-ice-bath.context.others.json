@@ -1,0 +1,7 @@
+{
+  "parent": "product.water-chiller-ice-bath.json",
+  "context": {
+    "market": "others"
+  },
+  "sections": {}
+}

@@ -1,0 +1,249 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .willpower-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: {{ section.settings.corner_radius }}px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  @media screen and (min-width: 750px) {
+    .willpower-card {
+      flex-direction: row;
+      align-items: stretch;
+    }
+  }
+
+  .willpower-image-col {
+    width: 100%;
+    position: relative;
+    background-color: #f4f4f4;
+    min-height: 300px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .willpower-image-col {
+      width: 50%;
+      min-height: auto;
+    }
+  }
+
+  .willpower-image-col img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .willpower-text-col {
+    width: 100%;
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    background-color: {{ section.settings.right_bg_color }};
+    color: {{ section.settings.text_color }};
+  }
+
+  @media screen and (min-width: 750px) {
+    .willpower-text-col {
+      width: 50%;
+      padding: 8rem 6rem; 
+    }
+  }
+
+  .willpower-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  .willpower-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .willpower-heading {
+    margin: 0 0 24px;
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: currentColor;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+        font-family: 'TT Hoves Pro Trial Medium';
+  }
+  
+  @media screen and (min-width: 750px) {
+    .willpower-heading {
+       font-size: 35px;
+    }
+  }
+
+  .willpower-description {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+
+  .willpower-description p {
+    margin-bottom: 16px;
+    color: currentColor;
+  }
+  .willpower-description p:last-child {
+    margin-bottom: 0;
+  }
+{%- endstyle -%}
+
+<div class="page-width section-{{ section.id }}-padding">
+  <div class="willpower-card">
+    <div class="willpower-image-col">
+      {%- if section.settings.image != blank -%}
+        {{ section.settings.image | image_url: width: 1500 | image_tag:
+          loading: 'lazy',
+          width: section.settings.image.width,
+          height: section.settings.image.height,
+          sizes: '(min-width: 750px) 50vw, 100vw'
+        }}
+      {%- else -%}
+        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+    </div>
+    <div class="willpower-text-col">
+      {%- if section.settings.right_bg_image != blank -%}
+        {{ section.settings.right_bg_image | image_url: width: 1500 | image_tag:
+          loading: 'lazy',
+          class: 'willpower-bg-image',
+          sizes: '(min-width: 750px) 50vw, 100vw'
+        }}
+      {%- endif -%}
+      
+      <div class="willpower-content">
+        {%- if section.settings.heading != blank -%}
+          <h2 class="willpower-heading">{{ section.settings.heading | escape }}</h2>
+        {%- endif -%}
+        {%- if section.settings.description != blank -%}
+          <div class="willpower-description rte">
+            {{ section.settings.description }}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Willpower Mission",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Left Column (Image)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Right Column (Content)"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "THE WARRIOR WILLPOWER MISSION"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Our mission is simple: to make advanced recovery accessible...</p>"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "right_bg_color",
+      "label": "Background Color",
+      "default": "#111827"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "header",
+      "content": "Layout Settings"
+    },
+    {
+      "type": "range",
+      "id": "corner_radius",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Corner Radius",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "Willpower Mission"
+    }
+  ]
+}
+{% endschema %}

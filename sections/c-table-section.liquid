@@ -1,0 +1,755 @@
+{% style %}
+
+#{{ section.id }} {
+      font-size: 16px;
+      padding-top: {{ section.settings.padding_top }}em;
+      padding-bottom: {{ section.settings.padding_bottom }}em;
+
+    }
+  
+    #{{ section.id }} .c-section-top-subheading,
+    #{{ section.id }} div,
+    #{{ section.id }} h2,
+    #{{ section.id }} h3 {
+      color: {{ section.settings.text_color }};
+    }
+
+    #{{ section.id }} h2 {
+      color: {{ section.settings.accent_color }};
+    }
+
+    #{{ section.id }} .c-section-top {
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+      {% if section.settings.section_top_alignment == "flex-start" %}width: 100%;{% endif %}
+      align-items: {{ section.settings.section_top_alignment }};
+      text-align: {{ section.settings.text_alignment }};
+    }
+
+    #{{ section.id }} .c-section-top h2 {
+        font-size:56px;
+        line-height: 60px;
+        font-weight: 700;
+    }
+
+    #{{ section.id }} .grid-container {
+  display: flex;
+  flex-direction: column;
+  /* gap: 20px; */
+  overflow: auto;
+}
+
+
+#{{ section.id }} .grid-item-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 24px;
+  align-items: center;
+  min-width:800px;
+  min-height:112px;
+  
+}
+
+#{{ section.id }} .grid-column {
+  text-align: center;
+  /* display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center; */
+}
+
+#{{ section.id }} .grid-column.has-icon {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#{{ section.id }} .product-image {
+  max-width: 100%;
+  height: auto;
+}
+
+#{{ section.id }} .product-image-first {
+  max-width: 100%;
+  height: auto;
+}
+
+#{{ section.id }} .product-title {
+  font-size: 1em;
+  color: #000000;
+  font-weight: 700;
+}
+
+#{{ section.id }} .product-title_1 {
+  font-size: 1em;
+  color: #000000;
+  font-size:20px;
+  font-weight:700;
+}
+
+#{{ section.id }} .product-paragraph {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #000000;
+}
+
+#{{ section.id }} .product-icon {
+  max-width: 30px;
+  height: auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#{{ section.id }} .block-title h2 {
+    font-weight:700;
+    font-size:24px;
+    margin-top:50px;
+    margin-bottom:30px;
+    position:relative;
+    display:inline-block;
+}
+
+#{{ section.id }} .block-title h2::after {
+    content: ''; 
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    width: 100%; 
+    height: 1px; 
+    background-color: #000; 
+}
+
+#{{ section.id }} .image-container {
+  position: relative;
+  display: inline-block;
+}
+
+#{{ section.id }} .product-image-first {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#{{ section.id }} .hover-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  background: linear-gradient(90deg, #0E83F9 0%, #084D93 100%);
+  padding: 10px 10px;
+  border-radius: 5px;
+  text-align: center;
+  color:white;
+}
+
+#{{ section.id }} .hover-button-link {
+  color: white;
+  font-size: 12px;
+  z-index: 10;
+}
+
+#{{ section.id }} .image-container:hover .hover-button {
+  display: block;
+  cursor:pointer;
+
+}
+
+#{{ section.id }} .highlight {
+    color: #0E83F9;
+}
+
+#{{ section.id }} .image-container:hover img {
+    filter: blur(2px);
+}
+
+@media (max-width: 768px) {
+
+  #{{ section.id }} .c-section-top h2 {
+    font-size:36px;
+    line-height: 40px;
+  }
+
+}
+
+
+
+{% endstyle %}
+
+<section id="{{ section.id }}" class="c-section">
+    <div class="{{ section.settings.section_container }}">
+      <div class="c-section-top">
+        {%- if section.settings.section_top_subheading != empty -%}
+          <p class="c-section-top-subheading">{{ section.settings.section_top_subheading }}</p>
+        {%- endif -%}
+        {%- if section.settings.section_top_heading != empty -%}
+          <h2>{{ section.settings.section_top_heading }}</h2>
+        {%- endif -%}
+        {%- if section.settings.section_top_heading == empty -%}
+            <h2>
+                Find The <span class="highlight">Perfect Water Chiller</span> For Your Needs
+            </h2>
+          {%- endif -%}
+        {%- if section.settings.section_top_paragraph != empty -%}
+          <div class="c-t-80">{{ section.settings.section_top_paragraph }}</div>
+        {%- endif -%}
+      </div>
+
+      <div class="grid-container">
+        {% for block in section.blocks %}
+          {% case block.type %}
+        {% when 'image_products' %}
+            <div class="grid-item-row" style="{% if block.settings.background_active %}background-color: {{ block.settings.background_color }};{% endif %}">
+              <div class="grid-column{% if block.settings.icon_1 %} has-icon{% endif %}" style="text-align: {{ block.settings.alignment_1 }};">
+                {% if block.settings.image_1 %}
+                  <img src="{{ block.settings.image_1 | image_url }}" alt="{{ block.settings.title_1 }}" class="product-image">
+                {% endif %}
+                {% if block.settings.title_1 %}
+                  <h3 class="product-title_1">{{ block.settings.title_1 }}</h3>
+                {% endif %}
+                {% if block.settings.paragraph_1 %}
+                  <p class="product-paragraph">{{ block.settings.paragraph_1 }}</p>
+                {% endif %}
+                {% if block.settings.icon_1 %}
+                  <img src="{{ block.settings.icon_1 | image_url }}" alt="Icon 1" class="product-icon">
+                {% endif %}
+              </div>
+              <div class="grid-column{% if block.settings.icon_2 %} has-icon{% endif %}">
+                <div class="image-container">
+                {% if block.settings.image_2 %}
+                  <img src="{{ block.settings.image_2 | image_url }}" alt="{{ block.settings.title_2 }}" class="product-image-first">
+                  <div class="hover-button">
+                    {% if block.settings.button_text_2 %}
+                      <a href="{{ block.settings.button_url_2 }}" class="hover-button-link">{{ block.settings.button_text_2 }}</a>
+                    {% endif %}
+                  </div>
+                {% endif %}
+                {% if block.settings.title_2 %}
+                  <h3 class="product-title">{{ block.settings.title_2 }}</h3>
+                {% endif %}
+                {% if block.settings.paragraph_2 %}
+                  <p class="product-paragraph">{{ block.settings.paragraph_2 }}</p>
+                {% endif %}
+                {% if block.settings.icon_2 %}
+                  <img src="{{ block.settings.icon_2 | image_url }}" alt="Icon 2" class="product-icon">
+                {% endif %}
+              </div>
+            </div>
+              <div class="grid-column{% if block.settings.icon_3 %} has-icon{% endif %}">
+                <div class="image-container">
+                {% if block.settings.image_3 %}
+                  <img src="{{ block.settings.image_3 | image_url }}" alt="{{ block.settings.title_3 }}" class="product-image-first">
+                  <div class="hover-button">
+                    {% if block.settings.button_text_3 %}
+                      <a href="{{ block.settings.button_url_3 }}" class="hover-button-link">{{ block.settings.button_text_3 }}</a>
+                    {% endif %}
+                  </div>
+                {% endif %}
+                {% if block.settings.title_3 %}
+                  <h3 class="product-title">{{ block.settings.title_3 }}</h3>
+                {% endif %}
+                {% if block.settings.paragraph_3 %}
+                  <p class="product-paragraph">{{ block.settings.paragraph_3 }}</p>
+                {% endif %}
+                {% if block.settings.icon_3 %}
+                  <img src="{{ block.settings.icon_3 | image_url }}" alt="Icon 3" class="product-icon">
+                {% endif %}
+              </div>
+            </div>
+              <div class="grid-column{% if block.settings.icon_4 %} has-icon{% endif %}">
+                <div class="image-container">
+                {% if block.settings.image_4 %}
+                  <img src="{{ block.settings.image_4 | image_url }}" alt="{{ block.settings.title_4 }}" class="product-image-first">
+                  <div class="hover-button">
+                    {% if block.settings.button_text_4 %}
+                      <a href="{{ block.settings.button_url_4 }}" class="hover-button-link">{{ block.settings.button_text_4 }}</a>
+                    {% endif %}
+                  </div>
+                {% endif %}
+                {% if block.settings.title_4 %}
+                  <h3 class="product-title">{{ block.settings.title_4 }}</h3>
+                {% endif %}
+                {% if block.settings.paragraph_4 %}
+                  <p class="product-paragraph">{{ block.settings.paragraph_4 }}</p>
+                {% endif %}
+                {% if block.settings.icon_4 %}
+                  <img src="{{ block.settings.icon_4 | image_url }}" alt="Icon 4" class="product-icon">
+                {% endif %}
+              </div>
+            </div>
+            </div>
+          {% when 'product_table' %}
+            <div class="grid-item-row" style="{% if block.settings.background_active %}background-color: {{ block.settings.background_color }};{% endif %}">
+              <div class="grid-column{% if block.settings.icon_1 %} has-icon{% endif %}" style="text-align: {{ block.settings.alignment_1 }};">
+                {% if block.settings.image_1 %}
+                  <img src="{{ block.settings.image_1 | image_url }}" alt="{{ block.settings.title_1 }}" class="product-image">
+                {% endif %}
+                {% if block.settings.title_1 %}
+                  <h3 class="product-title_1">{{ block.settings.title_1 }}</h3>
+                {% endif %}
+                {% if block.settings.paragraph_1 %}
+                  <p class="product-paragraph">{{ block.settings.paragraph_1 }}</p>
+                {% endif %}
+                {% if block.settings.icon_1 %}
+                  <img src="{{ block.settings.icon_1 | image_url }}" alt="Icon 1" class="product-icon">
+                {% endif %}
+              </div>
+              <div class="grid-column{% if block.settings.icon_2 %} has-icon{% endif %}">
+                {% if block.settings.image_2 %}
+                  <img src="{{ block.settings.image_2 | image_url }}" alt="{{ block.settings.title_2 }}" class="product-image">
+                {% endif %}
+                {% if block.settings.title_2 %}
+                  <h3 class="product-title">{{ block.settings.title_2 }}</h3>
+                {% endif %}
+                {% if block.settings.paragraph_2 %}
+                  <p class="product-paragraph">{{ block.settings.paragraph_2 }}</p>
+                {% endif %}
+                {% if block.settings.icon_2 %}
+                  <img src="{{ block.settings.icon_2 | image_url }}" alt="Icon 2" class="product-icon">
+                {% endif %}
+              </div>
+              <div class="grid-column{% if block.settings.icon_3 %} has-icon{% endif %}">
+                {% if block.settings.image_3 %}
+                  <img src="{{ block.settings.image_3 | image_url }}" alt="{{ block.settings.title_3 }}" class="product-image">
+                {% endif %}
+                {% if block.settings.title_3 %}
+                  <h3 class="product-title">{{ block.settings.title_3 }}</h3>
+                {% endif %}
+                {% if block.settings.paragraph_3 %}
+                  <p class="product-paragraph">{{ block.settings.paragraph_3 }}</p>
+                {% endif %}
+                {% if block.settings.icon_3 %}
+                  <img src="{{ block.settings.icon_3 | image_url }}" alt="Icon 3" class="product-icon">
+                {% endif %}
+              </div>
+              <div class="grid-column{% if block.settings.icon_4 %} has-icon{% endif %}">
+                {% if block.settings.image_4 %}
+                  <img src="{{ block.settings.image_4 | image_url }}" alt="{{ block.settings.title_4 }}" class="product-image">
+                {% endif %}
+                {% if block.settings.title_4 %}
+                  <h3 class="product-title">{{ block.settings.title_4 }}</h3>
+                {% endif %}
+                {% if block.settings.paragraph_4 %}
+                  <p class="product-paragraph">{{ block.settings.paragraph_4 }}</p>
+                {% endif %}
+                {% if block.settings.icon_4 %}
+                  <img src="{{ block.settings.icon_4 | image_url }}" alt="Icon 4" class="product-icon">
+                {% endif %}
+              </div>
+            </div>
+
+          {% when 'block_title' %}
+            <div class="block-title" style="text-align: {{ block.settings.alignment }};">
+              <h2>{{ block.settings.title }}</h2>
+            </div>
+          {% endcase %}
+        {% endfor %}
+    </div>
+</div>
+</section>
+
+{% schema %}
+{
+  "name": "C Table Section",
+  "settings": [
+    {
+        "type": "header",
+        "content": "Section Padding"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "label": "Padding top",
+        "min": 0,
+        "max": 15,
+        "step": 1,
+        "default": 4,
+        "unit": "rem"
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "min": 0,
+        "max": 15,
+        "step": 1,
+        "default": 4,
+        "unit": "rem"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color",
+        "default": "#000"
+      },
+      {
+        "type": "color",
+        "id": "accent_color",
+        "label": "Accent color",
+        "default": "#5d3be4"
+      },
+      {
+        "type": "select",
+        "id": "section_top_alignment",
+        "label": "Section Top Alignment",
+        "default": "center",
+        "options": [
+          {
+            "value": "flex-start",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "flex-end",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "section_container",
+        "label": "Section container",
+        "default": "page-width",
+        "options": [
+          {
+            "value": "page-width",
+            "label": "Normal"
+          },
+          {
+            "value": "",
+            "label": "None"
+          },
+          {
+            "value": "page-width2",
+            "label": "Smaller"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Section Top"
+      },
+      {
+        "type": "text",
+        "id": "section_top_subheading",
+        "label": "Subheading",
+        "default": "subheading"
+      },
+      {
+        "type": "text",
+        "id": "section_top_heading",
+        "label": "Heading",
+        "default": "My heading"
+      },
+      {
+        "type": "richtext",
+        "id": "section_top_paragraph",
+        "label": "Paragraph",
+        "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>"
+      },
+      {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Text alignment",
+        "default": "center",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+  ],
+  "blocks": [
+    {
+        "type": "image_products",
+        "name": "Image Products",
+        "settings": [
+            
+          {
+            "type": "image_picker",
+            "id": "image_1",
+            "label": "Image 1"
+          },
+          {
+            "type": "text",
+            "id": "title_1",
+            "label": "Title 1"
+          },
+          {
+            "type": "textarea",
+            "id": "paragraph_1",
+            "label": "Paragraph 1"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_1",
+            "label": "Icon 1"
+          },
+          {
+            "type": "url",
+            "id": "button_url_2",
+            "label": "Button URL_2"
+          },
+          {
+            "type": "text",
+            "id": "button_text_2",
+            "label": "Button Text 2",
+            "default": "Go to Page"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_2",
+            "label": "Image 2"
+          },
+          {
+            "type": "text",
+            "id": "title_2",
+            "label": "Title 2"
+          },
+          {
+            "type": "textarea",
+            "id": "paragraph_2",
+            "label": "Paragraph 2"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_2",
+            "label": "Icon 2"
+          },
+          {
+            "type": "url",
+            "id": "button_url_3",
+            "label": "Button URL_3"
+          },
+          {
+            "type": "text",
+            "id": "button_text_3",
+            "label": "Button Text 3",
+            "default": "Go to Page"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_3",
+            "label": "Image 3"
+          },
+          {
+            "type": "text",
+            "id": "title_3",
+            "label": "Title 3"
+          },
+          {
+            "type": "textarea",
+            "id": "paragraph_3",
+            "label": "Paragraph 3"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_3",
+            "label": "Icon 3"
+          },
+          {
+            "type": "url",
+            "id": "button_url_4",
+            "label": "Button URL_4"
+          },
+          {
+            "type": "text",
+            "id": "button_text_4",
+            "label": "Button Text 4",
+            "default": "Go to Page"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_4",
+            "label": "Image 4"
+          },
+          {
+            "type": "text",
+            "id": "title_4",
+            "label": "Title 4"
+          },
+          {
+            "type": "textarea",
+            "id": "paragraph_4",
+            "label": "Paragraph 4"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_4",
+            "label": "Icon 4"
+          },
+          {
+            "type": "checkbox",
+            "id": "background_active",
+            "label": "Activate Background Color"
+          },
+          {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background Color"
+          },          
+        ]
+      },   
+    {
+      "type": "product_table",
+      "name": "Product Table Row",
+      "settings": [
+        {
+            "type": "select",
+            "id": "alignment_1",
+            "label": "Text Alignment",
+            "options": [
+              { "value": "left", "label": "Left" },
+              { "value": "center", "label": "Center" },
+              { "value": "right", "label": "Right" }
+            ],
+            "default": "left"
+          },
+        {
+          "type": "image_picker",
+          "id": "image_1",
+          "label": "Image 1"
+        },
+        {
+          "type": "text",
+          "id": "title_1",
+          "label": "Title 1",
+          "default": "Default Title 1"
+        },
+        {
+          "type": "textarea",
+          "id": "paragraph_1",
+          "label": "Paragraph 1",
+          "default": "Default paragraph content 1."
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_1",
+          "label": "Icon 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Image 2"
+        },
+        {
+          "type": "text",
+          "id": "title_2",
+          "label": "Title 2",
+          "default": "Default Title 2"
+        },
+        {
+          "type": "textarea",
+          "id": "paragraph_2",
+          "label": "Paragraph 2",
+          "default": "Default paragraph content 2."
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_2",
+          "label": "Icon 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_3",
+          "label": "Image 3"
+        },
+        {
+          "type": "text",
+          "id": "title_3",
+          "label": "Title 3",
+          "default": "Default Title 3"
+        },
+        {
+          "type": "textarea",
+          "id": "paragraph_3",
+          "label": "Paragraph 3",
+          "default": "Default paragraph content 3."
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_3",
+          "label": "Icon 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_4",
+          "label": "Image 4"
+        },
+        {
+          "type": "text",
+          "id": "title_4",
+          "label": "Title 4",
+          "default": "Default Title 4"
+        },
+        {
+          "type": "textarea",
+          "id": "paragraph_4",
+          "label": "Paragraph 4",
+          "default": "Default paragraph content 4."
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_4",
+          "label": "Icon 4"
+        },
+        {
+          "type": "checkbox",
+          "id": "background_active",
+          "label": "Activate Background Color"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#f0f0f0"
+        }
+      ]
+    },
+    {
+        "type": "block_title",
+        "name": "Block Title",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "select",
+            "id": "alignment",
+            "label": "Alignment",
+            "options": [
+              { "value": "left", "label": "Left" },
+              { "value": "center", "label": "Center" },
+              { "value": "right", "label": "Right" }
+            ],
+            "default": "center"
+          }
+        ]
+      }
+  ],
+  "presets": [
+    {
+      "name": "C Table Section"
+    }
+  ]
+}
+{% endschema %}

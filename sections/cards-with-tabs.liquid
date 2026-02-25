@@ -1,0 +1,477 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .cwt-container {
+    max-width: {{ section.settings.page_width }}px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .cwt-header {
+    text-align: {{ section.settings.text_alignment }};
+    margin-bottom: 3rem;
+  }
+  
+.cwt-title {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #000000;
+    line-height: 1.2;
+    margin-top: 0;
+    font-family: 'TT Hoves Pro Trial Medium';
+    letter-spacing: 0;
+}
+
+  .cwt-description {
+    font-size: 14px;
+    color: #101010;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    letter-spacing: 0;
+}
+
+  /* Tabs */
+  .cwt-tabs-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 3rem;
+  }
+
+  .cwt-tab-btn {
+    border: none;
+    background: #F9F9F9;
+    color: #949494;
+    padding: 12px 28px;
+    border-radius: 999px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.25px;
+    font-family: 'TT Hoves Pro Trial Medium';
+}
+
+  .cwt-tab-btn:hover {
+    background-color: #e0e0e0;
+  }
+
+  .cwt-tab-btn.active {
+    background-color: {{ section.settings.accent_color }};
+    color: #ffffff;
+  }
+
+  /* Cards Grid */
+  .cwt-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .cwt-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 1100px) {
+    .cwt-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* Card */
+  .cwt-card {
+    background-color: {{ section.settings.card_bg_color }};
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    height: 100%;
+  }
+  
+  .cwt-card.hidden {
+    display: none;
+  }
+  .cwt-card-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: {{ section.settings.accent_color }};
+}
+  
+  .cwt-card-icon img, .cwt-card-icon svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    fill: currentColor;
+  }
+
+  .cwt-card-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: {{ section.settings.accent_color }};
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+    margin-top: 0;
+    font-family: 'TT Hoves Pro Trial Medium';
+    letter-spacing: 0;
+  }
+
+  .cwt-card-desc {
+        font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    color: {{ section.settings.text_color }};
+  }
+  .cwt-grid {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 5rem;
+}
+  
+  /* Mobile Horizontal Scroll for Tabs */
+  @media screen and (max-width: 749px) {
+    .cwt-grid {
+    padding: 0 1.5rem;
+}
+    .cwt-title {
+      font-size: 1.8rem;
+    }
+    .cwt-tabs-wrapper {
+      justify-content: flex-start;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding-bottom: 10px;
+      flex-wrap: nowrap;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      margin-left: -1.5rem;
+      margin-right: -1.5rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    .cwt-tabs-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+  }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="cwt-container">
+    
+    <div class="cwt-header">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="cwt-title">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      {%- if section.settings.description != blank -%}
+        <div class="cwt-description">{{ section.settings.description }}</div>
+      {%- endif -%}
+    </div>
+
+    <div class="cwt-tabs-wrapper">
+      {%- assign tab_blocks = section.blocks | where: "type", "tab_button" -%}
+      {%- for block in tab_blocks -%}
+        <button 
+          class="cwt-tab-btn {% if forloop.first %}active{% endif %}" 
+          data-tab-target="{{ block.settings.tag | handleize }}"
+          data-is-all="{% if forloop.first %}true{% else %}false{% endif %}"
+          {{ block.shopify_attributes }}
+        >
+          {{ block.settings.label }}
+        </button>
+      {%- endfor -%}
+    </div>
+
+    <div class="cwt-grid" id="cwt-grid-{{ section.id }}">
+      {%- assign card_blocks = section.blocks | where: "type", "card" -%}
+      {%- for block in card_blocks -%}
+        <div class="cwt-card" data-tags="{{ block.settings.tag | handleize }}" {{ block.shopify_attributes }}>
+          <div class="cwt-card-icon">
+            {%- if block.settings.icon_svg != blank -%}
+              {{ block.settings.icon_svg }}
+            {%- elsif block.settings.icon_image != blank -%}
+              <img src="{{ block.settings.icon_image | image_url: width: 120 }}" loading="lazy" alt="{{ block.settings.title | escape }}" width="60" height="60">
+            {%- endif -%}
+          </div>
+          <h3 class="cwt-card-title">{{ block.settings.title }}</h3>
+          <div class="cwt-card-desc">{{ block.settings.description }}</div>
+        </div>
+      {%- endfor -%}
+    </div>
+
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sectionId = '{{ section.id }}';
+    const container = document.querySelector('.section-' + sectionId + '-padding');
+    if(!container) return;
+
+    const tabs = container.querySelectorAll('.cwt-tab-btn');
+    const cards = container.querySelectorAll('.cwt-card');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove active class from all tabs
+        tabs.forEach(t => t.classList.remove('active'));
+        // Add active to clicked
+        tab.classList.add('active');
+
+        const targetTag = tab.getAttribute('data-tab-target');
+        const isAll = tab.getAttribute('data-is-all') === 'true';
+
+        cards.forEach(card => {
+          const cardTags = card.getAttribute('data-tags');
+          
+          if (isAll) {
+            // If first button (All) is selected, show all cards
+            card.classList.remove('hidden');
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(10px)';
+            requestAnimationFrame(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            });
+          } else {
+            // Check if card tags include the target tag
+            if (cardTags === targetTag || cardTags.includes(targetTag)) {
+              card.classList.remove('hidden');
+              card.style.opacity = '0';
+              card.style.transform = 'translateY(10px)';
+              requestAnimationFrame(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              });
+            } else {
+              card.classList.add('hidden');
+            }
+          }
+        });
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Cards With Tabs",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "BENEFITS OF HYPERBARIC OXYGEN THERAPY"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Mild hyperbaric oxygen therapy increases oxygen delivery to the body through controlled pressure, supporting recovery and cellular function."
+    },
+    {
+      "type": "range",
+      "id": "page_width",
+      "min": 1000,
+      "max": 1600,
+      "step": 50,
+      "default": 1300,
+      "unit": "px",
+      "label": "Content Max Width"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text Alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Section Background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "card_bg_color",
+      "label": "Card Background",
+      "default": "#F0F8FF"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#4A4A4A"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent Color",
+      "default": "#2C6ECB",
+      "info": "Used for active tabs, icons, and card titles"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab_button",
+      "name": "Tab Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Button Label",
+          "default": "Tab Name"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Filter Tag",
+          "info": "Match this with the Card tag.",
+          "default": "tag-name"
+        }
+      ]
+    },
+    {
+      "type": "card",
+      "name": "Content Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "Icon Image"
+        },
+        {
+          "type": "html",
+          "id": "icon_svg",
+          "label": "Icon SVG Code",
+          "info": "Paste SVG code here. Overrides image."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Card Title",
+          "default": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Description text goes here."
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Filter Tag",
+          "info": "Which tab does this card belong to?",
+          "default": "tag-name"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cards With Tabs",
+      "blocks": [
+        {
+          "type": "tab_button",
+          "settings": {
+            "label": "All Benefits",
+            "tag": "all"
+          }
+        },
+        {
+          "type": "tab_button",
+          "settings": {
+            "label": "Recovery",
+            "tag": "recovery"
+          }
+        },
+        {
+          "type": "tab_button",
+          "settings": {
+            "label": "Sleep",
+            "tag": "sleep"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "title": "Performance & Recovery",
+            "description": "Improves tissue oxygenation, supporting faster muscle recovery.",
+            "tag": "recovery"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "title": "Enhanced Sleep",
+            "description": "Supports nervous system balance for deeper, more restorative sleep.",
+            "tag": "sleep"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

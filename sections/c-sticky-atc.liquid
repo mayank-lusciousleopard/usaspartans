@@ -1,0 +1,319 @@
+{% if section.settings.use_custom_product == true %}
+  {% assign myProd = section.settings.product %}
+{% else %}
+  {% assign myProd = product %}
+{% endif %}
+
+<script type="lazyload_int" data-src="{{ 'product-info.js' | asset_url }}"></script>
+<script type="lazyload_int" data-src="{{ 'product-form.js' | asset_url }}"></script>
+
+<style>
+    #shopify-section-{{ section.id }}.shopify-section.c-sticky-atc {
+      position: fixed;
+      bottom:0;
+      z-index: 3;
+      transition: top 0.3s ease;
+      display: none;
+      width: 100%;
+    }
+
+    #shopify-section-{{ section.id }}.shopify-section.c-sticky-atc.is-visible {
+      display: none;
+    }
+
+    #{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}rem;
+      padding-bottom: {{ section.settings.padding_bottom }}rem;
+      background-color: #fff;
+      box-shadow: 0px 8px 10.8px 0px rgba(0, 0, 0, 0.15);
+    }
+
+    #{{ section.id }} .c-low-stocks, #{{ section.id }} .c-get-by {
+      display: none !important;
+    }
+
+    #{{ section.id }} .c-sa-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1em;
+    }
+
+    #{{ section.id }} .c-sa-left {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    #{{ section.id }} .c-sa-image {
+      width: 80px;
+      height: 80px;
+    }
+
+    #{{ section.id }} .c-sa-heading {
+      color: #000;
+      font-size: 1.25em;
+      margin: 0 auto 0 0;
+      font-weight: 700;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    #{{ section.id }} .c-sa-price-div {
+      color: #0E83F9;
+      font-size: 1.5em;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight:700;
+    }
+
+    #{{ section.id }} .c-sa-compare-price {
+      text-decoration: line-through;
+      color: #000;
+      font-weight:normal;
+      margin:0;
+    }
+
+    #{{ section.id }} .c-sa-normal-price {
+      margin:0;
+      font-weight: bold;
+    }
+
+    {% if myProd.metafields.custom.price_color != null %}
+      #{{ section.id }} .c-sa-price-div .c-sa-normal-price {
+        color: {{ myProd.metafields.custom.price_color }} !important;
+      }
+    {% endif %}
+
+    #{{ section.id }} .c-sa-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0rem;
+    }
+
+    #{{ section.id }} .c-pi-qty-div {
+      display: none;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    #{{ section.id }} .c-sa-atc {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      color: #fff;
+      font-size: 1em;
+    }
+
+    #{{ section.id }} .button:after {
+      box-shadow: none;
+    }
+
+    #{{ section.id }} .c-sticky-button {
+      min-width: 300px;
+    }
+
+    #{{ section.id }} .c-button {
+      color: white;
+      padding: 20px 40px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #0E83F9 0%, #084D93 100%);
+      box-shadow: none !important;
+      border: none;
+    }
+
+    #{{ section.id }} .c-button:hover {
+      background-color: #0E83F9; 
+      background-image: none; 
+    }
+
+    @media (max-width: 1024px) {
+      #{{ section.id }} .c-sa-price-div {
+        flex-direction: column;
+        gap: 0;
+      }
+
+      #{{ section.id }} .c-sa-heading {
+        -webkit-line-clamp: 2;
+      }
+
+      #{{ section.id }} .c-sticky-button {
+        min-width: 200px;
+        white-space: nowrap;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #{{ section.id }} {
+        padding-top: 1em;
+        padding-bottom: 1em;
+      }
+
+      #{{ section.id }} .c-sa-left {
+        align-items: center;
+      }
+
+      #{{ section.id }} .c-sa-heading {
+        font-size: 0.875em;
+        line-height: 150%;
+        -webkit-line-clamp: 2;
+      }
+
+      #{{ section.id }} .c-sa-image {
+        display: none;
+      }
+
+      #{{ section.id }} .c-sa-compare-price {
+        font-size: 0.75em;
+      }
+
+      #{{ section.id }} .c-sa-normal-price {
+        font-size: 0.875em;
+      }
+
+      #{{ section.id }} .c-sa-atc {
+        font-size: 1em;
+        padding: 0.5rem 0.5rem;
+        min-width: max-content;
+      }
+
+      #{{ section.id }} .c-sticky-button {
+        min-width: fit-content;
+      }
+    }
+</style>
+
+<section id="{{ section.id }}" data-spark="b2c-only" class="c-sticky-selector">
+  <div class="page-width">
+    <product-info
+      id="ProductInfo-{{ section.id }}"
+      data-section="{{ section.id }}"
+      data-url="{{ myProd.url }}"
+      class="c-sa-wrapper c-pi-grid-right"
+    >
+      <div class="c-sa-left">
+        {{ myProd.featured_image  | image_url: width: 500 | image_tag: class: 'c-sa-image' }}
+        <h3 class="c-sa-heading">{{ myProd.title }}</h3>
+        <div class="c-sa-price-div">
+          {% if myProd.compare_at_price > myProd.price %}
+            <p
+              class="c-sa-compare-price"
+              class="{% if myProd.compare_at_price < myProd.price %}c-sa-price-hide{% endif %}"
+            >
+              ${{ myProd.compare_at_price | money_without_currency | remove: '.00' }}
+            </p>
+          {% endif %}
+          <p class="c-sa-normal-price">${{ myProd.price | money_without_currency | remove: '.00' }}</p>
+        </div>
+      </div>
+      <div class="c-sa-right c-pi-atc-div">
+        <div class="c-pi-error"></div>
+        <div class="c-pi-qty-div">
+          <div class="c-pi-qty">
+            <span class="c-pi-qty-button c-pi-qty-minus minimum">{% render 'icon-minus' %}</span>
+            <input class="c-pi-qty-input" min="1" value="1" name="quantity" type="number">
+            <p class="c-pi-qty-number">1</p>
+            <span class="c-pi-qty-button c-pi-qty-plus">{% render 'icon-plus' %}</span>
+          </div>
+        </div>
+        {%- assign product_form_id = 'product-form-' | append: section.id -%}
+        {%- render 'buy-buttons',
+          product: product,
+          product_form_id: product_form_id,
+          section_id: section.id,
+          show_pickup_availability: true,
+          custom_classes: 'c-pi-atc c-button c-b2 c-sticky-button'
+        -%}
+      </div>
+    </product-info>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var stickySection = document.querySelector('#shopify-section-{{ section.id }}');
+
+    stickySection.style.display = 'none';
+
+    function checkScrollPosition() {
+      var pageHeight = document.documentElement.scrollHeight;
+      var scrollPosition = window.scrollY + window.innerHeight;
+
+      if (scrollPosition > pageHeight * 0.2 && scrollPosition < pageHeight * 0.92) {
+        stickySection.classList.add('is-visible');
+      } else {
+        stickySection.classList.remove('is-visible');
+      }
+    }
+
+    window.onscroll = function () {
+      checkScrollPosition();
+    };
+  });
+</script>
+
+{% schema %}
+{
+  "name": "C Sticky ATC",
+  "class": "c-sticky-atc",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "use_custom_product",
+      "label": "Use custom product",
+      "default": false
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 5,
+      "step": 0.1,
+      "default": 1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 5,
+      "step": 0.1,
+      "default": 1,
+      "unit": "rem"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Sticky ATC"
+    }
+  ]
+}
+{% endschema %}

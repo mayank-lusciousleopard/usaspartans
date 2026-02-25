@@ -1,0 +1,63 @@
+<section class="try-it">
+  <div class="w-layout-blockcontainer container w-container">
+    <div class="heading center">
+      <h2 class="title-section">{{ section.settings.heading }}</h2>
+    </div>
+    <div class="try-row">
+      {% for block in section.blocks %}
+      <div class="try-item">
+        <div class="try-item-icon-wrap"><img src="{{ block.settings.img | image_url }}" loading="lazy" alt="" class="try-item-icon"></div>
+        <div class="try-item-title"><strong>{{ block.settings.title }}</strong></div>
+        <p class="try-item-desc">{{ block.settings.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %} 
+  { 
+    "name": "Risk-Free Section",
+    "settings": [
+      { 
+         "type": "text",
+         "id":"heading",
+         "label": "Risk-Free Heading" 
+      }
+    ],
+    "blocks": [ 
+       { 
+         "type": "risk-free-block",
+         "name": "Risk-Free Block",
+         "settings": [ 
+           {
+              "type": "image_picker",
+              "id":   "img",
+              "label": "Risk-Free Image"
+           },
+           {
+              "type": "text",
+              "id": "title",
+              "label": "Risk-Free Title"
+           },
+           {
+              "type": "text",
+              "id": "text",
+              "label": "Risk-Free Text"
+            }
+         ] 
+       } 
+     ], 
+    "presets":[
+      {
+        "name":"Risk-Free Section" 
+      } 
+    ] 
+  } 
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

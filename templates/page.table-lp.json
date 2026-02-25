@@ -1,0 +1,404 @@
+{
+  "sections": {
+    "c_tailwind_KM9wmF": {
+      "type": "c-tailwind",
+      "settings": {}
+    },
+    "c_table_section_cjpJFa": {
+      "type": "c-table-section",
+      "blocks": {
+        "image_products_REjbyb": {
+          "type": "image_products",
+          "settings": {
+            "title_1": "",
+            "paragraph_1": "",
+            "button_url_2": "https:\/\/warriorwillpower.com\/products\/spartan-water-chiller-for-ice-bath-cold-plunge-water-chiller?variant=46779461337427",
+            "button_text_2": "LEARN MORE",
+            "image_2": "shopify:\/\/shop_images\/waterchillericebath_566d1581-3150-4e09-9215-6b96302fc40c.jpg",
+            "title_2": "0.5 HP PRO",
+            "paragraph_2": "",
+            "button_url_3": "shopify:\/\/products\/warrior-max-1-hp-wi-fi-water-chiller-heater",
+            "button_text_3": "LEARN MORE",
+            "image_3": "shopify:\/\/shop_images\/1.5hpwaterchiller.jpg",
+            "title_3": "1 HP Wi-Fi",
+            "paragraph_3": "",
+            "button_url_4": "shopify:\/\/products\/water-chiller-for-ice-bath-1-hp",
+            "button_text_4": "LEARN MORE",
+            "image_4": "shopify:\/\/shop_images\/water-chiller-ice-bath.jpg",
+            "title_4": "1 HP Standard",
+            "paragraph_4": "",
+            "background_active": false,
+            "background_color": ""
+          }
+        },
+        "block_title_8Ptre6": {
+          "type": "block_title",
+          "settings": {
+            "title": "Cooling Power",
+            "alignment": "left"
+          }
+        },
+        "product_table_c88WHq": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Range",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "Cools down to 39-45ºF\n<br>\nNo heating",
+            "title_3": "",
+            "paragraph_3": "Cools down to 37ºF\n<br>\nHeats up to 104ºF",
+            "title_4": "",
+            "paragraph_4": "Cools down to 39ºF\n<br>\nNo heating",
+            "background_active": false,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "product_table_iU6VkJ": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Water Capacity",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "Up to 80 gallons",
+            "title_3": "",
+            "paragraph_3": "Up to 130 gallons",
+            "title_4": "",
+            "paragraph_4": "Up to 90 gallons",
+            "background_active": true,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "product_table_MN4GpC": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Ambient Temp",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "< 85°F",
+            "title_3": "",
+            "paragraph_3": "< 110°F",
+            "title_4": "",
+            "paragraph_4": "< 90°F",
+            "background_active": false,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "block_title_3Gy4gX": {
+          "type": "block_title",
+          "settings": {
+            "title": "Performance",
+            "alignment": "left"
+          }
+        },
+        "product_table_Yrt3pe": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Compressor",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "X2 Faster Cooling\n<br>Than Competitors",
+            "title_3": "",
+            "paragraph_3": "X4 Faster Cooling\n<br>Than Competitors",
+            "title_4": "",
+            "paragraph_4": "X2.5 Faster Cooling\n<br>Than Competitors",
+            "background_active": true,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "product_table_ifLi6b": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "UV Disinfection",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "",
+            "icon_2": "shopify:\/\/shop_images\/x-icon_2c35e6b6-8eae-405a-87a3-c8bd0b45483a.png",
+            "title_3": "",
+            "paragraph_3": "",
+            "icon_3": "shopify:\/\/shop_images\/check_circle_2.png",
+            "title_4": "",
+            "paragraph_4": "",
+            "icon_4": "shopify:\/\/shop_images\/x-icon_2c35e6b6-8eae-405a-87a3-c8bd0b45483a.png",
+            "background_active": false,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "product_table_VzKgaH": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Filtration",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "Single filter",
+            "title_3": "",
+            "paragraph_3": "Double filter",
+            "title_4": "",
+            "paragraph_4": "Single filter",
+            "background_active": true,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "product_table_jHPyeV": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Pump type",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "External",
+            "title_3": "",
+            "paragraph_3": "Built-in Internal",
+            "title_4": "",
+            "paragraph_4": "External",
+            "background_active": false,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "product_table_97KmYJ": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "App Control",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "",
+            "icon_2": "shopify:\/\/shop_images\/x-icon_2c35e6b6-8eae-405a-87a3-c8bd0b45483a.png",
+            "title_3": "",
+            "paragraph_3": "",
+            "icon_3": "shopify:\/\/shop_images\/check_circle_2.png",
+            "title_4": "",
+            "paragraph_4": "",
+            "icon_4": "shopify:\/\/shop_images\/x-icon_2c35e6b6-8eae-405a-87a3-c8bd0b45483a.png",
+            "background_active": true,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "product_table_xzCbyf": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Scheduling Feature",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "",
+            "icon_2": "shopify:\/\/shop_images\/x-icon_2c35e6b6-8eae-405a-87a3-c8bd0b45483a.png",
+            "title_3": "",
+            "paragraph_3": "",
+            "icon_3": "shopify:\/\/shop_images\/check_circle_2.png",
+            "title_4": "",
+            "paragraph_4": "",
+            "icon_4": "shopify:\/\/shop_images\/x-icon_2c35e6b6-8eae-405a-87a3-c8bd0b45483a.png",
+            "background_active": false,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "product_table_graTwh": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "On\/Off Timer",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "",
+            "icon_2": "shopify:\/\/shop_images\/x-icon_2c35e6b6-8eae-405a-87a3-c8bd0b45483a.png",
+            "title_3": "",
+            "paragraph_3": "",
+            "icon_3": "shopify:\/\/shop_images\/check_circle_2.png",
+            "title_4": "",
+            "paragraph_4": "",
+            "icon_4": "shopify:\/\/shop_images\/x-icon_2c35e6b6-8eae-405a-87a3-c8bd0b45483a.png",
+            "background_active": true,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "product_table_wGya8D": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Auto-Defrost Funcionality",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "",
+            "icon_2": "shopify:\/\/shop_images\/x-icon_2c35e6b6-8eae-405a-87a3-c8bd0b45483a.png",
+            "title_3": "",
+            "paragraph_3": "",
+            "icon_3": "shopify:\/\/shop_images\/check_circle_2.png",
+            "title_4": "",
+            "paragraph_4": "",
+            "icon_4": "shopify:\/\/shop_images\/x-icon_2c35e6b6-8eae-405a-87a3-c8bd0b45483a.png",
+            "background_active": false,
+            "background_color": "#f0f0f0"
+          }
+        },
+        "product_table_HaELFP": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Fits Any Ice Bath",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "",
+            "icon_2": "shopify:\/\/shop_images\/check_circle_2.png",
+            "title_3": "",
+            "paragraph_3": "",
+            "icon_3": "shopify:\/\/shop_images\/check_circle_2.png",
+            "title_4": "",
+            "paragraph_4": "",
+            "icon_4": "shopify:\/\/shop_images\/check_circle_2.png",
+            "background_active": true,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "block_title_PgnGEn": {
+          "type": "block_title",
+          "settings": {
+            "title": "Build & Durability",
+            "alignment": "left"
+          }
+        },
+        "product_table_ieCPaG": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Waterproof",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "",
+            "icon_2": "shopify:\/\/shop_images\/x-icon_2c35e6b6-8eae-405a-87a3-c8bd0b45483a.png",
+            "title_3": "",
+            "paragraph_3": "",
+            "icon_3": "shopify:\/\/shop_images\/check_circle_2.png",
+            "title_4": "",
+            "paragraph_4": "",
+            "icon_4": "shopify:\/\/shop_images\/x-icon_2c35e6b6-8eae-405a-87a3-c8bd0b45483a.png",
+            "background_active": false,
+            "background_color": "#f0f0f0"
+          }
+        },
+        "product_table_Kt9BJm": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Easy Maintenance",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "",
+            "icon_2": "shopify:\/\/shop_images\/check_circle_2.png",
+            "title_3": "",
+            "paragraph_3": "",
+            "icon_3": "shopify:\/\/shop_images\/check_circle_2.png",
+            "title_4": "",
+            "paragraph_4": "",
+            "icon_4": "shopify:\/\/shop_images\/check_circle_2.png",
+            "background_active": true,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "product_table_hW9ddR": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Silent Performance",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "",
+            "icon_2": "shopify:\/\/shop_images\/check_circle_2.png",
+            "title_3": "",
+            "paragraph_3": "",
+            "icon_3": "shopify:\/\/shop_images\/check_circle_2.png",
+            "title_4": "",
+            "paragraph_4": "",
+            "icon_4": "shopify:\/\/shop_images\/check_circle_2.png",
+            "background_active": false,
+            "background_color": "#f0f0f0"
+          }
+        },
+        "block_title_E3kjxY": {
+          "type": "block_title",
+          "settings": {
+            "title": "Extras & Pricing",
+            "alignment": "left"
+          }
+        },
+        "product_table_6qtdqw": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Price",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "$1,062",
+            "title_3": "",
+            "paragraph_3": "$1,700",
+            "title_4": "",
+            "paragraph_4": "$1,275",
+            "background_active": true,
+            "background_color": "#f4f4f4"
+          }
+        },
+        "product_table_pPCPyt": {
+          "type": "product_table",
+          "settings": {
+            "alignment_1": "left",
+            "title_1": "Bonuses",
+            "paragraph_1": "",
+            "title_2": "",
+            "paragraph_2": "No",
+            "title_3": "",
+            "paragraph_3": "Free filters\n<br>Free thermometer\n<br>Free timer",
+            "title_4": "",
+            "paragraph_4": "No",
+            "background_active": false,
+            "background_color": "#f0f0f0"
+          }
+        }
+      },
+      "block_order": [
+        "image_products_REjbyb",
+        "block_title_8Ptre6",
+        "product_table_c88WHq",
+        "product_table_iU6VkJ",
+        "product_table_MN4GpC",
+        "block_title_3Gy4gX",
+        "product_table_Yrt3pe",
+        "product_table_ifLi6b",
+        "product_table_VzKgaH",
+        "product_table_jHPyeV",
+        "product_table_97KmYJ",
+        "product_table_xzCbyf",
+        "product_table_graTwh",
+        "product_table_wGya8D",
+        "product_table_HaELFP",
+        "block_title_PgnGEn",
+        "product_table_ieCPaG",
+        "product_table_Kt9BJm",
+        "product_table_hW9ddR",
+        "block_title_E3kjxY",
+        "product_table_6qtdqw",
+        "product_table_pPCPyt"
+      ],
+      "settings": {
+        "padding_top": 4,
+        "padding_bottom": 4,
+        "text_color": "#000000",
+        "accent_color": "#000000",
+        "section_top_alignment": "center",
+        "section_container": "page-width",
+        "section_top_subheading": "",
+        "section_top_heading": "",
+        "section_top_paragraph": "<p>Compare key features, cooling performance, and durability to choose the right fit for you<\/p>",
+        "text_alignment": "center"
+      }
+    }
+  },
+  "order": [
+    "c_tailwind_KM9wmF",
+    "c_table_section_cjpJFa"
+  ]
+}

@@ -1,0 +1,128 @@
+{% schema %}
+{
+  "name": "Four Blocks Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Main Heading"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "select",
+      "id": "desktop_cols",
+      "label": "Desktop Columns",
+      "options": [
+        {"value": "2", "label": "2 Columns"},
+        {"value": "3", "label": "3 Columns"},
+        {"value": "4", "label": "4 Columns"},
+        {"value": "5", "label": "5 Columns"}
+      ],
+      "default": "4"
+    },
+    {
+      "type": "select",
+      "id": "mobile_cols",
+      "label": "Mobile Columns",
+      "options": [
+        {"value": "1", "label": "1 Column"},
+        {"value": "2", "label": "2 Columns"}
+      ],
+      "default": "1"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom Class"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Block Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "Four Blocks Section",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<section class="four-blocks-section {{ section.settings.custom_class }}">
+  <div class="container">
+    <h2>{{ section.settings.main_heading }}</h2>
+    <p>{{ section.settings.subheading }}</p>
+
+    {% assign dcols = section.settings.desktop_cols %}
+    {% assign mcols = section.settings.mobile_cols %}
+
+    <div class="blocks-grid dcols-{{ dcols }} mcols-{{ mcols }}">
+      {% for block in section.blocks %}
+        <div class="block-item">
+          {% if block.settings.image %}
+            <span class="icon_img">
+            <img src="{{ block.settings.image | img_url: 'medium' }}" alt="{{ block.settings.title }}" />
+            </span>
+          {% endif %}
+          <h3>{{ block.settings.title }}</h3>
+          <p>{{ block.settings.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+  .four-blocks-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .blocks-grid {
+    display: grid;
+    gap: 20px;
+  }
+
+  /* Desktop Grid */
+  .blocks-grid.dcols-2 { grid-template-columns: repeat(2, 1fr); }
+  .blocks-grid.dcols-3 { grid-template-columns: repeat(3, 1fr); }
+  .blocks-grid.dcols-4 { grid-template-columns: repeat(4, 1fr); }
+  .blocks-grid.dcols-5 { grid-template-columns: repeat(5, 1fr); }
+
+  /* Mobile Grid */
+  @media(max-width: 768px){
+    .blocks-grid.mcols-1 { grid-template-columns: repeat(1, 1fr); }
+    .blocks-grid.mcols-2 { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .four-blocks-section .block-item img {
+    width: 100%;
+    border-radius: 8px;
+  }
+</style>

@@ -1,0 +1,80 @@
+.image-multicolumn__title-wrapper {
+  margin-bottom: 3rem;
+}
+
+.image-multicolumn__heading {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'TT Hoves Pro Trial Medium';
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+.image-multicolumn__grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    max-width: 850px;
+    margin: 0 auto;
+    --grid-desktop-vertical-spacing: 1.5rem;
+    --grid-desktop-horizontal-spacing: 1.5rem;
+    --grid-mobile-vertical-spacing: 1rem;
+    --grid-mobile-horizontal-spacing: 1rem;
+}
+
+.grid__item {
+  padding-left: 0;
+  padding-bottom: 0;
+}
+
+/* Mobile Defaults */
+.grid--1-col .grid__item {
+  width: 100%;
+}
+
+.grid--2-col .grid__item {
+  width: 50%;
+}
+
+/* Desktop Grid Sizes */
+@media screen and (min-width: 750px) {
+  .grid--1-col-desktop .grid__item { width: 100%; }
+  .grid--2-col-desktop .grid__item { width: 50%; }
+  .grid--3-col-desktop .grid__item { width: 33.33%; }
+  .grid--4-col-desktop .grid__item { width: 25%; }
+  .grid--5-col-desktop .grid__item { width: 20%; }
+  .grid--6-col-desktop .grid__item { width: 16.66%; }
+}
+
+.image-multicolumn__card {
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    height: 100%;
+    min-height: 90px;
+    transition: transform .2s ease;
+}
+
+.image-multicolumn__card:hover {
+  transform: translateY(-2px);
+}
+
+.image-multicolumn__image {
+  max-width: 100%;
+  height: auto;
+  max-height: 50px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Placeholder styling */
+.placeholder-svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  fill: rgba(0,0,0,0.1);
+}

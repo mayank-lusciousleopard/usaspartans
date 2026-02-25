@@ -1,0 +1,288 @@
+<style>
+  #{{ section.id }} {
+    font-size: 16px;
+    padding-top: {{ section.settings.padding_top }}em;
+    padding-bottom: {{ section.settings.padding_bottom }}em;
+    background: {{ section.settings.background_color }};
+  }
+
+  #{{ section.id }} .c-b-grid {
+    grid-template-columns:{% for i in (1..section.settings.columns) %} 1fr{% endfor %};
+    gap: 1em;
+    display: grid;
+    padding: 40px 64px;
+  }
+
+  #{{ section.id }} .c-b-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #{{ section.id }} .c-b-item-icon {
+    width: {{ section.settings.icon_width }}em;
+    min-width: {{ section.settings.icon_width }}em;
+  }
+
+  #{{ section.id }} .c-b-item-content h3 {
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: white;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 24px */
+    text-transform: uppercase;
+    margin: 1rem 0;
+  }
+
+  #{{ section.id }} .c-b-heading {
+    font-size: 40px;
+  }
+
+  @media (max-width: 768px) {
+    #{{ section.id }} .c-b-grid {
+
+      grid-template-columns: 1fr; 
+      padding: 20px;
+    }
+
+    #{{ section.id }} .c-b-item-icon {
+      width: 4em; 
+      min-width: 4em;
+    }
+
+    #{{ section.id }} .c-b-item-content h3 {
+      font-size: 16px; 
+    }
+     #{{ section.id }} .c-b-heading {
+    font-size: 32px;
+  }
+  }
+</style>
+
+<section id="{{ section.id }}" class="c-section">
+   <div class="page-width tw-flex tw-flex-col tw-gap-6 tw-justify-center tw-items-center tw-mx-auto tw-max-w-[768px] tw-z-10">
+    {% if section.settings.section_heading != empty %}
+      <span class="tw-text-[#0E83F9] tw-font-bold tw-text-base">{{ section.settings.section_heading }}</span>
+    {% endif %}
+    {% if section.settings.heading_first_part != empty or section.settings.heading_second_part != empty %}
+      <h2 class="tw-text-center tw-flex tw-flex-col c-b-heading-container">
+        <span class="tw-text-center tw-text-[32px] md:tw-text-[40px] tw-font-bold tw-text-black tw-block c-b-heading">
+          {{- section.settings.heading_first_part -}}
+        </span>
+        <span class="tw-text-center tw-text-[32px] md:tw-text-[40px] tw-font-bold tw-bg-custom-gradient tw-bg-clip-text tw-text-transparent c-b-heading">
+          {{- section.settings.heading_second_part -}}
+        </span>
+      </h2>
+    {% endif %}
+    {% if section.settings.description_heading != empty %}
+      <p class="tw-font-[500] tw-text-[18px] md:tw-text-[20px] tw-text-black !tw-text-center">
+        {{ section.settings.description_heading }}
+      </p>
+    {% endif %}
+  </div>
+  <div class="{{ section.settings.section_container }}">
+    <div class="c-b-grid">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'Item' %}
+            <div class="c-b-item" {{ block.shopify_attributes }}>
+              {% if block.settings.block_icon %}
+                <img src="{{ block.settings.block_icon | image_url: width: 500 }}" alt="" class="c-b-item-icon" />
+              {% endif %}
+              <div class="c-b-item-content">
+                <h3>{{ block.settings.block_heading }}</h3>
+              </div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+  /*
+  gsap.timeline({scrollTrigger: {
+    trigger: "#{{ section.id }} .c-b-grid",
+    toggleActions: "restart none reverse none",
+    start: "10% 100%",
+    end: "100% 80%"
+    } })
+    .from("#{{ section.id }} .c-b-item", {y: gsap.utils.wrap(["100%", "-100%"]), duration: 0.8})
+  */
+</script>
+
+{% schema %}
+{
+  "name": "C Blocks",
+  "blocks": [
+    {
+      "name": "Item",
+      "type": "Item",
+      "limit": 50,
+      "settings": [
+        {
+          "type": "text",
+          "id": "block_heading",
+          "label": "Heading",
+          "default": "My heading"
+        },
+        {
+          "type": "image_picker",
+          "id": "block_icon",
+          "label": "Icon"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 10,
+      "step": 0.5,
+      "unit": "em",
+      "label": "Padding top",
+      "default": 2
+    },
+    {
+      "type": "range", 
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 10,
+      "step": 0.5,
+      "unit": "em",
+      "label": "Padding bottom",
+      "default": 2
+    },
+    {
+      "type": "text",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "linear-gradient(267deg, #0E83F9 2.27%, #00264B 100%)"
+    },
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section heading"
+
+    },
+    {
+      "type": "text",
+      "id": "heading_first_part",
+      "label": "Heading first part"
+    },
+    {
+      "type": "text",
+      "id": "heading_second_part",
+      "label": "Heading second part"
+    },
+    {
+      "type": "text",
+      "id": "description_heading",
+      "label": "Description heading"
+    },
+    {
+      "type": "select",
+      "id": "blocks_direction",
+      "label": "Blocks direction",
+      "default": "vertical",
+      "options": [
+
+
+        {
+          "value": "vertical",
+          "label": "Vertical"
+        },
+        {
+          "value": "horizontal",
+          "label": "Horizontal"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "blocks_alignment",
+      "label": "Blocks alignment",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "icon_width",
+      "label": "Icon width",
+      "min": 0.4,
+      "max": 10,
+      "step": 0.2,
+      "default": 3,
+      "unit": "rem"
+    },
+    {
+      "type": "select",
+      "id": "section_container",
+      "label": "Section container",
+      "default": "page-width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "Normal"
+        },
+        {
+          "value": "",
+          "label": "None"
+        },
+        {
+          "value": "page-width2",
+          "label": "Smaller"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "use_separator_boder",
+      "label": "Use separator border",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "Columns",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "mobile_columns",
+      "label": "Mobile Columns",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Blocks"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,146 @@
+<div class="ticker" id="section-{{ section.id }}">
+  <div class="component-marquee-container" style="--marquee-animation-duration: {{ section.settings.ticker_speed }}s;">
+    <div class="component-marquee scroll active">
+      {% if section.blocks.size < 4 %}
+        {% for block in section.blocks %}
+          <div class="component-marquee-item">{{ block.settings.text }}</div>
+        {% endfor %}
+        {% for block in section.blocks %}
+          <div class="component-marquee-item">{{ block.settings.text }}</div>
+        {% endfor %}
+      {% else %}
+        {% for block in section.blocks %}
+          <div class="component-marquee-item">{{ block.settings.text }}</div>
+        {% endfor %}
+      {% endif %}
+    </div>
+    <div class="component-marquee scroll active">
+      {% if section.blocks.size < 4 %}
+        {% for block in section.blocks %}
+          <div class="component-marquee-item">{{ block.settings.text }}</div>
+        {% endfor %}
+        {% for block in section.blocks %}
+          <div class="component-marquee-item">{{ block.settings.text }}</div>
+        {% endfor %}
+      {% else %}
+        {% for block in section.blocks %}
+          <div class="component-marquee-item">{{ block.settings.text }}</div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% style %}
+  .component-marquee-container{
+    --gap: 1rem;
+    position:relative;
+    display:flex;
+    overflow:hidden;
+    user-select:none;
+    gap:20px;
+    width:100%;
+    --marquee-animation-duration: {{ section.settings.ticker_speed }}s;
+    background: {{section.settings.background_color}};
+    background-attachment:fixed;
+  }
+  .component-marquee.active{
+    opacity:1;
+  }
+  .component-marquee{
+    flex-shrink:0;
+    display:flex;
+    justify-content:space-around;
+    gap:var(--gap);
+    min-width:100%;
+    animation:marqueescroll {{ section.settings.ticker_speed }}s linear infinite;
+    opacity:0;
+    transition:opacity .5s ease-in-out;
+    color:{{section.settings.text_color}};
+  }
+  .component-marquee-item{
+    line-height:1.5;
+    font-weight:300;
+    font-size: 14px;
+  }
+  .component-marquee-item{
+    flex:0 0 auto;
+    text-align:center;
+    margin:0 .25rem;
+    padding:1rem 0;
+    margin:0;
+    letter-spacing: 1px;
+    color:#fff;
+  }
+  @keyframes marqueescroll {
+    0% {
+      transform: translate(0);
+    }
+    to {
+      transform: translate(calc(-100% - 1rem));
+    }
+  }
+{% endstyle %}
+
+{% schema %}
+  {
+    "name": "Ticker",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "select",
+        "id": "ticker_speed",
+        "label": "Ticker speed",
+        "options": [
+          {
+            "label": "Slow",
+            "value": "40"
+          },
+          {
+            "label": "Medium",
+            "value": "30"
+          },
+          {
+            "label": "Fast",
+            "value": "20"
+          }
+        ],
+        "default": "30"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Ticker",
+        "category": "display",
+        "settings": {
+          "background_color": "#000000",
+          "text_color": "#ffffff"
+        }
+      }
+    ]
+  }
+{% endschema %}

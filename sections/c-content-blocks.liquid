@@ -1,0 +1,649 @@
+<style>
+    #{{ section.id }} {
+      font-size: 16px;
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background-position: center 126px !important;
+
+      padding-top: {{ section.settings.padding_top }}em;
+      padding-bottom: {{ section.settings.padding_bottom }}em;
+      background-color: {{ section.settings.bg_color }};
+      {% if section.settings.bg_image %}
+        background: url("{{ section.settings.bg_image | image_url }}");
+      {% endif %}
+  }
+
+  #{{ section.id }} .c-section-top-subheading,
+  #{{ section.id }} div,
+  #{{ section.id }} h2,
+  #{{ section.id }} h3 {
+      color: {{ section.settings.text_color }};
+  }
+
+  #{{ section.id }} .c-section-top {
+      align-items: {{ section.settings.section_top_alignment }};
+      text-align: {{ section.settings.text_alignment }};
+
+  }
+
+  #{{ section.id }} h2 {
+      color: {{ section.settings.accent_color }};
+  }
+
+  #{{ section.id }} .c-cb-grid {
+      display: grid;
+      gap: 1em;
+      grid-template-columns: {{ section.settings.grid_template_columns }};
+  }
+
+  .new__header{
+    color: #000;
+    text-align: center;
+    font-size: clamp(32px, 4vw, 48px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 57.6px */
+    text-transform: capitalize;
+    margin: 1rem 0;
+  }
+
+  .c-section-button{
+  display: flex;
+  justify-content: center;
+  margin: 5.5rem 0 !important;
+  }
+
+  .text__lightblue{
+    color: #0E83F9 !important; /* Color específico para el párrafo */
+  }
+
+  /* Aplicar la clase al c-cb-grid con opción de imagen personalizada */
+  #{{ section.id }} .c-cb-grid.c-grid-container {
+      padding: 2rem;
+      backdrop-filter: blur(10px); /* Ajusta la cantidad de desenfoque */
+      background-color: rgba(255, 255, 255, 0.24); /* Fondo semitransparente para mejorar la visibilidad del contenido */
+
+      max-width: 100%;
+      margin: 0 auto;
+      border-radius: 32px;
+      {% if section.settings.c_cb_grid_bg_image %}
+        background: url("{{ section.settings.c_cb_grid_bg_image | image_url }}") no-repeat center center;
+        background-size: cover;
+      {% endif %}
+  }
+
+  #{{ section.id }} .c-cb-column:not(.c-middle) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5em;
+      overflow: hidden;
+  }
+
+  #{{ section.id }} .c-cb-column.c-middle {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75em;
+      grid-row-end: span 3;
+  }
+
+  #{{ section.id }} .c-cb-column.c-middle img,
+  #{{ section.id }} .c-cb-column.c-middle video {
+      width: 100%;
+      height: 379px; /* Altura fija de 379px */
+      object-fit: cover; /* Asegura que el video mantenga su relación de aspecto */
+      border-radius: 24px;
+  }
+
+  @media (max-width: 768px) {
+    /* Cambiar a una sola columna en pantallas pequeñas */
+    #{{ section.id }} .c-cb-grid {
+        grid-template-columns: 1fr; /* Solo una columna */
+    }
+
+    /* Reordenar para que el bloque de video sea el primero */
+    #{{ section.id }} .c-cb-column.c-middle {
+        order: -1; /* Se coloca al inicio */
+        grid-column: span 1; /* Ocupa una columna completa */
+        grid-row-end: auto; /* Asegura que no haya problema de altura */
+    }
+
+    /* Reordenar el primer child después del video */
+    #{{ section.id }} .c-cb-column:first-child {
+        order: 1; /* Coloca la tarjeta de la izquierda después del video */
+    }
+
+    /* Reordenar los demás bloques después del primer child */
+    #{{ section.id }} .c-cb-column:not(.c-middle):not(:first-child) {
+        order: 2; /* Coloca los demás bloques después del primer child */
+    }
+
+    /* Ajustar el video para pantallas pequeñas */
+    #{{ section.id }} .c-cb-column.c-middle video {
+        height: auto; /* Para que el video se ajuste al contenido */
+    }
+  }
+
+  #{{ section.id }} .c-cb-column.c-middle,
+  #{{ section.id }} .c-cb-column.c-middle .c-buttons-div {
+      justify-content: center;
+      align-items: {{ section.settings.blocks_alignment }};
+      text-align: left;
+  }
+
+  #{{ section.id }} .c-cb-item {
+      display: flex;
+
+      {% if section.settings.blocks_direction == "vertical" %}
+        flex-direction: column;
+      {% endif %}
+
+  }
+
+  #{{ section.id }} .c-cb-item,
+  #{{ section.id }} .c-cb-item-content {
+      gap: 0.75em;
+  }
+
+  #{{ section.id }} .c-cb-item-image-div {
+      display: flex;
+  }
+
+  #{{ section.id }} .c-cb-item-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+  }
+
+  #{{ section.id }} .c-cb-item img {
+      width: {{ section.settings.icon_width }}em;
+      min-width: {{ section.settings.icon_width }}em;
+      filter: brightness(0) invert(1);
+  }
+
+  /* Estilo para la tarjeta de la esquina superior izquierda */
+  #{{ section.id }} .c-cb-item {
+      background-color: #0e83f9; /* Color de fondo azul */
+      display: flex;
+      padding: 24px 16px;
+      flex-direction: column;
+      justify-content: start;
+      align-items: flex-start;
+      gap: 24px;
+      border-radius: 24px;
+      background: linear-gradient(90deg, #084D93 0%, #0E83F9 100%);
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+      h3 {
+      color: white;
+      }
+  }
+
+  #{{ section.id }} .c-cb-column:first-child h3 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: white !important;
+  }
+
+  /* Estilo específico para el h3 del resto de las cards */
+  #{{ section.id }} .c-cb-column:not(:first-child) h3 {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 140%;
+      margin: 1rem 0;
+  }
+
+  #{{ section.id }} .c-cb-column:first-child p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: white !important;
+  }
+
+  #{{ section.id }} .c-cb-column:first-child img {
+      width: 40px;
+      margin-bottom: 10px;
+  }
+
+  @media (max-width: {{ settings.c_breakpoint3 }}px) {
+      #{{ section.id }} .c-cb-grid .c-cb-column.c-middle {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 1;
+          grid-row-end: 1;
+          display: flex;
+          margin-bottom: 2em;
+      }
+
+      #{{ section.id }} .c-cb-grid {
+          grid-template-columns: 1fr 1fr;
+      }
+
+      #{{ section.id }} .c-cb-column:not(.c-middle) {
+          gap: 2em;
+      }
+
+      {% if section.settings.blocks_direction != "vertical" %}
+        #{{ section.id }} .c-cb-item {
+          flex-direction: column;
+        }
+      {% endif %}
+
+      {% if section.settings.one_column_mobile == true %}
+        #{{ section.id }} .c-cb-grid .c-cb-column.c-middle {
+          grid-column-end: 2;
+        }
+
+        #{{ section.id }} .c-cb-grid {
+          grid-template-columns: 1fr;
+        }
+      {% endif %}
+  }
+
+  #{{ section.id }} .c-cb-column:nth-child(3) {
+    align-self: end; /* Alinea el primer bloque de la columna derecha al final */
+  }
+</style>
+
+<section id="{{ section.id }}" class="c-section" style="margin-top: 0 !important; padding: 7rem 0 !important;">
+  <div class="{{ section.settings.section_container }}">
+    <div class="c-section-top">
+      {%- if section.settings.section_top_subheading != empty -%}
+        <p class="c-section-top-subheading text__lightblue">{{ section.settings.section_top_subheading }}</p>
+      {%- endif -%}
+      {%- if section.settings.section_top_heading != empty -%}
+        <h2 class="new__header">{{ section.settings.section_top_heading }}</h2>
+      {%- endif -%}
+      {%- if section.settings.section_top_paragraph != empty -%}
+        <div class="c-t-80">{{ section.settings.section_top_paragraph }}</div>
+      {%- endif -%}
+    </div>
+    <!-- Aplicar la nueva clase c-grid-container a c-cb-grid -->
+    <div class="c-cb-grid c-grid-container">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'Item' %}
+            <div class="c-cb-column" {{ block.shopify_attributes }}>
+              <div class="c-cb-item">
+                <div class="c-cb-item-image-div">
+                  {% if block.settings.block_image %}
+                    {{
+                      block.settings.block_image
+                      | image_url: width: 750
+                      | image_tag: loading: 'lazy', height: 'auto'
+                    }}
+                  {% endif %}
+                </div>
+                <div class="c-cb-item-content">
+                  <h3>{{ block.settings.block_heading }}</h3>
+                  <div>{{ block.settings.block_paragraph }}</div>
+                </div>
+              </div>
+            </div>
+          {% when 'Middle' %}
+            <div class="c-cb-column c-middle" {{ block.shopify_attributes }}>
+              {%- if block.settings.block_middle_subheading != empty -%}
+                <p class="c-section-top-subheading">{{ block.settings.block_middle_subheading }}</p>
+              {%- endif -%}
+              {%- if block.settings.block_middle_heading != empty -%}
+                <h2>{{ block.settings.block_middle_heading }}</h2>
+              {%- endif -%}
+              {%- if block.settings.block_middle_paragraph != empty -%}
+                <div class="c-t-80">{{ block.settings.block_middle_paragraph }}</div>
+              {%- endif -%}
+              {% if block.settings.block_image %}
+                {{ block.settings.block_image | image_url: width: 1250 | image_tag: loading: 'lazy', height: 'auto' }}
+              {% endif %}
+              {% if block.settings.block_video %}
+                {{ block.settings.block_video | media_tag: autoplay: true, loop: true, muted: true, controls: true }}
+              {% endif %}
+              {%- if block.settings.button_text != empty -%}
+                <a class="c-button {{ block.settings.button_style }}" href="{{ block.settings.button_url }}">
+                  {{- block.settings.button_text -}}
+                </a>
+              {%- endif -%}
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="c-section-button">
+    {%- if section.settings.footer_button_text != blank -%}
+      <a
+        href="{{ section.settings.footer_button_url }}"
+        class="c-button {{ section.settings.footer_button_style }}"
+      >
+        {{ section.settings.footer_button_text }}
+      </a>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "C Content Blocks",
+  "blocks": [
+    {
+      "name": "Item",
+      "type": "Item",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "block_image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "block_heading",
+          "label": "Heading",
+          "default": "My heading"
+        },
+        {
+          "type": "richtext",
+          "id": "block_paragraph",
+          "label": "Paragraph",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>"
+        }
+      ]
+    },
+    {
+      "name": "Middle",
+      "type": "Middle",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "block_image",
+          "label": "Image"
+        },
+        {
+          "type": "video",
+          "id": "block_video",
+          "label": "Video Upload"
+        },
+        {
+          "type": "text",
+          "id": "block_middle_subheading",
+          "label": "Subheading",
+          "default": "subheading"
+        },
+        {
+          "type": "text",
+          "id": "block_middle_heading",
+          "label": "Heading",
+          "default": "My heading"
+        },
+        {
+          "type": "richtext",
+          "id": "block_middle_paragraph",
+          "label": "Paragraph",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>"
+        },
+        {
+          "type": "header",
+          "content": "Button"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text",
+          "default": "Buy Now"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button Link"
+        },
+        {
+          "type": "text",
+          "id": "button_style",
+          "label": "Button style",
+          "default": "c-b1"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "footer_button_text",
+      "label": "Footer Button Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "footer_button_url",
+      "label": "Footer Button URL"
+    },
+    {
+      "type": "text",
+      "id": "footer_button_style",
+      "label": "Footer Button Style",
+      "default": "c-b1"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background repeat image"
+    },
+    {
+      "type": "image_picker",
+      "id": "c_cb_grid_bg_image",
+      "label": "Grid background image"
+    },
+    {
+      "type": "text",
+      "id": "grid_template_columns",
+      "label": "Grid template columns",
+      "default": "1fr 1fr 1fr"
+    },
+    {
+      "type": "checkbox",
+      "id": "one_column_mobile",
+      "label": "One column mobile",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "icon_width",
+      "label": "Icon width",
+      "min": 0.4,
+      "max": 10,
+      "step": 0.2,
+      "default": 3,
+      "unit": "rem"
+    },
+    {
+      "type": "select",
+      "id": "blocks_direction",
+      "label": "Blocks direction",
+      "default": "vertical",
+      "options": [
+        {
+          "value": "vertical",
+          "label": "Vertical"
+        },
+        {
+          "value": "horizontal",
+          "label": "Horizontal"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "blocks_alignment",
+      "label": "Blocks alignment",
+      "default": "center",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "blocks_text_alignment",
+      "label": "Blocks text alignment",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "section_container",
+      "label": "Section container",
+      "default": "page-width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "Normal"
+        },
+        {
+          "value": "",
+          "label": "None"
+        },
+        {
+          "value": "page-width2",
+          "label": "Smaller"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Section Colors"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#5d3be4"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000"
+    },
+    {
+      "type": "header",
+      "content": "Section Top"
+    },
+    {
+      "type": "text",
+      "id": "section_top_subheading",
+      "label": "Subheading",
+      "default": "subheading"
+    },
+    {
+      "type": "text",
+      "id": "section_top_heading",
+      "label": "Heading",
+      "default": "My heading"
+    },
+    {
+      "type": "richtext",
+      "id": "section_top_paragraph",
+      "label": "Paragraph",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>"
+    },
+    {
+      "type": "select",
+      "id": "section_top_alignment",
+      "label": "Section Top Alignment",
+      "default": "center",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "default": 4,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "default": 4,
+      "unit": "rem"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Content Blocks"
+    }
+  ]
+}
+{% endschema %}

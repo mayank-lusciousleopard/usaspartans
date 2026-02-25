@@ -1,0 +1,288 @@
+{% schema %}
+{
+  "name": "New Text Marquee",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Color Settings"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Layout Settings"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "gap_desktop",
+      "min": 10,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Space between items (Desktop)",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "gap_mobile",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Space between items (Mobile)",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Typography & Animation"
+    },
+    {
+      "type": "range",
+      "id": "font_size_desktop",
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Font Size (Desktop)",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "font_size_mobile",
+      "min": 10,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Font Size (Mobile)",
+      "default": 12
+    },
+    {
+      "type": "checkbox",
+      "id": "uppercase",
+      "label": "Uppercase Text",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "bold_text",
+      "label": "Bold Text",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "min": 2,
+      "max": 60,
+      "step": 1,
+      "unit": "s",
+      "label": "Animation Speed",
+      "default": 20
+    },
+    {
+      "type": "select",
+      "id": "direction",
+      "label": "Direction",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Right to Left"
+        },
+        {
+          "value": "reverse",
+          "label": "Left to Right"
+        }
+      ],
+      "default": "normal"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Text Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "PRESIDENT'S DAY SALE"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "New Text Marquee",
+      "blocks": [
+        {
+          "type": "text",
+          "settings": {
+            "text": "PRESIDENT'S DAY SALE"
+          }
+        },
+        {
+          "type": "text",
+          "settings": {
+            "text": "4 FREE GIFTS WITH PURCHASE"
+          }
+        },
+        {
+          "type": "text",
+          "settings": {
+            "text": "PRESIDENT'S DAY SALE"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  #NewTextMarquee-{{ section.id }} {
+    background-color: {{ section.settings.background_color }};
+    color: {{ section.settings.text_color }};
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  #NewTextMarquee-{{ section.id }} .marquee-track {
+    display: flex;
+    overflow: visible;
+    width: fit-content;
+    flex-shrink: 0;
+    gap: {{ section.settings.gap_desktop }}px;
+    /* To make the loop seamless, we translate by -50% because the track contains two identical sets of content */
+    animation: marquee-{{ section.id }} {{ section.settings.speed }}s linear infinite;
+    {% if section.settings.direction == 'reverse' %}
+      animation-direction: reverse;
+    {% endif %}
+  }
+  
+  #NewTextMarquee-{{ section.id }} .marquee-content-set {
+    display: flex;
+    flex-shrink: 0;
+    gap: {{ section.settings.gap_desktop }}px;
+    padding-right: {{ section.settings.gap_desktop }}px;
+  }
+
+  #NewTextMarquee-{{ section.id }} .marquee-item {
+    font-size: {{ section.settings.font_size_desktop }}px;
+    {% if section.settings.bold_text %}font-weight: 700;{% endif %}
+    {% if section.settings.uppercase %}text-transform: uppercase;{% endif %}
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    line-height: 1.2;
+  }
+
+  #NewTextMarquee-{{ section.id }} a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 749px) {
+    .section-{{ section.id }}-padding {
+       padding-top: {{ section.settings.padding_top | times: 0.75 | round }}px;
+       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round }}px;
+    }
+    #NewTextMarquee-{{ section.id }} .marquee-track {
+      gap: {{ section.settings.gap_mobile }}px;
+    }
+    #NewTextMarquee-{{ section.id }} .marquee-content-set {
+      gap: {{ section.settings.gap_mobile }}px;
+      padding-right: {{ section.settings.gap_mobile }}px;
+    }
+    #NewTextMarquee-{{ section.id }} .marquee-item {
+      font-size: {{ section.settings.font_size_mobile }}px;
+    }
+  }
+
+  @keyframes marquee-{{ section.id }} {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      /* Move left by 50% of the track's total width (which is one full set of content) */
+      transform: translateX(-50%);
+    }
+  }
+{%- endstyle -%}
+
+<div id="NewTextMarquee-{{ section.id }}" class="section-{{ section.id }}-padding">
+  <div class="marquee-track" role="marquee">
+    {%- capture marquee_items -%}
+      {%- for block in section.blocks -%}
+        <div class="marquee-item" {{ block.shopify_attributes }}>
+          {%- if block.settings.link != blank -%}
+            <a href="{{ block.settings.link }}">{{ block.settings.text }}</a>
+          {%- else -%}
+            <span>{{ block.settings.text }}</span>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    {%- endcapture -%}
+
+    <!-- 
+      We render the content set twice within the track. 
+      The animation slides the track from 0 to -50%.
+      Once it hits -50% (the start of the second set), it snaps back to 0 (the start of the first set).
+      Inside each set, we repeat the user blocks multiple times to ensure the set is wide enough to cover the screen.
+    -->
+    
+    <div class="marquee-content-set">
+      {%- for i in (1..10) -%}
+        {{ marquee_items }}
+      {%- endfor -%}
+    </div>
+    
+    <div class="marquee-content-set">
+      {%- for i in (1..10) -%}
+        {{ marquee_items }}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,141 @@
+<section class="science">
+  <div class="w-layout-blockcontainer container w-container">
+    <div class="heading center">
+      <div class="subtitle-section">{{ section.settings.title }}</div>
+      <h2 class="title-section">{{ section.settings.heading }}</h2>
+    </div>
+    <div class="science-row">
+      <div class="science-img-col" style="background-image: url('{{ section.settings.benefit-img | image_url }}')">
+        {% if section.settings.text != blank %}
+        <div class="science-info-wrap">
+          <div class="science-info-text">{{ section.settings.text }}</div>
+          <img src="https://cdn.shopify.com/s/files/1/0740/3195/6281/files/arrow-down-dark.svg?v=1694590767" loading="lazy" alt="" class="science-arrow">
+        </div>
+        {% endif %}
+      </div>
+      <div class="science-content-col">
+        <div class="science-content-inner">
+          <div class="science-content-title">{{ section.settings.main-title }}</div>
+          <div class="science-content-p">{{ section.settings.main-text }}</div>
+          <div class="science-numbers-row">
+            <div class="science-number-col">
+              <div class="science-number">{{ section.settings.number1 }}</div>
+              <div class="science-number-desc">{{ section.settings.text1 }}</div>
+            </div>
+            <div class="science-number-col">
+              <div class="science-number">{{ section.settings.number2 }}</div>
+              <div class="science-number-desc">{{ section.settings.text2 }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="science-benefits-row hidden-desktop">
+          {% for block in section.blocks %}
+          <div id="w-node-e4e34dec-bc31-2af4-b077-ecc1f38999cc-56a231fd" class="science-benefit-item">
+            <div class="science-benefit-icon-circle">
+              <img src="{{ block.settings.benefit-ico | image_url }}" loading="lazy" alt="" class="science-benefit-icon">
+            </div>
+            <div class="science-benefit-title">{{ block.settings.title }}</div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="science-benefits-row hidden-mobile">
+      {% for block in section.blocks %}
+      <div id="w-node-_371f4e75-054a-68c3-d85e-679e1ca3218a-56a231fd" class="science-benefit-item">
+        <div class="science-benefit-icon-circle">
+          <img src="{{ block.settings.benefit-ico | image_url }}" loading="lazy" alt="" class="science-benefit-icon"></div>
+        <div class="science-benefit-title">{{ block.settings.title }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %} 
+  { 
+    "name": "Science Section",
+    "settings": [
+      { 
+         "type": "text",
+         "id":"title",
+         "label": "Science Title" 
+      },
+      { 
+         "type": "text",
+         "id":"heading",
+         "label": "Science Heading" 
+      },
+      { 
+         "type": "text",
+         "id":"text",
+         "label": "Science Text" 
+      },
+
+      { 
+         "type": "text",
+         "id":"main-title",
+         "label": "Science Main Title" 
+      },
+      { 
+         "type": "richtext",
+         "id":"main-text",
+         "label": "Science Main Text" 
+      },
+      { 
+         "type": "text",
+         "id":"number1",
+         "label": "Science Title" 
+      },
+      { 
+         "type": "text",
+         "id":"text1",
+         "label": "Science Text" 
+      },
+      { 
+         "type": "text",
+         "id":"number2",
+         "label": "Science Title" 
+      },
+      { 
+         "type": "text",
+         "id":"text2",
+         "label": "Science Text" 
+      },
+      { 
+         "type": "image_picker",
+         "id":"benefit-img",
+         "label": "Benefits Image" 
+       }
+    ],
+    "blocks": [ 
+       { 
+         "type": "Science-Benefits",
+         "name": "Science Benefits Block",
+         "settings": [ 
+           {
+              "type": "image_picker",
+              "id":   "benefit-ico",
+              "label": "Science Benefits Icon"
+           },
+           {
+              "type": "text",
+              "id":   "title",
+              "label": "Science Benefits Title"
+            } 
+         ] 
+       } 
+     ], 
+    "presets":[
+      {
+        "name":"Science Section" 
+      } 
+    ] 
+  } 
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

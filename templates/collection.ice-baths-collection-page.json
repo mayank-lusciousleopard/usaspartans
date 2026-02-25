@@ -1,0 +1,53 @@
+{
+  "sections": {
+    "q4_collection_banner_aHYkxm": {
+      "type": "q4-collection-banner",
+      "name": "Q4 Collection Banner",
+      "settings": {
+        "eyebrow": "Spend More",
+        "title": "Save More",
+        "subtitle": "Tiered savings up to $550 — Ends Nov 10",
+        "gradient_start": "#143549",
+        "gradient_end": "#065367",
+        "image_bg_mobile": "shopify:\/\/shop_images\/wwp-q4-col-m_e227ca75-0106-4b0f-bde7-26b307cd01c7.png",
+        "image_bg_desktop": "shopify:\/\/shop_images\/wwp-q4-col-d_517b9192-51e8-4a38-993d-63a10da88793.png"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "custom_css": [
+        ".collection-hero__title {font-size: 2em;}",
+        "@media (min-width: 750px) {.collection-hero__title {font-size: 3em; }}"
+      ],
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": false,
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "q4_collection_banner_aHYkxm",
+    "banner",
+    "product-grid"
+  ]
+}

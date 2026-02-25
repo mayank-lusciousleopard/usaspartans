@@ -1,0 +1,625 @@
+<style>
+    #{{ section.id }} {
+      font-size: 16px;
+      padding-top: {{ section.settings.padding_top }}em;
+      padding-bottom: {{ section.settings.padding_bottom }}em;
+      background:linear-gradient(0deg, #F0F8FF 0%, #FFF 100%);
+    }
+  
+    #{{ section.id }} .c-section-top-subheading,
+    #{{ section.id }} div,
+    #{{ section.id }} h2,
+    #{{ section.id }} h3 {
+      color: {{ section.settings.text_color }};
+    }
+
+    #{{ section.id }} .c-section-top-subheading {
+        text-transform: uppercase;
+        color: #0E83F9;
+    }
+  
+    #{{ section.id }} h2 {
+      color: {{ section.settings.accent_color }};
+    }
+  
+    #{{ section.id }} .c-section-top {
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+      {% if section.settings.section_top_alignment == "flex-start" %}width: 100%;{% endif %}
+      align-items: {{ section.settings.section_top_alignment }};
+      text-align: {{ section.settings.text_alignment }};
+    }
+
+    #{{ section.id }} .c-section-top h2 {
+        font-size: 40px;
+        line-height: 54px;
+        font-weight: 700;
+      }
+  
+    #{{ section.id }} .c-b-grid {
+        margin-top: 70px;
+      grid-template-columns:{% for i in (1..section.settings.columns) %} 1fr{% endfor %};
+      gap: 1em;
+      display: grid;
+    }
+  
+    #{{ section.id }} .c-b-item {
+      display: flex;
+      justify-content: center;
+      border:2px solid #0E83F9;
+      background:linear-gradient(0deg, #FFF 0%, #F0F8FF 100%);
+      border-radius:16px;
+      padding:32px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      {% if section.settings.blocks_direction == "vertical" %}
+        flex-direction: column;
+      {% endif %}
+      {% if section.settings.blocks_alignment == "left" %}
+        align-items: flex-start;
+        text-align: left;
+      {% elsif section.settings.blocks_alignment == "center" %}
+        align-items: center;
+        text-align: center;
+      {% else %}
+        align-items: flex-end;
+        text-align: right;
+      {% endif %}
+    }
+
+    #{{ section.id }} .c-b-item h3 {
+        font-size: 34px;
+        font-weight: 700;
+      }
+  
+  
+    {% if section.settings.use_separator_boder == true %}
+      #{{ section.id }} .c-b-item {
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        padding-right: 1em;
+      }
+  
+      #{{ section.id }} .c-b-item:last-child {
+        border-right: none;
+        padding-right: 0em;
+      }
+    {% endif %}
+  
+    #{{ section.id }} .c-b-item,
+    #{{ section.id }} .c-b-item-content {
+      gap: 1em;
+    }
+
+    #{{ section.id }} .c-b-item.selected {
+        background:linear-gradient(90deg, #0E83F9 0%, #084D93 100%);
+        color:white !important;
+        transform: translateY(-30px); 
+        box-shadow: 0 40px 50px -10px rgba(0, 0, 0, 0.4);
+    }
+
+    #{{ section.id }} .c-b-item:hover{
+        background:linear-gradient(90deg, #0E83F9 0%, #084D93 100%);
+        color:white !important;
+    }
+
+    #{{ section.id }} .c-b-item:hover h3 {
+        color: #ffffff; 
+      }
+
+      #{{ section.id }} .c-b-item:hover p {
+        color: #ffffff; 
+      }
+
+      .c-b-item:hover .c-b-item-prices span {
+        color: #ffffff; 
+        }
+
+        #{{ section.id }} .c-single-price {
+            background:linear-gradient(90deg, #0E83F9 0%, #084D93 100%);
+            color:white;
+            padding:2px 4px;
+            border-radius:33px;
+            max-width:210px;
+            display:flex;
+            justify-content:center;
+        }
+
+        #{{ section.id }} .c-b-item.selected .c-single-price {
+            background: white;
+          }
+
+          #{{ section.id }} .c-b-item:hover .c-single-price {
+            background: white;
+          }
+
+          #{{ section.id }} .c-b-item.selected .c-single-price p {
+            color: #0E83F9;
+          }
+
+          #{{ section.id }} .c-b-item:hover .c-single-price p {
+            color: #0E83F9;
+          }
+
+    #{{ section.id }} .c-b-item.selected h3 {
+        color: #ffffff; 
+      }
+
+      #{{ section.id }} .c-b-item.selected p {
+        color: #ffffff; 
+      }
+
+      #{{ section.id }} .c-b-item.selected .c-b-item-prices span {
+        color: #ffffff; 
+        }
+  
+    #{{ section.id }} .c-b-item-image-div {
+      display: flex;
+    }
+  
+    #{{ section.id }} .c-b-item-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+  
+    #{{ section.id }} .c-b-item-image {
+      width: 100%;
+    }
+  
+    #{{ section.id }} .c-b-item-icon {
+      width: {{ section.settings.icon_width }}em;
+      min-width: {{ section.settings.icon_width }}em;
+    }
+
+    #{{ section.id }} .c-b-item-compare-price {
+        text-decoration: line-through;
+        font-size: 24px;
+      }
+
+      #{{ section.id }} .c-b-item-prices {
+        display:flex;
+        flex-direction:column;
+        gap:4px;
+      }
+
+      #{{ section.id }} .c-b-item-price {
+        font-size:40px;
+        font-weight:700;
+      }
+
+      #{{ section.id }} .c-button {
+        color: white;
+        padding: 20px 40px;
+        border-radius: 8px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 10px;
+    background: linear-gradient(90deg, #0E83F9 0%, #084D93 100%);
+      }
+  
+      #{{ section.id }} .c-button:hover { 
+          background-color: #0E83F9; 
+          background-image: none; 
+      }
+
+      #{{ section.id }} .c-buttons-div {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+      }
+  
+    @media (max-width: 768px) {
+      #{{ section.id }} .c-b-grid {
+        grid-template-columns:{% for i in (1..section.settings.mobile_columns) %} 1fr{% endfor %};
+        gap:60px;
+      }
+
+      #{{ section.id }} .c-section-top h2 {
+        font-size: 36px;
+        line-height: 38px;
+      }
+  
+      {% if section.settings.use_separator_boder == true %}
+        #{{ section.id }} .c-b-item {
+          border-right: none;
+          padding-right: 0em;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+          padding-bottom: 1em;
+        }
+
+        #{{ section.id }} .c-b-item.selected {
+            transform: translateY(-10px); 
+        }
+  
+        #{{ section.id }} .c-b-item:last-child {
+          border-bottom: none;
+          padding-bottom: 0em;
+        }
+      {% endif %}
+
+      #{{ section.id }} .c-section-top {
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+     }
+    }
+  </style>
+  
+  
+  <section id="{{ section.id }}" class="c-section" style="background: linear-gradient(0deg, #F0F8FF 0%, #FFF 100%);">
+    <div class="{{ section.settings.section_container }}">
+      <div class="c-section-top">
+        {%- if section.settings.section_top_subheading != empty -%}
+          <p class="c-section-top-subheading">{{ section.settings.section_top_subheading }}</p>
+        {%- endif -%}
+        {%- if section.settings.section_top_heading != empty -%}
+          <h2>{{ section.settings.section_top_heading }}</h2>
+        {%- endif -%}
+        {%- if section.settings.section_top_paragraph != empty -%}
+          <div class="c-t-80">{{ section.settings.section_top_paragraph }}</div>
+        {%- endif -%}
+      </div>
+      <div class="c-b-grid">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'Item' %}
+              <div class="c-b-item" data-id="{{ block.id }}">
+                <div class="c-b-item-content">
+                  <!-- Image product -->
+                  {% if block.settings.product %}
+                    {% assign product = all_products[block.settings.product] %}
+                    {% if product %}
+                        <h3>{{ block.settings.block_heading }}</h3>
+                        <p>{{ block.settings.block_paragraph }}</p>
+                      <div class="c-b-item-image-div">
+                        {% if block.settings.block_image %}
+                            {{ block.settings.block_image | image_url: width: 750 | image_tag: loading: 'lazy', height: 'auto', class: 'c-b-item-image' }}
+                          {% endif %}
+                          {% if block.settings.show_featured_image %}
+                        <a href="{{ product.url }}">
+                          <img 
+                            src="{{ product.featured_image | image_url: width: 750 }}" 
+                            alt="{{ product.featured_image.alt }}" 
+                            class="c-b-item-image"
+                          >
+                        </a>
+                    {% endif %}
+                      </div>
+                      <!-- Price -->
+                      <div class="c-b-item-prices">
+                        {% render 'price', product: product%}
+                      </div>
+                        <!-- Price for each -->
+                        <div class="c-single-price">
+                            <p>{{ block.settings.single_price }}</p>
+                        </div>
+                    {% endif %}
+                  {% endif %}
+                </div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+      {%- if section.settings.button_text != empty -%}
+        <div class="c-buttons-div">
+            <a href="{{ section.settings.button_url }}" class="c-button">{{ section.settings.button_text }}</a>
+          </div>
+      {%- endif -%}
+    </div>
+  </section>
+  
+  
+  {% comment %} <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const items = document.querySelectorAll('.c-b-item');
+      
+        if (items.length > 2) {
+          items[1].classList.add('selected'); 
+        }
+      
+        items.forEach(item => {
+          item.addEventListener('click', () => {
+            items.forEach(i => i.classList.remove('selected'));
+            
+            item.classList.add('selected');
+          });
+        });
+      });
+  </script> {% endcomment %}
+  
+  
+  {% schema %}
+    {
+      "name": "C Block Cards",
+      "blocks": [
+        {
+          "name": "Item",
+          "type": "Item",
+          "limit": 50,
+          "settings": [
+                    {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          },
+            {
+              "type": "text",
+              "id": "block_heading",
+              "label": "Heading",
+              "default": "My heading"
+            },
+            {
+              "type": "richtext",
+              "id": "block_paragraph",
+              "label": "Paragraph",
+              "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>"
+            },
+            {
+                "type": "richtext",
+                "id": "single_price",
+                "label": "Paragraph",
+                "default": "<p>100</p>"
+              },
+            {
+                "type": "checkbox",
+                "id": "show_featured_image",
+                "label": "Show product image?",
+                "default": false
+              },
+            {
+              "type": "image_picker",
+              "id": "block_image",
+              "label": "Image"
+            },
+            {
+              "type": "image_picker",
+              "id": "block_icon",
+              "label": "Icon"
+            }
+          ]
+        }
+      ],
+      "settings": [
+        {
+          "type": "select",
+          "id": "blocks_direction",
+          "label": "Blocks direction",
+          "default": "vertical",
+          "options": [
+            {
+              "value": "vertical",
+              "label": "Vertical"
+            },
+            {
+              "value": "horizontal",
+              "label": "Horizontal"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "blocks_alignment",
+          "label": "Blocks alignment",
+          "default": "left",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        },
+        {
+          "type": "range",
+          "id": "icon_width",
+          "label": "Icon width",
+          "min": 0.4,
+          "max": 10,
+          "step": 0.2,
+          "default": 3,
+          "unit": "rem"
+        },
+        {
+          "type": "select",
+          "id": "section_container",
+          "label": "Section container",
+          "default": "page-width",
+          "options": [
+            {
+              "value": "page-width",
+              "label": "Normal"
+            },
+            {
+              "value": "",
+              "label": "None"
+            },
+            {
+              "value": "page-width2",
+              "label": "Smaller"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "id": "use_separator_boder",
+          "label": "Use separator border",
+          "default": false
+        },
+        {
+          "type": "range",
+          "id": "columns",
+          "label": "Columns",
+          "min": 1,
+          "max": 6,
+          "step": 1,
+          "default": 3
+        },
+        {
+          "type": "range",
+          "id": "mobile_columns",
+          "label": "Mobile Columns",
+          "min": 1,
+          "max": 6,
+          "step": 1,
+          "default": 2
+        },
+        {
+          "type": "header",
+          "content": "Button"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text",
+          "default": "Buy Now"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button Link"
+        },
+        {
+          "type": "text",
+          "id": "button_style",
+          "label": "Button style",
+          "default": "c-b1"
+        },
+        {
+          "type": "header",
+          "content": "Section Colors"
+        },
+        {
+          "type": "color",
+          "id": "accent_color",
+          "label": "Accent color",
+          "default": "#5d3be4"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "First Background color",
+            "default": "#ffffff"
+          },
+          {
+            "type": "color",
+            "id": "bg_color_secondary",
+            "label": "Background color secondary",
+            "default": "#000000"
+          },
+          {
+            "type": "number",
+            "id": "gradient_angle",
+            "label": "Ángulo del gradiente (en grados)",
+            "default": 90
+          },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text color",
+          "default": "#000"
+        },
+        {
+          "type": "header",
+          "content": "Section Top"
+        },
+        {
+          "type": "text",
+          "id": "section_top_subheading",
+          "label": "Subheading",
+          "default": "subheading"
+        },
+        {
+          "type": "text",
+          "id": "section_top_heading",
+          "label": "Heading",
+          "default": "My heading"
+        },
+        {
+          "type": "richtext",
+          "id": "section_top_paragraph",
+          "label": "Paragraph",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>"
+        },
+        {
+          "type": "select",
+          "id": "section_top_alignment",
+          "label": "Section Top Alignment",
+          "default": "center",
+          "options": [
+            {
+              "value": "flex-start",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "flex-end",
+              "label": "Right"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "label": "Text alignment",
+          "default": "center",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "content": "Section Padding"
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "label": "Padding top",
+          "min": 0,
+          "max": 15,
+          "step": 1,
+          "default": 4,
+          "unit": "rem"
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "label": "Padding bottom",
+          "min": 0,
+          "max": 15,
+          "step": 1,
+          "default": 4,
+          "unit": "rem"
+        }
+      ],
+      "presets": [
+        {
+          "name": "C Block Cards"
+        }
+      ]
+    }
+  {% endschema %}

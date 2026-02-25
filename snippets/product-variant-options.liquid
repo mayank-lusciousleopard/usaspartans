@@ -1,0 +1,117 @@
+{% comment %} 
+  Renders product variant options
+
+  Accepts:
+  - product: {Object} product object.
+  - option: {Object} current product_option object.
+  - block: {Object} block object.
+
+
+  Usage:
+  {% render 'product-variant-options',
+    product: product,
+    option: option,
+    block: block
+  %}
+{% endcomment %}
+{%- liquid
+  assign variants_available_arr = product.variants | map: 'available'
+  assign variants_option1_arr = product.variants | map: 'option1'
+  assign variants_option2_arr = product.variants | map: 'option2'
+  assign variants_option3_arr = product.variants | map: 'option3'
+  assign variants_price_arr = product.variants | map: 'price'
+
+  assign product_form_id = 'product-form-' | append: section.id
+-%}
+
+{%- for value in option.values -%}
+    
+  {%- liquid
+
+    
+    unless option.name contains 'Add Ice Bath?'
+      assign class_name = 'product-new__option'
+    endunless
+    
+    # Find the variant that matches this option value and get its price
+    assign variant_price = ''
+    assign option_disabled = true
+    
+    # Get current selected values for other options
+    assign current_option1 = product.selected_or_first_available_variant.option1
+    assign current_option2 = product.selected_or_first_available_variant.option2
+    assign current_option3 = product.selected_or_first_available_variant.option3
+    
+    for option1_name in variants_option1_arr
+      case option.position
+        when 1
+          # For option 1, we need to find the variant with this value and the current option2/option3
+          if variants_option1_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+            if product.options.size < 2 or variants_option2_arr[forloop.index0] == current_option2
+              if product.options.size < 3 or variants_option3_arr[forloop.index0] == current_option3
+                assign option_disabled = false
+                assign variant_price = variants_price_arr[forloop.index0]
+              endif
+            endif
+          endif
+        when 2
+          # For option 2, we need to find the variant with current option1 and this value
+          if variants_option1_arr[forloop.index0] == current_option1 and variants_option2_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+            if product.options.size < 3 or variants_option3_arr[forloop.index0] == current_option3
+              assign option_disabled = false
+              assign variant_price = variants_price_arr[forloop.index0]
+            endif
+          endif
+        when 3
+          # For option 3, we need to find the variant with current option1/option2 and this value
+          if variants_option1_arr[forloop.index0] == current_option1 and variants_option2_arr[forloop.index0] == current_option2 and variants_option3_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+            assign option_disabled = false
+            assign variant_price = variants_price_arr[forloop.index0]
+          endif
+      endcase
+    endfor
+  -%}
+
+  {%- if block.settings.picker_type == 'button' -%}
+    <input
+      type="radio"
+      id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+      name="{{ option.name }}"
+      value="{{ value | escape }}"
+      form="{{ product_form_id }}"
+      {% if option.selected_value == value %}
+        checked
+      {% endif %}
+      {% if option_disabled %}
+        class="disabled"
+      {% endif %}
+    >
+    <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" class="{{ class_name }}">
+      {{ value -}}
+      
+      {% if variant_price != '' %}
+        <span class="price-difference">({{ variant_price | money }})</span>
+      {% endif %}
+      
+        <span class="price-difference"></span>
+      
+     {% if value == 'PRO' %}
+        <div class="option-info-text">Most popular</div>
+      {% endif %}
+      <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+    </label>
+  {%- elsif block.settings.picker_type == 'dropdown' -%}
+    <option
+      value="{{ value | escape }}"
+      {% if option.selected_value == value %}
+        selected="selected"
+      {% endif %}
+    >
+      {% if option_disabled -%}
+        {{- 'products.product.value_unavailable' | t: option_value: value -}}
+      {%- else -%}
+        {{- value -}}
+      {%- endif %}
+    </option>
+  {%- endif -%}
+{%- endfor -%}

@@ -1,0 +1,418 @@
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  #Banner-{{ section.id }} .new-banner__media {
+    border-radius: {{ section.settings.corner_radius }}px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  /* Height Logic */
+  #Banner-{{ section.id }} .new-banner__media {
+    height: {{ section.settings.mobile_height }};
+  }
+
+  @media screen and (min-width: 750px) {
+    #Banner-{{ section.id }} .new-banner__media {
+      height: {{ section.settings.desktop_height }};
+    }
+  }
+
+  /* Adapt to image logic */
+  {%- if section.settings.desktop_height == 'auto' -%}
+  @media screen and (min-width: 750px) {
+    #Banner-{{ section.id }} .new-banner__media {
+        height: auto;
+        /* aspect-ratio: 16 / 9; */
+    }
+    #Banner-{{ section.id }} .new-banner__media img {
+        height: auto;
+        position: relative;
+    }
+  }
+  {%- endif -%}
+
+  {%- if section.settings.mobile_height == 'auto' -%}
+  @media screen and (max-width: 749px) {
+    #Banner-{{ section.id }} .new-banner__media {
+        height: auto;
+        /* aspect-ratio: 16 / 9; */
+    }
+    #Banner-{{ section.id }} .new-banner__media img {
+        height: auto;
+        position: relative;
+    }
+  }
+  {%- endif -%}
+
+  .new-banner__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  /* Mobile/Desktop Image Switching */
+  .new-banner__image-mobile {
+    display: block;
+  }
+  .new-banner__image-desktop {
+    display: none;
+  }
+
+  @media screen and (min-width: 750px) {
+    .new-banner__image-mobile {
+      display: none;
+    }
+    .new-banner__image-desktop {
+      display: block;
+    }
+  }
+
+  /* Content Overlay */
+  .new-banner__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 2rem;
+    box-sizing: border-box;
+    pointer-events: none;
+    z-index: 2;
+    text-align: left !important;
+  }
+
+  .new-banner__box {
+    max-width: 50rem;
+    width: 100%;
+    pointer-events: auto;
+    color: {{ section.settings.text_color }};
+  }
+
+  .new-banner__heading {
+    margin: 0;
+    font-size: 36px;
+    letter-spacing: 0;
+    font-family: 'TT Hoves Pro Trial Medium';
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+    word-break: break-word;
+  }
+
+  .new-banner__text {
+    margin-bottom: 0;
+    font-size: 28px;
+    color: inherit;
+    line-height: 1.5;
+    font-family: 'TT Hoves Pro Trial Medium';
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+  /* Position Classes */
+  .pos-top-left { justify-content: flex-start; align-items: flex-start; text-align: left; }
+  .pos-top-center { justify-content: center; align-items: flex-start; text-align: center; }
+  .pos-top-right { justify-content: flex-end; align-items: flex-start; text-align: right; }
+  
+  .pos-middle-left { justify-content: flex-start; align-items: center; text-align: left; }
+  .pos-middle-center { justify-content: center; align-items: center; text-align: center; }
+  .pos-middle-right { justify-content: flex-end; align-items: center; text-align: right; }
+
+  .pos-bottom-left { justify-content: flex-start; align-items: flex-end; text-align: left; }
+  .pos-bottom-center { justify-content: center; align-items: flex-end; text-align: center; }
+  .pos-bottom-right { justify-content: flex-end; align-items: flex-end; text-align: right; }
+
+  /* Responsive Typography */
+  .new-banner__heading.hxl { font-size: 5rem; }
+  .new-banner__heading.h0 { font-size: 4rem; }
+  .new-banner__heading.h1 { font-size: 3rem; }
+  .new-banner__heading.h2 { font-size: 2rem; }
+
+  @media screen and (max-width: 749px) {
+    .new-banner__heading.hxl { font-size: 3.2rem; }
+    .new-banner__heading.h0 { font-size: 2.8rem; }
+    .new-banner__heading.h1 { font-size: 2.4rem; }
+    .new-banner__heading.h2 { font-size: 2rem; }
+
+    .new-banner__content {
+        /* Apply mobile alignment if different from desktop */
+        {% assign mobile_pos = section.settings.mobile_position | split: '-' %}
+        justify-content: {% if mobile_pos[1] == 'left' %}flex-start{% elsif mobile_pos[1] == 'right' %}flex-end{% else %}center{% endif %} !important;
+        align-items: {% if mobile_pos[0] == 'top' %}flex-start{% elsif mobile_pos[0] == 'bottom' %}flex-end{% else %}center{% endif %} !important;
+        text-align: {{ mobile_pos[1] }} !important;
+    }
+    
+    .new-banner__box {
+        max-width: 100%;
+    }
+  }
+
+  .new-banner__overlay {
+      position: absolute;
+      top: 0; 
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
+      z-index: 1;
+      pointer-events: none;
+  }
+{% endstyle %}
+
+<div class="section-{{ section.id }}-padding page-width">
+  <div id="Banner-{{ section.id }}" class="new-banner-wrapper">
+    <div class="new-banner__media">
+      
+      {%- if section.settings.image != blank -%}
+        {%- assign desktop_image_class = 'new-banner__image-desktop' -%}
+        {%- if section.settings.image_mobile == blank -%}
+           {%- assign desktop_image_class = '' -%}
+        {%- endif -%}
+
+        {{ section.settings.image | image_url: width: 3840 | image_tag:
+          loading: 'lazy',
+          width: section.settings.image.width,
+          height: section.settings.image.height,
+          class: desktop_image_class,
+          sizes: '100vw',
+          widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+        }}
+      {%- else -%}
+         {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+
+      {%- if section.settings.image_mobile != blank -%}
+        {{ section.settings.image_mobile | image_url: width: 1500 | image_tag:
+          loading: 'lazy',
+          width: section.settings.image_mobile.width,
+          height: section.settings.image_mobile.height,
+          class: 'new-banner__image-mobile',
+          sizes: '100vw',
+          widths: '375, 550, 750, 1100, 1500'
+        }}
+      {%- endif -%}
+
+      <div class="new-banner__overlay"></div>
+
+      <div class="new-banner__content pos-{{ section.settings.desktop_position }}">
+        <div class="new-banner__box">
+            {%- if section.settings.subheading != blank -%}
+            <div class="new-banner__text">
+              {{ section.settings.subheading }}
+            </div>
+          {%- endif -%}
+          {%- if section.settings.heading != blank -%}
+            <h2 class="new-banner__heading {{ section.settings.heading_size }}">
+              {{ section.settings.heading | escape }}
+            </h2>
+          {%- endif -%}
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "New Banner W Text Overlay",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "range",
+      "id": "image_overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Image overlay opacity",
+      "default": 0
+    },
+    {
+      "type": "select",
+      "id": "desktop_height",
+      "label": "Desktop Height",
+      "options": [
+        {
+          "value": "auto",
+          "label": "Adapt to image"
+        },
+        {
+          "value": "450px",
+          "label": "Small"
+        },
+        {
+          "value": "550px",
+          "label": "Medium"
+        },
+        {
+          "value": "650px",
+          "label": "Large"
+        }
+      ],
+      "default": "550px"
+    },
+    {
+      "type": "select",
+      "id": "mobile_height",
+      "label": "Mobile Height",
+      "options": [
+        {
+          "value": "auto",
+          "label": "Adapt to image"
+        },
+        {
+          "value": "250px",
+          "label": "Small"
+        },
+        {
+          "value": "350px",
+          "label": "Medium"
+        },
+        {
+          "value": "500px",
+          "label": "Large"
+        }
+      ],
+      "default": "auto"
+    },
+    {
+      "type": "range",
+      "id": "corner_radius",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Corner Radius",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Text Settings"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "What Makes This Chamber Different ?"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "h2", "label": "Small" },
+        { "value": "h1", "label": "Medium" },
+        { "value": "h0", "label": "Large" },
+        { "value": "hxl", "label": "Extra Large" }
+      ],
+      "default": "h0",
+      "label": "Heading Size"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Layout Settings"
+    },
+    {
+      "type": "select",
+      "id": "desktop_position",
+      "options": [
+        { "value": "top-left", "label": "Top Left" },
+        { "value": "top-center", "label": "Top Center" },
+        { "value": "top-right", "label": "Top Right" },
+        { "value": "middle-left", "label": "Middle Left" },
+        { "value": "middle-center", "label": "Middle Center" },
+        { "value": "middle-right", "label": "Middle Right" },
+        { "value": "bottom-left", "label": "Bottom Left" },
+        { "value": "bottom-center", "label": "Bottom Center" },
+        { "value": "bottom-right", "label": "Bottom Right" }
+      ],
+      "default": "middle-right",
+      "label": "Desktop Content Position"
+    },
+    {
+      "type": "select",
+      "id": "mobile_position",
+      "options": [
+        { "value": "top-center", "label": "Top" },
+        { "value": "middle-center", "label": "Middle" },
+        { "value": "bottom-center", "label": "Bottom" }
+      ],
+      "default": "middle-center",
+      "label": "Mobile Content Position"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "New Banner With Text Overlay"
+    }
+  ]
+}
+{% endschema %}

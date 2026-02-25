@@ -1,0 +1,195 @@
+{% comment %}
+  Renders product buy-buttons.
+  Accepts:
+  - product: {Object} product object.
+  - block: {Object} passing the block information.
+  - product_form_id: {String} product form id.
+  - section_id: {String} id of section to which this snippet belongs.
+  - show_pickup_availability:: {Boolean} for the pickup availability. If true the pickup availability is rendered, false - not rendered (optional).
+
+  Usage:
+  {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, show_pickup_availability: true %}
+{% endcomment %}
+ {% if product.handle contains 'sauna' %}
+              <div class="badge-for-preorder">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <g clip-path="url(#clip0_756_155)">
+    <path d="M3.80762 5.08599C4.93962 4.07999 5.64162 3.73999 6.99962 3.48999C8.35762 3.74099 9.05962 4.07999 10.1916 5.08599L6.99962 6.68199L3.80762 5.08599Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M6.99993 6.674V10.405M3.80793 5.086C3.41493 6.166 3.41093 7.454 3.72293 8.539C3.77543 8.71686 3.8799 8.87496 4.02293 8.993C5.01093 9.817 5.68693 10.12 6.78893 10.361C6.928 10.391 7.07187 10.391 7.21093 10.361C8.31293 10.12 8.98893 9.817 9.97593 8.993C10.1193 8.8751 10.2242 8.71698 10.2769 8.539C10.5889 7.454 10.5849 6.166 10.1919 5.086L6.99993 6.682L3.80793 5.086Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M0.75 6.99998C0.749463 5.60859 1.21323 4.25681 2.06782 3.1588C2.92241 2.06079 4.11896 1.27934 5.4679 0.938258C6.81683 0.597179 8.24101 0.715974 9.51479 1.27582C10.7886 1.83567 11.8391 2.80456 12.5 4.02898C12.576 2.92698 12.553 2.29698 12.4 1.15398M13.25 6.99998C13.2504 8.38845 12.7885 9.73754 11.9371 10.8344C11.0857 11.9312 9.89333 12.7132 8.54812 13.0572C7.20292 13.4011 5.78148 13.2873 4.50814 12.7337C3.23479 12.1801 2.18203 11.2183 1.516 9.99998C1.44 11.102 1.462 11.732 1.616 12.875" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_756_155">
+      <rect width="14" height="14" fill="white"/>
+    </clipPath>
+  </defs>
+</svg>
+<p>Estimated delivery time 1 month</p>
+              </div>
+            {% endif %}
+<div {{ block.shopify_attributes }}>
+  {%- if product != blank -%}
+    <product-form class="product-form">
+      <div class="product-form__error-message-wrapper" role="alert" hidden>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          class="icon icon-error"
+          viewBox="0 0 13 13"
+        >
+          <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
+          <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
+          <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
+          <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+        </svg>
+        <span class="product-form__error-message"></span>
+      </div>
+
+      {%- form 'product',
+        product,
+        id: product_form_id,
+        class: 'form',
+        novalidate: 'novalidate',
+        data-type: 'add-to-cart-form'
+      -%}
+        <input
+          type="hidden"
+          name="id"
+          value="{{ product.selected_or_first_available_variant.id }}"
+          disabled
+          class="product-variant-id"
+        >
+        <div class="product-form__buttons">
+          {%- liquid
+            assign check_against_inventory = true
+            if product.selected_or_first_available_variant.inventory_management != 'shopify' or  product.selected_or_first_available_variant.inventory_policy == 'continue'
+              assign check_against_inventory = false
+            endif
+            if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
+              assign quantity_rule_soldout = true
+            endif
+          -%}
+          <button 3asdf
+            id = "ProductSubmitButton-{{ section_id }}"
+            type="submit"
+            name="add"
+            class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+            {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
+              disabled
+            {% endif %}
+          >
+            <span>
+              {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+                {{ 'products.product.sold_out' | t }}
+              {%- else -%}
+                {% if product.handle contains 'sauna' %}
+                  Add to Cart (Preorder)
+                {% else %}
+                  {{ 'products.product.add_to_cart' | t }} - {{ product.price | money_without_trailing_zeros }}
+                {% endif %}
+              {%- endif -%}
+            </span>
+            <div class="loading-overlay__spinner hidden">
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                class="spinner"
+                viewBox="0 0 66 66"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+              </svg>
+            </div>
+          </button>
+          {%- if block.settings.show_dynamic_checkout -%}
+            {{ form | payment_button }}
+          {%- endif -%}
+        </div>
+        {% if template contains 'product' %}
+          <div class="c-low-stocks">
+            <div class="c-low-icon">
+              {% render 'c-low-icon' %}
+            </div>
+            <div class="c-low-text">
+              Low Stock | Order now to avoid missing out.
+            </div>
+          </div>
+          {% for collection in product.collections %}
+            {% if collection.title contains 'Sauna' or collection.title contains 'Accessories' %}
+              {%  assign flag = true %}
+            {% else %}
+              {%  assign flag = false %}
+            {% endif %}
+          {% endfor %}
+          {% if product.title == 'Warrior Ultra 1.5 HP Wi-Fi Water Chiller + Heater' %}
+            {%  assign flag = true %}
+          {% endif %}
+          <div class="c-get-by">
+            {% if flag == false %}
+              <p class="c-get-by-text">Get it by <span id="c-gb-prev">{{ three_days_later_date }}</span> - <span class="c-gb-post">{{ seven_days_later_date }}</span>. Ships from USA.</p>
+            {% endif %}
+            <ul class="c-gb-list">
+              <li class="c-gbl-item">
+                {% render 'c-truck' %}
+                <p class="c-gbl-text">Free & Fast Shipping</p>
+              </li>
+              <li class="c-gbl-item">
+                {% render 'c-shield' %}
+                <p class="c-gbl-text">1 Year Warranty</p>
+              </li>
+              <li class="c-gbl-item">
+                {% render 'c-return-arrow' %}
+                <p class="c-gbl-text">60 Days Trial</p>
+              </li>
+            </ul>
+          </div>
+        {% endif %}
+      {%- endform -%}
+    </product-form>
+  {%- else -%}
+    <div class="product-form">
+      <div class="product-form__buttons form">
+        <button
+          type="submit"
+          name="add"
+          class="product-form__submit button button--full-width button--primary"
+          disabled
+        >
+          {{ 'products.product.sold_out' | t }}
+        </button>
+      </div>
+    </div>
+  {%- endif -%}
+
+  {%- if show_pickup_availability -%}
+    {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
+
+    {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities
+      | where: 'pick_up_enabled', true
+    -%}
+
+    <pickup-availability
+      class="product__pickup-availabilities no-js-hidden quick-add-hidden"
+      {% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %}
+        available
+      {% endif %}
+      data-root-url="{{ routes.root_url }}"
+      data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+      data-has-only-default-variant="{{ product.has_only_default_variant }}"
+    >
+      <template>
+        <pickup-availability-preview class="pickup-availability-preview">
+          {% render 'icon-unavailable' %}
+          <div class="pickup-availability-info">
+            <p class="caption-large">{{ 'products.product.pickup_availability.unavailable' | t }}</p>
+            <button class="pickup-availability-button link link--text underlined-link">
+              {{ 'products.product.pickup_availability.refresh' | t }}
+            </button>
+          </div>
+        </pickup-availability-preview>
+      </template>
+    </pickup-availability>
+
+    <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
+  {%- endif -%}
+</div>

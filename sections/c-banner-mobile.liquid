@@ -1,0 +1,59 @@
+
+
+<section style="margin-top:50px;">
+<div
+  class="c-background tw-w-full tw-h-[54px] tw-py-2 tw-px-16 {% unless section.settings.christmas_styles %} tw-border-y-2 tw-border-[#F0B36B] tw-bg-custom-gradient-black {% else %} tw-bg-custom-christmas-green-gradient {% endunless %} tw-overflow-hidden tw-relative tw-flex" style="position:relative;"
+  
+>
+  <!-- Marquee 1 for larger screens -->
+  
+
+  <div
+    class="c-div tw-w-[100%] tw-flex tw-gap-16 tw-absolute tw-inset-0 tw-items-center tw-whitespace-nowrap "
+  >
+    <div x-ref="item" class="tw-flex tw-items-center tw-justify-around tw-flex-shrink-0 tw-w-full tw-py-2 tw-space-x-8" style="padding-right:10px;">
+      <span
+        class="c-text tw-font-bold tw-translate-y-0.5 tw-text-sm md:tw-text-xl tw-text-white"
+        {% unless section.settings.christmas_styles %}
+          style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent"
+        {% endunless %}
+      >
+        {{- section.settings.main_text -}}
+      </span>
+
+      
+    </div>
+  </div>
+</div>
+</section>
+
+{% schema %}
+{
+  "name": "C Banner Mobile",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "christmas_styles",
+      "label": "Christmas Styles",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "main_text",
+      "label": "Main Text",
+      "default": "Secure Your VIP Bundles and Save 20%"
+    },
+    {
+      "type": "image_picker",
+      "id": "small_image",
+      "label": "Small Image"
+    },
+
+  ],
+  "presets": [
+    {
+      "name": "C Banner Mobile"
+    }
+  ]
+}
+{% endschema %}

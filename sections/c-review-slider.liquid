@@ -1,0 +1,106 @@
+<section>
+<div id="slider-{{ section.id }}" class="tw-p-5 md:tw-p-6 lg:tw-pb-14  tw-relative">
+    <div class="tw-flex tw-gap-4 tw-transition-transform tw-duration-300 tw-ease-in-out tw-transform">
+      {% for block in section.blocks %}
+      <div class="tw-w-full tw-min-w-full tw-flex tw-flex-col tw-gap-4 tw-p-6 tw-bg-white tw-rounded-lg tw-shadow-lg">
+        <!-- Icono -->
+        <div class="tw-flex tw-justify-center tw-items-center">
+          <img src="{{ block.settings.icon | img_url }}" alt="Icon" class="tw-w-16 tw-h-16 tw-object-contain" />
+        </div>
+        <!-- Título -->
+        <h2 class="tw-text-xl tw-font-bold tw-text-center tw-text-gray-800">
+          {{ block.settings.title }}
+        </h2>
+        <!-- Descripción -->
+        <p class="tw-text-sm tw-text-center tw-text-gray-600">
+          {{ block.settings.description }}
+        </p>
+        <!-- Icono y texto en fila -->
+        <div class="tw-flex tw-items-center tw-gap-2">
+          <img src="{{ block.settings.row_icon | img_url }}" alt="Row Icon" class="tw-w-6 tw-h-6 tw-object-contain" />
+          <span class="tw-text-gray-800 tw-text-sm">
+            {{ block.settings.row_text }}
+          </span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <!-- Controles del slider -->
+    <button id="prev-{{ section.id }}" class="tw-absolute tw-left-2 tw-top-1/2 tw-transform -tw-translate-y-1/2 tw-px-4 tw-py-2 tw-bg-gray-800 tw-text-white tw-rounded-full tw-shadow-lg">‹</button>
+    <button id="next-{{ section.id }}" class="tw-absolute tw-right-2 tw-top-1/2 tw-transform -tw-translate-y-1/2 tw-px-4 tw-py-2 tw-bg-gray-800 tw-text-white tw-rounded-full tw-shadow-lg">›</button>
+  </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const slider = document.getElementById('slider-{{ section.id }}');
+      const slides = slider.querySelector('.tw-flex');
+      const prevButton = document.getElementById('prev-{{ section.id }}');
+      const nextButton = document.getElementById('next-{{ section.id }}');
+  
+      let currentIndex = 0;
+  
+      function updateSlider() {
+        const slideWidth = slider.clientWidth;
+        slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+      }
+  
+      prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : 0;
+        updateSlider();
+      });
+  
+      nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex < slides.children.length - 1) ? currentIndex + 1 : slides.children.length - 1;
+        updateSlider();
+      });
+  
+      window.addEventListener('resize', updateSlider);
+    });
+  </script>
+
+{% schema %}
+  {
+    "name": "C Slider Section",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Slide",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description"
+          },
+          {
+            "type": "image_picker",
+            "id": "row_icon",
+            "label": "Row Icon"
+          },
+          {
+            "type": "text",
+            "id": "row_text",
+            "label": "Row Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "C Slider Section"
+      }
+    ]
+  }
+
+  {% endschema %}

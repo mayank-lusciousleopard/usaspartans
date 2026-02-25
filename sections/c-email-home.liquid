@@ -1,0 +1,548 @@
+<style>
+  #{{ section.id }} {
+    font-size: 20px;
+    padding-top: {{ section.settings.padding_top }}em;
+    padding-bottom: {{ section.settings.padding_bottom }}em;
+    background: {{ section.settings.bg_color }};
+  }
+
+  #{{ section.id }} .c-section-top-subheading,
+  #{{ section.id }} div,
+  #{{ section.id }} h1,
+  #{{ section.id }} h2,
+  #{{ section.id }} h3 {
+    color: {{ section.settings.text_color }};
+  }
+
+  #{{ section.id }} .c-hi-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: {{ section.settings.grid_gap }};
+    display: grid;
+  }
+
+  #{{ section.id }} .c-eh-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5em;
+    align-items: {{ section.settings.section_top_alignment }};
+    text-align: {{ section.settings.text_alignment }};
+    padding: {{ section.settings.grid_left_padding }};
+  }
+
+  #{{ section.id }} .c-paragraph {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  #{{ section.id }} .c-hi-left-items {
+    display: grid;
+    grid-template-columns:{% for block in section.blocks %} 1fr{% endfor %};
+    gap: 0.5em;
+    width: 100%;
+  }
+
+  #{{ section.id }} .c-hi-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.75em;
+  }
+
+  #{{ section.id }} .c-hi-item img {
+    width: {{ section.settings.block_icon_size }}px;
+  }
+
+  #{{ section.id }} .c-hi-grid-right {
+    overflow: hidden;
+    display: flex;
+  }
+
+  #{{ section.id }} .c-hi-grid-right img {
+    width: 100%;
+    height: 100%;
+    max-height: 85vh;
+    object-fit: cover;
+    transition: 0.2s ease;
+    border-radius: 26px;
+  }
+
+  #{{ section.id }} .c-hi-grid-right:hover img {
+    transform: scale(1.1);
+  }
+
+  #{{ section.id }} .c-buttons-div {
+    margin-top: 0em;
+  }
+
+  #{{ section.id }} .c-button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #{{ section.id }} .c-hi-item-paragraph {
+    font-size: 0.875em;
+  }
+
+  @media (max-width: {{ settings.c_breakpoint2 }}px) {
+    #{{ section.id }} .c-hi-grid {
+      grid-template-columns: 1fr;
+      gap: 0em;
+      display: grid;
+    }
+
+    #{{ section.id }} .c-hi-grid-left {
+      padding: {{ section.settings.grid_left_padding_mobile }};
+    }
+  }
+
+  strong {
+    background: linear-gradient(90deg, rgba(14, 131, 249, 1) 0%, rgba(8, 77, 147, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline;
+  }
+
+  #{{ section.id }} .form {
+    width: 100% !important;
+  }
+
+  #{{ section.id }} .input-group {
+    display: flex;
+    margin-bottom: 16px;
+    gap: 1rem;
+  }
+
+  #{{ section.id }} .input-field {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px !important;
+    outline: none;
+    box-shadow: none;
+    transition: border-color 0.3s;
+  }
+
+  #{{ section.id }} .input-field:focus {
+    border-color: #3b82f6;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  #{{ section.id }} .input-field::placeholder {
+    color: #9ca3af;
+  }
+
+  #{{ section.id }} .input-field.error {
+    border-color: #ef4444;
+  }
+
+  #{{ section.id }} .input-field.success {
+    border-color: #10b981;
+  }
+
+  #{{ section.id }} .submit-button {
+    background: linear-gradient(90deg, rgba(14, 131, 249, 1), rgba(9, 79, 149, 1) 100%);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  #{{ section.id }} .submit-button:hover {
+    background: #0E83F9 !important;
+  }
+
+  #{{ section.id }} .privacy-text {
+    font-size: 12px;
+    color: black;
+  }
+
+  #{{ section.id }} .link {
+    color: #3b82f6;
+    text-decoration: none;
+    transition: text-decoration 0.3s;
+  }
+
+  #{{ section.id }} .link:hover {
+    text-decoration: underline;
+  }
+
+  #{{ section.id }} .new__header {
+    font-size: clamp(32px, 4vw, 40px) !important;
+  }
+
+  @media (max-width: 768px) {
+    #{{ section.id }} {
+      font-size: 18px;
+      padding-top: {{ section.settings.padding_top | times: 0.5 }}em;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 }}em;
+    }
+  }
+</style>
+
+
+<section id="{{ section.id }}" class="tw-w-full tw-px-4 tw-mb-5">
+
+  <div class="{{ section.settings.section_container }}">
+    <div class="tw-flex tw-flex-col md:tw-flex-row tw-flex-wrap tw-justify-between">
+      <div class="tw-w-full md:tw-w-6/12 tw-mb-3 tw-px-2 c-eh-info-container">
+        <div class="c-hi-review-div">
+          <div data-oke-star-rating data-oke-all-reviews="true"></div>
+        </div>
+        {%- if section.settings.section_top_subheading != empty -%}
+          <p class="c-section-top-subheading tw-text-center md:tw-text-left">
+            {{ section.settings.section_top_subheading }}
+          </p>
+        {%- endif -%}
+
+        {%- if section.settings.section_top_heading != empty -%}
+          <h2 class="new__header  ">
+            {{ section.settings.section_top_heading }}
+            {%- if section.settings.section_top_heading_2 != empty -%}
+              <strong>
+                {{ section.settings.section_top_heading_2 }}
+              </strong>
+            {%- endif -%}
+          </h2>
+        {%- endif -%}
+
+
+        {%- if section.settings.section_top_paragraph != empty -%}
+          <div class="c-paragraph tw-p-0 md:tw-pr-3 c-t-80  ">
+            {{ section.settings.section_top_paragraph }}
+          </div>
+        {%- endif -%}
+
+        <!-- Newsletter Form -->
+        {% if section.settings.newsletter_enable %}
+          <div class="tw-flex tw-w-full">
+            <div class="tw-w-full">
+              {% form 'customer', id: 'ContactFooter' %}
+                <input type="hidden" name="contact[tags]" value="newsletter">
+
+                <div class="tw-mt-5 tw-flex tw-flex-wrap tw-gap-2 tw-w-full">
+                  <div class="tw-flex tw-items-center tw-w-full md:tw-w-8/12">
+                    <input
+                      id="NewsletterForm--{{ section.id }}"
+                      type="email"
+                      name="contact[email]"
+                      class="tw-h-100 tw-w-full tw-px-4 tw-py-2 tw-border-2 tw-border-blue-500 tw-rounded-lg focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-500"
+                      value="{{ form.email }}"
+                      aria-required="true"
+                      autocorrect="off"
+                      autocapitalize="off"
+                      autocomplete="email"
+                      {% if form.errors %}
+                        autofocus
+                        aria-invalid="true"
+                        aria-describedby="Newsletter-error--{{ section.id }}"
+                      {% elsif form.posted_successfully? %}
+                        aria-describedby="Newsletter-success--{{ section.id }}"
+                      {% endif %}
+                      placeholder="{{ 'newsletter.label' | t }}"
+                      required
+                    >
+                    {%- if form.errors -%}
+                      <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">
+                        {%- render 'icon-error' -%}
+                        {{- form.errors.translated_fields.email | capitalize }}
+                        {{ form.errors.messages.email -}}
+                      </small>
+                    {%- endif -%}
+                  </div>
+
+                  <div>
+                    <button
+                      type="submit"
+                      class="submit-button tw-bg-blue-500 tw-text-white tw-rounded-lg tw-px-4 tw-py-2 hover:tw-bg-blue-600 focus:tw-ring-2 focus:tw-ring-blue-500"
+                      name="commit"
+                      id="Subscribe"
+                      aria-label="{{ 'newsletter.button_label' | t }}"
+                    >
+                      Sign Up
+                    </button>
+                  </div>
+                </div>
+
+                <p class="privacy-text tw-mt-4 tw-text-sm tw-text-black">
+                  We respect your privacy—no spam, no sharing your information, and you can unsubscribe at any time.
+                   {% comment %} <a href="#" class="tw-text-blue-500 hover:tw-underline">single click</a>. {% endcomment %}
+                </p>
+
+                {% if form.errors %}
+                  <small class="newsletter-form__message form__message tw-text-red-500" id="ContactFooter-error">
+                    {% render 'icon-error' %}
+                    {{ form.errors.translated_fields.email | capitalize }}
+                    {{ form.errors.messages.email }}
+                  </small>
+                {% endif %}
+
+                {% if form.posted_successfully? %}
+                  <h3
+                    class="newsletter-form__message newsletter-form__message--success form__message tw-text-green-500"
+                    id="ContactFooter-success"
+                    tabindex="-1"
+                    autofocus
+                  >
+                    {% render 'icon-success' %}
+                    {{ 'newsletter.success' | t }}
+                  </h3>
+                {% endif %}
+              {% endform %}
+            </div>
+          </div>
+        {% endif %}
+
+        <div class="c-hi-left-items">
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'Item' %}
+                <div class="c-hi-item" {{ block.shopify_attributes }}>
+                  {% if block.settings.block_image %}
+                    {{
+                      block.settings.block_image
+                      | image_url: width: 750
+                      | image_tag: loading: 'lazy', height: 'auto'
+                    }}
+                  {% endif %}
+                  <div class="c-hi-item-paragraph">{{ block.settings.block_paragraph }}</div>
+                </div>
+            {% endcase %}
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="c-hi-grid-right tw-w-full md:tw-w-6/12 tw-px-2">
+        {% if section.settings.image %}
+          {{ section.settings.image | image_url: width: 1500 | image_tag: loading: 'eager', height: 'auto' }}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "C Email Home",
+  "blocks": [
+    {
+      "name": "Item",
+      "type": "Item",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "block_image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "block_paragraph",
+          "label": "Paragraph",
+          "default": "<p>Lorem ipsum dolor sit amet</p>"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text", 
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#fff"
+    },
+    {
+      "type": "range",
+      "id": "block_icon_size",
+      "label": "Block Icon size", 
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "default": 25,
+      "unit": "px"
+    },
+    {
+      "type": "text",
+      "id": "grid_gap",
+      "label": "Grid gap",
+      "default": "7.5vw"
+    },
+    {
+      "type": "text",
+      "id": "grid_left_padding",
+      "label": "Grid left padding",
+      "default": "0rem 0rem"
+    },
+    {
+      "type": "text",
+      "id": "grid_left_padding_mobile",
+      "label": "Grid left padding mobile",
+      "default": "0rem 0rem"
+    },
+    {
+      "type": "select",
+      "id": "section_container",
+      "label": "Section container",
+      "default": "page-width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "Normal"
+        },
+        {
+          "value": "",
+          "label": "None"
+        },
+        {
+          "value": "page-width2",
+          "label": "Smaller"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Buy Now"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Section Colors"
+    },
+    {
+      "type": "checkbox",
+      "id": "newsletter_enable",
+      "default": true,
+      "label": "t:sections.footer.settings.newsletter_enable.label"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_heading",
+      "default": "Subscribe to our emails",
+      "label": "t:sections.footer.settings.newsletter_heading.label"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000"
+    },
+    {
+      "type": "header",
+      "content": "Section Top"
+    },
+    {
+      "type": "text",
+      "id": "section_top_subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "section_top_heading",
+      "label": "Heading",
+      "default": "Section Heading"
+    },
+    {
+      "type": "text",
+      "id": "section_top_heading_2",
+      "label": "Heading2",
+    },
+    {
+      "type": "richtext",
+      "id": "section_top_paragraph",
+      "label": "Paragraph",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+    },
+    {
+      "type": "select",
+      "id": "section_top_alignment",
+      "label": "Section Top Alignment",
+      "default": "flex-start",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "default": 4,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "default": 4,
+      "unit": "rem"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Email Home"
+    }
+  ]
+}
+{% endschema %}

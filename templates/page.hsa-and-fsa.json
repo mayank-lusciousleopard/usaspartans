@@ -1,0 +1,316 @@
+{
+  "sections": {
+    "image_with_text_KJRWn4": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_HAjwmp": {
+          "type": "caption",
+          "settings": {
+            "caption": "USE YOUR HSA\/FSA",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_LJd8g4": {
+          "type": "heading",
+          "settings": {
+            "heading": "Save 20-40% on Warrior Willpower Purchases with Flex",
+            "heading_size": "h2"
+          }
+        },
+        "text_TPd9mh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We've partnered with Flex to allow you to use your Health Savings Account (HSA) or Flexible Spending Account (FSA), and purchase our products with pre-tax dollars.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "caption_HAjwmp",
+        "heading_LJd8g4",
+        "text_TPd9mh"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/ice_bath_with_HSA.jpg",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "1748851338c6b46fb4": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "multicolumn_caaXyV": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_3i9TRA": {
+          "type": "column",
+          "settings": {
+            "title": "1. Add product(s) to your cart",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_9EkWcJ": {
+          "type": "column",
+          "settings": {
+            "title": "2. Go to checkout",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_tUtz6j": {
+          "type": "column",
+          "settings": {
+            "title": "3. Select Flex as payment method",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_3i9TRA",
+        "column_9EkWcJ",
+        "column_tUtz6j"
+      ],
+      "settings": {
+        "title": "How It Works",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "collapsible_content_4b7zqR": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_Y6QtUP": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is a Letter of Medical Necessity?",
+            "icon": "question_mark",
+            "row_content": "<p>An LMN, or Letter of Medical Necessity, is like a doctor’s note. It’s issued by a healthcare provider to outline the medical reasons why a particular product or service is medically necessary for an individual's health, and qualifies your purchase to be HSA\/FSA eligible. LMNs demonstrate that an expense is needed to diagnose, treat, or alleviate a medical symptom, rather than for general health or wellness purposes.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6cVCwp": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why do I need a Letter of Medical Necessity?",
+            "icon": "question_mark",
+            "row_content": "<p>If you want to use your HSA\/FSA funds to purchase Warrior Willpower products, you’ll need a Letter of Medical Necessity (LMN), and we’ve partnered with Flex to help you with this.<\/p><p>Certain products are eligible for purchase with HSA\/FSA funds if they treat, cure, prevent, diagnose, or alleviate a medical need. For instance, items like bandaids are always eligible as they serve a solely medical purpose. <\/p><p>However, there are “dual-eligible” products that can be used for general health and wellness or for specific medical purposes—if recommended by a healthcare provider based on your individual needs. <\/p><p>Take iron supplements, for example; many use them to support their overall health. Yet, for someone with anemia, iron supplements become crucial. In such cases, individuals can use their HSA\/FSA funds if their healthcare provider issues an LMN, recommending the supplements specifically to address their anemia.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_9pfhT3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I get a Letter of Medical Necessity?",
+            "icon": "question_mark",
+            "row_content": "<p>You can request a Letter of Medical Necessity at checkout If you’re approved, you’ll be able to check out using your HSA\/FSA funds for your qualified purchase. <\/p><p>To request an LMN you will:<\/p><ul><li>Complete intake forms, similar to how you would at a doctor’s office<\/li><li>Consult with our team of healthcare providers, who will determine if you are eligible<\/li><\/ul><p>Once you have your LMN in hand, you can return to Warrior Willpower and shop as usual. During checkout, you’ll simply select the Flex payment method to utilize your HSA\/FSA funds.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_7C3b7r": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does it take to get approved for a Letter of Medical Necessity?",
+            "icon": "question_mark",
+            "row_content": "<p>Our healthcare provider team strives to provide a response within 12 business hours after you submit your LMN intake forms. <\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_t9JNCH": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How does using my HSA\/FSA save me money?",
+            "icon": "question_mark",
+            "row_content": "<p>HSA and FSA accounts let people use pretax money for health-related expenses. This boosts buying power. Instead of paying taxes on income first, you can directly use pretax funds for health needs.<\/p><p>An individual can put up to $3,850 in an HSA yearly, or $7,750 for a family. If you're 55 or older, add another $1,000. For an FSA, the limit is $3,050 per person, plus $500 from employers. <\/p><p>Most people save between $1,000 and $2,000, depending on their state and tax rate.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_8DCGtN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I don't have enough funds in my HSA\/FSA account to reimburse the entire purchase. Can I still use this?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes. You can still submit for partial reimbursement.<\/p><p>For example: if you purchase an eligible item for $2000 but only have $1200 in your account, you can reimburse $1200 of your purchase with your tax-free funds (with the remaining $800 paid for as normal).<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_YcD7Gr": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What information will I need to provide for a Letter of Medical Necessity?",
+            "icon": "question_mark",
+            "row_content": "<p>To see if you’re a candidate for a Letter of Medical Necessity, similar to other telehealth experiences, you’ll be asked to share your name, contact information, date of birth, and information about the symptoms you are experiencing and your medical history. We will also verify your phone number and ask you to upload a photo ID to verify your identity. <\/p><p>The information you provide in the LMN process will be kept confidential and shared only with our healthcare providers to evaluate your eligibility for an LMN.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_bEQ37k": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long is a Letter of Medical Necessity valid for?",
+            "icon": "question_mark",
+            "row_content": "<p>Letters of Medical Necessity are valid for 12 months from the day they are signed and written. <\/p><p>Please note, LMNs cannot be used retroactively for purchases made prior to the date they are signed.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_JFKCbc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I was approved for an LMN. How do I make a purchase?",
+            "icon": "question_mark",
+            "row_content": "<p>Once you’re approved for a Letter of Medical Necessity, proceed to <a href=\"https:\/\/warriorwillpower.com\" title=\"https:\/\/warriorwillpower.com\">warriorwillpower.com<\/a>, add the relevant item(s) to your cart, and check out with Flex using your HSA\/FSA card. Please use the same email address at checkout that you used to apply for an LMN. If you don’t have your HSA\/FSA card handy, you can pay with debit\/credit and apply to your HSA\/FSA administrator for reimbursement. <\/p><p>After purchase, Flex will email you a receipt and the LMN. Please upload your receipt and LMN to your HSA\/FSA administrator’s website to substantiate your order or request reimbursement if you paid with debit\/credit.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_N9UDNr": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I submit my Letter of Medical Necessity to my HSA\/FSA provider?",
+            "icon": "question_mark",
+            "row_content": "<p>After you complete a purchase using an LMN, you will need to submit your Letter of Medical Necessity and your receipt to substantiate the purchase if you paid with your HSA\/FSA or to get reimbursed if you paid with your credit\/debit card. To do this:<\/p><ol><li>Log into your HSA\/FSA account on your benefit administrator’s website <\/li><li>Find the Reimbursement or Claims section <\/li><li>Upload your receipt and Letter of Medical Necessity<\/li><\/ol><p>Your administrator will process and evaluate your claim. Please note that some HSA\/FSA benefits administrators may incorrectly deny reimbursement, so before purchasing a product with an LMN you should consider contacting your administrator to determine if your purchases will be covered\/reimbursed. You can learn more about what is eligible <a href=\"https:\/\/www.irs.gov\/publications\/p969\"><span style=\"text-decoration:underline\">here<\/span><\/a>.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_xaqR74": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why wasn’t I approved for a Letter of Medical Necessity?",
+            "icon": "question_mark",
+            "row_content": "<p>Flex independent healthcare provider may determine that you do not have symptoms demonstrating a medical necessity for a product or service. While you cannot use your HSA\/FSA funds now, you can still use another payment method to complete your purchase on our site for example Afterpay which allows you to pay on installments.<\/p><p>We do not recommend reapplying.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_Y6QtUP",
+        "collapsible_row_6cVCwp",
+        "collapsible_row_9pfhT3",
+        "collapsible_row_7C3b7r",
+        "collapsible_row_t9JNCH",
+        "collapsible_row_8DCGtN",
+        "collapsible_row_YcD7Gr",
+        "collapsible_row_bEQ37k",
+        "collapsible_row_JFKCbc",
+        "collapsible_row_N9UDNr",
+        "collapsible_row_xaqR74"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "17488511454373fbed": {
+      "type": "apps",
+      "blocks": {
+        "flex_pay_with_hsa_fsa_medium_UYAiYJ": {
+          "type": "shopify:\/\/apps\/flex-pay-with-hsa-fsa\/blocks\/medium\/c0438c22-7b33-4278-b0c3-ef6c6b7b5f83",
+          "settings": {
+            "style": "light",
+            "alignment": "center",
+            "width": 315
+          }
+        }
+      },
+      "block_order": [
+        "flex_pay_with_hsa_fsa_medium_UYAiYJ"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "collection_list_cLVEyg": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_NmMKBU": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "water-chillers-for-ice-baths"
+          }
+        },
+        "featured_collection_wPpWrP": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bundles"
+          }
+        },
+        "featured_collection_QGdNiE": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "inflatable-cold-plunge"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_NmMKBU",
+        "featured_collection_wPpWrP",
+        "featured_collection_QGdNiE"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Shop Our Products",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_with_text_KJRWn4",
+    "1748851338c6b46fb4",
+    "main",
+    "multicolumn_caaXyV",
+    "collapsible_content_4b7zqR",
+    "17488511454373fbed",
+    "collection_list_cLVEyg"
+  ]
+}

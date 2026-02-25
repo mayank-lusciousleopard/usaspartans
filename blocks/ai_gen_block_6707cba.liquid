@@ -1,0 +1,1261 @@
+{% doc %}
+  @prompt
+    Collection page — filter/sort sidebar left, product cards right.
+    - Pre-order button for products tagged "pre-order" or "preorder"
+    - No star ratings (Judge.me widget placeholder rendered per card)
+    - Mobile: sidebar collapsed by default, toggled open via button
+{% enddoc %}
+{% assign ai_gen_id = block.id | default: section.id | replace: '_', '' | downcase %}
+
+{% style %}
+      *, *::before, *::after { box-sizing: border-box; }
+
+      .cfg-wrap-{{ ai_gen_id }} {
+        padding: {{ block.settings.section_padding }}px 0;
+        background: {{ block.settings.page_bg }};
+        color: {{ block.settings.text_color }};
+         font-family: TT Hoves Pro Trial Regular;
+      }
+
+      .cfg-single-range-{{ ai_gen_id }} {
+    width: 100%;
+    height: 6px;
+    appearance: none;
+    background: linear-gradient(
+      to right,
+      {{ block.settings.accent_color }} 0%,
+      {{ block.settings.accent_color }} 100%,
+      #e0e0e0 100%
+    );
+    border-radius: 3px;
+    outline: none;
+  }
+
+  .cfg-single-range-{{ ai_gen_id }}::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: {{ block.settings.accent_color }};
+    cursor: pointer;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+  }
+
+  .cfg-single-range-{{ ai_gen_id }}::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: {{ block.settings.accent_color }};
+    cursor: pointer;
+  }
+
+      .cfg-container-{{ ai_gen_id }} {
+        max-width: {{ block.settings.container_width }}px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* ── Mobile filter toggle button ── */
+      .cfg-mobile-toggle-{{ ai_gen_id }} {
+        display: none;
+        width: 100%;
+        padding: 12px 16px;
+        background: {{ block.settings.sidebar_bg }};
+        border: 1px solid {{ block.settings.sidebar_border }};
+        border-radius: {{ block.settings.sidebar_radius }}px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        color: {{ block.settings.text_color }};
+        text-align: left;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+      }
+
+      .cfg-mobile-toggle-icon-{{ ai_gen_id }} {
+        transition: transform 0.25s ease;
+        font-style: normal;
+        display: inline-block;
+      }
+
+      .cfg-mobile-toggle-{{ ai_gen_id }}[aria-expanded="true"] .cfg-mobile-toggle-icon-{{ ai_gen_id }} {
+        transform: rotate(180deg);
+      }
+
+      /* ── Layout ── */
+      .cfg-layout-{{ ai_gen_id }} {
+        display: grid;
+        grid-template-columns: {{ block.settings.sidebar_width }}px 1fr;
+        gap: {{ block.settings.grid_gap }}px;
+        align-items: start;
+      }
+
+      /* ── Sidebar ── */
+      .cfg-sidebar-{{ ai_gen_id }} {
+        background: {{ block.settings.sidebar_bg }};
+        border: 1px solid {{ block.settings.sidebar_border }};
+        border-radius: {{ block.settings.sidebar_radius }}px;
+        padding: 20px;
+        position: sticky;
+        top: 20px;
+        height: 100%;
+      }
+
+    .cfg-sidebar-header-{{ ai_gen_id }} {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      margin-bottom: 8px;
+      /* remove border-bottom from here */
+    }
+
+      .cfg-sidebar-title-{{ ai_gen_id }} {
+        font-size: 15px;
+        font-weight: 700;
+        margin: 0;
+        color: {{ block.settings.text_color }};
+      }
+
+      .cfg-remove-all-{{ ai_gen_id }} {
+        font-size: 13px;
+        color: {{ block.settings.accent_color }};
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+      }
+      .cfg-remove-all-{{ ai_gen_id }}:hover { text-decoration: underline; }
+
+    .cfg-product-count-{{ ai_gen_id }} {
+      font-size: 13px;
+      color: #888;
+      margin: 0 0 14px 0;  /* tighter margin */
+    }
+
+      .cfg-section-{{ ai_gen_id }} {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid {{ block.settings.divider_color }};
+      }
+      .cfg-section-{{ ai_gen_id }}:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .cfg-section-title-{{ ai_gen_id }} {
+        font-size: 14px;
+        font-weight: 600;
+        color: {{ block.settings.text_color }};
+        margin: 0 0 12px 0;
+      }
+
+      /* Radio / checkbox rows */
+      .cfg-radio-option-{{ ai_gen_id }} {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        margin-bottom: 8px;
+        cursor: pointer;
+      }
+
+      .cfg-radio-option-{{ ai_gen_id }} input[type="radio"] {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 16px;
+        height: 16px;
+        border: 2px solid #ccc;
+        border-radius: 50%;
+        cursor: pointer;
+        flex-shrink: 0;
+        transition: border-color 0.2s;
+      }
+      .cfg-radio-option-{{ ai_gen_id }} input[type="radio"]:checked {
+        border-color: {{ block.settings.accent_color }};
+        background: {{ block.settings.accent_color }};
+        box-shadow: inset 0 0 0 3px #fff;
+      }
+
+      .cfg-radio-option-{{ ai_gen_id }} input[type="checkbox"] {
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+        flex-shrink: 0;
+        accent-color: {{ block.settings.accent_color }};
+      }
+
+      .cfg-radio-label-{{ ai_gen_id }} {
+        font-size: 14px;
+        font-weight: 400;
+        color: {{ block.settings.text_color }};
+        cursor: pointer;
+      }
+
+      /* Price range */
+      .cfg-price-inputs-{{ ai_gen_id }} {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+      .cfg-price-input-{{ ai_gen_id }} {
+        position: relative;
+        flex: 1;
+      }
+      .cfg-price-input-{{ ai_gen_id }} span {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 13px;
+        color: #888;
+      }
+      .cfg-price-input-{{ ai_gen_id }} input {
+        width: 100%;
+        padding: 8px 8px 8px 22px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 13px;
+        color: {{ block.settings.text_color }};
+        background: #fff;
+      }
+      .cfg-price-input-{{ ai_gen_id }} input:focus {
+        outline: none;
+        border-color: {{ block.settings.accent_color }};
+      }
+      .cfg-price-info-{{ ai_gen_id }} {
+        font-size: 12px;
+        color: #888;
+        margin-bottom: 12px;
+      }
+
+      .cfg-range-track-{{ ai_gen_id }} {
+        position: relative;
+        height: 4px;
+        background: #e0e0e0;
+        border-radius: 2px;
+        margin: 8px 0 4px;
+      }
+      .cfg-range-fill-{{ ai_gen_id }} {
+        position: absolute;
+        height: 100%;
+        background: {{ block.settings.accent_color }};
+        border-radius: 2px;
+      }
+      .cfg-range-slider-{{ ai_gen_id }} {
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        appearance: none;
+        -webkit-appearance: none;
+        background: transparent;
+        pointer-events: none;
+        top: 0;
+      }
+      .cfg-range-slider-{{ ai_gen_id }}::-webkit-slider-thumb {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: {{ block.settings.accent_color }};
+        border: 2px solid #fff;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+        cursor: pointer;
+        pointer-events: all;
+        margin-top: -6px;
+      }
+
+      /* ── Product grid ── */
+      .cfg-products-grid-{{ ai_gen_id }} {
+        display: grid;
+        grid-template-columns: repeat({{ block.settings.products_per_row }}, 1fr);
+        gap: {{ block.settings.product_gap }}px;
+      }
+
+      /* ── Card ── */
+      .cfg-card-{{ ai_gen_id }} {
+        background: {{ block.settings.card_bg }};
+        border-radius: {{ block.settings.card_radius }}px;
+        border: 1px solid {{ block.settings.card_border }};
+        overflow: hidden;
+        transition: box-shadow 0.25s ease, transform 0.25s ease;
+        display: flex;
+        flex-direction: column;
+      }
+      .cfg-card-{{ ai_gen_id }}:hover {
+        box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+        transform: translateY(-3px);
+      }
+
+      .cfg-card-link-{{ ai_gen_id }} {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cfg-card-image-{{ ai_gen_id }} {
+        position: relative;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        background: #f5f6f7;
+      }
+      .cfg-card-image-{{ ai_gen_id }} img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+      }
+      .cfg-card-{{ ai_gen_id }}:hover .cfg-card-image-{{ ai_gen_id }} img {
+        transform: scale(1.04);
+      }
+      .cfg-card-image-placeholder-{{ ai_gen_id }} {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f0f0f0;
+      }
+      .cfg-card-image-placeholder-{{ ai_gen_id }} svg {
+        width: 50%;
+        height: 50%;
+        opacity: 0.25;
+      }
+
+      /* Badges */
+      .cfg-sale-badge-{{ ai_gen_id }},
+      .cfg-preorder-badge-{{ ai_gen_id }} {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 3px 8px;
+        border-radius: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .cfg-sale-badge-{{ ai_gen_id }} {
+        background: {{ block.settings.badge_bg }};
+        color: {{ block.settings.badge_color }};
+      }
+      .cfg-preorder-badge-{{ ai_gen_id }} {
+        background: {{ block.settings.preorder_badge_bg }};
+        color: {{ block.settings.preorder_badge_color }};
+      }
+
+      /* Card body */
+      .cfg-card-body-{{ ai_gen_id }} {
+        padding: 14px 14px 8px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+      .cfg-card-title-{{ ai_gen_id }} {
+        font-size: 13.5px;
+        font-weight: 600;
+        color: {{ block.settings.text_color }};
+        margin: 0 0 8px 0;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      /* Judge.me placeholder — the app fills this automatically */
+      .cfg-judgeme-{{ ai_gen_id }} {
+        min-height: 20px;
+        margin-bottom: 8px;
+      }
+
+      /* Prices */
+      .cfg-price-row-{{ ai_gen_id }} {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 12px;
+      }
+      .cfg-price-original-{{ ai_gen_id }} {
+        font-size: 13px;
+        color: #aaa;
+        text-decoration: line-through;
+      }
+      .cfg-price-sale-{{ ai_gen_id }} {
+        font-size: 15px;
+        font-weight: 700;
+        color: {{ block.settings.text_color }};
+      }
+      .cfg-discount-badge-{{ ai_gen_id }} {
+        font-size: 11px;
+        font-weight: 700;
+        color: {{ block.settings.discount_tag_color }};
+        background: {{ block.settings.discount_tag_bg }};
+        padding: 2px 6px;
+        border-radius: 3px;
+      }
+
+      /* Buttons — wrap and button on top so clicks aren't stolen by card/link */
+      .cfg-btn-wrap-{{ ai_gen_id }} {
+        padding: 0 14px 14px;
+        margin-top: auto;
+        position: relative;
+        z-index: 2;
+      }
+
+      .cfg-atc-btn-{{ ai_gen_id }},
+      .cfg-preorder-btn-{{ ai_gen_id }} {
+        display: block;
+        width: 100%;
+        padding: 11px 16px;
+        border: none;
+        border-radius: {{ block.settings.btn_radius }}px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        text-align: center;
+        transition: opacity 0.2s ease;
+        position: relative;
+        z-index: 2;
+      }
+      .cfg-atc-btn-{{ ai_gen_id }} {
+        background: {{ block.settings.btn_bg }};
+        color: {{ block.settings.btn_color }};
+      }
+      .cfg-preorder-btn-{{ ai_gen_id }} {
+        background: {{ block.settings.preorder_btn_bg }};
+        color: {{ block.settings.preorder_btn_color }};
+      }
+      .cfg-atc-btn-{{ ai_gen_id }}:hover,
+      .cfg-preorder-btn-{{ ai_gen_id }}:hover { opacity: 0.85; }
+      .cfg-atc-btn-{{ ai_gen_id }}:disabled { opacity: 0.5; cursor: not-allowed; }
+
+      /* Empty */
+      .cfg-empty-{{ ai_gen_id }} {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding: 60px 20px;
+        color: #888;
+      }
+
+      /* ── Responsive ── */
+      @media (max-width: 989px) {
+        .cfg-mobile-toggle-{{ ai_gen_id }} { display: flex; }
+
+        .cfg-layout-{{ ai_gen_id }} { grid-template-columns: 1fr; }
+
+        .cfg-sidebar-{{ ai_gen_id }} {
+          position: static;
+          display: none;          /* collapsed by default */
+          margin-bottom: 16px;
+        }
+        .cfg-sidebar-{{ ai_gen_id }}.is-open { display: block; }
+
+        .cfg-products-grid-{{ ai_gen_id }} { grid-template-columns: repeat(2, 1fr); }
+      }
+
+      @media (max-width: 640px) {
+        .cfg-products-grid-{{ ai_gen_id }} { grid-template-columns: 1fr; }
+      }
+{% endstyle %}
+
+<div class="cfg-wrap-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="cfg-container-{{ ai_gen_id }}">
+    <!-- Mobile toggle -->
+    <button
+      class="cfg-mobile-toggle-{{ ai_gen_id }}"
+      aria-expanded="false"
+      aria-controls="cfg-sidebar-{{ ai_gen_id }}"
+      data-cfg-mobile-toggle="{{ ai_gen_id }}"
+    >
+      <span>Filter &amp; Sort</span>
+      <i class="cfg-mobile-toggle-icon-{{ ai_gen_id }}">&#9660;</i>
+    </button>
+
+    <div class="cfg-layout-{{ ai_gen_id }}">
+      <!-- ── Sidebar ── -->
+      <aside
+        class="cfg-sidebar-{{ ai_gen_id }}"
+        id="cfg-sidebar-{{ ai_gen_id }}"
+      >
+        <div class="cfg-sidebar-header-{{ ai_gen_id }}">
+          <h2 class="cfg-sidebar-title-{{ ai_gen_id }}">Filter:</h2>
+          <button class="cfg-remove-all-{{ ai_gen_id }}" ...>Remove all</button>
+        </div>
+
+        <p class="cfg-product-count-{{ ai_gen_id }}" ...>6 products</p>
+
+        <hr style="border:none; border-top: 1px solid {{ block.settings.divider_color }}; margin: 0 0 18px;">
+
+        <!-- Sort by -->
+        <div class="cfg-section-{{ ai_gen_id }}">
+          <p class="cfg-section-title-{{ ai_gen_id }}">Sort by:</p>
+          {%- assign sort_opts = 'manual|Featured,best-selling|Best selling,title-ascending|Alphabetically A-Z,title-descending|Alphabetically Z-A,price-ascending|Price low to high,price-descending|Price high to low,created-ascending|Date old to new,created-descending|Date new to old'
+            | split: ','
+          -%}
+          {%- for opt in sort_opts -%}
+            {%- assign kv = opt | split: '|' -%}
+            <label class="cfg-radio-option-{{ ai_gen_id }}">
+              <input
+                type="radio"
+                name="cfg-sort-{{ ai_gen_id }}"
+                value="{{ kv[0] }}"
+                data-cfg-sort="{{ ai_gen_id }}"
+                {% if forloop.first %}
+                  checked
+                {% endif %}
+              >
+              <span class="cfg-radio-label-{{ ai_gen_id }}">{{ kv[1] }}</span>
+            </label>
+          {%- endfor -%}
+        </div>
+
+        <!-- Price Range -->
+        {%- if block.settings.show_price_filter -%}
+          <div class="cfg-section-{{ ai_gen_id }}">
+            <p class="cfg-section-title-{{ ai_gen_id }}">Price Range</p>
+            <p class="cfg-price-info-{{ ai_gen_id }}" data-cfg-price-info="{{ ai_gen_id }}">
+              The highest price is ${{ block.settings.max_price | default: 1000 }}.00
+            </p>
+            <div class="cfg-price-inputs-{{ ai_gen_id }}">
+              <div class="cfg-price-input-{{ ai_gen_id }}">
+                <span>$</span>
+                <input
+                  type="number"
+                  placeholder="From"
+                  min="0"
+                  max="{{ block.settings.max_price | default: 1000 }}"
+                  value="0"
+                  data-cfg-price-min="{{ ai_gen_id }}"
+                >
+              </div>
+              <div class="cfg-price-input-{{ ai_gen_id }}">
+                <span>$</span>
+                <input
+                  type="number"
+                  placeholder="To"
+                  min="0"
+                  max="{{ block.settings.max_price | default: 1000 }}"
+                  value="{{ block.settings.max_price | default: 1000 }}"
+                  data-cfg-price-max="{{ ai_gen_id }}"
+                >
+              </div>
+            </div>
+            <input
+              type="range"
+              class="cfg-single-range-{{ ai_gen_id }}"
+              min="0"
+              max="{{ block.settings.max_price | default: 1000 }}"
+              value="{{ block.settings.max_price | default: 1000 }}"
+              data-cfg-range="{{ ai_gen_id }}"
+            >
+          </div>
+        {%- endif -%}
+      </aside>
+
+      <!-- ── Products ── -->
+      <div class="cfg-products-grid-{{ ai_gen_id }}" data-cfg-grid="{{ ai_gen_id }}">
+        {%- if collection -%}
+          {%- for product in collection.products limit: block.settings.products_limit -%}
+            {%- comment -%}
+              Pre-order detection via Liquid's built-in `contains`.
+              Tag your products with exactly "preorder" or "pre-order" in Shopify admin.
+            {%- endcomment -%}
+            {%- assign is_ = false -%}
+            {%- if product.tags contains 'preorder'
+              or product.tags contains 'pre-order'
+              or product.tags contains 'Preorder'
+              or product.tags contains 'Pre-order'
+              or product.tags contains 'Pre-Order'
+            -%}
+              {%- assign is_preorder = true -%}
+            {%- endif -%}
+
+            {%- comment -%}
+              Sale detection: product is on sale only when compare_at_price_max exists AND
+              is strictly greater than the current price. This is the most reliable method
+              across single-variant and multi-variant products.
+            {%- endcomment -%}
+            {%- assign has_sale = false -%}
+            {%- assign savings_pct = 0 -%}
+            {%- if product.compare_at_price_max and product.compare_at_price_max > product.price_min -%}
+              {%- assign has_sale = true -%}
+              {%- assign savings_pct = product.compare_at_price_max
+                | minus: product.price_min
+                | times: 100
+                | divided_by: product.compare_at_price_max
+              -%}
+            {%- endif -%}
+
+            <div
+              class="cfg-card-{{ ai_gen_id }}"
+              data-cfg-card="{{ ai_gen_id }}"
+              data-price="{{ product.price }}"
+              data-title="{{ product.title | escape }}"
+              data-created="{{ product.created_at }}"
+            >
+              <a href="{{ product.url }}" class="cfg-card-link-{{ ai_gen_id }}">
+                <div class="cfg-card-image-{{ ai_gen_id }}">
+                  {%- if product.featured_image -%}
+                    <img
+                      src="{{ product.featured_image | image_url: width: 600 }}"
+                      alt="{{ product.featured_image.alt | escape }}"
+                      loading="lazy"
+                      width="600"
+                      height="600"
+                    >
+                  {%- else -%}
+                    <div class="cfg-card-image-placeholder-{{ ai_gen_id }}">
+                      {{ 'product-1' | placeholder_svg_tag }}
+                    </div>
+                  {%- endif -%}
+
+                  {%- if is_preorder -%}
+                    <span class="cfg-preorder-badge-{{ ai_gen_id }}">Pre-order</span>
+                  {%- elsif has_sale -%}
+                    <span class="cfg-sale-badge-{{ ai_gen_id }}">Sale</span>
+                  {%- endif -%}
+                </div>
+
+                <div class="cfg-card-body-{{ ai_gen_id }}">
+                  <h3 class="cfg-card-title-{{ ai_gen_id }}">{{ product.title }}</h3>
+
+                  {%- comment -%}
+                    Judge.me preview badge widget.
+                    The Judge.me app scans for .jdgm-preview-badge elements and injects
+                    the star rating automatically using the data-id attribute.
+                  {%- endcomment -%}
+                  <div
+                    class="cfg-judgeme-{{ ai_gen_id }} jdgm-widget jdgm-preview-badge"
+                    data-id="{{ product.id }}"
+                  ></div>
+
+                  <div class="cfg-price-row-{{ ai_gen_id }}">
+                    {%- if has_sale -%}
+                      <span class="cfg-price-original-{{ ai_gen_id }}">{{ product.compare_at_price | money }}</span>
+                    {%- endif -%}
+                    <span class="cfg-price-sale-{{ ai_gen_id }}">{{ product.price | money }}</span>
+                    {%- if has_sale -%}
+                      <span class="cfg-discount-badge-{{ ai_gen_id }}">{{ savings_pct }}% OFF</span>
+                    {%- endif -%}
+                  </div>
+                </div>
+              </a>
+
+              <div class="cfg-btn-wrap-{{ ai_gen_id }}">
+                {%- if is_preorder -%}
+                  <button
+                    type="button"
+                    class="v7-atc-button cfg-atc-btn-{{ ai_gen_id }}"
+                    data-cfg-preorder="{{ ai_gen_id }}"
+                    data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+                  >
+                    Pre-order
+                  </button>
+                {%- elsif product.available -%}
+                  <button
+                    type="button"
+                    class="v7-atc-button cfg-atc-btn-{{ ai_gen_id }}"
+                    data-cfg-atc="{{ ai_gen_id }}"
+                    data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+                  >
+                    {% if product.handle contains 'sauna' %}Preorder{% else %}Add to cart{% endif %}
+                  </button>
+                {%- else -%}
+                  <button class="v7-atc-button" disabled>Sold out</button>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endfor -%}
+        {%- else -%}
+          <div class="cfg-empty-{{ ai_gen_id }}">
+            <p>No collection selected. Please choose a collection in the theme editor.</p>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  console.log('[CFG] Script running (collection filter grid)');
+  const id   = '{{ ai_gen_id }}';
+  const grid = document.querySelector(`[data-cfg-grid="${id}"]`);
+  console.log('[CFG] Init: id=', JSON.stringify(id), 'grid found=', !!grid);
+  if (!grid) {
+    console.warn('[CFG] No grid found for data-cfg-grid="' + id + '", add-to-cart will not run.');
+    return;
+  }
+
+  // ─────────────────────────────────────────────
+  // Snapshot original DOM order once on page load
+  // so "Featured" sort can always restore it.
+  // ─────────────────────────────────────────────
+  const originalOrder = Array.from(grid.querySelectorAll(`[data-cfg-card="${id}"]`));
+  const allCards = () => Array.from(grid.querySelectorAll(`[data-cfg-card="${id}"]`));
+  console.log('[CFG] Cards in grid:', originalOrder.length);
+
+  // ─────────────────────────────────────────────
+  // PRICES — Shopify stores prices in CENTS.
+  // data-price on each card is in cents (e.g. 319000 for $3,190).
+  // The slider and text inputs show DOLLARS.
+  // Internally priceMin / priceMax are in DOLLARS for readability,
+  // and we divide data-price by 100 when comparing.
+  // ─────────────────────────────────────────────
+
+  try {
+  // Auto-detect the real max price from actual product cards (in dollars)
+  // This makes the slider work regardless of what the settings say.
+  const realMaxCents = originalOrder.length ? Math.max(...originalOrder.map(c => +c.dataset.price || 0)) : 0;
+  const realMaxDollars = Math.ceil(realMaxCents / 100);
+  // Round up to a clean number for the slider ceiling
+  const MAX = realMaxDollars > 0 ? realMaxDollars : ({{ block.settings.max_price | default: 1000 }});
+
+  let sortVal  = 'manual';
+  let priceMin = 0;         // dollars
+  let priceMax = MAX;       // dollars
+
+  // ── Mobile sidebar toggle ──
+  const mobileToggle = document.querySelector(`[data-cfg-mobile-toggle="${id}"]`);
+  const sidebar      = document.getElementById(`cfg-sidebar-${id}`);
+
+  if (mobileToggle && sidebar) {
+    mobileToggle.addEventListener('click', () => {
+      const open = mobileToggle.getAttribute('aria-expanded') === 'true';
+      mobileToggle.setAttribute('aria-expanded', String(!open));
+      sidebar.classList.toggle('is-open', !open);
+    });
+  }
+
+  // ── Sort radios ──
+  document.querySelectorAll(`[data-cfg-sort="${id}"]`).forEach(r => {
+    r.addEventListener('change', () => { sortVal = r.value; applyAll(); });
+  });
+
+  // ── Price range sliders ──
+  const rangeLow  = document.querySelector(`[data-cfg-range-low="${id}"]`);
+  const rangeHigh = document.querySelector(`[data-cfg-range-high="${id}"]`);
+  const fill      = document.querySelector(`[data-cfg-range-fill="${id}"]`);
+  const inputMin  = document.querySelector(`[data-cfg-price-min="${id}"]`);
+  const inputMax  = document.querySelector(`[data-cfg-price-max="${id}"]`);
+  const priceInfo = document.querySelector(`[data-cfg-price-info="${id}"]`);
+
+  // Initialise slider and inputs with real max from products
+const range = document.querySelector(`[data-cfg-range="${id}"]`);
+
+if (range) {
+  priceMax = +range.value;
+
+function updateBackground() {
+  const percent = (range.value - range.min) / (range.max - range.min) * 100;
+
+  // compensate for thumb width (18px)
+  const offset = 9; // half of thumb width
+
+  range.style.background = `
+    linear-gradient(
+      to right,
+      #0070f3 0%,
+      #0070f3 calc(${percent}% + ${offset}px),
+      #e0e0e0 calc(${percent}% + ${offset}px),
+      #e0e0e0 100%
+    )
+  `;
+}
+
+  updateBackground();
+
+  range.addEventListener('input', () => {
+    priceMax = +range.value;
+    if (inputMax) inputMax.value = priceMax;
+    updateBackground();
+    applyAll();
+  });
+}
+  if (inputMin)  { inputMin.max  = MAX; inputMin.value  = 0; }
+  if (inputMax)  { inputMax.max  = MAX; inputMax.value  = MAX; }
+  if (priceInfo) priceInfo.textContent = `The highest price is $${MAX.toLocaleString()}.00`;
+
+  function updateFill() {
+    if (!fill || !rangeHigh) return;
+    const pct = +rangeHigh.value / MAX * 100;
+    fill.style.left  = '0%';
+    fill.style.right = (100 - pct) + '%';
+  }
+
+  if (rangeLow) {
+    rangeLow.addEventListener('input', () => {
+      if (+rangeLow.value > +rangeHigh.value) rangeLow.value = rangeHigh.value;
+      priceMin = +rangeLow.value;
+      if (inputMin) inputMin.value = priceMin;
+      updateFill(); applyAll();
+    });
+  }
+if (rangeHigh) {
+  rangeHigh.addEventListener('input', () => {
+    priceMax = +rangeHigh.value;
+    if (inputMax) inputMax.value = priceMax;
+    const pct = (priceMax / MAX * 100);
+    fill.style.left  = '0%';
+    fill.style.right = (100 - pct) + '%';
+    applyAll();
+  });
+}
+  if (inputMin) {
+    inputMin.addEventListener('input', () => {
+      priceMin = Math.max(0, +inputMin.value || 0);
+      if (rangeLow) rangeLow.value = priceMin;
+      updateFill(); applyAll();
+    });
+  }
+  if (inputMax) {
+    inputMax.addEventListener('input', () => {
+      priceMax = Math.min(MAX, +inputMax.value || MAX);
+      if (rangeHigh) rangeHigh.value = priceMax;
+      updateFill(); applyAll();
+    });
+  }
+  updateFill();
+
+  // ── Clear all ──
+  const clearBtn = document.querySelector(`[data-cfg-clear="${id}"]`);
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      sortVal = 'manual'; priceMin = 0; priceMax = MAX;
+      if (rangeLow)  { rangeLow.value  = 0; }
+      if (rangeHigh) { rangeHigh.value = MAX; }
+      if (inputMin)  { inputMin.value  = 0; }
+      if (inputMax)  { inputMax.value  = MAX; }
+      document.querySelectorAll(`[data-cfg-sort="${id}"]`).forEach((r, i) => r.checked = i === 0);
+      updateFill(); applyAll();
+    });
+  }
+
+  // ── Apply filters & sort ──
+  function applyAll() {
+    const cards = allCards();
+
+    // 1. Filter: price is in CENTS in data-price, compare against dollars
+    const minCents = priceMin * 100;
+    const maxCents = priceMax * 100;
+    cards.forEach(card => {
+      const priceCents = +card.dataset.price;
+      card.style.display = (priceCents >= minCents && priceCents <= maxCents) ? '' : 'none';
+    });
+
+    // 2. Sort ALL cards (visible + hidden) so hidden ones land in correct position when revealed
+    let sorted;
+    if (sortVal === 'manual') {
+      // Restore original page order
+      sorted = [...originalOrder];
+    } else {
+      sorted = [...originalOrder].sort((a, b) => {
+        const pa = +a.dataset.price,  pb = +b.dataset.price;
+        const ta = a.dataset.title,   tb = b.dataset.title;
+        const ca = new Date(a.dataset.created), cb2 = new Date(b.dataset.created);
+        if (sortVal === 'price-ascending')    return pa - pb;
+        if (sortVal === 'price-descending')   return pb - pa;
+        if (sortVal === 'title-ascending')    return ta.localeCompare(tb);
+        if (sortVal === 'title-descending')   return tb.localeCompare(ta);
+        if (sortVal === 'created-ascending')  return ca - cb2;
+        if (sortVal === 'created-descending') return cb2 - ca;
+        return 0;
+      });
+    }
+    // Re-append in sorted order (moves both visible and hidden cards)
+    sorted.forEach(card => grid.appendChild(card));
+
+    // 3. Update visible count
+    const visibleCount = sorted.filter(c => c.style.display !== 'none').length;
+    const countEl = document.querySelector(`[data-cfg-count="${id}"]`);
+    if (countEl) countEl.textContent = visibleCount + ' product' + (visibleCount !== 1 ? 's' : '');
+  }
+
+  } catch (e) {
+    console.error('[CFG] Init error (filter/sort may not work):', e);
+  }
+
+  // ── Shared cart add handler ──
+  async function handleCartAdd(btn) {
+    console.log('[CFG] handleCartAdd called', { btn: !!btn, disabled: btn && btn.disabled, dataset: btn && btn.dataset });
+    if (!btn || btn.disabled) {
+      console.log('[CFG] handleCartAdd skipped: no btn or disabled');
+      return;
+    }
+    const original = btn.textContent.trim();
+    const variantId = btn.dataset.variantId;
+    if (!variantId) {
+      console.warn('[CFG] No variant ID on button', btn);
+      btn.textContent = 'Error — no variant';
+      setTimeout(() => { btn.textContent = original; }, 2000);
+      return;
+    }
+    console.log('[CFG] Adding to cart variantId=', variantId);
+    btn.textContent = 'Adding…';
+    btn.disabled = true;
+
+    const sectionIds = getSections();
+    const payload = { id: variantId, quantity: 1, sections: sectionIds.length ? sectionIds.join(',') : undefined };
+    console.log('[CFG] POST /cart/add.js payload=', payload);
+
+    try {
+      const res = await fetch('/cart/add.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      console.log('[CFG] Response status=', res.status, 'ok=', res.ok);
+
+      if (res.ok) {
+        const data = await res.json();
+        console.log('[CFG] Add to cart success', data);
+        btn.textContent = 'Added ✓';
+
+        // ── Trigger cart UI refresh (wrap in try/catch so theme bugs don't break our success) ──
+        try {
+          if (data.sections) {
+            document.dispatchEvent(new CustomEvent('cart:refresh', { bubbles: true }));
+          }
+          const cartDrawer = document.querySelector('cart-drawer');
+          if (cartDrawer && typeof cartDrawer.renderContents === 'function') {
+            cartDrawer.renderContents(data);
+          }
+          document.documentElement.dispatchEvent(
+            new CustomEvent('cart:updated', { bubbles: true, detail: { cart: data } })
+          );
+          fetch('/cart.js')
+            .then(r => r.json())
+            .then(cart => {
+              document.querySelectorAll('[data-cart-count], .cart-count, .cart__count, #CartCount').forEach(el => {
+                el.textContent = cart.item_count;
+              });
+              document.querySelectorAll('cart-icon-bubble').forEach(el => {
+                el.innerHTML = cart.item_count > 0
+                  ? `<span class="visually-hidden">${cart.item_count} item${cart.item_count !== 1 ? 's' : ''}</span><span aria-hidden="true">${cart.item_count}</span>`
+                  : '';
+              });
+            })
+            .catch(function() {});
+        } catch (themeErr) {
+          console.warn('[CFG] Theme cart UI update failed (item was still added):', themeErr);
+        }
+
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.disabled = false;
+        }, 2000);
+
+      } else {
+        const err = await res.json().catch(() => ({}));
+        console.warn('[CFG] Add to cart failed', res.status, err);
+        btn.textContent = err.description || 'Error — try again';
+        btn.style.background = '#c53030';
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 3000);
+      }
+    } catch (e) {
+      console.error('[CFG] Add to cart exception', e);
+      btn.textContent = 'Error — try again';
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.disabled = false;
+      }, 2500);
+    }
+  }
+
+  // Section IDs to request from cart/add.js so the response includes data.sections (theme cart drawer expects this)
+  function getSections() {
+    const sectionIds = new Set([
+      'cart-drawer',
+      'cart-icon-bubble'
+    ]);
+    document.querySelectorAll('[id^="shopify-section-"]').forEach(el => {
+      const id = el.id.replace('shopify-section-', '');
+      if (id.toLowerCase().includes('cart')) sectionIds.add(id);
+    });
+    return Array.from(sectionIds);
+  }
+
+  // Bind add-to-cart: use CAPTURE phase so we run before theme/link handlers
+  const atcButtons = grid.querySelectorAll('button.v7-atc-button[data-variant-id]');
+  console.log('[CFG] Binding', atcButtons.length, 'add-to-cart button(s)');
+  atcButtons.forEach((btn, i) => {
+    btn.addEventListener('click', function (e) {
+      console.log('[CFG] Add-to-cart button clicked', { index: i, variantId: this.dataset.variantId });
+      e.preventDefault();
+      e.stopPropagation();
+      handleCartAdd(this);
+    }, true);
+  });
+
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Collection filter grid",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "container_width",
+      "label": "Container width",
+      "min": 900,
+      "max": 1600,
+      "step": 50,
+      "unit": "px",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "label": "Section padding",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "label": "Sidebar gap",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Sidebar"
+    },
+    {
+      "type": "range",
+      "id": "sidebar_width",
+      "label": "Sidebar width",
+      "min": 180,
+      "max": 360,
+      "step": 10,
+      "unit": "px",
+      "default": 240
+    },
+    {
+      "type": "range",
+      "id": "sidebar_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "color",
+      "id": "sidebar_bg",
+      "label": "Sidebar background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "sidebar_border",
+      "label": "Sidebar border",
+      "default": "#e5e5e5"
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "Divider color",
+      "default": "#eeeeee"
+    },
+    {
+      "type": "header",
+      "content": "Filters"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_price_filter",
+      "label": "Show price range filter",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "max_price",
+      "label": "Max price for slider ($)",
+      "min": 100,
+      "max": 9000,
+      "step": 100,
+      "default": 1000
+    },
+    {
+      "type": "header",
+      "content": "Products"
+    },
+    {
+      "type": "range",
+      "id": "products_per_row",
+      "label": "Products per row (desktop)",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "products_limit",
+      "label": "Products limit",
+      "min": 4,
+      "max": 50,
+      "step": 2,
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "product_gap",
+      "label": "Product gap",
+      "min": 8,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Cards"
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "label": "Card border radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "btn_radius",
+      "label": "Button border radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 6
+    },
+    {
+      "type": "color",
+      "id": "card_bg",
+      "label": "Card background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_border",
+      "label": "Card border",
+      "default": "#e8e8e8"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "page_bg",
+      "label": "Page background",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent / active color",
+      "default": "#0070f3"
+    },
+    {
+      "type": "color",
+      "id": "btn_bg",
+      "label": "Add to cart — background",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "btn_color",
+      "label": "Add to cart — text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "preorder_btn_bg",
+      "label": "Pre-order button — background",
+      "default": "#5a3e8c"
+    },
+    {
+      "type": "color",
+      "id": "preorder_btn_color",
+      "label": "Pre-order button — text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "badge_bg",
+      "label": "Sale badge background",
+      "default": "#e53e3e"
+    },
+    {
+      "type": "color",
+      "id": "badge_color",
+      "label": "Sale badge text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "preorder_badge_bg",
+      "label": "Pre-order badge background",
+      "default": "#5a3e8c"
+    },
+    {
+      "type": "color",
+      "id": "preorder_badge_color",
+      "label": "Pre-order badge text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "discount_tag_bg",
+      "label": "Discount tag background",
+      "default": "#fff3cd"
+    },
+    {
+      "type": "color",
+      "id": "discount_tag_color",
+      "label": "Discount tag text",
+      "default": "#856404"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection filter grid"
+    }
+  ]
+}
+{% endschema %}

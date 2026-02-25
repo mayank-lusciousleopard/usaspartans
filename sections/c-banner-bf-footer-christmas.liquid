@@ -1,0 +1,100 @@
+<section
+  id="{{ section.id }}"
+  class="tw-p-10 md:tw-px-16 md:tw-py-20  tw-bg-custom-gradient-black tw-relative watermarked"
+>
+  {% if section.settings.image %}
+    <div
+      class="tw-absolute !tw-block tw-inset-0 tw-bg-cover tw-h-full tw-w-full tw-bg-center"
+      style="background-image: url('{{ section.settings.image | image_url: width: 3000 }}');"
+    ></div>
+  {% endif %}
+  <div class="tw-relative tw-flex tw-flex-col tw-mx-auto tw-items-center tw-gap-8 tw-max-w-[1018px] tw-z-10">
+    <div class="tw-flex tw-flex-col tw-items-center tw-gap-6">
+      <div class="tw-flex tw-flex-col tw-gap-6">
+        <h2 class="tw-text-center tw-text-[40px] md:tw-text-[48px] tw-font-bold tw-capitalize">
+          <span class="tw-text-center tw-bg-custom-gradient-orange tw-bg-clip-text tw-text-transparent">
+            {{ section.settings.section_top_heading }}
+          </span>
+          <span class="c-top-heading tw-text-white">
+            {{ section.settings.section_bottom_heading }}
+          </span>
+        </h2>
+      </div>
+      <p class="c-description tw-text-lg tw-text-center tw-text-white ">
+        {{ section.settings.description_banner }}
+      </p>
+    </div>
+    <div class="tw-flex md:tw-flex-row tw-flex-col tw-w-fit tw-gap-2">
+      <a
+        class="c-button tw-py-5 tw-px-10 tw-gap-2.5 tw-rounded-[10px] tw-opacity-100 tw-bg-custom-christmas-red-gradient tw-text-white tw-font-bold tw-flex tw-items-center tw-justify-center hover:!tw-bg-custom-christmas-red-gradient-hover"
+        href="{{ section.settings.button_url_1 | default: '#' }}"
+      >
+        <p
+          class=" tw-font-bold tw-text-white"
+          style="background: linear-gradient(90deg, #000000 0%, #484848 100%); -webkit-background-clip: text; background-clip: text; color: white;"
+        >
+          {{ section.settings.button_text_1 | default: 'CHECK ALL BUNDLES' }}
+        </p>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "C Banner Christmas Footer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_top_heading",
+      "label": "Heading",
+      "default": "Exclusive Access: 20% Off"
+    },
+    {
+      "type": "text",
+      "id": "section_bottom_heading",
+      "label": "Heading_complement",
+      "default": " VIP Bundles – Limited Time Offer!"
+    },
+    {
+      "type": "text",
+      "id": "description_banner",
+      "label": "Description",
+      "default": "Discount applied automatically, no discount code needed"
+    },
+    {
+      "type": "text",
+      "id": "button_text_1",
+      "label": "Button Text 1",
+      "default": "CHECK ALL BUNDLES"
+    },
+    {
+      "type": "url",
+      "id": "button_url_1",
+      "label": "Button URL 1"
+    },
+    {
+      "type": "text",
+      "id": "button_text_2",
+      "label": "Button Text 2",
+      "default": "CHECK ALL CHILLERS"
+    },
+    {
+      "type": "url",
+      "id": "button_url_2",
+      "label": "Button URL 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Banner BF Footer",
+      "category": "custom"
+    }
+  ]
+}
+{% endschema %}

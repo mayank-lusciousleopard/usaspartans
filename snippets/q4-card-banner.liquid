@@ -1,0 +1,197 @@
+<style>
+  .q4-card {
+    /* design tokens */
+    --q4-outer-radius: 16px;
+    --q4-inner-radius: 40px;
+    --q4-space-v: 28.7px;
+    --q4-space-h: 40.18px;
+    --q4-bg-start: {{ settings.sale_q4_bg_start | default: '#143549' }};
+    --q4-bg-end: {{ settings.sale_q4_bg_end | default: '#065367' }};
+    --q4-text: {{ settings.sale_q4_text_color | default: '#FFFFFF' }};
+    --q4-btn-bg: {{ settings.sale_q4_button_bg | default: '#FFFFFF' }};
+    --q4-btn-text: {{ settings.sale_q4_button_text | default: '#113B4F' }};
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: var(--q4-outer-radius);
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  .q4-card__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: var(--q4-bg-end);
+    border-bottom-left-radius: var(--q4-inner-radius);
+    border-bottom-right-radius: var(--q4-inner-radius);
+    object-fit: cover;
+  }
+
+  .q4-card__content {
+    width: 100%;
+    padding: 24px;
+    color: var(--q4-text);
+    background:
+      linear-gradient(0deg, var(--q4-bg-start) 0%, var(--q4-bg-end) 100%),
+      linear-gradient(180deg, rgba(6, 83, 103, 0.40) 0%, rgba(6, 83, 103, 0.80) 50%);
+    border-top-left-radius: var(--q4-inner-radius);
+    border-top-right-radius: var(--q4-inner-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex: 1;
+  }
+
+  .q4-card__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14.35px;
+  }
+
+  .q4-card__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .q4-card__eyebrow {
+    margin: 0;
+    opacity: 0.8;
+    font-weight: 600;
+    line-height: 1.1;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .q4-card__title {
+    margin: 0;
+    font-weight: 700;
+    line-height: 1;
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .q4-card__subtitle {
+    margin: 0;
+    opacity: 0.8;
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  .q4-card__btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7.17px 12.91px;
+    gap: 5.74px;
+    background: var(--q4-btn-bg);
+    color: var(--q4-btn-text);
+    border-radius: 716.7px;
+    font-weight: 700;
+    font-size: 14.35px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .q4-card__subtitle-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  @media screen and (max-width: 990px) {
+    .q4-card {
+      flex-direction: row;
+    }
+    .q4-card picture, .q4-card__content {
+      flex: 1;
+    }
+    .q4-card__image {
+      border-radius: 0 40px 40px 0 !important;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+    .q4-card__content {
+      width: auto;
+      padding: 10px;
+      border-radius: 40px 0 0 40px !important;
+    }
+
+    
+
+    .q4-card__btn {
+      padding: 6px 10px;
+      gap: 4px;
+      font-size: 12px;
+    }
+
+    .grid__item--q4-card-banner {
+      grid-column: span 2;
+    }
+  }
+
+  @media screen and (min-width: 1400px) {
+    .q4-card__eyebrow {
+      font-size: 18px;
+    }
+    .q4-card__title {
+      font-size: 36px;
+    }
+    .q4-card__subtitle {
+      font-size: 16px;
+    }
+    .q4-card__btn {
+      font-size: 18px;
+    }
+  }
+</style>
+
+<div class="q4-card">
+  {% if settings.sale_q4_image != blank and settings.sale_q4_image_mobile != blank %}
+    <picture>
+      <source media="(max-width: 990px)" srcset="{{ settings.sale_q4_image_mobile | image_url: width: 560 }}">
+      <source media="(min-width: 990px)" srcset="{{ settings.sale_q4_image | image_url: width: 560 }}">
+      <img class="q4-card__image" src="{{ settings.sale_q4_image | image_url: width: 560 }}" alt="{{ settings.sale_q4_image_alt | default: settings.sale_q4_title | escape }}" width="560" height="{{ 560 | divided_by: settings.sale_q4_image.aspect_ratio | round }}" loading="lazy">
+    </picture>
+  {% endif %}
+
+  <div class="q4-card__content">
+    <div class="q4-card__group">
+      <div class="q4-card__heading">
+        {% if settings.sale_q4_eyebrow != blank %}
+          <p class="q4-card__eyebrow">{{ settings.sale_q4_eyebrow }}</p>
+        {% endif %}
+        {% if settings.sale_q4_title != blank %}
+          <p class="q4-card__title">{{ settings.sale_q4_title }}</p>
+        {% endif %}
+      </div>
+      <div class="q4-card__subtitle-group">
+      {% if settings.sale_q4_subtitle != blank %}
+        <p class="q4-card__subtitle">{{ settings.sale_q4_subtitle | newline_to_br }}</p>
+      {% endif %}
+
+      {% if settings.sale_q4_subtitle_2 != blank %}
+        <p class="q4-card__subtitle-2">{{ settings.sale_q4_subtitle_2 | newline_to_br }}</p>
+      {% endif %}
+      </div>
+    </div>
+
+    {% if settings.sale_q4_button_label != blank %}
+      <a class="q4-card__btn" href="{{ settings.sale_q4_button_link | default: routes.all_products_collection_url }}">{{ settings.sale_q4_button_label }}</a>
+    {% endif %}
+  </div>
+</div>
+
+

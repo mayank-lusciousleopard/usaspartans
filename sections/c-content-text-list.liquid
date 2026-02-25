@@ -1,0 +1,529 @@
+<style>
+  #{{ section.id }} {
+    font-size: 16px;
+    padding-top: {{ section.settings.padding_top }}em;
+    padding-bottom: {{ section.settings.padding_bottom }}em;
+    background-color: {{ section.settings.bg_color }};
+  }
+
+  #{{ section.id }} .c-section-top-subheading,
+  #{{ section.id }} div,
+  #{{ section.id }} h2,
+  #{{ section.id }} h3 {
+    color: {{ section.settings.text_color }};
+  }
+
+  #{{ section.id }} .page-width {
+    position: relative;
+  }
+
+  #{{ section.id }} .c-ct-grid {
+    display: grid;
+    grid-template-columns: {{ section.settings.grid_proportion }};
+    gap: 1.5em; /* Ajusta el espacio entre columnas */
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+
+  #{{ section.id }} .c-ct-grid > * {
+    display: flex;
+    justify-content: center;
+    align-items: {{ section.settings.alignment }};
+    text-align: {{ section.settings.text_alignment }};
+    flex-direction: column;
+  }
+
+  #{{ section.id }} .c-ct-grid1 {
+    gap: 1.5em;
+
+    padding: {{ section.settings.padding_desktop }};
+    {% if section.settings.flip == true %}
+      order: 1;
+    {% endif %}
+  }
+
+  #{{ section.id }} .c-ct-para {
+    font-size: 1.125em;
+  }
+
+  #{{ section.id }} .c-ct-para a {
+    text-decoration: underline;
+  }
+
+  #{{ section.id }} .c-ct-benefits {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: {{ section.settings.section_top_alignment }};
+    gap: 0.75em;
+  }
+
+  #{{ section.id }} .c-ct-benefit {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.6em;
+    font-size: 1.125em;
+  }
+
+  #{{ section.id }} .c-ct-benefit svg {
+    width: 1.5em;
+    min-width: 1.5em;
+  }
+
+  #{{ section.id }} .c-ct-small-image {
+    width: 10em;
+  }
+
+  #{{ section.id }} .c-ct-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 100vh;
+  }
+
+  /* Media query para dispositivos móviles */
+  @media (max-width: 768px) {
+    #{{ section.id }} .c-ct-grid {
+      grid-template-columns: 1fr; /* Una columna en móviles */
+      gap: 1em; /* Ajusta el espacio para móviles */
+    }
+
+    #{{ section.id }} .c-ct-grid1 {
+      padding: {{ section.settings.padding_mobile }};
+      order: 1;
+      align-items: flex-start;
+    }
+  }
+
+  /* Estilos específicos para la sección del checklist */
+  .checklist-section#{{ section.id }} {
+    margin: 0 !important;
+    background-color: white;
+    border-radius: 10px;
+  }
+
+  .checklist-section#{{ section.id }} h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .checklist-items#{{ section.id }} li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #4a4a4a;
+  }
+
+  .checklist-items#{{ section.id }} li img {
+    width: 48px !important;
+    height: 48px !important;
+    object-fit: contain;
+  }
+
+  @media (max-width: 768px) {
+    .checklist-section#{{ section.id }} {
+      padding: 10px;
+    }
+
+    .checklist-items#{{ section.id }} li {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .checklist-items#{{ section.id }} li img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .badge {
+    border: 1px solid transparent;
+    border-radius: 0.5rem !important;
+    display: inline-block;
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+    line-height: 1;
+    padding: 1rem;
+    text-align: center;
+    background-color: rgba(236, 134, 14, 1) !important;
+    border-color: rgba(236, 134, 14, 1) !important;
+    color: white !important;
+    word-break: break-word;
+  }
+
+  .money {
+    font-size: clamp(18px, 3vw, 28px);
+    font-weight: 700;
+    line-height: 120%; /* 33.6px */
+    letter-spacing: -1.4px;
+  }
+
+  .c-ct-heading {
+    color: #000;
+    margin: 0 !important;
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 700;
+    line-height: 120%; /* 57.6px */
+    text-transform: capitalize;
+  }
+
+  .c-ct-para p {
+    padding: 1rem !important;
+    font-size: clamp(16px, 2.5vw, 20px);
+    font-weight: 600;
+    line-height: 120%; /* 24px */
+  }
+
+  .c-section-top-subheading {
+    color: #0E83F9 !important;
+    text-align: center !important;
+    font-size: clamp(14px, 2vw, 16px);
+    font-weight: 600;
+    line-height: 150%; /* 24px */
+  }
+</style>
+
+{% assign myBlocks = section.blocks | where: 'type', 'Item' %}
+
+<section id="{{ section.id }}" class="c-section  ">
+  <div class="{% if section.settings.full_width == false %}page-width{% endif %}">
+    <div class="c-ct-grid">
+      <div class="c-ct-grid1">
+        {% if section.settings.subheading != empty %}
+          <p class="c-section-top-subheading">{{ section.settings.subheading }}</p>
+        {% endif %}
+        {% if section.settings.heading != empty %}
+          <h2 class="c-ct-heading">{{ section.settings.heading }}</h2>
+        {% endif %}
+        {% if section.settings.paragraph != empty %}
+          <div class="c-ct-para" style="padding: 0 !important;">{{ section.settings.paragraph }}</div>
+        {% endif %}
+        <div>
+          <!-- SECCION: CHECKLIST -->
+          <div class="checklist-section" style="padding: 0 !important;" id="{{ section.id }}">
+            <ul
+              class="checklist-items"
+              style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 3rem;"
+            >
+              {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                  {%- when 'checklist' -%}
+                    <li style="display: flex; align-items: center; gap: 24px !important; ">
+                      {% if block.settings.icon_1 %}
+                        {{ block.settings.icon_1 | image_url: width: 750 | image_tag: loading: 'lazy', height: '40px', width: '40px' }}
+                      {% endif %}
+                      <span>{{ block.settings.text_1 }}</span>
+                    </li>
+                {%- endcase -%}
+              {%- endfor -%}
+            </ul>
+          </div>
+          <!-- END-SECCION: CHECKLIST -->
+        </div>
+
+        {%- if section.settings.button_text != empty -%}
+          <div class="c-buttons-div">
+            <a
+              class="
+                c-button tw-inline-block tw-text-white tw-font-bold tw-px-6 tw-py-3 tw-rounded-lg
+                tw-bg-gradient-to-r tw-from-[#0E83F9] tw-to-[#084D93]
+                tw-text-center tw-uppercase tw-transition tw-duration-300
+                hover:tw-from-[#084D93] hover:tw-to-[#0E83F9] {{ section.settings.button_style }}
+              "
+              href="{{ section.settings.button_url }}"
+            >
+              {{- section.settings.button_text -}}
+            </a>
+          </div>
+        {%- endif -%}
+      </div>
+      <div class="c-ct-grid2">
+        {% if section.settings.image %}
+          {{
+            section.settings.image
+            | image_url: width: 1500
+            | image_tag: loading: 'lazy', height: 'auto', class: 'c-ct-image'
+          }}
+        {% endif %}
+        {% if section.settings.video %}
+          {{
+            section.settings.video
+            | media_tag: autoplay: true, loop: true, muted: true, controls: true, class: 'c-ct-image'
+          }}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "C Content Text list",
+  "blocks": [
+    {
+      "name": "Item",
+      "type": "Item",
+      "limit": 50,
+      "settings": [
+        {
+          "type": "text",
+          "id": "block_heading",
+          "label": "Block heading",
+          "default": "Text here"
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "name": "Checklist Section",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Features"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_1",
+          "label": "Icon 1"
+        },
+        {
+          "type": "text",
+          "id": "text_1",
+          "label": "Item Text 1",
+          "default": "Adjustable Temperature Control"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_2",
+          "label": "Icon 2"
+        },
+        {
+          "type": "text",
+          "id": "text_2",
+          "label": "Item Text 2",
+          "default": "Energy-Efficient Cooling System"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_3",
+          "label": "Icon 3"
+        },
+        {
+          "type": "text",
+          "id": "text_3",
+          "label": "Item Text 3",
+          "default": "Compact, Durable Design"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "small_image",
+      "label": "Small image"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "subheading"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "My heading"
+    },
+    {
+      "type": "richtext",
+      "id": "paragraph",
+      "label": "Paragraph",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Video Upload"
+    },
+    {
+      "type": "checkbox",
+      "id": "flip",
+      "label": "Flip",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width?",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "grid_proportion",
+      "label": "Grid proportion",
+      "default": "1fr 1fr",
+      "options": [
+        {
+          "value": "1fr 1fr",
+          "label": "1 | 1"
+        },
+        {
+          "value": "1fr 0.75fr",
+          "label": "1 | 0.75"
+        },
+        {
+          "value": "0.75fr 1fr",
+          "label": "0.75 | 1"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Content alignment",
+      "default": "flex-start",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Buy Now"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_style",
+      "label": "Button style",
+      "default": "c-b1"
+    },
+    {
+      "type": "header",
+      "content": "Section Colors"
+    },
+    {
+      "type": "color",
+      "id": "card_bg_color",
+      "label": "Card background color",
+      "default": "transparent"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000"
+    },
+    {
+      "type": "header",
+      "content": "Content Padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "2 values (with units) seprated by a space. The first value is for the y-direction padding and the second for the x-direction padding"
+    },
+    {
+      "type": "text",
+      "id": "padding_desktop",
+      "label": "Content padding",
+      "default": "10% 10%"
+    },
+    {
+      "type": "text",
+      "id": "padding_mobile",
+      "label": "Content padding mobile",
+      "default": "2em 1em 1em 1em"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "default": 4,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "default": 4,
+      "unit": "rem"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Content Text list"
+    }
+  ]
+}
+{% endschema %}

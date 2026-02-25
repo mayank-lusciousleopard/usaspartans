@@ -1,0 +1,460 @@
+<style>
+  #{{ section.id }} {
+    font-size: 16px;
+    padding-top: {{ section.settings.padding_top }}em;
+    padding-bottom: {{ section.settings.padding_bottom }}em;
+    background-color: {{ section.settings.bg_color }};
+    background-position: left;
+    {% if section.settings.bg_image %}
+      background: url({{ section.settings.bg_image | image_url: width: 2000 }}) no-repeat center/cover;
+    {% else %}
+      background:{{ section.settings.bg_color }};
+    {% endif %}
+  }
+
+  #{{ section.id }} .c-rs-section-top h2,
+  #{{ section.id }} .c-rs-section-top h3,
+  #{{ section.id }} .c-rs-section-top p,
+  #{{ section.id }} .c-rs-card h3,
+  #{{ section.id }} .c-rs-card p {
+    color: {{ section.settings.text_color }};
+  }
+
+  #{{ section.id }} .c-rs-section-top h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+  }
+
+  #{{ section.id }} .c-rs-card h3 {
+    font-size: 1.125em;
+    font-weight: 700;
+  }
+
+  #{{ section.id }} .c-rs-section-top {
+    align-items: {{ section.settings.section_top_alignment }};
+    text-align: {{ section.settings.text_alignment }};
+    margin: 0 auto 20px;
+    max-width: 798px;
+  }
+
+  #{{ section.id }} .swiper {
+    cursor: grab;
+  }
+
+  #{{ section.id }} .swiper-button-next,  #{{ section.id }} .swiper-button-prev {
+    position: absolute;
+    top: var(--swiper-navigation-top-offset, 50%);
+    width: 40px;
+    height: 40px;
+    margin-top: calc(0px -(var(--swiper-navigation-size) / 2));
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: linear-gradient(90deg, #0E83F9 0%, #084D93 100%);
+    border-radius: 50%;
+    }
+
+  #{{ section.id }}  .swiper-button-next:after, .swiper-button-prev:after {
+    font-size:18px;  
+  }
+
+  #{{ section.id }} .c-rs-card {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 16px;
+    padding: 20px;
+    background-color: {{ section.settings.card_bg_color }};
+    border-radius: 32px;
+    text-align: left;
+    color: {{ section.settings.card_text_color }};
+    border: 1px solid #E2E2E2;
+  }
+
+  #{{ section.id }} .c-rs-card > img {
+    border-radius: 20px;
+  }
+
+  #{{ section.id }} .c-rs-card-stars {
+    display: flex;
+    gap: 5px;
+  }
+
+  #{{ section.id }} .c-rs-card-stars svg {
+    color: {{ section.settings.star_color }};
+  }
+
+  #{{ section.id }} .c-rs-card-paragraph {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  #{{ section.id }} .swiper-pagination {
+    bottom: -8px;
+    z-index: 10;
+  }
+
+  #{{ section.id }} .c-rs-rating-container {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    margin-bottom: 1em;
+  }
+
+  #{{ section.id }} .c-rs-rating-text {
+    font-size: 1em;
+    font-weight: 700;
+    color: {{ section.settings.text_color }};
+  }
+
+  #{{ section.id }} .c-b1 {
+    border-radius: 0.5em;
+    display: flex;
+    padding: 0.75em 1.5em;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid  #0E83F9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    color: #0E83F9;
+    font-size: 1em;
+    margin: 40px auto 0;
+    width: fit-content;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  #{{ section.id }} .c-b1:hover {
+    background: linear-gradient(90deg, #0E83F9 0%, #084D93 100%);
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    #{{ section.id }} .c-rs-section-top h2 {
+      font-size: 2em;
+    }
+
+    #{{ section.id }} .c-rs-rating-container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #{{ section.id }} {
+      padding-top: {{ section.settings.padding_top | times: 0.5 }}em;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 }}em;
+    }
+
+    #{{ section.id }} .c-rs-card-paragraph,
+    #{{ section.id }} .c-rs-card h3 {
+      font-size: 1em;
+    }
+  }
+</style>
+
+
+<section id="{{ section.id }}" class="c-rs-section">
+  <div class="c-rs-container page-width">
+    <div class="c-rs-section-top">
+      {% if section.settings.show_rating %}
+        <div class="c-rs-rating-container">
+            <div class="c-rs-card-stars">
+              {% for i in (1..5) %}
+                {% render 'c-icon-star' %}
+              {% endfor %}
+            </div>
+            <span class="c-rs-rating-text">
+              {{ section.settings.review_text_rating }}
+            </span>
+        </div>
+      {% endif %}
+      {%- if section.settings.section_top_subheading != empty -%}
+        <p class="c-rs-section-top-subheading">{{ section.settings.section_top_subheading }}</p>
+      {%- endif -%}
+      {%- if section.settings.section_top_heading != empty -%}
+        <h2>{{ section.settings.section_top_heading }}</h2>
+      {%- endif -%}
+      {%- if section.settings.section_top_paragraph != empty -%}
+        <div class="c-rs-section-top-paragraph">{{ section.settings.section_top_paragraph }}</div>
+      {%- endif -%}
+    </div>
+
+    <div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'Item' %}
+                <div class="c-rs-card swiper-slide" {{ block.shopify_attributes }}>
+                  {% if block.settings.block_image %}
+                    {{
+                      block.settings.block_image
+                      | image_url: width: 1250
+                      | image_tag: loading: 'lazy', height: 'auto'
+                    }}
+                  {% endif %}
+
+                  <div class="c-rs-card-stars">
+                    {% for i in (1..5) %}
+                      {% render 'c-icon-star' %}
+                    {% endfor %}
+                  </div>
+                  {%- if block.settings.block_heading != empty -%}
+                    <h3>{{ block.settings.block_heading }}</h3>
+                  {%- endif -%}
+                  <div class="c-rs-card-paragraph">{{ block.settings.block_paragraph }}</div>
+                </div>
+            {% endcase %}
+          {% endfor %}
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </div>
+  {% if section.settings.button_text != blank %}
+    <a href="{{ section.settings.button_url }}" class="c-b1">
+      {{ section.settings.button_text }}
+    </a>
+  {% endif %}
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var swiper = new Swiper('#{{ section.id }} .mySwiper', {
+      slidesPerView: 1.1,
+      slidesPerGroup: 1,
+      spaceBetween: 10,
+      slidesOffsetAfter: 100,
+      breakpoints: {
+        640: {
+          slidesPerView: 1.5,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1280: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+      navigation: {
+        nextEl: '#{{ section.id }} .swiper-button-next',
+        prevEl: '#{{ section.id }} .swiper-button-prev',
+      },
+      pagination: {
+        el: '#{{ section.id }} .swiper-pagination',
+        clickable: true,
+      },
+      slideToClickedSlide: true,
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "C Reviews Swiper",
+  "blocks": [
+    {
+      "name": "Item",
+      "type": "Item",
+      "limit": 50,
+      "settings": [
+        {
+          "type": "text",
+          "id": "block_heading",
+          "label": "Heading",
+          "default": "Lorem ipsum dolor sit amet"
+        },
+        {
+          "type": "richtext",
+          "id": "block_paragraph",
+          "label": "Paragraph",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "block_image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button Link "
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "label": "Show Rating",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "review_text_rating",
+      "label": "Review Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background repeat image"
+    },
+    {
+      "type": "text",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#fff"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width?",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Section Colors"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#5d3be4"
+    },
+    {
+      "type": "color",
+      "id": "card_bg_color",
+      "label": "Card background color",
+      "default": "#5A4A42"
+    },
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "Card text color",
+      "default": "#FBFBFB"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star color",
+      "default": "#5d3be4"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000"
+    },
+    {
+      "type": "header",
+      "content": "Section Top"
+    },
+    {
+      "type": "text",
+      "id": "section_top_subheading",
+      "label": "Subheading",
+      "default": "subheading"
+    },
+    {
+      "type": "text",
+      "id": "section_top_heading",
+      "label": "Heading",
+      "default": "Section Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "section_top_paragraph",
+      "label": "Paragraph",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>"
+    },
+    {
+      "type": "select",
+      "id": "section_top_alignment",
+      "label": "Section Top Alignment",
+      "default": "center",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "default": 4,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "default": 4,
+      "unit": "rem"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Reviews Swiper"
+    }
+  ]
+}
+{% endschema %}

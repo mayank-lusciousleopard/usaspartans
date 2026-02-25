@@ -1,0 +1,81 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "layout": "grid",
+        "show_image": true,
+        "image_height": "medium",
+        "show_date": true,
+        "show_author": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_tULcpG": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_zdQmpb": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "When to take a cold plunge?",
+            "icon": "question_mark",
+            "row_content": "<p>After cold exposure, your body heats up—yes, HEATS up. Body temperature increases tend to wake us up, whereas body temperature decreases tend to shift us toward sleepy states. Thus, we suggest using deliberate cold early in the day and not too close to bedtime. Sometimes it's better to do it late than never, but not if it perturbs your sleep. If a deliberate cold affects your sleep, try doing it earlier in the day, or not at all.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_YFjAzf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long should each ice bath session be?",
+            "icon": "question_mark",
+            "row_content": "<p>Consider doing deliberate cold exposure for 11 minutes per week in total. Not per session, but rather, 2-4 sessions lasting 1-5 mins each distributed across the week. Again, the water temperature should be uncomfortably cold yet safe to stay in for a few minutes. You can do more, but this should be the minimum to achieve the benefits of cold exposure. You can do very cold, very brief exposures for adrenaline release too, but the 11 minutes is based on a recent study that explored a range of effects and is a good solid, basic protocol for ongoing use.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_pUbUre": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use the ice bath outside?",
+            "icon": "question_mark",
+            "row_content": "<p>Definitely! We engineered the Warrior Willpower ice bath to be weather and UV resistant, so you can set it up inside or outside, even in temperatures below freezing. The insulation layer makes the water turn to ice a lot slower, but we still recommend to stir the water at least once a day to keep the water from freezing completely solid.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_KgMBct": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What other product collections do you offer?",
+            "icon": "question_mark",
+            "row_content": "<p>Explore other collections and products from Warrior Willpower:<\/p><ol><li><a href=\"https:\/\/warriorwillpower.com\/collections\/water-chiller-heater\" target=\"_blank\" title=\"https:\/\/warriorwillpower.com\/collections\/water-chiller-heater\">Water Chillers and Heaters<\/a><\/li><li><a href=\"https:\/\/warriorwillpower.com\/collections\/portable-cold-plunge\" title=\"https:\/\/warriorwillpower.com\/collections\/portable-cold-plunge\">Portable Cold Plunge Tubs<\/a><\/li><li><a href=\"https:\/\/warriorwillpower.com\/collections\/inflatable-cold-plunge\" title=\"https:\/\/warriorwillpower.com\/collections\/inflatable-cold-plunge\">Inflatable Ice Bath & Cold Plunge Tubs<\/a><\/li><li><a href=\"https:\/\/warriorwillpower.com\/collections\/cold-plunge-barrels\" title=\"https:\/\/warriorwillpower.com\/collections\/cold-plunge-barrels\">Cold Plunge & Ice Bath Barrels<\/a><\/li><li><a href=\"https:\/\/warriorwillpower.com\/collections\/sauna-ice-bath-combo\" title=\"https:\/\/warriorwillpower.com\/collections\/sauna-ice-bath-combo\">Portable Sauna & Ice Bath Combo<\/a><\/li><li><a href=\"https:\/\/warriorwillpower.com\/collections\/water-chiller-filters\" title=\"https:\/\/warriorwillpower.com\/collections\/water-chiller-filters\">Water Chiller Filters<\/a><\/li><li><a href=\"https:\/\/warriorwillpower.com\/collections\/cold-plunge-ice-bath-mats\" title=\"https:\/\/warriorwillpower.com\/collections\/cold-plunge-ice-bath-mats\">Cold Plunge & Ice Bath Mats<\/a><\/li><li><a href=\"https:\/\/warriorwillpower.com\/collections\/saunas\" target=\"_blank\" title=\"https:\/\/warriorwillpower.com\/collections\/saunas\">Portable Saunas<\/a><\/li><li><a href=\"https:\/\/warriorwillpower.com\/products\/infrared-sauna-blanket\" title=\"https:\/\/warriorwillpower.com\/products\/infrared-sauna-blanket\">Low EMF Infrared Sauna Blanket<\/a><\/li><li><a href=\"https:\/\/warriorwillpower.com\/products\/1-5hp-wifi-water-chiller\" title=\"https:\/\/warriorwillpower.com\/products\/1-5hp-wifi-water-chiller\">1.5 HP Water Chiller<\/a><\/li><li><a href=\"https:\/\/warriorwillpower.com\/products\/1-2-hp-wifi-water-chiller-for-ice-bath\" title=\"https:\/\/warriorwillpower.com\/products\/1-2-hp-wifi-water-chiller-for-ice-bath\">1\/2 HP Water Chiller<\/a><\/li><li><a href=\"https:\/\/warriorwillpower.com\/products\/water-chiller-for-ice-bath-1-hp\" title=\"https:\/\/warriorwillpower.com\/products\/water-chiller-for-ice-bath-1-hp\">1 HP Water Chiller<\/a><\/li><li><a href=\"https:\/\/warriorwillpower.com\/collections\/bundles\" title=\"https:\/\/warriorwillpower.com\/collections\/bundles\">Cold Plunge Tub With Chiller<\/a><\/li><\/ol>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_zdQmpb",
+        "collapsible_row_YFjAzf",
+        "collapsible_row_pUbUre",
+        "collapsible_row_KgMBct"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Ice Bath FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "collapsible_content_tULcpG"
+  ]
+}

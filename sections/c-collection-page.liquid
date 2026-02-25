@@ -1,0 +1,499 @@
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+<link
+  rel="preload"
+  href="{{ 'component-rte.css' | asset_url }}"
+  as="style"
+  onload="this.onload=null;this.rel='stylesheet'"
+>
+
+{%- if section.settings.enable_quick_add -%}
+  <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
+  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-padding tw-px-5 md:!tw-p-6 md:tw-w-[90%] tw-mx-auto">
+  <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical{% endif %} !tw-px-0 md:!tw-mb-0 !tw-mb-7 tw-gap-16">
+    {{ 'component-facets.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+    {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
+      <aside
+        aria-labelledby="verticalTitle"
+        class="tw-bg-[rgba(14,131,249,0.04)] tw-rounded-lg md:!tw-mb-0 !tw-mb-7 tw-shadow-custom !tw-pr-0 facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
+        id="main-collection-filters"
+        data-id="{{ section.id }}"
+      >
+        {% render 'facets-new',
+          results: collection,
+          enable_filtering: section.settings.enable_filtering,
+          enable_sorting: section.settings.enable_sorting,
+          filter_type: section.settings.filter_type
+        %}
+      </aside>
+{%- endif -%}
+
+    <div class="product-grid-container" id="ProductGridContainer">
+      {%- paginate collection.products by section.settings.products_per_page -%}
+        {%- if collection.products.size == 0 -%}
+          <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
+            <div class="loading-overlay gradient"></div>
+            <div class="title-wrapper center">
+              <h2 class="title title--primary">
+                {{ 'sections.collection_template.empty' | t -}}
+                <br>
+                {{
+                  'sections.collection_template.use_fewer_filters_html'
+                  | t: link: collection.url, class: 'underlined-link link'
+                }}
+              </h2>
+            </div>
+          </div>
+        {%- else -%}
+          <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %} !tw-flex !tw-flex-col !tw-gap-6">
+            <div class="loading-overlay gradient"></div>
+            <div class=" !tw-flex !tw-flex-row !tw-gap-3">
+              {% render 'facets-new', 
+                results: collection,
+                enable_filtering: section.settings.enable_filtering,
+                selected_only: true 
+              %}
+            </div>
+            <ul
+              id="product-grid"
+              data-id="{{ section.id }}"
+              class="
+                tw-grid tw-gap-6
+                tw-grid-cols-2 lg:tw-grid-cols-3 2xl:tw-grid-cols-4
+              "
+            >
+              {%- for product in collection.products -%}
+                {% assign lazy_load = false %}
+                {%- if forloop.index > 2 -%}
+                  {%- assign lazy_load = true -%}
+                {%- endif -%}
+{% comment %} 
+                {%- if forloop.index == 3 -%}
+                  <li class="grid__item grid__item--q4-card-banner" style="min-width: 100%;">
+                    {% render 'q4-card-banner' %}
+                  </li>
+                {%- endif -%} {% endcomment %}
+
+                <li class="tw-w-full">
+                  {% render 'card-product-new-collection',
+                    card_product: product,
+                    media_aspect_ratio: section.settings.image_ratio,
+                    show_secondary_image: section.settings.show_secondary_image,
+                    show_vendor: section.settings.show_vendor,
+                    show_rating: section.settings.show_rating,
+                    lazy_load: lazy_load,
+                    show_quick_add: section.settings.enable_quick_add,
+                    section_id: section.id
+                  %}
+                </li>
+              {%- endfor -%}
+            </ul>
+
+            {%- if paginate.pages > 1 -%}
+              {% render 'pagination', paginate: paginate, anchor: '' %}
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      {%- endpaginate -%}
+    </div>
+  </div>
+</div>
+
+
+
+
+<style>
+  /* Custom Price Range Slider Styles */
+  .custom-price-slider {
+    position: relative;
+    height: 24px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .range-slider-track {
+    width: 100%;
+    height: 5px;
+    background-color: #E5E7EB; /* Gray track */
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .range-slider-progress {
+    position: absolute;
+    height: 100%;
+    background-color: #0075FF; /* Blue active range */
+    border-radius: 5px;
+    top: 0;
+  }
+  
+  .range-inputs {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  .range-inputs input[type="range"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: none;
+    pointer-events: none;
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    top: 0;
+    margin: 1rem 0 !important;
+  }
+  
+  /* Slider Thumbs */
+  .range-inputs input[type="range"]::-webkit-slider-thumb {
+    pointer-events: auto;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #0075FF;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    margin-top: -8px;
+  }
+  
+  .range-inputs input[type="range"]::-moz-range-thumb {
+    pointer-events: auto;
+    width: 20px;
+    height: 20px;
+    background: #0075FF;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    border: none;
+  }
+  
+  /* Fix track height for alignment */
+  .range-inputs input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    height: 100%;
+    background: transparent;
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Function to initialize the slider logic
+  function initPriceSlider() {
+    // Target inputs generated by facets-new (standard Dawn names)
+    const priceInputs = document.querySelectorAll('input[name="filter.v.price.gte"]');
+    
+    priceInputs.forEach(inputMin => {
+      // Find the container
+      const wrapper = inputMin.closest('.facets__price') || inputMin.closest('details') || inputMin.parentElement.parentElement;
+      if (!wrapper) return;
+      
+      // Avoid re-initializing
+      if (wrapper.querySelector('.custom-price-slider')) return;
+      
+      const inputMax = wrapper.querySelector('input[name="filter.v.price.lte"]');
+      if (!inputMax) return;
+
+      // Get the max possible price from the max attribute usually set by Dawn
+      let maxPrice = parseFloat(inputMax.getAttribute('max'));
+      if (isNaN(maxPrice)) {
+        // Fallback: try to guess from initial value or safe default
+        maxPrice = parseFloat(inputMax.value) || 10000;
+      }
+
+      const currentMin = inputMin.value ? parseFloat(inputMin.value) : 0;
+      const currentMax = inputMax.value ? parseFloat(inputMax.value) : maxPrice;
+
+      // Create Slider HTML
+      const sliderContainer = document.createElement('div');
+      sliderContainer.className = 'custom-price-slider';
+      sliderContainer.innerHTML = `
+        <div class="range-slider-track">
+          <div class="range-slider-progress"></div>
+        </div>
+        <div class="range-inputs">
+          <input type="range" class="min-range" min="0" max="${maxPrice}" value="${currentMin}" step="1">
+          <input type="range" class="max-range" min="0" max="${maxPrice}" value="${currentMax}" step="1">
+        </div>
+      `;
+      
+      // Insert slider after the inputs wrapper (usually .field)
+      // We append it to the wrapper containing the inputs
+      wrapper.appendChild(sliderContainer);
+
+      const rangeMin = sliderContainer.querySelector('.min-range');
+      const rangeMax = sliderContainer.querySelector('.max-range');
+      const progress = sliderContainer.querySelector('.range-slider-progress');
+
+      // Update progress bar visuals
+      function updateProgress() {
+        let minVal = parseFloat(rangeMin.value);
+        let maxVal = parseFloat(rangeMax.value);
+
+        // Validation to prevent crossing
+        if (minVal > maxVal - 1) {
+           // If dragging min, limit to max
+           if (document.activeElement === rangeMin) {
+             minVal = maxVal - 1;
+             rangeMin.value = minVal;
+           } else {
+             maxVal = minVal + 1;
+             rangeMax.value = maxVal;
+           }
+        }
+
+        const minPercent = (minVal / maxPrice) * 100;
+        const maxPercent = (maxVal / maxPrice) * 100;
+        
+        progress.style.left = minPercent + '%';
+        progress.style.width = (maxPercent - minPercent) + '%';
+      }
+
+      // Sync Range -> Text Inputs
+      function syncToInputs() {
+        inputMin.value = rangeMin.value;
+        inputMax.value = rangeMax.value;
+        // Trigger 'input' event for Dawn to detect change and auto-submit filter
+        inputMin.dispatchEvent(new Event('input', { bubbles: true }));
+        inputMax.dispatchEvent(new Event('input', { bubbles: true }));
+      }
+
+      // Sync Text Inputs -> Range
+      function syncToRange() {
+        const valMin = parseFloat(inputMin.value) || 0;
+        const valMax = parseFloat(inputMax.value) || maxPrice;
+        // Check bounds
+        if (valMin <= valMax && valMin >= 0 && valMax <= maxPrice) {
+            rangeMin.value = valMin;
+            rangeMax.value = valMax;
+            updateProgress();
+        }
+      }
+
+      // Event Listeners
+      rangeMin.addEventListener('input', () => { updateProgress(); syncToInputs(); });
+      rangeMax.addEventListener('input', () => { updateProgress(); syncToInputs(); });
+
+      // Listen to text input changes (user typing)
+      inputMin.addEventListener('change', syncToRange);
+      inputMax.addEventListener('change', syncToRange);
+      inputMin.addEventListener('keyup', syncToRange);
+      inputMax.addEventListener('keyup', syncToRange);
+
+      // Initial Draw
+      updateProgress();
+    });
+  }
+
+  // MutationObserver to handle re-renders when filters are applied (Dawn AJAX)
+  const observer = new MutationObserver((mutations) => {
+    initPriceSlider();
+  });
+
+  const facetContainer = document.querySelector('.facets-vertical') || document.getElementById('main-collection-filters') || document.body;
+  if (facetContainer) {
+    observer.observe(facetContainer, { childList: true, subtree: true });
+  }
+
+  // Initial Load
+  initPriceSlider();
+});
+</script>
+
+
+{% schema %}
+{
+  "name": "C Collection Page",
+  "class": "section collection-pro-grid-section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 8,
+      "max": 24,
+      "step": 4,
+      "default": 16,
+      "label": "t:sections.main-collection-product-grid.settings.products_per_page.label"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 4,
+      "label": "t:sections.main-collection-product-grid.settings.columns_desktop.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-collection-product-grid.settings.header__3.content"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__3.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.main-collection-product-grid.settings.image_ratio.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.show_secondary_image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.show_vendor.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.show_rating.label",
+      "info": "t:sections.main-collection-product-grid.settings.show_rating.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_quick_add",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.enable_quick_buy.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-collection-product-grid.settings.header__1.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_filtering",
+      "default": true,
+      "label": "t:sections.main-collection-product-grid.settings.enable_filtering.label",
+      "info": "t:sections.main-collection-product-grid.settings.enable_filtering.info"
+    },
+    {
+      "type": "select",
+      "id": "filter_type",
+      "options": [
+        {
+          "value": "horizontal",
+          "label": "t:sections.main-collection-product-grid.settings.filter_type.options__1.label"
+        },
+        {
+          "value": "vertical",
+          "label": "t:sections.main-collection-product-grid.settings.filter_type.options__2.label"
+        },
+        {
+          "value": "drawer",
+          "label": "t:sections.main-collection-product-grid.settings.filter_type.options__3.label"
+        }
+      ],
+      "default": "horizontal",
+      "label": "t:sections.main-collection-product-grid.settings.filter_type.label",
+      "info": "t:sections.main-collection-product-grid.settings.filter_type.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sorting",
+      "default": true,
+      "label": "t:sections.main-collection-product-grid.settings.enable_sorting.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-collection-product-grid.settings.header_mobile.content"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "default": "2",
+      "label": "t:sections.main-collection-product-grid.settings.columns_mobile.label",
+      "options": [
+        {
+          "value": "1",
+          "label": "t:sections.main-collection-product-grid.settings.columns_mobile.options__1.label"
+        },
+        {
+          "value": "2",
+          "label": "t:sections.main-collection-product-grid.settings.columns_mobile.options__2.label"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name":"C Collection Page",
+      "category": "custom"
+    }
+  ]
+}
+{% endschema %}

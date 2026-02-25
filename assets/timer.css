@@ -1,0 +1,62 @@
+/* Timer pill styles - mobile first */
+.timer {
+  display: flex;
+  justify-content: center;
+}
+
+.timer__grid {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.timer__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 6px;
+  border-radius: 32px;
+  background: #FFE4DD;
+  margin: 0;
+}
+
+.timer__num,
+.timer__unit,
+.timer__separator {
+  color: #FF5627;
+  font-family: Satoshi;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.36px;
+}
+.timer__separator {
+  color: #FFF;
+}
+
+/* Prevent width jitter on digit changes */
+.timer__num {
+  font-variant-numeric: tabular-nums;
+  -moz-font-feature-settings: 'tnum';
+  -webkit-font-feature-settings: 'tnum';
+  font-feature-settings: 'tnum';
+  display: inline-block;
+  min-width: 2ch;
+  text-align: center;
+}
+
+.timer__num.js-days {
+  min-width: 3ch;
+}
+
+@media (min-width: 990px) {
+  .timer__grid {
+    gap: 8px;
+  }
+  .timer__num,
+  .timer__unit,
+  .timer__separator {
+    font-size: 14px;
+  }
+}

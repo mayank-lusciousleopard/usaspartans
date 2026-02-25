@@ -1,0 +1,385 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "6ccd1cb4-90a7-4a9a-ac15-7ab3821a9c4c": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Only Today: Free E-Book \"Beginner's Guide To Cold Water Therapy\" (Usually £19.99)",
+            "text_style": "body"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "premium_info_qJJqDk": {
+          "type": "premium_info",
+          "settings": {
+            "heading": "HSA \/ FSA Eligible",
+            "text": "<p>save an average of 30% with pre tax funds Choose flex at checkout<\/p>",
+            "info_hover_text": "Use your HSA\/FSA card to pay for this item.",
+            "bg_color": "#f5f8f0",
+            "text_color": "#000000",
+            "icon_color": "#39b856",
+            "margin_top": 0,
+            "margin_bottom": 16
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "5d95a31e-cbd1-4408-97da-fecd07e8406f": {
+          "type": "payment_icon",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "6ccd1cb4-90a7-4a9a-ac15-7ab3821a9c4c",
+        "vendor",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "premium_info_qJJqDk",
+        "buy_buttons",
+        "5d95a31e-cbd1-4408-97da-fecd07e8406f",
+        "description"
+      ],
+      "custom_css": [],
+      "settings": {
+        "cstm_class": "",
+        "date": "",
+        "enable_sticky_info": true,
+        "overlay_width_d": 70,
+        "overlay_width_m": 50,
+        "media_size": "small",
+        "constrain_to_viewport": false,
+        "media_fit": "cover",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "show",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "why_choose_ice_bath_ReFBfw": {
+      "type": "why-choose-ice-bath",
+      "blocks": {
+        "benefit_nz4RbE": {
+          "type": "benefit",
+          "settings": {
+            "label": "Accelerates recovery",
+            "icon": "shopify:\/\/shop_images\/stars_8c539901-a52d-4b3a-89e6-d4e4f7a648da.svg"
+          }
+        },
+        "benefit_6gjAL4": {
+          "type": "benefit",
+          "settings": {
+            "label": "Builds mental resilience",
+            "icon": "shopify:\/\/shop_images\/smile.svg"
+          }
+        },
+        "benefit_B8wjy8": {
+          "type": "benefit",
+          "settings": {
+            "label": "Relieves muscle pain",
+            "icon": "shopify:\/\/shop_images\/heart.svg"
+          }
+        },
+        "benefit_nE7Dxm": {
+          "type": "benefit",
+          "settings": {
+            "label": "Easy to use & maintain",
+            "icon": "shopify:\/\/shop_images\/like.svg"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_nz4RbE",
+        "benefit_6gjAL4",
+        "benefit_B8wjy8",
+        "benefit_nE7Dxm"
+      ],
+      "name": "Why choose an ice bath",
+      "settings": {
+        "heading": "Why choose an ice bath?",
+        "text": "<p>Ice baths reduce inflammation, speed up recovery, and build mental toughness. A proven way to boost your health, fitness, and strength.<\/p>",
+        "cta_label": "Discover all benefits",
+        "cta_link": "",
+        "cta_new_tab": false,
+        "image": "shopify:\/\/shop_images\/ice-bath.png",
+        "image_alt": "",
+        "padding_top": 32,
+        "padding_bottom": 0,
+        "padding_top_desktop": 72,
+        "padding_bottom_desktop": 0
+      }
+    },
+    "c_sticky_atc_Dkg3MV": {
+      "type": "c-sticky-atc",
+      "settings": {
+        "use_custom_product": false,
+        "product": "",
+        "padding_top": 2,
+        "padding_bottom": 2
+      }
+    },
+    "c_faqs_ffp77W": {
+      "type": "c-faqs",
+      "blocks": {
+        "faq_U4ky7i": {
+          "type": "FAQ",
+          "name": "Who can use a hyperbaric chamber?",
+          "settings": {
+            "faq_heading": "Who can use a hyperbaric chamber?",
+            "faq_answer": "<p>Most healthy adults can use it safely. Consult your doctor if you have medical conditions.<\/p>"
+          }
+        },
+        "faq_P4pfJi": {
+          "type": "FAQ",
+          "name": "Who uses hyperbaric chambers?",
+          "settings": {
+            "faq_heading": "Who uses hyperbaric chambers?",
+            "faq_answer": "<p>Athletes, biohackers, wellness enthusiasts, and professionals use it to recover faster, boost energy, and reduce stress.<\/p>"
+          }
+        },
+        "faq_dKJiUe": {
+          "type": "FAQ",
+          "name": "Why use a hyperbaric chamber?",
+          "settings": {
+            "faq_heading": "Why use a hyperbaric chamber?",
+            "faq_answer": "<p>It helps your body absorb more oxygen, accelerating healing, recovery, and energy.<\/p>"
+          }
+        },
+        "faq_mRe7yb": {
+          "type": "FAQ",
+          "name": "What does a hyperbaric chamber do?",
+          "settings": {
+            "faq_heading": "What does a hyperbaric chamber do?",
+            "faq_answer": "<p>It creates a pressurized oxygen-rich environment so your body takes in more oxygen.<\/p>"
+          }
+        },
+        "faq_CCQtYg": {
+          "type": "FAQ",
+          "name": "What is HBOT good for?",
+          "settings": {
+            "faq_heading": "What is HBOT good for?",
+            "faq_answer": "<p>Sleep, energy, circulation, inflammation, recovery, and mental clarity.<\/p>"
+          }
+        },
+        "faq_imBK6U": {
+          "type": "FAQ",
+          "name": "How does it work?",
+          "settings": {
+            "faq_heading": "How does it work?",
+            "faq_answer": "<p>At 1.5 ATA pressure, oxygen dissolves deeper into blood and tissues. Our chamber has an integrated concentrator and safety controls.<\/p>"
+          }
+        },
+        "faq_Fyt9nF": {
+          "type": "FAQ",
+          "name": "Is it safe?",
+          "settings": {
+            "faq_heading": "Is it safe?",
+            "faq_answer": "<p>Yes. CE-certified, with safety valves, reinforced zippers, and controlled decompression.<\/p>"
+          }
+        },
+        "faq_RbBJ9p": {
+          "type": "FAQ",
+          "name": "Will it help me?",
+          "settings": {
+            "faq_heading": "Will it help me?",
+            "faq_answer": "<p>Many feel better energy, recovery, and sleep within 2–3 weeks of regular use.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_U4ky7i",
+        "faq_P4pfJi",
+        "faq_dKJiUe",
+        "faq_mRe7yb",
+        "faq_CCQtYg",
+        "faq_imBK6U",
+        "faq_Fyt9nF",
+        "faq_RbBJ9p"
+      ],
+      "disabled": true,
+      "name": "C FAQs",
+      "settings": {
+        "use_grid": true,
+        "side": true,
+        "heading": "<p>Frequently Asked Questions<\/p>",
+        "paragraph": "<p>Have you got questions? We've got answers!<\/p>",
+        "button_text": "Buy Now",
+        "button_url": "",
+        "button_style": "c-b1",
+        "accent_color": "#000000",
+        "card_background": "linear-gradient(262deg, rgba(14, 131, 249, 1), rgba(9, 79, 149, 1) 100%)",
+        "faq_text_border": "#ffffff",
+        "bg_color": "#ffffff",
+        "text_color": "#000000",
+        "section_top_subheading": "FAQs",
+        "section_top_heading": "Need Help? We’ve Got You Covered",
+        "section_top_paragraph": "<p>Dive into our FAQ section to learn more about the benefits, features, and usage of our products to better meet your needs.<\/p>",
+        "section_top_alignment": "center",
+        "text_alignment": "center",
+        "padding_top": 1,
+        "padding_bottom": 4
+      }
+    },
+    "16961995668f2c6a92": {
+      "type": "apps",
+      "blocks": {
+        "ca156014-7d4d-4e75-92db-f955281cefab": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "ca156014-7d4d-4e75-92db-f955281cefab"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "rich_text_Fhk9La": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_eGedPQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h1>Why Choose Us<\/h1>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_eGedPQ"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class": ""
+      }
+    },
+    "multicolumn_wrEM4T": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_3V3EV8": {
+          "type": "column",
+          "settings": {
+            "title": "60 DAY MONEY BACK GUARANTEE",
+            "text": "<p>If you are not happy with our product we will refund you. No questions asked.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_YxVdhe": {
+          "type": "column",
+          "settings": {
+            "title": "1 YEAR WARRANTY",
+            "text": "<p>We stand behind the integrity of our products and offer a warranty for one year. You will get support even outside the warranty period.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_HC9i97": {
+          "type": "column",
+          "settings": {
+            "title": "FREE INSURED SHIPPING & 24\/7 CUSTOMER SUPPORT",
+            "text": "<p>Free shipping and the best in class customer support team, ready to help you via email, live chat and SMS.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_3V3EV8",
+        "column_YxVdhe",
+        "column_HC9i97"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "why_choose_ice_bath_ReFBfw",
+    "c_sticky_atc_Dkg3MV",
+    "c_faqs_ffp77W",
+    "16961995668f2c6a92",
+    "rich_text_Fhk9La",
+    "multicolumn_wrEM4T",
+    "related-products"
+  ]
+}

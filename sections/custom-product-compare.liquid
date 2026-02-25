@@ -1,0 +1,283 @@
+<section id="product-compare--{{ section.id }}">
+  <div class="page-width">
+    <div class="custom__product_compare_container">
+      <div class="compare__heaings">
+        {% if section.settings.heading != blank %}
+          <h2 class="product__compare_heading h1">{{ section.settings.heading }}</h2>
+        {% endif %}
+        {% if section.settings.description != blank %}
+          <div class="product__compare_desc">{{ section.settings.description }}</div>
+        {% endif %}
+      </div>
+      <div class="compare__table_-container">
+        <div class="compare__table_row">
+          <div class="info__container"></div>
+          <div class="own__product_info product__logo">
+            {% if section.settings.logo != blank %}
+              <img src="{{ section.settings.logo | img_url: 'master' }}" class="info__image">
+            {% else %}
+              {{ shop.name }}
+            {% endif %}
+          </div>
+          <div class="other_product_info other__header">
+            {{ section.settings.other_title | default: "Other Product" }}
+          </div>
+        </div>
+        {% for block in section.blocks %}
+          <div class="compare__table_row">
+            {% if block.settings.info != blank %}<div class="info__container">{{ block.settings.info }}</div>{% endif %}
+            <div class="own__product_info">
+              {% if block.settings.own_icon != blank %}
+                <img src="{{ block.settings.own_icon | img_url: 'master' }}" class="info__image">
+              {% endif %}
+              {% if block.settings.own_text != blank %}
+                <p>{{ block.settings.own_text }}</p>
+              {% endif %}
+            </div>
+            <div class="other_product_info">
+              {% if block.settings.other_icon != blank %}
+                <img src="{{ block.settings.other_icon | img_url: 'master' }}" class="info__image">
+              {% endif %}
+              {% if block.settings.other_text != blank %}
+                <p>{{ block.settings.other_text }}</p>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+        <div class="compare__table_row empty">
+          <div class="info__container empty"></div>
+          <div class="own__product_info empty"></div>
+          <div class="other_product_info empty"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+#product-compare--{{ section.id }} {
+  background: #007eff;
+  padding: 40px 0 70px;
+}
+#product-compare--{{ section.id }} .compare__heaings {
+  text-align: center;
+  padding-bottom: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#product-compare--{{ section.id }} .compare__table_row {
+  display: grid;
+  grid-template-columns: 30% 35% 35%;
+}
+#product-compare--{{ section.id }} .other_product_info.other__header {
+  border: none;
+  justify-content: flex-end;
+  font-size: 22px;
+  font-weight: 900;
+  color: {{ section.settings.other_title_color }};
+  text-transform: uppercase;
+}
+#product-compare--{{ section.id }} .other_product_info {
+  border-right: 1px solid {{ section.settings.border_color }};
+  border-top: 1px solid {{ section.settings.border_color }};
+}
+#product-compare--{{ section.id }} .info__container:empty {
+  display: block;
+  border: none;
+}
+  
+#product-compare--{{ section.id }} .info__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid {{ section.settings.border_color }};
+  padding-left: 0px;
+  text-align: center;
+  border-top: 1px solid {{ section.settings.border_color }};
+}
+  
+#product-compare--{{ section.id }} .own__product_info.product__logo img {
+  max-width: 120px;
+  padding: 20px;
+}
+#product-compare--{{ section.id }} .compare__table_row.empty div:empty {
+  display: block;
+  border: none;
+  border-top: 1px solid {{ section.settings.border_color }};
+}
+#product-compare--{{ section.id }} .own__product_info.empty {
+  min-height: 35px;
+  border-radius: 0 0 10px 10px;
+}
+#product-compare--{{ section.id }} .own__product_info.product__logo {
+  min-height: 140px;
+  border-radius: 10px 10px 0 0;
+}
+#product-compare--{{ section.id }} .other_product_info img,
+.own__product_info img {
+  max-width: 20px;
+}
+#product-compare--{{ section.id }} .other_product_info p,
+#product-compare--{{ section.id }} .own__product_info p {
+  margin: 0;
+  font-weight: 600;
+  padding: 5px 0 0;
+}
+#product-compare--{{ section.id }} .own__product_info {
+  background: {{ section.settings.own_bg }};
+}
+#product-compare--{{ section.id }} .own__product_info p {
+  color: {{ section.settings.own_color }};
+  text-align: center;
+}
+#product-compare--{{ section.id }} .other_product_info p {
+  color: {{ section.settings.other_color }};
+  text-align: center;
+}
+#product-compare--{{ section.id }} .info__container {
+  font-weight: 900;
+  color: {{ section.settings.info_color }};
+}
+
+#product-compare--{{ section.id }} .own__product_info,
+#product-compare--{{ section.id }} .other_product_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+#product-compare--{{ section.id }} h2.product__compare_heading {
+  color: {{ section.settings.heading_color }};
+}
+#product-compare--{{ section.id }} .product__compare_desc * {
+  color: {{ section.settings.desc_color }};
+}
+@media (max-width: 576px) {
+  #product-compare--{{ section.id }} .own__product_info.product__logo {
+    min-height: 100px;
+    height: 100px;
+  }
+  #product-compare--{{ section.id }} .other_product_info.other__header {
+    font-size: 18px;
+  }
+}
+</style>
+{% schema %}
+  {
+    "name": "Custom Product Compare",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "description",
+        "label": "Description",
+        "default": "<p>Description</p>"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Product Image"
+      },
+      {
+        "type": "richtext",
+        "id": "other_title",
+        "label": "Other Product Title"
+      },
+      {
+        "type": "color",
+        "id": "heading_color",
+        "label": "Heading Color",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "color",
+        "id": "desc_color",
+        "label": "Description Color",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "color",
+        "id": "info_color",
+        "label": "Info Color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "own_color",
+        "label": "Own Text Color",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "color",
+        "id": "other_color",
+        "label": "Other Text Color",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "color",
+        "id": "own_bg",
+        "label": "Own Text Background",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "color",
+        "id": "other_title_color",
+        "label": "Other Product Title",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "color",
+        "id": "border_color",
+        "label": "Border Color",
+        "default": "#FFFFFF"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "item_block",
+        "name": "Row Item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "info",
+            "label": "Info",
+            "default": "Info"
+          },
+          {
+            "type": "image_picker",
+            "id": "own_icon",
+            "label": "Check Icon (Own Product)"
+          },
+          {
+            "type": "text",
+            "id": "own_text",
+            "label": "Own Product Text",
+            "default": "Own Product Text"
+          },
+          {
+            "type": "image_picker",
+            "id": "other_icon",
+            "label": "Check Icon (Others)"
+          },
+          {
+            "type": "text",
+            "id": "other_text",
+            "label": "Other Product Text",
+            "default": "Other Product Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Product Compare"
+      }
+    ]
+  }
+{% endschema %}

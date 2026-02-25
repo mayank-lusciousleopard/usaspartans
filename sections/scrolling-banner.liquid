@@ -1,0 +1,162 @@
+{% comment %}
+  <div class="tw-w-full tw-h-[68px] tw-py-2 tw-px-16 tw-border-y-2 tw-border-[#F0B36B] tw-bg-custom-gradient-black tw-overflow-hidden tw-relative tw-flex">
+      <!-- Marquee 1 for larger screens -->
+      <div class="tw-hidden lg:tw-flex tw-gap-8 tw-absolute tw-inset-0 tw-items-center tw-whitespace-nowrap tw-animate-marquee tw-mx-8">
+          <span class="tw-font-bold tw-text-xl" style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent">{{ section.settings.main_text }}</span>
+          <span class="tw-font-bold tw-text-xl tw-opacity-100" style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent">{{ section.settings.sub_text }}</span>
+          <span class="tw-font-bold tw-text-xl" style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent">{{ section.settings.main_text }}</span>
+          <span class="tw-font-bold tw-text-xl tw-opacity-100" style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent">{{ section.settings.sub_text }}</span>
+      </div>
+
+      <!-- Marquee 1 for medium screens -->
+      <div class="tw-hidden md:tw-flex md:tw-mr-6 lg:tw-hidden tw-gap-8 tw-absolute tw-inset-0 tw-items-center tw-whitespace-nowrap tw-animate-marquee tw-mx-8">
+          <span class="tw-font-bold tw-text-lg" style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent">{{ section.settings.main_text }}</span>
+          <span class="tw-font-bold tw-text-lg tw-opacity-100" style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent">{{ section.settings.sub_text }}</span>
+          <span class="tw-font-bold tw-text-lg" style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent">{{ section.settings.main_text }}</span>
+      </div>
+
+      <!-- Marquee 1 for small screens -->
+      <div class="tw-flex md:tw-hidden tw-gap-6 tw-mr-6 tw-absolute tw-inset-0 tw-items-center tw-whitespace-nowrap tw-animate-marquee tw-mx-4">
+          <span class="tw-font-bold tw-text-base" style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent">{{ section.settings.main_text }}</span>
+      </div>
+
+      <!-- Marquee 2 for larger screens -->
+      <div class="tw-hidden lg:tw-flex tw-gap-8 tw-absolute tw-inset-0 tw-items-center tw-whitespace-nowrap tw-animate-marquee2 tw-mx-8">
+          <span class="tw-font-bold tw-text-xl" style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent">{{ section.settings.main_text }}</span>
+          <span class="tw-font-bold tw-text-xl tw-opacity-100" style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent">{{ section.settings.sub_text }}</span>
+          <span class="tw-font-bold tw-text-xl" style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent">{{ section.settings.main_text }}</span>
+          <span class="tw-font-bold tw-text-xl tw-opacity-100" style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent">{{ section.settings.sub_text }}</span>
+      </div>
+
+      <!-- Marquee 2 for medium screens -->
+      <div class="tw-hidden md:tw-flex lg:tw-hidden tw-gap-8 tw-absolute tw-inset-0 tw-items-center tw-whitespace-nowrap tw-animate-marquee2 tw-mx-8">
+          <span class="tw-font-bold tw-text-lg tw-opacity-100" style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent">{{ section.settings.sub_text }}</span>
+          <span class="tw-font-bold tw-text-lg" style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent">{{ section.settings.main_text }}</span>
+          <span class="tw-font-bold tw-text-lg tw-opacity-100" style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent">{{ section.settings.sub_text }}</span>
+          <span class="tw-font-bold tw-text-lg" style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent">{{ section.settings.main_text }}</span>
+      </div>
+
+      <!-- Marquee 2 for small screens -->
+      <div class="tw-flex md:tw-hidden tw-gap-6 tw-absolute tw-inset-0 tw-items-center tw-whitespace-nowrap tw-animate-marquee2 tw-mx-4">
+          <span class="tw-font-bold tw-text-base tw-opacity-100" style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent">{{ section.settings.sub_text }}</span>
+          <span class="tw-font-bold tw-text-base tw-opacity-100" style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent">{{ section.settings.main_text }}</span>
+      </div>
+  </div>
+{% endcomment %}
+<script src="https://unpkg.com/alpinejs" defer></script>
+<div
+  class="c-background tw-w-full tw-h-[68px] tw-py-2 tw-px-16 {% unless section.settings.christmas_styles %} tw-border-y-2 tw-border-[#F0B36B] tw-bg-custom-gradient-black {% else %} tw-bg-custom-christmas-green-gradient {% endunless %} tw-overflow-hidden tw-relative tw-flex"
+  x-data
+  x-init="
+    $nextTick(() => {
+        const content = $refs.content;
+        const item = $refs.item;
+        const clone = item.cloneNode(true);
+        content.appendChild(clone);
+    });
+  "
+>
+  <!-- Marquee 1 for larger screens -->
+
+  <div
+    class="tw-w-[250%] md:tw-w-[115%] tw-flex tw-gap-16 tw-absolute tw-inset-0 tw-items-center tw-whitespace-nowrap tw-animate-marquee tw-mx-8"
+    x-ref="content"
+    style="animation-duration: 20s;"
+  >
+    <div x-ref="item" class="tw-flex tw-items-center tw-justify-around tw-flex-shrink-0 tw-w-full tw-py-2 tw-space-x-8">
+      <span
+        class="c-text tw-font-bold tw-translate-y-0.5 tw-text-sm md:tw-text-xl tw-text-white tw-flex tw-justify-center tw-items-center "
+        {% unless section.settings.christmas_styles %}
+          style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent"
+        {% endunless %}
+      >
+        {{- section.settings.main_text -}}
+      </span>
+      <span
+        class="c-text tw-font-bold tw-translate-y-0.5 tw-text-sm md:tw-text-xl tw-opacity-100 tw-text-white tw-flex tw-justify-center tw-items-center "
+        {% unless section.settings.christmas_styles %}
+          style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent"
+        {% endunless %}
+      >
+        {{- section.settings.sub_text -}}
+      </span>
+      <span
+        class="c-text tw-font-bold tw-translate-y-0.5 tw-text-sm md:tw-text-xl tw-text-white tw-flex tw-justify-center tw-items-center "
+        {% unless section.settings.christmas_styles %}
+          style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent"
+        {% endunless %}
+      >
+        {{- section.settings.main_text_2 -}}
+      </span>
+      <span
+        class="c-text tw-font-bold tw-translate-y-0.5 tw-text-sm md:tw-text-xl tw-opacity-100 tw-text-white tw-flex tw-justify-center tw-items-center"
+        {% unless section.settings.christmas_styles %}
+          style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent"
+        {% endunless %}
+      >
+        {{- section.settings.sub_text_2 -}}
+      </span>
+      {% comment %} <span
+        class="tw-hidden lg:tw-block tw-font-bold tw-text-xl tw-text-white"
+        {% unless section.settings.christmas_styles %}
+          style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent"
+        {% endunless %}
+      >
+        {{- section.settings.main_text -}}
+      </span>
+      <span
+        class="tw-hidden lg:tw-block tw-font-bold tw-text-xl tw-opacity-100 tw-text-white"
+        {% unless section.settings.christmas_styles %}
+          style="background: linear-gradient(90deg, #EC860E 0%, #F0B36B 100%); background-clip: text; color: transparent"
+        {% endunless %}
+      >
+        {{- section.settings.sub_text -}}
+      </span> {% endcomment %}
+      
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Scrolling Text Banner",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "christmas_styles",
+      "label": "Christmas Styles",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "main_text",
+      "label": "Main Text",
+      "default": "Secure Your VIP Bundles and Save 20%"
+    },
+    {
+      "type": "text",
+      "id": "sub_text",
+      "label": "Sub Text",
+      "default": "Limited Stock"
+    },
+    {
+      "type": "text",
+      "id": "main_text_2",
+      "label": "Main Text 2",
+      "default": "Secure Your VIP Bundles and Save 20%"
+    },
+    {
+      "type": "text",
+      "id": "sub_text_2",
+      "label": "Sub Text 2",
+      "default": "Limited Stock"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Scrolling Text Banner",
+      "category": "custom"
+    }
+  ]
+}
+{% endschema %}

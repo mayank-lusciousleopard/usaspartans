@@ -1,0 +1,121 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "new_footer_ykarrR": {
+      "type": "new-footer",
+      "blocks": {
+        "brand_info_3NBrrw": {
+          "type": "brand_info",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Link_Warrior_Willpower_2x_c0936242-5217-4866-ac75-cb28865c20c9.png",
+            "logo_width": 90,
+            "contact_text": "<p>Email: support@example.com<br\/>Phone: 123-456-7890<br\/>Monday - Sunday : 9AM - 5PM EST<br\/>Free & Fast Us Shipping<\/p>",
+            "show_social": true
+          }
+        },
+        "menu_column_E8ctni": {
+          "type": "menu_column",
+          "settings": {
+            "heading": "Shop & Explore",
+            "menu": "footer-1"
+          }
+        },
+        "menu_column_BAFYyz": {
+          "type": "menu_column",
+          "settings": {
+            "heading": "Customer Support",
+            "menu": "footer-2"
+          }
+        },
+        "menu_column_hAkYdr": {
+          "type": "menu_column",
+          "settings": {
+            "heading": "Company & Legal",
+            "menu": "footer-3"
+          }
+        }
+      },
+      "block_order": [
+        "brand_info_3NBrrw",
+        "menu_column_E8ctni",
+        "menu_column_BAFYyz",
+        "menu_column_hAkYdr"
+      ],
+      "name": "New Footer",
+      "settings": {
+        "bg_color": "#f7f7f7",
+        "text_color": "#374151",
+        "padding_top": 40,
+        "padding_bottom": 20,
+        "padding_top_mobile": 32,
+        "padding_bottom_mobile": 32
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer-1": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Helpful Links",
+            "menu": "footer"
+          }
+        },
+        "99526cce-1157-4766-a5b4-b5517a93f9be": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Policies",
+            "menu": "others"
+          }
+        },
+        "footer-2": {
+          "type": "text",
+          "settings": {
+            "heading": "Our details",
+            "subtext": "<p>Email: <a href=\"mailto:support@spartanicebath.com\" title=\"mailto:support@warriorwillpower.com\">support@warriorwillpower.com<\/a><\/p><p>Phone: 833-213-2115 (Text Us)<\/p><p>Monday - Sunday: 9 AM - 5 PM EST<\/p><p>Free & Fast US Shipping<\/p><p><\/p>"
+          }
+        },
+        "image_XQJrQJ": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_1.svg",
+            "image_width": 100,
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "footer-1",
+        "99526cce-1157-4766-a5b4-b5517a93f9be",
+        "footer-2",
+        "image_XQJrQJ"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".global-media-settings {border: none !important;}",
+        ".grid div:last-child {order: -1; \/* Un valor más bajo hace que aparezca primero *\/}",
+        " \/* Media Query para dispositivos pequeños *\/@media (max-width: 768px) {.grid div:last-child {order: -1 !important; \/* Mantiene la prioridad en responsive *\/ }}"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "newsletter_enable": false,
+        "newsletter_heading": "Subscribe to our email list for ice baths",
+        "enable_follow_on_shop": false,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": true,
+        "show_policy": false,
+        "margin_top": 0,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    }
+  },
+  "order": [
+    "new_footer_ykarrR",
+    "footer"
+  ]
+}

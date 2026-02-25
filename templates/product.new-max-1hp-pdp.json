@@ -1,0 +1,1448 @@
+{
+  "sections": {
+    "c_tailwind_wEGgk8": {
+      "type": "c-tailwind",
+      "settings": {}
+    },
+    "c_sticky_atc_W7EMfC": {
+      "type": "c-sticky-atc",
+      "settings": {
+        "use_custom_product": false,
+        "product": "",
+        "padding_top": 2,
+        "padding_bottom": 2
+      }
+    },
+    "c_custom_main_product_nJA7ex": {
+      "type": "c-custom-main-product",
+      "blocks": {
+        "judge_me_reviews_preview_badge_3CfUz6": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "title_9aUaU4": {
+          "type": "title",
+          "settings": {}
+        },
+        "price_Ppbenx": {
+          "type": "price",
+          "settings": {}
+        },
+        "klarna_on_site_messaging_app_block_WNbbTU": {
+          "type": "shopify:\/\/apps\/klarna-on-site-messaging\/blocks\/app-block\/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "top-strip-promotion-badge",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        },
+        "afterpay_on_site_messaging_payments_messaging_j7Mzzw": {
+          "type": "shopify:\/\/apps\/afterpay-on-site-messaging\/blocks\/payments-messaging\/f45a5524-d177-4475-bf59-281efd2215a8",
+          "settings": {
+            "text_align": "inherit",
+            "margin_top": 5,
+            "margin_bottom": 4,
+            "color": "",
+            "size": "md",
+            "intro_text": "Or",
+            "show_interest_free": true,
+            "payment_amount_is_bold": true,
+            "show_with": true,
+            "logo_type": "compact-badge",
+            "logo_theme": "black-on-mint",
+            "modal_link_style": "learn-more-text",
+            "modal_theme": "mint",
+            "breakpoint": 749,
+            "text_align_mobile": "inherit",
+            "margin_top_mobile": 5,
+            "margin_bottom_mobile": 5,
+            "show_lower_limit": true,
+            "show_upper_limit": true,
+            "show_if_outside_limits": true,
+            "product": "{{product}}"
+          }
+        },
+        "quantity_selector_dkdEJC": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "premium_info_hiCM9U": {
+          "type": "premium_info",
+          "settings": {
+            "heading": "HSA \/ FSA Eligible",
+            "text": "<p>save an average of 30% with pre tax funds Choose flex at checkout<\/p>",
+            "info_hover_text": "Use your HSA\/FSA card to pay for this item.",
+            "bg_color": "#f4f9f4",
+            "text_color": "#121212",
+            "icon_color": "#2e8b57",
+            "margin_top": 0,
+            "margin_bottom": 16
+          }
+        },
+        "buy_buttons_LNRXAp": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "collapsible_tab_iwPELG": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Water Chiller Specifications",
+            "icon": "check_mark",
+            "content": "<ul><li>1 HP compressor (using CryoBoost™ technology that delivers up to <strong>4x faster cooling<\/strong> vs other chillers on the market)<\/li><li>Fits any ice bath model<\/li><li>Completely waterproof<\/li><li>Energy-efficient ($0.5 - $1.5 per day)<\/li><li>UV disinfection that kills bacteria<\/li><li>NSF certified 20-micron filter (keeps the water clean for 4 - 8 weeks without needing to replace it)<\/li><li>Safety shut-off<br\/><br\/>We know every detail about the Wi-Fi Chiller and we have gone through 7 iterations during the past 2 years, <strong>improving the internal parts based on our customers feedback!<\/strong> You don't have to worry about the warranty even outside the warranty period. <strong>Please beware of copycats<\/strong> on the market with no real reviews from independent third parties like ours and no knowledge about the product.<\/li><\/ul><p><\/p><p><strong>Technical characteristics:<\/strong><\/p><ul><li>850 W input power <\/li><li>2600 W refrigerating power  <\/li><li>3300 W heating power<\/li><li>Uses a regular 110V \/ 60 Hz US plug <\/li><li>50-60db noise level (comparable to a dishwasher)  <\/li><li>10A minimum outlet<\/li><li>630 GPH pump flow  <\/li><li>130 gallons max water volume<br\/><br\/><\/li><\/ul><p><strong>Temperature capability: <\/strong><br\/>The Warrior Max chills water down to 37 degrees Fahrenheit (adjustable by 1 degree from 37 - 104).<br\/><br\/><strong>Size:<\/strong><br\/>Size: 24.4 × 16.53 × 18.9 inches  <br\/><br\/><strong>Weight:<\/strong><br\/>100 lbs \/ 45 kg (easy to move with wheels)<br\/><br\/><strong>Water pump & filtration:<\/strong><br\/>20 micron filtration and nonstop water flow, maintaining crystal clean water from weeks to months.<br\/>The filter is located in the front for easy replacement.  <br\/>The pump is built inside the chiller.<br\/><br\/><strong>Power usage:<\/strong><br\/>Our Warrior Max uses new energy-efficient technology that doesn't hike up the energy bill.<br\/>Exact power usage varies based on usage, but expect to spend around <strong>$0.5-$1.5 per day<\/strong> on electricity (10 - 20 times cheaper than buying ice).<br\/><br\/><strong>Indoor and outdoor use:  <\/strong><br\/>The chiller is waterproof and can be used both indoors and outdoors without the need for a cover. It is recommended to set it up under a shaded area to protect it from weather and environmental factors, extending its lifespan.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_HfEDP3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Bonuses ($500 Value)",
+            "icon": "check_mark",
+            "content": "<p>If you order today, you will receive the following bonuses (<strong>$500 worth of products and services for free<\/strong>):<\/p><ul><li>x5 Water chiller filters<\/li><li>Water thermometer<\/li><li>Waterproof timer to track your cold plunge time<\/li><li>Free & fast shipping from California (This saves you hundreds of dollars because it is a bulky shipment)<\/li><\/ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_akermF": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What Is Included",
+            "icon": "check_mark",
+            "content": "<ul><li>1 HP Warrior Max Wi-Fi Water Chiller\/Heater  <\/li><li>x5 Filters<\/li><li>Waterproof thermometer<\/li><li>Waterproof timer to track your cold plunge time<\/li><li>Text & video instructions<\/li><li>1 Year warranty<\/li><li>Free & fast shipping<\/li><li>x2 Black Hoses 59\" Long Each  <\/li><li>x4 Wheels With Brakes  <\/li><li>x4 Clamps  <\/li><li>x4 3\/4 Male Stainless Steel Connectors  <\/li><li> x2 1\/2\" Male to 3\/4\" Female Stainless Steel Connectors  <\/li><li>x2 1\/2\" Female to 3\/4\" Female Stainless Steel Connectors  <\/li><\/ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_rkKfye": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "icon": "apple",
+            "content": "<p>The shipping is <strong>FAST &<\/strong> <strong>FREE.<\/strong><br\/><br\/><strong>Update 23rd May 2025:<\/strong> We ship from our warehouse in California to US mainland in 2 - 6 business days after dispatch.<\/p><p>Shipping to Canada and Hawaii takes 7 - 14 business days.<\/p><p>We have increased our price twice in the past month after selling out. If you want to <strong>secure the lowest price, order today<\/strong> before we raise the prices again.<br\/><br\/><strong>Easy Returns:<\/strong><\/p><p>You have 60 days to test it.<br\/>You can test and use the water chiller, but if you need to return it, please ensure it is in good condition and dry.<br\/>Once the return is received at the warehouse, a refund will be processed within 2-3 business days.<\/p><p>We will provide you with a <strong>pre-paid label<\/strong>, and UPS will come to your house at your convenience for a seamless return process. Carrying it to the courier office is unnecessary, which other companies will ask you to do.<\/p>",
+            "page": ""
+          }
+        },
+        "logos_description_CbGmbw": {
+          "type": "logos_description",
+          "settings": {
+            "heading": "Used By Athletes From",
+            "logo_image_1": "shopify:\/\/shop_images\/UFC_logo_1.svg",
+            "logo_image_2": "shopify:\/\/shop_images\/Olympic_rings_without_rims_2.svg",
+            "logo_image_3": "shopify:\/\/shop_images\/Logo_CrossFit_1.svg",
+            "logo_image_4": "shopify:\/\/shop_images\/nfl_1.svg",
+            "description_text": "The most advanced and highest quality Wi-Fi chiller\/heater on the market. It uses powerful 1 HP cooling, triple filtration, and UV disinfection to give you perfectly chilled and crystal-clean water. Save money, time, and hassle. No more ice ever again. Cools your ice bath water to 37°F, or warm it up to 104°F, from your smartphone. Waterproof and perfect for indoor and outdoor use - energy efficient and quiet."
+          }
+        },
+        "reelup_shoppable_videos_reels_reelup_product_slider_4HwXFj": {
+          "type": "shopify:\/\/apps\/reelup-shoppable-videos-reels\/blocks\/reelup_product_slider\/a8ec9e4d-d192-44f7-9c23-595f9ee7dd5b",
+          "settings": {}
+        },
+        "checklist_BKKEbL": {
+          "type": "checklist",
+          "settings": {
+            "heading": "",
+            "icon_1": "shopify:\/\/shop_images\/check_circle_8db3b541-d13d-499e-bc47-c1dabc0d2332.svg",
+            "text_1": "Adjustable Temperature Control",
+            "icon_2": "shopify:\/\/shop_images\/check_circle_8db3b541-d13d-499e-bc47-c1dabc0d2332.svg",
+            "text_2": "Little to no maintenance",
+            "icon_3": "shopify:\/\/shop_images\/check_circle_8db3b541-d13d-499e-bc47-c1dabc0d2332.svg",
+            "text_3": "Keeps water cold every day even at 120-degree climate"
+          }
+        },
+        "scroll_right_image_MykhQY": {
+          "type": "scroll_right_image",
+          "disabled": true,
+          "settings": {
+            "scroll_image": "shopify:\/\/shop_images\/Frame_1618872951.png"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_preview_badge_3CfUz6",
+        "title_9aUaU4",
+        "price_Ppbenx",
+        "klarna_on_site_messaging_app_block_WNbbTU",
+        "afterpay_on_site_messaging_payments_messaging_j7Mzzw",
+        "quantity_selector_dkdEJC",
+        "premium_info_hiCM9U",
+        "buy_buttons_LNRXAp",
+        "collapsible_tab_iwPELG",
+        "collapsible_tab_HfEDP3",
+        "collapsible_tab_akermF",
+        "collapsible_tab_rkKfye",
+        "logos_description_CbGmbw",
+        "reelup_shoppable_videos_reels_reelup_product_slider_4HwXFj",
+        "checklist_BKKEbL",
+        "scroll_right_image_MykhQY"
+      ],
+      "custom_css": [
+        "section {margin: 0 auto;}",
+        ".product-form__buttons {padding: 2rem 0 !important;}",
+        ".price.price--large.price--on-sale.price--show-badge {display: flex; align-items: center;}",
+        "#save-badge {text-transform: uppercase !important;}",
+        ".thumbnail-slider li,.product__media-list li {list-style: none;}",
+        "@media (min-width: 768px) {.unified-section {margin-top: -32px; } h1 {font-size: 40px; }}",
+        "li {list-style-type: disc;}"
+      ],
+      "settings": {
+        "section_id": "beta",
+        "enable_sticky_info": true,
+        "overlay_width_d": 70,
+        "overlay_width_m": 50,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "show",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "f1b619ef-8684-416a-b153-bbc831334606": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "FAST 2 - 6 BUSINESS DAYS DOMESTIC SHIPPING",
+            "text_style": "body"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "new_usp_w37rcM": {
+          "type": "new_usp",
+          "settings": {
+            "usp_image_1": "shopify:\/\/shop_images\/history_1.png",
+            "usp_heading_1": "Ready in Minutes — No Ice Needed",
+            "usp_text_1": "Plug & play chills water fast.",
+            "usp_bg_color_1": "#eeffe3",
+            "usp_image_2": "shopify:\/\/shop_images\/Vector_f54b1445-ed84-4596-a09e-5de6cca22220.png",
+            "usp_heading_2": "Perfect Recovery Temp — Always",
+            "usp_text_2": "Keeps water at 37–39°F.",
+            "usp_bg_color_2": "#e6f2ff",
+            "usp_image_3": "shopify:\/\/shop_images\/Vector_1.png",
+            "usp_heading_3": "Science-Backed Recovery",
+            "usp_text_3": "Less inflammation, faster muscle repair.",
+            "usp_bg_color_3": "#fff5e1"
+          }
+        },
+        "5ad6cb90-d947-461f-9eb9-a432fb4bdacd": {
+          "type": "iconic_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/check-symbol-4795.png",
+            "text": "Helps with muscle recovery"
+          }
+        },
+        "839db4ea-0928-48cb-829a-7190e3e64182": {
+          "type": "iconic_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/check-symbol-4795.png",
+            "text": "Strengthens your immune system"
+          }
+        },
+        "4be5a123-6886-4d77-baa1-ec6130051a7c": {
+          "type": "iconic_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/check-symbol-4795.png",
+            "text": "Boosts your energy and mood"
+          }
+        },
+        "52e7dbd4-d527-471f-abbd-4579f8377fca": {
+          "type": "iconic_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/check-symbol-4795.png",
+            "text": "Reduces stress & anxiety"
+          }
+        },
+        "d6440d0f-8107-4e73-a3fd-6c5560bca784": {
+          "type": "text",
+          "settings": {
+            "text": "Questions? Message us at 833-213-2115",
+            "text_style": "body"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "62950366-91e6-4329-853a-819a493380a1": {
+          "type": "payment_icon",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "19a58bcf-33df-40a3-bfcd-8e1ba687156c": {
+          "type": "icon-with-text",
+          "settings": {
+            "custom_class": "",
+            "layout": "horizontal",
+            "icon_1": "check_mark",
+            "heading_1": "1 Year Warranty",
+            "icon_2": "return",
+            "heading_2": "30 Day Return Policy",
+            "icon_3": "truck",
+            "heading_3": "Free Shipping"
+          }
+        },
+        "9e64bf03-e0c7-4091-99f1-5569ed2d8dcc": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Specifications",
+            "icon": "none",
+            "content": "<ul><li>29.5 inches diameter<\/li><li>29.5 inches in height<\/li><li>80 gallons capacity<\/li><li>Suitable heights up to 6'7\"<\/li><li>3 x thermal insulated TPE layers<\/li><li>Polyester fabric strengthened layers<\/li><li>UV-resistant skin-friendly PVC inner lining<\/li><li>Lid to keep the water at a steady temperature<\/li><li>6.61 lbs \/ 3 kg empty weight<\/li><\/ul>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "e4b3bd11-239a-4d6e-b1fb-c008fb82cdb6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What's included?",
+            "icon": "none",
+            "content": "<ul><li>x 1 Spartan Willpower Ice Bath<\/li><li>x 1 Free Thermo Lid<\/li><li>x 6 Durable Support Legs<\/li><li>x 1 Hand Pump<\/li><li>x 1 Drain Hose \/ Drain Spout<\/li><li>x 1 Repair Patch<\/li><li>x 1 User Manual<\/li><li>x 1 Cushion<\/li><li>x 1 All Weather Cover (Optional)<\/li><\/ul>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_MTkTRG": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping info",
+            "icon": "none",
+            "content": "<p>Our delivery time is 7 - 14 business days after we dispatch the order. We dispatch all orders within 2 - 5 business days.<\/p><p><strong>Shipping is completely FREE to USA and Canada.<\/strong><\/p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "b63a9dcf-2828-4d7e-ba67-9fba4afb1b71": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How long should I stay in the cold water?",
+            "icon": "none",
+            "content": "<p>Consider doing deliberate cold exposure for 11 minutes per week in total. Not per session, but rather, 2-4 sessions per week lasting 1-3 mins each. Again, the water temperature should be uncomfortably cold yet safe to stay in for a few minutes. You can do more, but this should be the minimum to achieve the benefits of cold exposure. You can do very cold, very brief exposures for adrenaline release too, but the 11 minutes is based on a recent study that explored a range of effects and is a good solid, basic protocol for ongoing use.<\/p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "complementary_NjgBrx": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Pairs well with",
+            "make_collapsible_row": false,
+            "icon": "price_tag",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "counter",
+            "image_ratio": "square",
+            "enable_quick_add": false
+          }
+        },
+        "reelup_shoppable_videos_reels_reelup_product_slider_Hqe9B4": {
+          "type": "shopify:\/\/apps\/reelup-shoppable-videos-reels\/blocks\/reelup_product_slider\/a8ec9e4d-d192-44f7-9c23-595f9ee7dd5b",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "f1b619ef-8684-416a-b153-bbc831334606",
+        "vendor",
+        "price",
+        "new_usp_w37rcM",
+        "5ad6cb90-d947-461f-9eb9-a432fb4bdacd",
+        "839db4ea-0928-48cb-829a-7190e3e64182",
+        "4be5a123-6886-4d77-baa1-ec6130051a7c",
+        "52e7dbd4-d527-471f-abbd-4579f8377fca",
+        "d6440d0f-8107-4e73-a3fd-6c5560bca784",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "62950366-91e6-4329-853a-819a493380a1",
+        "description",
+        "19a58bcf-33df-40a3-bfcd-8e1ba687156c",
+        "9e64bf03-e0c7-4091-99f1-5569ed2d8dcc",
+        "e4b3bd11-239a-4d6e-b1fb-c008fb82cdb6",
+        "collapsible_tab_MTkTRG",
+        "b63a9dcf-2828-4d7e-ba67-9fba4afb1b71",
+        "complementary_NjgBrx",
+        "reelup_shoppable_videos_reels_reelup_product_slider_Hqe9B4"
+      ],
+      "disabled": true,
+      "settings": {
+        "cstm_class": "",
+        "date": "",
+        "enable_sticky_info": true,
+        "overlay_width_d": 104,
+        "overlay_width_m": 80,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "c_blocks_CUJkqP": {
+      "type": "c-blocks",
+      "blocks": {
+        "item_ppiXYN": {
+          "type": "Item",
+          "settings": {
+            "block_heading": "60-Day Risk Free Trial",
+            "block_icon": "shopify:\/\/shop_images\/local_shipping_186b7cf8-651b-4457-84ea-3e19cc26e6ac.png"
+          }
+        },
+        "item_3JdRqt": {
+          "type": "Item",
+          "settings": {
+            "block_heading": "1 Year Warranty",
+            "block_icon": "shopify:\/\/shop_images\/local_shipping_8ddfa52f-c57b-4ce1-930c-7155f34064a5.png"
+          }
+        },
+        "item_t6YQpw": {
+          "type": "Item",
+          "settings": {
+            "block_heading": "Free & FAST US Shipping",
+            "block_icon": "shopify:\/\/shop_images\/local_shipping_8ddfa52f-c57b-4ce1-930c-7155f34064a5.png"
+          }
+        }
+      },
+      "block_order": [
+        "item_ppiXYN",
+        "item_3JdRqt",
+        "item_t6YQpw"
+      ],
+      "disabled": true,
+      "settings": {
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "background_color": "linear-gradient(267deg, #0E83F9 2.27%, #00264B 100%)",
+        "section_heading": "",
+        "heading_first_part": "",
+        "heading_second_part": "",
+        "description_heading": "",
+        "blocks_direction": "vertical",
+        "blocks_alignment": "left",
+        "icon_width": 3,
+        "section_container": "page-width",
+        "use_separator_boder": false,
+        "columns": 3,
+        "mobile_columns": 2
+      }
+    },
+    "c_content_blocks_MP7mjW": {
+      "type": "c-content-blocks",
+      "blocks": {
+        "item_dPc4EP": {
+          "type": "Item",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/image_384.svg",
+            "block_heading": "Energy-Efficient",
+            "block_paragraph": "<p>We built our chiller with new CryoBoost™ technology, up to three times more energy-efficient than others. Its running cost is only $0.5 - $1.5 per day.<\/p>"
+          }
+        },
+        "middle_9ybEpA": {
+          "type": "Middle",
+          "disabled": true,
+          "settings": {
+            "block_video": "shopify:\/\/files\/videos\/recovatech.mp4",
+            "block_middle_subheading": "",
+            "block_middle_heading": "",
+            "block_middle_paragraph": "<p> <\/p>",
+            "button_text": "",
+            "button_url": "",
+            "button_style": ""
+          }
+        },
+        "item_KFttiL": {
+          "type": "Item",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/image_383_8b78a7f0-40b2-45bc-8a4d-d31e708f16ca.svg",
+            "block_heading": "Waterproof",
+            "block_paragraph": "<p>Engineered to perform up to 130 degrees outside, ensuring your cold plunge routine is never interrupted. No need to cover it when it rains.<\/p>"
+          }
+        },
+        "item_4QNaXf": {
+          "type": "Item",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/image_379.png",
+            "block_heading": "4X Faster Cooling",
+            "block_paragraph": "<p>Submerge yourself in water down to 37°F even in hot climates above 100°F. Our chiller cools up to four times faster compared to others on the market.<\/p>"
+          }
+        },
+        "item_ccRgTH": {
+          "type": "Item",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/image_380.png",
+            "block_heading": "Crystal Clean Water",
+            "block_paragraph": "<p>Constant 24\/7 circulation and 20-micron filtration, your water always stays crystal clean, ensuring longer periods between water changes.<\/p>"
+          }
+        },
+        "item_hTxhzJ": {
+          "type": "Item",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/image_382.png",
+            "block_heading": "Plug & Play Setup",
+            "block_paragraph": "<p> No plumbing required - simply connect the hoses to your ice bath and you are ready in 10 minutes. Video set up instructions included. Fits any ice bath.<\/p>"
+          }
+        },
+        "item_PmqmBm": {
+          "type": "Item",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/image_381.svg",
+            "block_heading": "Convenient App Control",
+            "block_paragraph": "<p>Control your plunge from anywhere with your phone. Schedule a timer, check and change temperature, turn on\/off your chiller. Compatible with iOS and Android.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_dPc4EP",
+        "middle_9ybEpA",
+        "item_KFttiL",
+        "item_4QNaXf",
+        "item_ccRgTH",
+        "item_hTxhzJ",
+        "item_PmqmBm"
+      ],
+      "custom_css": [
+        "section {margin: 0 !important;}",
+        ".c-cb-item-content > * {color: white !important;}"
+      ],
+      "settings": {
+        "footer_button_text": "",
+        "footer_button_url": "",
+        "footer_button_style": "c-b1",
+        "grid_template_columns": "1fr 1fr 1fr",
+        "one_column_mobile": false,
+        "icon_width": 3,
+        "blocks_direction": "vertical",
+        "blocks_alignment": "center",
+        "blocks_text_alignment": "center",
+        "section_container": "page-width",
+        "accent_color": "#000000",
+        "bg_color": "#ffffff",
+        "text_color": "#000000",
+        "section_top_subheading": "The peace of mind of having a steady, cold plunge at your fingertips is invaluable.",
+        "section_top_heading": "Cold & Filtrated Water 24\/7",
+        "section_top_paragraph": "<p>Simple, Effective, and does exactly what it promises<\/p>",
+        "section_top_alignment": "center",
+        "text_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 4
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "c_content_text_list_NHLNqm": {
+      "type": "c-content-text-list",
+      "blocks": {
+        "checklist_XBCHKM": {
+          "type": "checklist",
+          "settings": {
+            "heading": "",
+            "icon_1": "shopify:\/\/shop_images\/CheckCircle.svg",
+            "text_1": "x5 Chiller Filters",
+            "icon_2": "shopify:\/\/shop_images\/check_circle_8db3b541-d13d-499e-bc47-c1dabc0d2332.svg",
+            "text_2": "",
+            "icon_3": "shopify:\/\/shop_images\/check_circle_8db3b541-d13d-499e-bc47-c1dabc0d2332.svg",
+            "text_3": ""
+          }
+        },
+        "checklist_qRTBUe": {
+          "type": "checklist",
+          "settings": {
+            "heading": "",
+            "icon_1": "shopify:\/\/shop_images\/CheckCircle.svg",
+            "text_1": "Waterproof Thermometer",
+            "icon_2": "shopify:\/\/shop_images\/check_circle_8db3b541-d13d-499e-bc47-c1dabc0d2332.svg",
+            "text_2": "",
+            "icon_3": "shopify:\/\/shop_images\/check_circle_8db3b541-d13d-499e-bc47-c1dabc0d2332.svg",
+            "text_3": ""
+          }
+        },
+        "checklist_n3RR4M": {
+          "type": "checklist",
+          "settings": {
+            "heading": "Features",
+            "icon_1": "shopify:\/\/shop_images\/CheckCircle.svg",
+            "text_1": "Waterproof Timer to easily track your plunge time",
+            "text_2": "",
+            "text_3": ""
+          }
+        },
+        "checklist_RierAL": {
+          "type": "checklist",
+          "settings": {
+            "heading": "Features",
+            "icon_1": "shopify:\/\/shop_images\/CheckCircle.svg",
+            "text_1": "Free & Fast Shipping",
+            "text_2": "",
+            "text_3": ""
+          }
+        },
+        "checklist_aymMXf": {
+          "type": "checklist",
+          "settings": {
+            "heading": "Features",
+            "icon_1": "shopify:\/\/shop_images\/CheckCircle.svg",
+            "text_1": "Hose Set & Fittings",
+            "text_2": "",
+            "text_3": ""
+          }
+        },
+        "checklist_PjbE9y": {
+          "type": "checklist",
+          "settings": {
+            "heading": "Features",
+            "icon_1": "shopify:\/\/shop_images\/CheckCircle.svg",
+            "text_1": "4 Wheels with breaks",
+            "text_2": "",
+            "text_3": ""
+          }
+        },
+        "checklist_BDeKJH": {
+          "type": "checklist",
+          "settings": {
+            "heading": "",
+            "icon_1": "shopify:\/\/shop_images\/CheckCircle.svg",
+            "text_1": "1 Year Warranty",
+            "icon_2": "shopify:\/\/shop_images\/check_circle_8db3b541-d13d-499e-bc47-c1dabc0d2332.svg",
+            "text_2": "",
+            "icon_3": "shopify:\/\/shop_images\/check_circle_8db3b541-d13d-499e-bc47-c1dabc0d2332.svg",
+            "text_3": ""
+          }
+        },
+        "checklist_BqJYfj": {
+          "type": "checklist",
+          "settings": {
+            "heading": "Features",
+            "icon_1": "shopify:\/\/shop_images\/CheckCircle.svg",
+            "text_1": "Power Cable (US 110V Plug)",
+            "text_2": "",
+            "text_3": ""
+          }
+        },
+        "checklist_7HYCBY": {
+          "type": "checklist",
+          "settings": {
+            "heading": "Features",
+            "icon_1": "shopify:\/\/shop_images\/CheckCircle.svg",
+            "text_1": "Instruction Manual and Setup Video",
+            "text_2": "",
+            "text_3": ""
+          }
+        }
+      },
+      "block_order": [
+        "checklist_XBCHKM",
+        "checklist_qRTBUe",
+        "checklist_n3RR4M",
+        "checklist_RierAL",
+        "checklist_aymMXf",
+        "checklist_PjbE9y",
+        "checklist_BDeKJH",
+        "checklist_BqJYfj",
+        "checklist_7HYCBY"
+      ],
+      "custom_css": [
+        ".c-ct-image {object-fit: contain;}",
+        "section {margin: 0 !important;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "heading": "What is included",
+        "paragraph": "<p>Each Warrior Max includes $500 worth of gifts:<\/p>",
+        "image": "shopify:\/\/shop_images\/wifi-water-chiller.png",
+        "flip": true,
+        "full_width": false,
+        "grid_proportion": "1fr 1fr",
+        "alignment": "flex-start",
+        "text_alignment": "left",
+        "button_text": "get my water chiller",
+        "button_url": "#beta",
+        "button_style": "c-b1",
+        "card_bg_color": "rgba(0,0,0,0)",
+        "bg_color": "#ffffff",
+        "text_color": "#000000",
+        "padding_desktop": "10% 10%",
+        "padding_mobile": "2em 1em 1em 1em",
+        "padding_top": 0,
+        "padding_bottom": 4
+      }
+    },
+    "c_faqs_dFDJKK": {
+      "type": "c-faqs",
+      "blocks": {
+        "faq_GC8myT": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "Is this water chiller going to hike up my electricity bill?",
+            "faq_answer": "<ul><li>No, the chiller will not rack up high energy bills. It uses the same technology as your fridge\/freezer at home, which is extremely economical.<\/li><li>The exact power usage varies based on usage but expect to spend around $0.5-$1.5 per day in electricity (10 times less than buying ice if you plunge regularly!). <\/li><li>Thanks to our new Cryoboost™ technology, our water chiller is up to three times cheaper to use than other models on the market.<\/li><li><strong>One of the best long-term investments for your health and your family.<\/strong><\/li><\/ul>"
+          }
+        },
+        "faq_RU6HaM": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "Is it compatible with my ice bath model?",
+            "faq_answer": "<ul><li>Our water chiller is compatible with all ice baths on the market! Including home bathtubs.<\/li><li>If you have any questions, please email us at support@warriorwillpower.com.<\/li><\/ul>"
+          }
+        },
+        "faq_Rm8Kp9": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "Can I run the chiller all the time (24\/7)?",
+            "faq_answer": "<ul><li>Yes, you can run the chiller continuously (24\/7), or schedule it to automatically turn on a few hours before your cold plunge from your phone with our smart app. The instructions are included in the papers of the chiller.<\/li><\/ul>"
+          }
+        },
+        "faq_rCEAeB": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "Can I use it outdoors? Is it waterproof?",
+            "faq_answer": "<ul><li>The chiller is waterproof, so you can freely use it outside and don't have to cover it with anything. You can use it in hot weather up to 130 degrees. <\/li><li>Make sure not to use it below freezing temperatures during the winter (keep it somewhere warmer.)<\/li><\/ul>"
+          }
+        },
+        "faq_JCect7": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "How often I should change the water filter?",
+            "faq_answer": "<ul><li>We recommend changing the water filter once every 1 - 2 months. <strong>You get free 5 filters with your order!<\/strong><\/li><li>When the filter color turns brown, it is time to change it.<\/li><li>How to change the filter in 3 easy steps:<\/li><\/ul><p>1. Turn off the machine and unscrew the filter casing with hands.<\/p><p>2. Replace the old filter<\/p><p>3. Put back the filter casing<\/p>"
+          }
+        },
+        "faq_RzKTyi": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "What is the size of the chiller?",
+            "faq_answer": "<ul><li>The size is 24.4 x 16.53 x 18.9 inches. It comes with easy-to-move wheels with brakes and handles.<\/li><\/ul>"
+          }
+        },
+        "faq_meW8RX": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "Is it easy to setup?",
+            "faq_answer": "<ul><li>The chiller setup takes about 10 minutes and is easy to set up. We provide easy-to-follow video instructions with your order. All you have to do is connect the hoses to your ice bath.<\/li><\/ul>"
+          }
+        },
+        "faq_QKhdBC": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "Does it require a special outlet?",
+            "faq_answer": "<ul><li>Nope. The Warrior Chiller uses a standard 110V outlet.<\/li><\/ul>"
+          }
+        },
+        "faq_7He7gb": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "Is the water chiller noisy?",
+            "faq_answer": "<ul><li>The water chiller is designed for quiet operation. We've prioritized ensuring that your cold plunge sessions are as peaceful as possible. Thanks to our advanced engineering, the chiller operates with minimal noise, allowing you to relax and rejuvenate without any disruptions, making it a top choice for both indoor and outdoor settings.<\/li><\/ul>"
+          }
+        },
+        "faq_Tkzhdk": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "How much will I save on ice?",
+            "faq_answer": "<ul><li>We have calculated that at 4 - 5 ice baths per week, the chiller cost is made back in 4 - 6 months. The chiller is a wise financial and time-saving decision if you're a regular ice plunger, plus you skip the hassle of buying ice and you don't have to change the water frequently.<\/li><\/ul>"
+          }
+        },
+        "faq_HJAV89": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "Can I use the chiller in a regular bathtub?",
+            "faq_answer": "<ul><li>Yes, you can use the chiller with your home bathtub. Just put both hoses over the top and you are ready.<\/li><\/ul>"
+          }
+        },
+        "faq_BtdwNA": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "How fast does it cool the water?",
+            "faq_answer": "<ul><li>The chiller cools the water within 2 - 3 hours down to 37-40 degrees, depending on your climate and the ambient temperature of the water.<\/li><\/ul>"
+          }
+        },
+        "faq_rBMdjp": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "What temperatures can the chiller achieve?",
+            "faq_answer": "<ul><li> This Wi-Fi chiller\/heater can keep the water at a steady 37 filtering and keeping your water clean. It can warm it up to 104 F. It takes about 2 - 4 hours depending on your water volume and ambient temp.<\/li><\/ul>"
+          }
+        },
+        "faq_DUgKQk": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "Do I need to use ice when using the chiller?",
+            "faq_answer": "<ul><li>You don't have to add ice whatsoever when using our water chiller. It cools or heats the water using our new energy-efficient Cryoboost™ technology.<\/li><\/ul>"
+          }
+        },
+        "faq_LtNUX3": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "How do I keep the water clean for longer?",
+            "faq_answer": "<ul><li>Always keep the lid on your ice bath when not in use, to help prevent any debris from falling in.<\/li><li>The chiller keeps the water clean for 4 - 8 weeks. Then you may replace the water in your ice bath.<\/li><li>You may apply hydrogen peroxide or water sanitizer in your ice bath if you prefer, but that is not necessary.<\/li><\/ul>"
+          }
+        },
+        "faq_D8yxHJ": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "What is the recommended water temperature for cold plunge beginners?",
+            "faq_answer": "<ul><li>We recommend starting out at around 59º F \/ (15°C) if it's your first time, and then slowly lowering the temperature with each session.<\/li><li>Wim Hoff recommends plunging 1 - 3 minutes per session to get the benefits.<\/li><\/ul>"
+          }
+        },
+        "faq_A8Wpb8": {
+          "type": "FAQ",
+          "settings": {
+            "faq_heading": "What is your shipping time?",
+            "faq_answer": "<p>The shipping is <strong>FAST &<\/strong> <strong>FREE.<\/strong><br\/><br\/><strong>Update 23rd May 2025:<\/strong> We ship from our warehouse in California to US mainland in 2 - 6 business days after dispatch.<\/p><p>Shipping to Canada and Hawaii takes 7 - 14 business days.<\/p><p>We have increased our price twice in the past month after selling out. If you want to <strong>secure the lowest price, order today<\/strong> before we raise the prices again.<\/p><ul><li><strong>BEWARE <\/strong>- There are copycats on the market that sell similar chiller like ours. We are the original creators of the 1 HP Smart\/Wi-Fi chiller! <\/li><\/ul><p>We know every detail about the Wi-Fi Chiller in case of potential issues, we know how to fix them. We have gone through <strong>7 iterations during<\/strong> the past 2 years, <strong>improving the internal parts<\/strong> based on our customers feedback!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_GC8myT",
+        "faq_RU6HaM",
+        "faq_Rm8Kp9",
+        "faq_rCEAeB",
+        "faq_JCect7",
+        "faq_RzKTyi",
+        "faq_meW8RX",
+        "faq_QKhdBC",
+        "faq_7He7gb",
+        "faq_Tkzhdk",
+        "faq_HJAV89",
+        "faq_BtdwNA",
+        "faq_rBMdjp",
+        "faq_DUgKQk",
+        "faq_LtNUX3",
+        "faq_D8yxHJ",
+        "faq_A8Wpb8"
+      ],
+      "settings": {
+        "use_grid": true,
+        "side": true,
+        "heading": "",
+        "paragraph": "<p>Have you got questions? We've got answers!<\/p>",
+        "button_text": "Buy Now",
+        "button_url": "",
+        "button_style": "c-b1",
+        "accent_color": "#000000",
+        "card_background": "linear-gradient(90deg, rgba(14, 131, 249, 1), rgba(9, 79, 149, 1) 100%)",
+        "faq_text_border": "#ffffff",
+        "bg_color": "#ffffff",
+        "text_color": "#000000",
+        "section_top_subheading": "FAQ",
+        "section_top_heading": "Need Help? We’ve Got You Covered",
+        "section_top_paragraph": "<p>Dive into our FAQ section to learn more about the benefits, features, and usage of our products to better meet your needs.<\/p>",
+        "section_top_alignment": "center",
+        "text_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "c_content_text_kUfhCd": {
+      "type": "c-content-text",
+      "blocks": {
+        "card_BAzjF3": {
+          "type": "Card",
+          "settings": {
+            "card_icon": "shopify:\/\/shop_images\/b1_1.svg",
+            "card_title": "Research-Driven Results"
+          }
+        },
+        "card_nWT8Cm": {
+          "type": "Card",
+          "settings": {
+            "card_icon": "shopify:\/\/shop_images\/b2_1.svg",
+            "card_title": "Neuroscience-Endorsed Benefits"
+          }
+        },
+        "card_k4FEcq": {
+          "type": "Card",
+          "settings": {
+            "card_icon": "shopify:\/\/shop_images\/b3_1-1.svg",
+            "card_title": "Verified Health Boosts"
+          }
+        },
+        "card_4CfFB7": {
+          "type": "Card",
+          "settings": {
+            "card_icon": "shopify:\/\/shop_images\/b4.svg",
+            "card_title": "Proven Performance Enhancements"
+          }
+        }
+      },
+      "block_order": [
+        "card_BAzjF3",
+        "card_nWT8Cm",
+        "card_k4FEcq",
+        "card_4CfFB7"
+      ],
+      "custom_css": [
+        "section {margin: 0 !important;}",
+        ".c-card {justify-content: center;}",
+        "@media (max-width: 768px) {.c-card:first-child {margin-top: 32px; } .c-ct-grid {gap: 32px; }}"
+      ],
+      "settings": {
+        "padding_top": 7,
+        "padding_bottom": 7,
+        "padding_mobile": "2em",
+        "use_box_shadow": true,
+        "mobile_text_first": false,
+        "use_gradient_background_grid1": true,
+        "show_dynamic_stats": true,
+        "center_content": false,
+        "link": "",
+        "blue_text": "",
+        "normal_text": "",
+        "use_arrow": false,
+        "add_stars": false,
+        "star_color": "#cccccc",
+        "subheading": "Research and studies have found impressive outcomes",
+        "main_heading": "Great investment for your & family health",
+        "heading_highlight": "",
+        "heading_highlight_color": "#000000",
+        "heading_color": "#ffffff",
+        "paragraph_color": "#ffffff",
+        "bg_color": "",
+        "description": "It's not just an opinion, cold water therapy is based on science. Check what the scientific research says about the benefits of cold water immersion.",
+        "heading_tag": "h2",
+        "heading": "Backed by science",
+        "paragraph": "<p>The Spartan\/Warrior Water Chiller isn't just about the chill—it's a wellness tool grounded in scientific research. Numerous studies have validated the benefits of cold water immersion. It's been shown to trigger dopamine release, the \"feel-good\" neurotransmitter, enhancing mood and focus. Athletes and researchers alike vouch for its role in accelerating muscle recovery after intense workouts. Backed by neuroscience, it helps build resilience against stress. Dive in, and experience a scientifically-proven boost to your health and mood.<\/p>",
+        "image": "shopify:\/\/shop_images\/cold-plunge_072fab27-e367-4c9d-bbc5-b3dae6e5f9f0.webp",
+        "add_social_proof": false,
+        "add_promotion_badge": false,
+        "promotion_text": "Promotion",
+        "badge_text": "Badge",
+        "flip": true,
+        "full_width": false,
+        "grid_proportion": "1fr 1fr",
+        "alignment": "flex-start",
+        "text_alignment": "left"
+      }
+    },
+    "c_product_blocks_x7KbXY": {
+      "type": "c-product-blocks",
+      "blocks": {
+        "item_Lzr6Ar": {
+          "type": "Item",
+          "settings": {
+            "heading": "",
+            "image": "shopify:\/\/shop_images\/waterchillerforicebath_3097982a-5cd6-4517-832c-10e4ff08a90e_1.png"
+          }
+        },
+        "item_kBdeRE": {
+          "type": "Item",
+          "settings": {
+            "heading": "",
+            "image": "shopify:\/\/shop_images\/Frame_1618873137.png"
+          }
+        },
+        "item_pGp7Dn": {
+          "type": "Item",
+          "settings": {
+            "heading": "",
+            "image": "shopify:\/\/shop_images\/coldplungechiller_1_cc9fdc1b-6365-406a-9264-10d7c6f8a32f.png"
+          }
+        }
+      },
+      "block_order": [
+        "item_Lzr6Ar",
+        "item_kBdeRE",
+        "item_pGp7Dn"
+      ],
+      "custom_css": [
+        "section {background: linear-gradient(0deg, #dcedff 0%, rgba(255, 255, 255, 0) 100%);}",
+        ".c-section {margin: 0 !important;}"
+      ],
+      "settings": {
+        "grid_template_columns": "1fr 1fr 1fr",
+        "grid_template_columns_mobile": "1fr",
+        "button_text": "get my water chiller",
+        "button_url": "#beta",
+        "accent_color": "#121212",
+        "bg_color": "#ffffff",
+        "text_color": "#000000",
+        "section_top_subheading": "how to use",
+        "section_top_heading": "How It Works In 3 Easy Steps",
+        "section_top_paragraph": "<p>The system maintains a consistent water temperature, allowing you to jump in whenever you're ready for a refreshing cold plunge.<\/p>",
+        "section_top_alignment": "center",
+        "section_top_text_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 4
+      }
+    },
+    "c_competitors_comparision_bj8mpn": {
+      "type": "c-competitors-comparision",
+      "blocks": {
+        "item_Y3gdBj": {
+          "type": "Item",
+          "settings": {
+            "row_heading": "<x><\/x>",
+            "use_column1": true,
+            "column1_true": true,
+            "column1_heading": "<svg width=\"87\" height=\"87\" viewbox=\"0 0 87 87\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\"><rect width=\"87\" height=\"87\" rx=\"43.5\" fill=\"white\"><\/rect><rect width=\"87\" height=\"87\" rx=\"43.5\" fill=\"url(#pattern0_112_3075)\"><\/rect><defs><pattern id=\"pattern0_112_3075\" patterncontentunits=\"objectBoundingBox\" width=\"1\" height=\"1\"><use xlink:href=\"#image0_112_3075\" transform=\"scale(0.0025641)\"><\/use><\/pattern><image id=\"image0_112_3075\" width=\"390\" height=\"390\" xlink:href=\"data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYYAAAGGCAYAAAB\/gCblAAAgAElEQVR4Ae29\/eu+W3bfNf+AIP5kk0CHTDIzJ3PmzDnzmJxMkplkYjBRLIGqUfChWrAKNS0+YYuIYtWK1aKNAQULEgNCRVGaX1Qirdj+UkOxaqOSEMZkICQZOsx0Jq098jrO+2SdddbaT9e+7vu6P\/f6wof9cO299lrvvfd77Yfrur\/ve1\/9KwSeAIHf+q3f+tv\/xX\/pX\/n3\/+6\/98d\/fubvn\/pnfvJP\/9Iv\/dL7nwCiMrEQKAQKgedC4B\/8h\/+J\/+pv+zu+9a2Vv+\/62Gd++bnQKmsLgUKgEHgCBFYcgq3zv\/yVv\/L6E8BUJhYChUAh8DwIvPkDP\/QLluhn48+DVFlaCBQChcCTIMD9wqwzUHmOoZ4EpjKzECgECoHnQeC\/+bN\/9veI6BVyd\/Bv\/Jv\/7r9q\/7hs1nOF\/+FP\/cc\/+TxIlaWFQCFQCDwJAryVJKK3oTcfJ2GfE6\/7BY9SpQuBQqAQeCEIsEPokT6vstoy9UbSC+n8MqMQKAQKgQiBkWMi6xSIUyeSVXmFQCFQCBQCLwCBn\/mZ\/+If88TPpbRM48jIP+duQs8rLAQKgUKgEHhhCPAFsyd+jo5kZnRBzd2EnldYCBQChUAh8MIQiC6gv+X9H\/6yzIwunuvnMIROhYVAIVAIvEAEoh0BOwiZGjmGelVV6FRYCBQChcALQ4DdQvb1s15H9W8k4TTYUej5C4OkzCkECoFC4LkRiN5I0n3Dn\/tz\/\/PnQCdyDHIOddfw3OOnrC8ECoEXhgDELycQhT3HQJ16bfWFDYoypxAoBJ4bgWy3oA\/edI+gHYPyrRPhSKl2Dc89jsr6QqAQeEEIZESvy2ZCzJVjyH5wr75peEGDokwpBAqB50bArvwV5xdTM8cQfehGPTmQ50azrC8ECoFC4AUgIGdgQ46P9PqqCJ8dg34biaMjW74cwwsYCGVCIVAIFAIgEP0MBiTPhbMupa1jwDlQL\/qvQPWskC0ECoFCoBB4YAR0b+BX\/5jUcgzsKHwd0nXP8MCDoVQvBAqB50YA0s8+aIPghQ7xaMcgp+GdA0dM7EJUv8JCoBAoBAqBiyPAK6XZW0UieXsk5B2DnARmqnwUchdRDuLig6HUKwQKgUKAVX70aqondusYKC9nQL7iOBhfL0pTp34yo8ZeIVAIFAIXRKC3S7Ckbh2DdQZ8CCfHoDeWODqK3lCy8oir3gWhKZUKgUKgEHguBPhZ7NZdgggcctdugvJCyToGyF2Xy\/pamreTaCN6S0myFSK3dg9CtsJCoBAoBO6AACQ+sppnN+HvHqQuz7TaJ+Q4imeSq2fkjRxVUU\/ORW1UWAgUAoVAIXADBCBsrdSzkB2CiB6VdDxEef0HPMjRbyXJMfBMMqML5pG2KXMDGKqJQqAQKAQKARDQMY\/IOwop43\/0zl4oy2HgFBSHzCljHYieeeQ5MtLRVNQ+eejg61W6ECgECoFCYCMCkHbvPoGjnGiVLzVE5tolQPwif63y7Y7AOxfJIeRZ7+6hnINFrOKFQCFQCGxEYMQpjFz+isjlBKxjkLOwbziNmNDbwZRzGEGxyhQChUAhMIHAiFOA8FurezWn3QDlyeM+QTsGhbypxFGQfa1V9bOwnEOGTOUXAoVAIbAZgRGnwAp\/tFmOmTzpy6EolGOYXen3nEPriGtU\/ypXCBQChcDTI6Cjn+yCd5Zs2RV4x+BB1j2Ejpv881a6dwdS3zm00KtnhUAhUAh0ELBn\/ZFjmHUKNCfHgLysebW18j0Cuw59AyE5NsTpaGeStV\/5hUAhUAgUAgEClsAtsSq+4hRoBlKWjKDZt7P0XHcOWbks377uKlk2nDn6ytqo\/EKgECgEngoByFvHOZZQFV91CgJRcpT2Ye+5Lx+le7udVacTtVV5hUAhUAi8eARapDp7IRyB1SN+nuOYorqjeb0jJe4iRmVVuUKgECgEnhoB+3MUInCFu8hU8jKgeT7zqmomp3ekdHTnk7Vb+YVAIVAIvCgEWq987nqjZ8Qx7LoH0KuvatOGR3clL6rjy5hCoBAoBCIEWscvO46Q1KbIWWkf8nzlVVUvh3RrB0Q7K28+Re1UXiFQCBQCLxIBfpJCpO1DCHaX0ZKdyeP5zsvh1p2JvsDOdKn8QqAQKASeGoHs47Ad5\/0WWH1nYPNsHMew0xG1dkK727J2VLwQKAQKgYdGAPLUSt6Huy9pde6fAUb72bPV\/NauQT\/etyq76hUChUAh8CIRgPy9Q1Aap7HTaC592TVkMne9\/WTlt+4adu+IbLsVLwQKgULgYRHIVtRnkDQOp0XGrWdHAM6Oys7YoRzRs+oWAoVAIXAJBHS8o12Cwl2vjcpI\/dRGi\/x3vZGkNhVmzg9bd152q70KC4FCoBB4aATkCHy4+35B5NxyODsvnm2nyCl5G0mf5Yxs+xUvBAqBQuChEIjIkrzdK2n9BtOuj+VmQG5dsO\/8TmNGpypbCBQChcAlEWitpHdePOMMcDbRF8fsIHbvTiKw9aqsd4Sto61ITuUVAoVAIfCiEWg5hp2G6+c2vAOwH9ad\/epodpcSOaudtpesQqAQKAQeCoHMMewkS3YerNa9zOg12TOPdVr\/I91DdVopWwgUAoXAmQhkjmHn8QqXuxzf2N8mipyCjnhwDjuPsYSf9FA7NlSZCguBQqAQeHoEbuEY2C3Y3yXyToHn\/piH7w52O4dyDE8\/3AuAQqAQGEHgbMeAE7AkHzkFLqZxAv4jNFtvxJZemXIMPYTqeSFQCBQC73vf+852DOwUtPLPnII6gnJ+58BuYtfrreUYhHSFhUAhUAh0ELBn7YrvvGOgee8UkJ99zMbbSTgE6bLLOZRj6AyEelwIFAKFgBAQAdtwp2OwToE3k0ir7Sxk90A5e7w0Ui+TR345hhY69awQKAQKAYOAJV85B\/9qqSk+FZVTGHUIkXB2FuwieFvpyLFS5hiwP2q38gqBQqAQeFoE\/Lm+nMNRQFj181Uz9xhHZe2or99qkn0K7RtTO9opGYVAIVAIPDwCGWE+vGHOgMwBspNwRStZCBQChcBzI5AdsRw5trkiotGRGbuGo3cXV7S1dCoECoFC4BAC2SurVzkCOmScqayjIx++NDuNyRUtBAqBQmANgey\/vjz7R+3WtF2rxe7HOwSl9Z3FmuSqVQgUAoXAC0VAJGlD7h5eirn8TpO1zcZfio1lRyFQCBQCWxGwRKn4zm8Ztiq7ICy7R3lJNi7AUlUKgUKgEMgRyN7YyWs81pPMvnIMj9WPpW0hUAjcEIGMOP2bSfrYjHf\/\/Vs+5N3qDR\/04qgLvfnJDP6Ikxf91Ib9iQ3tiAjrVdUbDrJqqhAoBB4Lgcwx2P9DAYsgXcg0Kw\/Z8pXzWW\/60H7WNo6KC3PvGLhcts7AxssxPNY4LW0LgULghghkH7l54oRkRfrE2SFkRO3rHjWHtvzKn7T9qQzvFGgTfa0zsHHZclS3ql8IFAKFwItDABK3hKm4\/682RbIQMkdH2lFAyJRVPYWU2fE6qHdctI\/OyOaPnYKOtnznZLahYzkGj1alC4FCoBD4JgIZebIbsCDJMYj4CSFpne1HDgLCPuIcrMOxDiFqC32svsQz26Kyvm6lC4FCoBB4WgRYcVuyV9z\/yioEr2dRCIlD2FwO2yOmVefA8ZHaQTbtZw5B5XwnsmvRMx\/6spUuBAqBQqAQ+CYC0U5AJOpBahGt6uiYx94L+N2Hl+vT+lrZXmbjwNg1qB0fopuXYx2ULe+dnq9X6UKgECgEnhqBGcfQKuuJl7Ks8uVMWPWPAE0diBtSJ85fRvC2TRyRl5\/VI9+XrXQhUAgUAoXANxFokT2k7IGy5\/6WmKM49w\/U56Ka1X5E3pF8ORF2DrpYjuQrL9sBlGPw6Fa6ECgECoEBBFqOgWdeBM5ihKxF2rpjoB67B+4JvEylac86hdbRkeQT6g0pyVGYOYbo2El1KiwECoFCoBB43\/veZ0nWxiPHAGCrzqEHttqbkS9HEsnOHAP3IFH5yisECoFCoBD4JgLWGdi4iDoDyn9jYOv6uHYOmSybr3sJL8One3cFmX7lGCzaFS8ECoFCIEDAE67SPceAKMpkK3PJUdha3UstjoVUvhWOyMq+YyjHILQrLAQKgUIgQSAj4BHHIJHcHbBC790\/9GT26nPRnN0pSBeFmWPo7TRUv8JCoBAoBJ4WgR2OwYIH+WcyWyt97hayepA5bynZdnrxbPdRjqGHXD0vBAqBp0cgI+Nsdd96swgwW46BN40ywFv1Wsc\/mT4teZkOlV8IFAKFQCGw8FYS3yOwus\/AaxEyTiirm\/08B3VajiH7PgKHkTm9zJlkNlV+IVAIFAJPhUB2rg\/BR0BwpNMi6p5jyORmdwI9x6AP6SJdM8eQ6RDJqLxCoBAoBJ4OgeytohZ5tl4\/7TmG7K5gxTGw8m85KS6rI+fQqvN0A6AMLgQKgULAI5A5huzIh\/qs0jNybR3hQNLZMc6KY+D4qeXAMttal+Aen0oXAoVAIfB0CGQ\/PdECAjJuXSRHq3TlZUSefZBGvcwJtXYu6I8DULs2pF7LvnpWCBQChcBTI2AJ08Z7oOAYsotfK8fHszrZ6p76kWNg59Ej+NYupGdfPS8ECoFC4GkR8MStdA8QVuMZMUtGFGbHONnOBRmRY+AYqXXxjP6tN52yu46e3fW8ECgECoEXj0BE3hnhWzD0AVlEsJFM5eEA\/P1Fi8Azx4CO2e5DerYuwnt1JaPCQqAQKASeAgGOYSDG7FyfY50RICDtaAcgJ5CFdgeALq3dQuQYqEM+YUvPlmPARpybd1ItefWsECgECoEXgwCrehwBJJ69wmlJfNQx8Euo0Q7Ayori1EEnSJmVf1TG5llHQqeww8j+gx7baci3crI4OoANGPWcjZVf8UKgECgEHgYBSBfyFHFnhJjlR7uAyHiIFBmE9nkm1+aLjG1eFveOAbv4s21m8UxmKx+ng3wwjI7KsrYqvxAoBAqByyDAkQnk2Xqzp0WE\/pkn4sxQrcg9SXt5R9NWH7UJaWd62fyjbVOfHY4cRfa6rW2z4oVAIVAI3BQBiJGz8Z2OQOSplfLMcYqOgtBLQEjertA6Bu1SRgmae5RdDtPag0z0GtVD2FRYCBQChcBhBOQIIDiRsCWoI3Ed5xw5W2fljg52BT9yjzGjt3UMrNypuwKsdlbI6F14z+hH2XIUKz1SdQqBQmAIgTMdgchr59s4nMFDjDgZGbh7ha5VOdiIhNXWbIgs\/aE7TnH0Un7GWYAHznwn1rO2VvlCoBB4UATOcgS3PBfXDgFb6IazHIOOkewOYrTb0S3acbF7QC7P1RfI321DOYrRnqpyhcATIsD5PavI3UdDkPO9XrmkXVbTECxduptUtWNQO+A3MnTAWs7qj\/\/hf\/4\/\/z1vfu5X\/vAP\/\/Av\/\/7Pff6LH\/7Qx37T7wAgb47E7B0LbZO3+\/ipHMVID1aZQuCFIgAxnXFcsYtY0A\/y0yp5lHRtd1EHkoU8yT\/LMeheQGRvdYji6INeH\/7op774cx\/5rrd+49u+411\/f+HDH37rj372e37zU6994te9k8DRYhdtyTHgzIlfuT8jHCqvECgE7owARAKh7N4RQLaQt1bPq2ayGobYvH7f8ne+\/y3IEYczKxubRazU3e0YkCnnA2GP6Ied0ondgXcKPv1\/fvuH3vq3P\/mJr7GrUD12KHJGyiPEPvXDWf29y\/GPYFVlCoFCYDMCZxDDzvsB+7Gb7gIsyRH\/xPs\/+Nb\/\/urrXyEkDSHOwiRnAIEr7ttZTaOLjpFGdbM6\/EM\/8Llf8Y6glcZJfOojn\/iN3\/VtH\/rqP\/m93\/vrP\/vR73qLv59483u\/9Lu+7YNfkx3oYo+dhJndgans0bAchdCtsBC4IAJnO4KjX9paUopWu56gcAa\/9qGPfg2iJFx1DuxmkM1OxJKyb28lzTCQLbrHaA0NjntsOxwXtRyBf8YR04+98upvE0bPcBBWPvZqNwf+2k1Ix9k+sbKzuHUUaqfCQqAQuBECV3YEkW4f+rYPvPWjH3zlrT\/xIz\/8y\/z9oTe\/+zfJiwjmxz\/2xlflFESAf+nNN39dx0qjq3O6AvKjDXYlux2DjpGQ33OcPPe2RvcLsnc1ZAfxQ298z7schG0XR4aTjIap3cXJ4dm6K3HrnKI2K68QKAQOIBCR7cpEtXWY\/FyEspLtEVtLdd0PQNj2WAgi\/0c\/\/vGvQeoZ0fHsj33+s1\/6\/u\/48Fs4i5\/\/7Ge\/lJX9L7\/ve9+5jJ1xDrLZ6qa8IyE6UB8cW\/jwjJW0bYujn8zOHfnsKrib4G2n6I2nEfzKUfR6tZ4XAndAwG71Lamsxnc5AhGGdwRWL1b9v\/qdr\/71HSQnGf\/3G59616ucI8c3dNvunYLs1Koa+a3hwQpddRRymSy7bhmyo+COAj3oPxYcLd3tM\/X7zldka0dhEa54IRAgcHVHMEoI\/8n3vfkbK2T3xQ+88o1WvZ\/94c+\/82aOCHZkp6N7BtXZHSI\/6M63s3SU5dv8ye\/Pd0YtDHY8YychfdhFjTpYb+Pu8YpOO3awXs9KFwIPhYBWYDtXtDsmlvQadQQiGcJ\/+hMfX94l\/Hvf\/32\/\/pc+\/enUqfzUD33+i7Yt4hBbb9WbkbOXtZpGfjTw0Cs7vmLlvoPkV2XQ\/rd863f8ddmMnkePFHc7il073KhvKq8QuAwCRwhXE9iHO7biu\/TizaFVoqLeL77+yS9zL5E5h7\/85pvhpSoOrNfJHred6axt9MraOYKTrcsF9qqT4fXXn\/zuz3zZvuqKvrsI+QxHwfEXO5zoddysHyq\/ELgUArqUXVl5Z4RyJUdgdYTQIXZLWitxdhwt55C9ydQ6zmFQ7NyVWbu5VI4GnX1jyZYn\/oXv\/oFfzrCB5KPXUW15nAGvpurnM\/7lT63v0pAbfURndd7hKM54eYJdTjmKaPRV3qUQYPCzmmldytoJNxLf8V74rh1Bpm+LyC2hjcR5TRV5mcw\/+j2f+XKmR3akwyA5654hevWTBYEupiNd+U0ki4VW7hztfPqVN75M2j4nTh7fPXz4g6++Yz8\/mTHzyisyItm+rZ9+7SNvoeNnXv90uEPbQchnOAo7V5B\/KXIoZZ4HgasO7rMdgSW7jMA92cykuWugjUi2fzPpXbq8\/8NfzgihtYK3Mmbj0cVtb3fC5a\/wgNh11s\/XzMpXyO7Bf9nM0c\/oLoH6+t2lb\/nWD3xjxDGobULKs4vhsvwHP\/3me+54wGuHo9Du+oxFVWvB8DxsVZaeisDuc9OrTqoRguROofWNgiWY2bi+dI6cg55FOkLK0QDAYUTlj+b5s+6RnYlW+YSQPH\/\/0ac+\/lWLkRyC1w8nMULu\/veVkOPbsO2Nxmk7upeweu4e063dl223F2dsHL1gj8ZW5T0hAnb13Rt4I891XnvkAu2M1dWI7rYMdwFf+tBr7yKzUXIZKYfDUXveOfAhnJ5FYXS8w9D1H5lFdWfyIEA7JRgrvfp8Q4D9ECzHQv44KHMIP\/jGp3+dZy3seM6uw18m\/z2ffLNbtyU3evY7DuL\/\/yaiZfeOIx47D3c4ih3z0PZ9xV84ApZ0dwxAJgyXz0dWKvbICjJqTcKzn\/El845L5ohsfJ6OlLDpbefwzS+of+4L7\/2ewdsdHfFEH5r5ejNp+zYUfTTieDiOwc7f96lP\/bWf+NRnfkOr\/4xo+XmL3ltHPLe\/viobRup6zGfTOCOcltocCXc4irN27hw5ZseRL5z6yjyPAIMB0hiZ2CMDny0rRwqrZ5vWEezSaUTvrAxHN5A05\/uzxHG0PF9QSy\/04HK6dc+gsjh1Vpm2r3EWer4jxNlL\/qjT0Q\/n\/fGPvfrO6p8jHnupjG4jpI5DiH4XCVk7jo2Qr5\/VwKHxNpXHjd1JlO\/LtdJH5wt9sHsOM++OzGGNiwofCAFtSxmQrQE7+mznCugKjgC7eS30Xs7AOhP7y6rohXPgC+mRvsE52DsA4iP1RsvI8cxcbOt+ARvZJXDMY9uD6O3ltMVC8ZZD6NVVu8jgD0el31MS+fujKKvfLeJyFMJ3llpYWLEI2HWRrWMnFgJ2PM3qVeUvjMCOoxgGytH3pxn0rEh2OacdE5bjmt6P3omcbhnym0voJhuzbxn03IY4Wns0sKP\/JZ9hjmzGg\/JaISt54QYp620k6ozsEHiNNNshZA6Box6e8frp0ZV9y7aznllSXnUUkDmkvut7IubshSmuVJtF4MiKkcFw5J6AQb1zcO6eiH\/qez79Ff9T1yKxK4R8DW2dw4z91jlADjN1s7IihxnHrmMkiFpy+c96cBIZxuwwuFDWx2yqR4ijiRxCq46tPxLnWwYciv9Db+00bBg5rpF2RstcZVE2yz1V\/sIIcOY\/OgDt8dCKSTihndvZUb1Xy7EK\/+8\/+9736DPCukf+Uecg57yKka3Hbg9Hb\/NacY5nODpi1f\/pVz76FZxE9JYRpM4ziDc70smcCfcK\/v+JFrFzOW0JnO8SdJykUBfhR\/uWS\/UWFjufsQNk9756aaz7vNljpzpSWmHFi9ZpnQVrywqZr3S6BtjOS+ydE2hU1hk\/l32UaGx9+199jtqkcvTxrgvoGadA+3x\/YO1QHFJufTwm3SF2dgcRedu7ChwDjsXeZaitW4a3dA7CiFALutUXP5j72tlbuT6+Kv+i1PjcarHK8x1MmtXCCjIMjqvdE0T2zeZxZMPF8y2JZKYtfyE9Yx\/OYaZ8VhYCyp75fO0WsBESh+Cj10ttPeq0nIHwwgFwpMR9xY43kSR3R8jX2dame8SPHgFn\/cwic4Uzqs4FEcgcAyuEEXXtamIXwdxjskRtyhnw327qf1TjDaDW\/6i2gzxWZfAB3OqdQ2T\/mXn6+QqOjuyFs2+TewSOiThuGsWFHcKnPvKJd76HGK13q3L2PsXbe+s0c3b2pZGMM8gf4Ywq8wAIZBeP2bZQx0Oz54+3HvBH2+Mr5ujimQ\/Z+Mr4X\/jkx78ePb8VuWTtHLlzOIrZaH0+\/pL+0YdgvCLKUdLK0Q8OZMQp6A7Bhxw52XsHxdmp+MvmXlp1cQS0I5sJydP\/GjeK2y3K6diptfrPjh7LMTwA4Y+qmL1B4u8UGCjZFvIWA\/ZWbYxeOOMU+P+W\/\/wbH\/+KJjwfmfH\/NO\/8CvoXXnv9nR+XUzu98MrOgeMge8EM+UPmELInz56d0fPf++pr34gcCm3Shr+IHhlXOsKC6H\/slVd\/e6ROVganhx7og57IzspeIR9+8ItE0pFu9qv3Uf6pchdFIHMMXt2sXDRAHjXv6G8d6X9T0xFURFyzeX\/gox\/9W3\/m9dd+e7beVZ3DDvJvYfEHP\/o7X09TDvLt3V348SpHwKreOjF092WjNG89jRA+Turvf+MTX4lkXCnP7wRYNEb6wRGeNyr9oAhEuwBed\/PmvGTHAJGz+m8Rzsgz7iLshNmxe\/jFVz769odsf+SN1\/7fER1sGf6faavPveO8lWP1OzvOL56O2sxdBt9GtBwXF9mW8PXaKx\/KeSci29gNtV6zHdXvnuWinUCkTzkGz5oPnB7t4Jd2sSy7d76KGr0ZtGP38NOvf\/Rvoi+O5ksfeOUbIp2R8ErOITrisTbwdhLEzG8msfLX3x957dW386PXUm19Gx95+4dLb5yH3RVYGTvj6N77aW6NyauFEeFHOsIRD0yFpbpFIOrg0YEQ1X2UvB2EHRFH5BzA5OjuQc6BO5C\/+OqrU86h9T+83aq\/PvS7v\/NvCC+I\/\/e+8juXsTiA0Z\/04GIZ0u85Cbuyb9lIOQhbup0d\/o6D6P80d0vvWz6L+IC8SAfLLRV\/YASizuWDNG9SVO5R83jldOcFsSeTzDkcdUbcNSAD3HEUvt1Wmt97umd\/\/eOvfuTtnQAOABvefv30w298+cs\/\/hM\/\/wd+9Mf+t7\/rB77wf\/zIj\/x9fwHCsX\/ZTrVH6L2PyfjOgYtgLpTf1uXbvuNdbw21sOztfFp19YxdSvSTHvfso1bbng\/KMXhEXlg6Ggz+somfTYjKPWIeF8yanGeGOB6RuMeJ3cPq\/\/LGURL3DRDsP\/Lqq3\/rS9\/+ka+P2nFv5wAOn\/zAK9\/4X\/+DP\/mvvfVLv\/b+0anE+GNMRj\/2xwVuRtQcS\/m\/3k6jhSV1+eXX7\/rOj7zzJlqrfPYMp\/Box0q+r8oxeEReUDp7u8A7huz1NE94V05D0mf+7tGvfvuH3\/PmUEbEOjbhiCcjj9F8LqdHy1Iu0+kWfcdl7W\/96q\/+7iNTiA8v\/S6C3UPmHGawaZXFKXCMBU5cNLfKZs+od\/YP6p3Vj77Psv9rAyfuy1b6wRDICN9\/9ZyVO2sQ7pbL0RE\/U51N2B35\/9xr735NEpn+LSXZxRn7f\/2D3\/drP\/rBV97+vxRWdw+ret\/DOUDmfBzJHx9IHZkqLGj823TsHI7sBlpY4nT0dTbOoVXWP2N3EP3XohoLjxL675pYPEa6wxVH+rbqXgCBjPB952blooFxtTxI0E\/W3en\/7rXXvsHxkJfb+n+YeVuI8txH8BtM\/MS3r2\/TfDz3F3\/wB3+Zvx3\/axxt3rKvcAY4BX1Ze3T4S5a14YxLZJyCLrJHvqhWn7V2B7rbiH7NFRusTVeJe04ox3B0BF+4fkb4fhBkn8BfZdBmetzCKUAEHA39s6+\/9zsDHRll+sk5iEz4X9gUV\/ifffLjX43uKthtHP3Nplu9yqrvYvgZFbA4umPQlGIVa4+VIHDhtiOE3NV3yO691prtDvQTH61vJKy+V3QOnhPKMWgUvsBw1DFkg0CT5orhrZwCF8HY78\/6\/\/TnPvulEVxG7hlaRz84H9pi52HJZTTOh32R4xnRfbSM3nLT5bEnmSNTy591j5JvDx\/vFLI7DI6vKGt\/asP+8N\/K8RZ1tEsZxfjscr7PssWiL3ekb6vunRB4qY7hVk6BN4Qg1eir5N5uwU5k9P3Sh177aous5ByQyzcAtj5x9MDJrDiIM34+A33+9U++8XV0E1lodb9rx\/CKlToAACAASURBVMC08WOY3yFq4TjyzK7YIejIKZDH\/ychAscx0HZUdqRNX8bq4Pv6Hmn1oajK4y6dfDmVr\/CBEBjt3EfaMXDR7CfZWWl+x4hXRr38v\/zmm0O7BU0mQvTuXULr6If7jP\/xjTe+hiPwq\/1VB7HTOaAD8rgPwTbuA5gWOkoiPDpNkMlLEn4M812C74+ZtP3+gV8\/tUSv3cGnX3njy9\/yrR\/4Oj91wW5hZVfQ0+lquwZP+B53jWVf7mg\/V\/07IJB1riayVHoUxwAhnfnhmp3M\/9dHPvb22X\/0ExU\/9UOf\/6ImymzY+8+A5BzYOUC+6MRRkt+hyEH0diLWph3OQU4BuXIMGkd6PZqdg3\/LRWVGQ96jxzH4\/4FwxDFw3MSvpFrbIWK+UbD9BemrzB\/8xBtf\/\/4PvvI3Vn8OXHJmwivtGkbfVIQrRvuwyl0UgcwxeHUfxTGMnNfPTMxW2T\/1yY9\/PdotUCd7TdWSTive+wBOzgEZ1pFEDgKHQX7LFvuM13rZvbT0y55ZZ4VMHIMunjWmdCcAsStvNkSG6vsPrSBua4+Ns\/rnOwJW+34noG8UrG22jJVzq\/iVdg2e8DPu8OVm+7bKXwCBrHO9ao\/gGFiprpyvr05y3gr6dz79ifDbiJ5j4NcqwVR\/\/p18kVP2nwWhs3UOOBL7nQbOAjwkh7DnbDwO0TGVlefj0U+W\/0+f+9wXReAaU+xGddcADn53qnJZyP2EdhysYr0e0c9bQLB8S0BZvkewhE+cn8fwcpTmJ7sjmR6vs9LSW\/rcK\/SEn3GHL5f1Y+VfGIGsc73KdPa9BuRou3wzcNbkjORCtLOOAZLMjlDoC7\/6xXYdCUVOzzoHytkvuykfkTuX2KPHbZKR7SDYIYB7Jo9n0X2CHU\/sKEhjvx93Pq03YXAIivvx4V8p5ThIH6fxv8XhJNSfHCnp8tjL8WnKQdJevmSdFdKe1+UeaU\/4GXf4cr4PK\/0ACGSd61W3E\/keg3KkTS58z5qckVy+W2DXED3Ldgyt\/y5RmGtF7G2G+CF1f0FtnQN1\/Mpd5O7vIGYcBDYih6Mh\/ZGObFceeqIz9sg2hXbXYO1kJ8BY886T8hqDOE\/FbV3ikLfaZydgf34CUtczQhyGrz+aRq69f7Byz4jz9tOobmeVA3P1H2HGHb6crVPxB0Eg61yvfrSSPWsArsi95ZtImvjsFrJ2+bmLzI7WrkG4Q4Qcs2QyaPePff6zX+KoBn3+5Cff+IYty3PvQCj3c1\/4\/K\/gECBslacsR087vqYWNoTI9fcLso8wI3fpxfEaWPGnoyee2bjKKuQtIXYE9tIWZ8F\/sGN1s28eqe5KiGzaPPuo6Qq7Bk\/4GXf4crbPK\/4gCGSd69W\/umOYuVy1BHEkjmOATCIZPzXwVhITqHe+zg6jRYQ9MmtdxrPDQk\/9XhOy2FWQJv\/\/+Y7xX231GPBFNvIYX34sKZ3tGno2tZ7z\/z3b+wL\/y6s4jeiSuSVz9BlOgvsIvmWY+ciOsvzhXHijij+czRe++wd+mT\/kjupwZjlP+Bl3+HLq7wofCIGsc70JV3YMrH57xxqeuHakIVDajmS1fiPJTl5W1L3jJQhUb+HQDxzN8EddKyuLZ7uHSG\/y2Dkc3T2wK0GflmNgjEEimd5H83\/s45\/6sr9P0F3DUdmj9fkCWgRvw0f6fxhkqyf8jDt8Oc8llX4ABLLO9apf2TFAQhnJnZnP6poLaN8GTsoe1WhitULwXfm5YvpvtG\/A6ehvK3lbozQ7DdnfcwyMM3301sJn9hn\/w5vVbfTNHo7vcLo4Y\/rjyG5tVuerl\/eEn3GHL+e5pNIPgEDWuV71UfK5x+COztItKZwR\/08\/8frbZ\/p\/4o3X3vnvKtWOVssWC3YFrPp7q3zK9I6XfN+Q5rJ2lGBxaOjIBTl3DrpM9uHsroF+QK6cAvYzbiJ9fR4krDeNGJOQi8VvNB69imp\/wyiSQ5\/Qnr\/wRkf6LarzjHme8DPu8OV8X1f6ARDIOter3roIveckgeREyLcK+f+WIT\/+\/FfPkVPgEtXiyYq05WhZpVLG1hmNzziIkX7DRt05tI7r9AaSZGIDNvLHGBvVn3I4xp4DVTs29K+ismvgJy1sGRtHt94xHvq0+srKe+lxT\/gZd\/hyM31fZS+CQNa5Xj06+4oD3371ewvHwI\/laUXM\/8GgNjmi4Sw\/wsj\/lICwBfsW6fBs9HhJOxLq8HfWEQiOz35IJ\/s5UsN2FhDRyls2j4QrY423kKQLb\/DgJKK+II+d1Siu6Is9Z+GZ6XjFfE\/4GXf4ciN9XmUuhkDWuV7Nlcl6i8E9e9wh8pgJ\/\/wbH\/8K3yzIIRCya0AGJBntEqztPaLsOYjR3QPO4RY7O+zn2wlhSB9g76iefmyRZpfAGJsdZxwd2TeAcBDZLgGH0OuLSDfyoi+skfdMDsMTfsYdvlyGaeVfGIGsc73KsxPWEuNZcVboIqddIT+M9zOf\/PjXcARaBUt\/CJEdg46P\/q03P\/PX5CxUxof+GMnjatOZg4CAbLleHPKjv1aOY7z+rTQf0oE7r7bO6uhtWHFo9uiIj9myuwQ5BJyPHAM7BtoEc69LlkYOeICrdhyE2c+ZtLB7xGee8DPumME0w7ry74wAEyUapF6tKzqGXcdI\/Ac7OALuKyIscEBcNsshRD9UF9UjLztG8vjaNCtvvxIVEdlyI3F2ESK0TMcj+eyW\/oEf+pG\/unJhbvWf1UFHR7yOmr1xxJGaHAFtoSNYQORc8qvN1Qt\/q7+VJ7kvLSzHYHv8CeLRAPZmX9ExHP0JjP\/hjTe+5ncFYIGD4FdT2TnIGbAynnEIwnSV0CExSzasUo+QL3VxUmfsIqyNrBZnV4zZylMY2pCfotAP4PE1s\/2YTeWwsaUDjtfjgCMeuYj288KmadM7dOn0EsJyDLa3nyAeDVo72YHgao6BI5wjx0f8BzuyG0fAjoG7BOsIJH\/FISAb8jk6fOgHHVVAOqT5w2lAcL6fRtqDwHbtInSvwPiwpEicNuyKPdPNOkD1iQ35GIxdgRxCdrlMm568sjZxlMLVtuV3GVn9LB+5K8diVoerxr2zJR3p6stlWFX+xREY6dyrOYbowzIReS+UU0AGu4as\/KpDEJ4Q3q6uZ7UP8fHHyhbChcRoCyIaIWCvCyTmCV26j4QQPzKkR1anp59W7595\/dNf+v2f+\/wX+UkIjoq4VMYJqH\/8byDZ9npteNtJo7vatrJmHEwklzz6CDlW7qPHPeGXY8h6\/4XkRwPWD4KrOQZ+QE6EMRP+mddf+212G9GHaZLDT1dn9w0RVlneymq+NaTsalQrdTkMdKCPKNOSET2zcjNbfD6rbZyRXXUT17jBdrtyhiSls9VB44rfA7I\/X6G+II\/fEOK3g7wOpOUorcyZODpFcsmz9szIVFlw7TnNqG2LafT8XnnqW9lXjkFIvNAwGmh+EGgCR2XvkcdXuyKP0fAXXnv9axC+XjX19fiAq\/fq6aitO46RsuFG30Ae2iXY3UNGwJksm4+TGbGPNmjTHkehT+SU0NWuyqmjNpGBLNrEMfBbQuwY+CE64uwgWvqwI4valPyREB1abfDsaDvWeffawlHhVHvl7vHcc0I2Xny5kX6oMhdEIFrV+M5la3yPwZi1OesYvvTtH\/k6R0eZU+D\/Ol7ZJeAwoxXezmOkaMhAiJ4UrfNGJ9+HkRyfF40F3wfItSvtzClY2ZYc0RPdI9x8W1F69O7Ctt+KR234vKM7E+y1jtTLJ213VKvYRHJ35fnxZMebbQNn28K7nj0IAhEZ+EFA2nb+veM\/+8Of\/xW\/4m+luVf46dc\/+jejMnysNWsPmGkCMOntqhhZu4+RRocS\/aRVOHrMnr1jiz0C8rhA8JRRGyNOQbpTD4eJTI+Xb8enKQ8RCXPJ3BFG49+3r\/Qsnl4\/9AcDaz9x\/0aUdbxq+96h54TMMXibK\/2gCEQTw65eMOtqjoEffItIPsrjXoEP06Jns0dHECLk6Lva4sNE989vmYZ8\/IpTq\/RRPbAHAmNsiMR0DCRCIB+yH5EpUqG81y0iPMpAwmB9tpONxn+kk\/KyMTCCw2gZ63zV7r1D75Q1DrxeozZWuYsjEE0MOt2qbYnPD4Rbp2deVf3Vb\/\/wb7Nb2OEUIKsWSbHqA0uPncXxVnGIxR9dQOTe4ff0EUFhO3HKy1GI7HsyaFPONNuNIBPcPPn0ZO94rl3M7Dimr8\/U1\/ffrH67y3usyzF4RF5YOhqAntyu5Bha\/yuZdwC\/79WPvMX9gs+f3SlAHo\/Y7RHpQWgtB4edkDlkDZGzQpZTgAhFOCN4IAenQtlonN1i9d3TMyM42dkKz9TfYt3S4VbPPI7R2EIXX67SD4pANDG8Y4AYbjUAW+2wW2j9\/LN1AP\/ta6++87tGNh\/H0mrDPmPiz66yrzYM0N\/apDhELcKXziwAIHLKMPF1p2Cf8wznorwsxPlQlhA5ateGPQeVyd6Zv2PRc9buAbkWr3vGPeaRbloE+LKVfkAERhwDZt1zUKrt0d3CX\/3QR77Bn3UIxPloTbJ6ISvmKxDXjiGFc8DJeZvJo\/8hRzsOMmcosmcn0dKLcpKdOSbpApnQfkvemc92OAZskb3e2R7RvYedMLxF6O2IHAN5vlylHxQBSwgaYFEH69k9wyM\/s\/2Lr3\/yy+w4RvSHrHZO8CsMDZF1y37Izb8h43XHYbZWhmqHMTRCbCNteh12pnc5BuEqB7Hr\/gF5kn2vMOID8rw+UbmdfVWybohANDGiDvaD4B7p0WMkv1MgHf1gXmQDq+GX5hQ0nCBtiD2yGwLiucpmoRYS0SpfTgHH0fv2RQR6b6yj8R\/hs5IH1hzZgZn\/46iOeebzSXP0hl7gSXql7Z11Ij6gj30bUblsHFX+xRGIJkbUwdFA8APj7PTqT21Tb0Q3JvHFu+uwehCx78tRp0Djqo8MS+o4AuSQz5giHmEOWWZHVYeNWxDQc2CRDc+WF\/FBhAFObKELqsoVEYgcA5Pb68rgiAbDrfPs\/x4W7Qx8HruMkSOkZ3AK6lPf59HxEUchlvhVl1DOAfJnXGgXwiqYeplT4Hkm08q\/ZfwKK\/Jbz6HZ9qI7pUhGOYZbjtyT22KiRp3sm72KY0DXH\/\/YG1+N\/u9h7xRIj7yF9ExOgX61r0J623ESLAwg9x6JUxYy4E\/HUNE4QVbkfPwYu0caW6Pxb\/MyR2fLvOR4RPiRvVG5e\/RptbkJgaiTvWhWDVG5e+WxC+gdLXHh3NMv2h15219ampW7cLGXpDgJ5bOrmLU7ey11RdZs2yvlrYOU3VEoZxk9e4Y8T\/gsAiK7r3REuDIeqo5DIOpkV+Ry\/1mPdObH73gN1e8WOELiv+VUuSjEKfRWxR6Hl5DWCtgeETD5hRGOY9bO7AgJZzEr61blrSOU7VGIY2OcjOwuovqPnucdgz+KlH1XXQDcajy9uHaiAe872RKHBsKVQnYQf+jN7\/7Nn\/vC53+FH9nrOQXIUccfL65DGwbZo0NNePLkLLgvWHGWEclyrNRQ5a6PslVvNKal6LM6B88F5Rg0Il54GJ0L+8GQHRNEE+kR8q565n32ULOTWn0MFuqzlRV+diQj+WfbNCt\/huD9USN1o\/ki\/F5i6Psx44KVBcVs31X5GyIQ3R944rSE8uiDf4X8sJ8VNn\/2XP6G3bStKfWfJrzdDa7souydhWRfebcQ7W6ktw+zY7UZGV7mo6U1TjQA7Xixtuh5hS8EgaijybPmvRTHwIS2do3E7YpaE2HFuYy0dYsyskET3n6hvLLq0zGU5BJe9SJyltBbi4BZWRafKI4zjRZpUdlb5vkxGfEF+vhylX5wBKKO9o4hOy645QA92taKU8DuiPjQZUXevYeKdfByDDgD2ThL6JHTBJsVB3MmNvRjdJfWGlMju54jzkEf+3msrnZU5fsl0m8EKy+n0hdHIJrcEem1JtHVn60MXCZsj0x47if2lbvb7g7ssZHyZy+fM2KU07kCFoxvOb6ZcTpqQ3bm3moLfbLdSGsx0pJ5xjP09H1YjsEj8kLTdhWpwRURqZ49WtiahK0uzUjP2\/9IzkE2RRMeAsUx2NdYW\/hAYB4Lpa9w1IbDju4\/pGMrHMVA+MixtmTaZ9ndheRFizVb\/1bxiAeixVK0kJQtFT4oAtGre6MD4lYD9Eg7TLLZromO11o6PIpzwCFgRzaRIVNIboTYW+fhs8Q62z+98ozpiMBafahnYLSyCwQ34StZWWh3a5ktq04ta3MlP+KBSI4\/es5sqvwHQyDqbG8CgyQqd+U8VsDejl56dvUn+6\/uHKxdo8ckEVaQpnYesj0KcQ4rBBu1OZOHUxsl6EjvlYWE9BtxSKNjEuxWnVtk10petLOJ5JRj0Ah4YWHU2d7E1goxqn+FvJGVr7UzOlabseOqzgGSEVlGq0CLQSsOPhDbKCbgkZ2lt9pZeYaNR8doRIQruuCEI1IHu5Hdgtqk7CjWZ5TzhJ\/NjyMLDdla4QURiHYDfkLPHq+cMVBnZXobWtAzCUWes+3Y8ld0DnaFvzKJj5AumB5Zhbf6TM+Qf7Tvzjr+Am\/+ZhyC7CK0Y+vWcb+wwo5Ih5UxZW2s+EURiByD7+xHcwwzEx0HcpRY7IS5knOwR0h+BTgyHI8ezQgXnBMOZqTN0TLI23EWf6X+8rbvHJfqi9HQc4AdS1bG7n71GFT6TghEk8uv8rLVgh0gV4rPrNCibf9RW5B5p+58p1l7FDF7hAQJzBwbCS+cTzSeeD57lPKOIUEE23b1mx\/rQXN3yzp6PKZ+WQm9Y8gWh3cDpxo+F4Gow\/3q8pEcg9e9hV5k+8okiupkb\/+09Nn1jFWciJ1wZFXHzokdgupFNrXyWN2qHcZLJmemfyI80LGlx+wz6Ry1de+8e847b3vk8K+wAPJ6VnoTAqyY\/GRiEFjxTB5f5orpmYF6C5vu5Rx0PAhZ+90TachZf+iYkfhMH7PL8GMmc7z0k1+R2rpRnP6SXTN6tcrOjJdIp1vk7ba5hYd95m2L9CDPl6v0C0EgWpVEHW4HzVXjngR7XQQpjtqyet57a+dgV3aerMEDMhy1ebScX0hY3FvHPtQbWbEzRlfx79kw85KCtetWcfDZ4bh7ONjn0fyPxs2tx\/atMK92vvn\/+NpBQTxaSUUDw9e7Z3rliIJJl9kFETFBkMuu6siKlTZWCIg6kCLta4WPTvxx\/mx1YzDbC8IWWVMOGUf7C4wi5xNNLMpF5A7ptXYP1qaj+kb1\/ds3ke73zsO53tI5MDa8zRF2K3POy630hRGIOt2ru4NIonZ25DFpRlae3ialIR+RLCSVyTp6vs0KC5KnDf2pbYgcjPmLCLSFE+Wpr3rRxJatPoR00ClzkFm72JLh5NtQmvLgLD2t7Gj3QJ4tc0Ycu6XflUOwu9Uc9IRP2xH2jN0rY1a6HUQgIgU\/6W8xSaPBN5J3qwEKiY7oc88yK06Svo7IOrKjt8IfGYq0F110I1s7KxxP1P4ZefTriN5HymghcEQGdW\/xppJ3DOge4U7+UXuq\/oURiFYivtMZLNHguHceZHJLaEcJ9B64oNsKyUX939J\/ZbeQ9RFO3bavFbzdAbV02fGMtjL9VvPpB5wfRI5NuxYvjPcdNrdk+LnPjjIq7xePq1hVvYsiEJE+g8Gqmw2OaMDcMm\/XhLO2tuK3XMm2cIQg6DdLFL7PWnboWWsniK20gVz+LIHjhFbaU7s+hEhpz8v17bYwWX22Y3HBToexiA3qE\/BawQhi1s7J4gQRr9o4U887hogfkGd1q\/gLRCA6O2cwWFMZLDOD6xZlIZFbr1qY\/LewLWoDwoHItSuwpE4f2v4aiWe2tHYe1BHxoSPkF5HYSPszZRh\/1jFF+BzJ82TY041x5x0B7YMNfTGCCf2IDPoR28AdGewwonGNkzli42hdb3u0GEJfX67SLwyBiPQZrN7M0YF1q3KRjl7n3Wkm\/K3sox3IgokpZyB7LKnzXPmjIfJERNaellOwslk4qD6hX0jYsjvjkK7atXofjY9gCFnTvndQ3mFn9jLPwMnXt7qjR+QUkEldW\/aMONh6\/SN9yzF4lF5gOiK7qOPPmJBHBrcny1t1TXRZf8QOXxecIYjsGAK7VSdbXbawgHhafYnMkRU0ctDT6jJSr6XbyDPG6+4+AI+MkGnP2om9tN\/bGSAPB849Qwtv5PGcsi37b3HxHM17u0NUX99qIdDCo57dAAF1uEIGg282Wjmo\/K3DSD+v71lpe4Sz024mPuSQERT28Ewk0yKzlu2jpNpavVr5OCo7NsCnZYOteyS+ewXtidk7BMYcbZKf6W2dwejYoN9bMtWWxXhU9mw5+lztKYxkeKxUtsIXhkBEFt5Ev2qKBsyt8u5xjCQ8dp71auU5QqSUUT\/hFFZ2TK0+BFOIT23Ql7QzujoEF60uqZfteITjjhAMrL4j4w9Si8pB0OgEztiMDZQDs95OCD0opzqRfJ8H0ffkWoxu4Rh8X2OX15v0jN7Whoo\/GALRoPPEw6CJBsk98u45MGn7iM0jK89o+FhSX1mxZYSILV6eJXmeo\/Mo5pZUR1fDkb0zeaNjEwyRmxG4vcOgbG8lD07R3GmNj1mHIBwynVttzT7zzpx0JGNkISO9K3xgBKKJ5YkgGyTRwDk7755QR1j17GVSQzTe2Y7aYduEvEbrqVy28kNvZKucD3lmCWmU6CEOOTLqr+jsdemlsVE7lqw\/RPTSLSo3YiOOtNeWlX20\/7Hdyjsr7ue8HXe2zV5f1PMXggAT13Y8cU8YR1fKXv5qmhXXPWGHOGZ19xNuRn+70ofQZupSFjK05G515ximJ8+SPHWRxdgYWTVit1bUtLXqGHs68tziZG1UHCKXnGi8U86vmFVeIfbMOATKotcIVmojC2falc2zoW87cqD3nn9ex0qfiEBE+hEJzQ60M8pHep0IzXtEz07QEfJ9TyPfzIBIReorciAk6kX9gFytoLP2bT5jxMoChx6Rqj7kKDvOuJzOiN7aTfvSJ9tBoafK2BCc5OCszFZ81Hnadlrx2fZbukXPLD7SI2rz3vNPulV4AwQgED9YopWBJrcve8u038ncAJ53mohw6tm+Qug0SFvCGxmk31FkMBKt+KTvKKn7piBh6YUsxsmIg0F\/nAJ1ZpyKb9+nWzbKVoVWT+XZEL2sfHRmvNkyvTjY4EStnB3xiKR7usw8H53v95x\/O3AsGZMI2MnOgCLtRZw9OEcG8hmTztuZpaOd1YjOmbwsH0LS6px+sISW1fH5rVX00cmNfp6QkUm+18OnWa1rHHEsN1LHyyBNvdljPTCRLOHr+0+7Bvp6ZXe40lfSqRV6vL3eR9P+TT\/wjWTec\/618KlnJyGgyWoHg5+0WvHZMreO33Ngzq4ehc0sWYgEcAor5\/KtFwUg011DiL6wBIu+ItZeGzpeoo4l7F49njMubbvCuRfaHUHmVJgHK\/2MHX6+jNgyWmZFpx4e9jnyrS70rX2u+OxYtjIr\/oAIRKTvSbi1CtXAOTtcIcpd3ZGRSc9mj2NLH0sAoyRr5YEPJBXpBJmeQV6MC9sm5DrST+giTEfrIHd2JW+xkF4WZ\/t8JY7tkmv7Ymc8I+oVfaM6fowy9qJyO20qWQ+AQET6fiV39uCMBqLPuyeUq4TkV2OZDXYyeuyzOja\/tZI+m7xoWzsd9RmLjRFHZB0LWGV12AlZB0Q7tOHbVftRSHkwa+2qonqtvBUHbvttJA4mLR2OPvM7gchx4rxHdK0yLwiBiPQ1iWTm2YNzZHBLl1uHTJwR\/aIyEFdPX1acIr2R8pE8Jm7UPnmrl81RO608xpE95sGmESeH\/aqHA\/YrWGRY27BVZNay29YhThvoT3v+2Up659FcC1eeCZ8VPXt1fNsRpqvj0suu9AMhEJE+g8ObIPLqDbSznnt9bpU+ssIUGWW6QnDCNcI8q2fzW6vmEWK2snbE\/YoTDDzZ+3YYgy07GFOR04hIrDX+1G6rzMgz+gydJe\/s0DvHER1HykRjLtodj+58z8ah5N8YAZGTBhNpr8LsJJSsXaHX56w0K0r+JN8T3aw9kuNDiEUrQcIVorFHUF6ve6zyrE2RPj0bhYety1jMHNxs38hB+fFu2xuJ35ooj+xaW\/b4MUL\/ROWFmx\/DlX7hCESk7ycxx0vRoLlV3q26ACys7RE2MzZnk0p4QlLWEY3a2TsSWZE52nZUDswssWOf3wVga0aq4ORxZfVq+8K3O+sYdCdwpE\/Ryetxi7TF1uO0mvZ9EfUBslt9cAvbq407ISCSsgPME9pZ21nbZhaHUHZB0xrk2MgEtG3NrC5Ht+F2Behxtm1ncUi\/p1ePVDPZK\/noY21HN+GMrd5BUNbbLbJmLCrOeKA\/JMvrNnvMJyL0+mTjLsqXc\/G6nJ1u7Q4jPUfyfB9Ec3zn3Dsbo5K\/GYFo0PntO4NoZLCdUQai2GEydvrJILmQD5PA2m0JfMQuCE+vYap8pLuIiVDtj4boma0e0d8+a5HqaHu9cpGTEgHbupGDACvyNbasQxFG4Igd0Q5otn+kF6H6Zyakf61Nt4xrfM7o2yvrHW60QIzG7y3trrbuiIAmph1InrQYRPb5LeMM2KPwoH9rYovQLQHNrkjBBCwhOIuP1d1OcIjNPhuJ29W0bYM4+iLTtu\/7caSN0TKRrWDsCcfKQz9rA7pSB\/1F3CpvFyyUs32jMqrrsYjSkm\/lRuWyPLtoUPu3DFcdWmQPeHrdbb+ojjDzZSv9JAhoICiMVgozk1BydoQQ3tFuYICz8ozkyDFin32+MhEhD+9QrP4ipUwX276P21W0x9WSlm9\/h2P1usgOr4e11dexaTD34ymqa50PZEa7Vk60yvU6KS2SU38rfzSMHJPV5ey4XVSM6pyVi+Y3+PryUZ+cbWfJvxACEJUfFF69aEXh65yRXllZW901obLVswjKE+iKvSJ8W9e2K3L3bVl9ozjEn2ErwrP1PGF6Cbod9AAAIABJREFUQrVlZ+OZU4jIpicb3S0hWQenuhCyHZ+2DM8yXHy+cJqpY2XgUKTTvUJssDqtxoWF7GCORbLu7QylX4V3QkBHKXZw+EGxa1DaNnpxv4pfgUd6R+SoZ+jh7bWE1dPTPmeS8af6hDpeUZ6fmC27MiKmzYyMac+SaWRfq83smRybtZe4tTGrm+WDlR1\/xIWX6pDOnK0cu9fJp23\/+2cjaVtfet0jHLW3ZZO3JdtF3cO+avNCCFiC1IDy20jSenarEJI4CpPIGAKysjx5+2erNmpFa1f5TES7Uh3dMdijlEgfb5O1gfZkO3WJt8rbulE8cwrI9mMlqt\/Lw1aRHk7NO2rqWx3kQCzOEUbKsyt+5c2E4Bfp1LNr9\/OMxGds8XZE8z9bdOy2p+RdGIFosPlVLaQyM\/h2lBXJrkIHIaMHk9rLsKtUCMc+P+IEdZyEPK1yITzpgj4jky6arBZT247V3cZtm9Sljl+N2\/JR3K\/WrQ7ER51cJNvn0ZaOwegz9PdlrE3YYx28182mrRz1i30+Er+Kc1jVXzZaLIjbuaAyO\/vVt1fpB0GACakBoTAiLz27VWhXeStQagXqdx7eEfoVb4+Ue\/ZrZW6dqXRR3YygIT5fVnVsODpx7Sqb+lG\/ZtiiI+Rr27XxEeeUyVY+q1dstn1A\/wiDyE6eQ9LoQrmI2Kye3uYjxHrUORwd0+Bmx5W1cyTusUCesLb1I6esPqvwiRDQRNPgIO3NX5lQLWJRW1mYkafXK0rblaXfediJsMtOa4NtL3MydkeGndSxell5UdzWj+xXXkTufoeksjaEsFv68OxI\/1hyxz7k2faRrd2Ddgb2Ofr5MRvhRJ53Lt5ZZvWyfNr1xzFWt1acutYJtsq2nq3a4LGgjcjOVftaOtezB0QgIn0\/8TVRo4GU5THhIT1ksdJhUiCnRTqSdWQCWvl2kHuijkjS1pUuM6FdSbcmMDjwN0pwVge\/C2oNOXD3bUR2S0aPdI\/0C234PsCujCy1e6BNv9pmTI0sPKyjztq32I7E0WdlVY1sxpewXg1Xdw1eZzCN7F3Vq+q9MASiyeonol2FR4OplcdE8hMU+S3ilDw\/mHvQez1VPiLIiJDU7pGQtiJMyesdfYy0C56yayTETi83cg5gh2xfVmmeWUc70rbKQOTRAqTn5KgnzMBP8ggzmdKX0I\/jqF9s+Zn4zNgEN8mOxp21ayQ+MnfUnkLfd8xJPVMYHTeN6FNlXiACEXHYSWgnpwbQSshqyU9USLQ3yFlZj8JuyccOcpuP7hG5otuKXb6Ob4vndicB3i0C9vKitMexh09EAugEuaFPpLNvd4YIrT7ZLgQMGFu2bBaX08JJ+DpyHF5f0owvKzMa61G90bxRTNBZMiOnbHUciWOX5I2GXm4072bmmpdX6ReGQDTItJJjQPe27ExwiIU6hL3jGAafn9wQXaudkcnkiV3OLSID2We7MiLP0UnXK+dXa2A+QsaZ3BE8rG3EIyLI5Pv8UQL0bVLPy1LaY+Lr+jTlGSOML1s3Gr9qw8vwY0TljoQj2FjHsOM4Cbtm+pOx5rGI5htzxZer9BMj4FewGryQeDZpKJNNCiYrdb1cyWJQ2skt6Ftb\/R4ZeqKFBJiQ6Kl2FUZ6t2xVvZVQDko22nDVGal\/rKyRuMeoZw\/9F2E10lYLz1WZ9CdO3esVkRy2eT3PcAy00xubfnHiF0Zez5E086fXf3pOX3iZemZD5q0vV+knRoDJZgcI8dYkYiKMDG5NZC+btJ\/cgp92M4eSTcBo1Yi8zNFEumfkEuk+modM2ZWFWgmPylS5TF4rH7tH7aQPIufdkq9n9JP09GFEUqo3Gkq+xmE0XjLsvT670tnYxCbvkBnjo7a2ynm5mS3eEUdzGwxbbdWzJ0QgItBopc3Aa02ADDpWTNHkRV5EFBB9RmBR++TZScGEiZwFZaJjpGiiWHmr8VFiHZ3gVo8M614+zqHXHn0\/qrtvz\/eF1TnC3tcfTUN2VraPY2Mky5fbmaZNv+iI8GCnGOk2m9fDQLb5vox2qjv7ZtaOKn9RBEaJMVuFjZjF4JxxNq3VrXUOkQPA2WTk51dP6J6V1cRaCVtHSBYvf8ww0taO1R36Rc4abD25WX1b8YgEZQ9jZ1Vu1ma2eKDNezgGayvtZ\/qNjo3Mbpsf9aH0IIzGSnRCsFMnq1\/FHxgBJqwdTFkcEj5iZovsmUgRcWRko51GNMijPNnk24hWTyq7GuIAfTsRbpTJnGWr7SMO2upB+zgmSAGHeaR\/s37CDsjpiGyrs+K9fsscQ0bWLbx3PwMr2XE0ZB609ItwiMbcruOto\/ZU\/YshEA0WO+B2rSggo2xykh8Rakb0vUlh9SeOHAv76E7Jy+mlRycZmPZkZc8jnKxtt4y3nAL6+6OMo7rhZHor5YgQaZf8DNNWPmOzZ2ervn2W6baCC9ha2T7u5y3jxpchvdJ21XkCBFqDnkm4k4iQlU1sT95AT\/nMmUSDPMuzx0hMqEyHrP5I\/uikh9xG5GVl\/IS\/1xBtjRt0t5jv0nGU3KP2Rut63NWvPXt9vSgtWZF+K3mtRR07QiszWgwxt2yZihcC7yDQ2prr2OadwhsiLWJm8vkmdjgHObfWZXg0kWfyRo9Msl2QbwsSQV\/wIrT1yPM43TLdI8kznBeOxmOUpSMsLH5ZvSjfkvmMDj1ZkY6zea2dsx+P0S71jPk9a0OVvygC0UpCg9oPrl0mQHRqw4fRYG05E1\/fp7UTaTlAX2c2HTm0CKsW1rbNTJ6IiR3PvZxDzylkukd4zOS1VscWO+KR3IgYfb0o7cej+iAq28vbvUJnDERtgpXHIHKMzENfrtKFwDsIRINr9yB+p7FvRlqrHSafL99yJpH+ysMhRJNCz3eEow50hNyiSW2xEMHdwzn0nAJjRrszq\/PR+CwZR3c9wm22v6nn9V+VRdte1tF0NKa0GLKyo3Kj49bKqfgTIcB22U8YCPVsCCAS3y7pjPRaziSSc4u8aBJGuI2SyYg89VeGU9T+0byeU4B4znAK6N1r2\/dztBIexd\/LyvojG7u+vk8f7QdfP8LGOzMcgNejtwDx7VT6CRGIBtctVhO0Abn5QUs6I5rVCRm1sSMvIiE\/hKKJmbVtz7S9HKUhYOFGOKKD6q6E0fiw+p\/toOQIbZutuCdGbF51DFl\/zO5i0PcMMo520n7HFJWhT1fGQtV5IgQ82Z4xgDM4W2f\/0WotO1dtEcVZz0ZxmiG2jIg8fv6+Ijp+83VW0j2nALaeiFbaadWZwQ99onETkePIuMDpRbrhnEfq2zKjfRu1l+VFeviykVM8a7z4tiv9wAjYwUv81quJ1sSPVsPRQPc23CLtLyb9EGDSjhCr1bUn07bhneruyT6i++42rX2KezstXlGchY7qKvSONKqX5WUX\/Vn5LP8Mx4B9dmFHHFvBjD92q9H8usWJgLCv8AERiCYMA+qWprSOWlixQbBeHzsZsol4dn7ktKQnhMmOYlaH6BhEMqOQ1bFtYxdRjziFWV0j\/Ufy6H\/GgbWzF\/djJhrnPRl6HtnZGrOq58OzHEPv7s1jN7rTHembKvNCEYhWY0yiW5vb2gVERwNHJrqfsKtpTz5ghl5HnNbsbg0dvAOa2XVE\/dzqC2E1q2fUzkweDk9tj4R+DB8ZL+Dr+3r0aMqu1qNxPINBVrbnGDxeZ+mR6Vf5D4hAtDK8hxkRwdkBHa3OI91tnTPjkL\/FCeKxJLDadnambdvy8ejeZZW4Rwj4rJWvt8unZ\/D1q\/wjjoG+9PJGnCf62nJehrdvJk2f08d+N8C4xFHQln+mMXnrE4EZu6rsRRDwk+2e28wWKUWrNpxJNvg1Cc4KRY67HILVc2XiRju\/WefQwl\/6QTx+9XyroTyin9XT6nXUMSDX3jX4Izy1a0PatI5hpV+tDcTBwO9ISSPb3xv4uS3drB1efqULgbcR8MQqwrsXPNlgZlBHKy478TTwbxFCDJmuHtNZfai\/MnmjHRQ6jhB5VNfrfU+nwHicJXdr92xdbztp2y9Z36sez9HZjk90WJ1XOAR7ZEgc2d4ZSH521IUNKlNhIZAioIGsMCLftPIJD1oTmEFtJzvNkyZf+t8zxFkwgWdWtpm+KyQMFn41ifyWLBxQVMfr1ZJxwjAIRVqS9fpFafpBglYuiyOZjDXGaM8xyLFbnaXLTAjBe4dg7bKy6H+etXSb3UVa+RV\/EgQiEr63YwD62YFtJ180mc\/M8ys3JqedyEfaXiFjCClylOgEaaAffxDOyC4B\/Vf0OGMKjRzfWLw9CdpnR+MRxpJp29XYBMMZTHBkdh6o\/yIZ9OsoNplTieRW3pMiEDmG6JL31vBEemnSEfrtM0TXmqi27s44bdK2xUdEMNIOk10XhdnEhhys\/JF4dowwopMvM+sUsB+bziAgr1svTf9YvHrldz234xMckDtzv0AdjWdCMLV2EKcNcFa5Ud2tbl5mpQuBtxGILiwh5SvAY1dLftDbFZl0nSFkL282TfuakNaRslofkYVDiHBm0kYOIrJXdmfhDjxmnAI4YJfsh7Qy3VbyV52d+gcHLt3ODOk\/a58WLSOETFn6WvoxB3w90raMytqQ59FYpH+sbhUvBEIEIvKICCusfHLmlXcNTDqIj8loSbvlzDRxIQ6\/y\/BQRhPftuPLZ+lIjvTohdTt6Um7lImc2e4dQ9RGzwaeC7feeBqRNVJGjsj2iSd3+0xxcMQRqw2\/S+C5xpzK2JCFCs9tW\/Y5cWGhNissBEIEIscwQgahsBMyW0QbrUhbE8dPktU0ExBTmYDIUFpHBi252DMKU9Q3KxPbkk1LN\/ts9Ngju8+YsXMED2FtdRyN0z+M6Vs5hpX5Y3FEX+9c7NGSt5vyjJWoXT9\/djvrkb6rMg+IQLQKu5IZrcmsCW\/1PUIgfsJlaUvOIl0mMvpkdciP9LW6R\/HI2dj2ozo+D8LwBJHpyVEDJOVlRGlLZlYedtpVa1R3Ng+bbRuzcXBsjaVZeVl5bJ+1zeJIfYt\/q+8omzkE6eD73TsclauwEHgXAn7gMODfVeACCXtu7SdktLKNnJ2vdyRtV126o2GS9mTaejOw7nAOtBftQKTzCMlYnS2ZSYZCCNiWPRqnLcleDRnnt3AMtDNjr8XROwX0jcbVTF\/5+c0YmNGvyj4pAn7gMPGuBkVEjCKI6DKNVZGenxHa1fAoaTGZj+AaYTC7c6B9dIcc6Hf+cKLIjo4hMn0jXYRz5KgzOaP50RhVezPh0V3HSFvgOWoXmGvH6Z1ChjHy7fjrteWxK8fQQ6yev42AHzgM\/itCE62cNFGj7XFrl6F6K2HkiEbkrJC474fouGqHXN9OK50RFhicoYt2ZCMY98q0xlCv7ujzGeLV3PNOIXJglInGeauveKY2pP+Mfj3Z9fwFI+AHDgPoiua2LpUjQmqV1yRZCaMVoVZ9LXkQ6g5c7dGD2ovs39GWl9FyCmDgyx9Nj+7GhMMVwlHipZz0tWMjcgrM0ZkdncWd8ap2CG81VqwOFX9ABB7FMbB9tgPcx\/3E6ZX39UfT0cSPMPTydp6738M5tJwCq1mP\/9GpgLyzdn2+b3amo\/HhsbB3HfbNusgpHCVy64Cwk7Hq9al0IfAeBCJSe0+hi2T41Y+d0HbVJXVHVvJWxkg8IvgIQy9r5RhAdkThLZ1DzymgS6Tjah5O4Yy+831yRnrEMcjhEcqhRjvcEVk9jMsx9BCq5yEC0QQMC14gE3LNJnN0lLHzfFrtRiQ44hh2THLfBbdwDi2nACaRQ\/Z6zqajlbPwv3rY62dL1FpkROPa7iRm8bPlbXtgVzsGi07FUwSiC7m08AUeRPqKLPzbGmccJ0UQaAUoPaLwrAl5pnPoOYVd5GUxfWSnQL+3jn7YHWj86q7K5mnctGRYrEbi5RhGUKoy70EgWu2+p9CFMqIttyZU9KpktCNS+ZUwgmJUjo4NIhlH8s5wDj2nsJO8ZPujOwXGQWsBYO3TIsaP52jnK3xWwnIMK6hVnfe8zsbgvjIskGBGxNGk3H2c5LGJjgEy\/c44dpE+EI13gqxKV5xRzynQzopc6RqFljQz\/GbyWZlDirv7v6dDRux29yqnavOQi85yGBFGK3nlGFZQqzoP5xjoMk+AdrJ6wmo5EltvNO6HzAyhRY7LyzuSxnaPDWkwGJXbI1J7YToqs1fOk9doX2AbmPJHPyCHP53dq12Pyaj81XJq14Z2ZyD9bB5tnbFw8NjSf1avihcCIQJMKj8BPLmGFe+Y2SKvaHKN3AF4DLK0NRucdGaclff5IgUrZ2c8cg7oCGatdqjXeusLO5Az42Ra7dlnvf7hOSTK7mylfU\/Avk92p6NVv8aJJWbl0f5ZiwbvGGjLYl\/xQiBEIHIMZ5NXqMhEpt+C24mtbboVt5MYrNxo0lldovhZBGD1ipwDukBKOE6eqzxxnIYlqUjvs5wCYw29op0XK\/0dY3H3rjHCx+Z5ne3RHGMR7P0RpK+j\/jkaRmP0qMyq\/wQIPKJjoFuy4wEIzHebn4R2Es\/GNYEh1B6ZZrKjXY3X+Wg6cw7SCTLmT+lWeJZTsDb6cQih2edH46t91cIle+Z1tzsx7XisI6QfjtqX1S\/HkCFT+U0E\/IRksIv8mhXv\/LB1nKTJJxUhyWwSz+Zr0tvJPisDkkIn6XdW2HMOI3rjgM\/W1ZIkOp3hOH0bI7avlmFs2D6VUyJUvl3YnLmLLMcgxCucQiA6ZumdR081cFLh1nFSpL+diKsTnnqs7lpOaVS2J4+TYHr7f1dbtV3HHmfphlxP2JAnREnb4LxrkbJz19jrY+sA7DGWdQBWhs3fjXU5ht2IPom8aOBoVXx1CDLCi0g3stNOznvEIwd2BuazOweIyu+6duuFTt4pZH0A0UYXuj2dqINj0V8m\/4x86Uvbkq95ZfN4xjju2bL6PBr3q7Kq3hMhEA0cDeCrw5Ct3O2KTTb4yajJes8w0lP67g4h4mh3KPvRBaIGp91te3m0kTl16eNDdPNybBpHhn04NV\/3Hmkdh9lxp3ll86SbHIm1aUc8mt875JaMF46AfWNCgzRacV8RBiaTdPahn2gQoy9zzzREh063xhVccKgQhv5u4Qxol7F2hLgjvDgiGr1Ev2V\/y5FZJ6CjOZsnneQ0do+Hcgy7EX0SedEgPfPMczesGSloxWbbm12latLOhKy8cawiXRvqzDwiOKvnS4hjI6QNQWZ9NIMrZW2fIh\/ZszJuVV67QTu\/7LzyelD+jHHhHYP0egljrGw4EQE7cDVYmcgnNrlVdHY8otWZbexWRAIByAnY9p8hDnnjGDWWjoY4c8gMOfYs\/hZO\/qjuHG9B9laOxkCkfzRmVX419I7BOqdVmVXvCRDwA1eD+FFMjxwbNkQTANKSfbcM0YVJT\/tnX+reo984JsI+EfgRbCFMZLHb0AraOnTaAsMjbdyqLosD+sM6AewiLxuLsnlXP5Zj2IXkE8qJJgoT8FGgyAjJ638VQkFf7Soe2VHglI\/uDiJH4PsNMtUYhWz5U1qh5KCTrw\/WKnfLkJ03RG\/1tfd31mFILxyG1\/9IuhzDEfSevG50BhxNsKvClJFTRLqagFcKwZ9V8qM4Y8bGEbKlvyDAUXvtrhYyZRyiA6Q3IueIrkfHCX3rHYDsjhYq1nHsmG\/lGHag+KQyoomjbfAjQGJXZHYiR6uvyFZb50jcHnmsyoEYruqUIbRV\/CBH+mP1qMSSq4h1dGx6clztm131WARIdz9m2E3q2Y7Q207\/7ZBbMp4AAT84mQAMqEcxPVp5YYOdgLIlsnXHhNdK7wh5Wj1YaUaOTXbcMoTMwdLqNxKH5MA72rnN6m8JbnbRki0cRmw4owy4yEEyXnwbs46vhaXFjXbKMbTQqmfvQsAPnkccQNFxWDQJziIJT+JHj1tEFthF\/4hI3tVxN0hwvg+RSZ\/RkBX+Tp2t80f2jOn0xajetypHn8oGv1jxY0nlVkI\/t6M5sSK36jwBAvZyTxNjdvLdGyY\/ubAj2pafRRIZCTLJhemREFtu6SCwh13QEZ13rnwZX9ZBzcjGliN2nFEXh68543cN0U5XZWdDHIHVvxzDLIJPXD4jy0eCJCNgTyBnkERrsmV62ck6G8cJert29tXqLsHbMXvk07PBOqpZ2dGO0ut76zQ4y2ZL4K3xpPKjoZWLfTudzqgOVe6BEYgmxY6z4VtBYo8arC04Pa+Dfb4j3iIpPzF3tCcZux0ETnP2LoGdZbaw2L3rtE52VrZ1KsLv3qHupRif1rZop+vH8Gjajz97hDUqo8o9MQLRisquaB4BGnvUoEkfTQQ\/WVR2NcxW7\/6IYFV+r94OB4FjhWx7bdnntIszYWxE2FM2w2ZlPHk8Z2T7s3Zrxz3jws9jaPNXsFIdP9aj+aCyFRYC70HADyAmy6MNomhVCHl5Y8nbRQatleutyWjVQcweHeEEWOFaXCPswXj30YV1XjPjM9vV7BoHq3LsbtOOy2ina\/Eejft5PYPZaBtV7gUjEJEYg+qRTB61ISq3OrFbxBftwlbbmak34yBmsYCYoyNGCC7S0V6y7hhL9qhrVnak373z7MICBy19rMM4gpt1pMimv4\/Iq7pPhoA949Tg3HnWeQs4s1WhbzuyVTbPhhFJ0p6d5LMyd5VvOQiOKuwKdaTNFqn4Yx4rL8PI98tI2vex37m0ZPjVs9XxnnF7JCY9WguOlo3+meQpfLTjYW9PpW+MAJNXg8eGu846b2WO1V1xO\/HQw5OLys2GrRXrKOlmZ\/ORLpSF3GZ3It5B0Kd+JRm1pzzaHTnayPSi\/Z39bzGb2dXO7o5k\/9mhdW5yXjN2tbD1uo\/0Y0tePXtCBPwgIv1oK4yI8PxkaK1uIwyyvGxVB\/FmdXw+BBDtYLAD+eDvHZuGJs6cMhkh+7a4B6C8JVZfxqfRb3RxkDlD2pPOO0J\/n+H7N2uDct6+K6SxRzrLee3CzNs3ipX0qbAQeJ9WK3YwtY4PrghZRE7Rea21cTWeOc2I6LM2cADg6M\/oyZ85gqHNUQeR6eLzZ1f6LbszrFbGkG9nZnU94xQ9HmemhYN1Xso7EnqdyzEcQfNJ67Ka9ANpZtJdATZPsNgTObejBNFa0UW7Fo+rTQu3yKlFuqt8FO5yEMiJ5Ed5kD66txzTrJOJ2lFetOMbJTy\/27D9cIt4Nu6kv91tKk92z4bU9zaN7v5m26ryLxgBvxJjULUI8IpQRJMhcm7R7shPolY6I7qItFpyeCYcmbSRUyFvliQg61USHHEK6IrTajkDb\/dOUvI4RX0sXG0YjXGv55lp+sXrTnt2ASBMj+6yorlgsah4ITCEQHYBPXOkMdTQiYUgHz+xmYi+yaOOISPPaNfl9fFpq1vWB9RB9iy54qhm7hUyh2d1hMSyla+3zaYzzKzs0XiE84jzjMaH1fHsONihg3cO1rFpbFpnMYqLLVeOwaJR8UMIRBN+54Q+pNxgZa247CT3VSNiseV78Yygo7ZnZUEIWR3kr64k6UeRTiQ\/cqAWN5yWJ7RITpZnyc\/KXYlHDnRU\/hEbMttG80X2OGw71+zOXP0\/4qRb2NHfVi\/GTqt8PSsEUgQi4jg6QNPGTnoQ2eCJXJPPTpzRuH2LxJoAYY\/KsOWilW7PwaCDt8nq0opHuwiIqbUzjO5urA2jcdpu6TbzzBKr2o+w9DJ32aI2Z0I5BnTyxC1slD\/q6Lx9SvsxflSe5Fb4hAj4wcSgf7SVRmSDJ4yozOgEh1iioYEDHZVhy3ndkC1ysOV8HGJc3T1If9rmr+VkVu3y+pLOsJM+M2Gk1wj5QcCRbrfIY9xZG+3uRX1Jf6CL3UXYOqNxP8ZHsBmVXeWeDAENSj9JtJp5BDgiUtWkk\/6rq3twibCAWD1mo2kwl142jFbEkcwjuwfbno9jkyWuqO3ZPOT5dlbTUT+jT9Q\/vg1Iclb3HeW9Y7A22Gdqy+s9k\/bHpaRn6lfZQuBdCGhQ2pAB\/K5CF05Ezs1OOlSPylh7s3hGbHaCZ3WzfO+0BK2f2Fl98tnVtY6CJHM0PMMpSP9dembOeOTo80h\/yY6VMFq1awFgjyiVly0aRvrROz8\/B0ZkVJlC4B0E\/IBiAoxMtncE3DkSEYafFKuOITsKObKy9roJvhUddzlwSGqF+Ebq7Fy5Zrj3dg3RGBnR\/WiZyDEIa7vo0BzMFg0aI61QMqRzNnZbMupZIfAOAhCVBpPCR7tnkN4K\/YRcIV1kRatdSEjtrISZY6BDVuQdJd7o7H5Fj6zOzrEE2UXtjCxkRMhR\/bPy\/Dikj60NmoTqg9bYUNksBGdrx5HdR9ZG5T8RApCfHVCKR6R4VVj8aimakLJrNMwIbebIJ2qrNfn95I7qR3kjxOj7jlV0tCiI5B\/NO7IStnpnYxX9eruGI\/dMq\/ZH49AuUmSb+mGlHyXD61iOQchUuIyAzjjt4HqkrahfDUakbm0biWcr8VXyVpuZXDrPOzjVsSF9FfXXKKlAruhw1A6rUy8+qtvIAM70bjlcyc3q9vRffR45BnusJfLWHUhUXrr3Qq9jr3w9LwS6CHhiZZCR1614kQJacdnJ4VWzz0bimrRWjl3tjciIyrQmPwQa1VEexAaxZKv9jIBZTePozyTGlmwcGTpbLFfjGUYjbRzd7akfRkMwiexUfY0xjSt77xDVy\/KinVRWtvILgWEEtGLRgFW4azIPK7JYcLdjgGQiVTJSEl4jYcsxRHZYmX5VDCH43YN2enIG2YWtlUsZSBP5LYK3dXw8G0Mqt+uivHUk5PHxfXj0fki2zIReB9KqL0zkGMiPyvfybH1ktMZYT1Y9LwTeQSCbMLvOht9p6KSInxhMDmyyzWkyjoTZytuT8IgsX6Y1aXuOIeqPyDmMOAP0QhewszhFWHobojSLiBY+O3egUfvkZQ7d2ofNWf0z8m3biqsd68iUpzIzoXfKrTE2I7fKFgLvi8gkI8irwRWRmSe8yD4wLtLOAAAYEElEQVRNRh9mBOzLraTRI8Ov5xi8TZIT2d\/TzZKS5Chc2RlRt3dU45212psNo6NP2atVeCbTk6jqnRVGeqgt2wfKi8r38vy4sXJ7det5IdBEwL5Gp0E6sgJrCr3RQ1ar0lmhJ9GZlWJ0hBbho7ZmwwwWP8G9XG+TldMjZStLx022vo2vkCf1s52n2u61a3VoxVt9kZ3rW3mtnY103RXadhWXbEvgymMHqHKjoR83u3Aebb\/KvWAEogssBuvKQL0HTJpYCj2JjjqG7MhjtL7ab4UZPn6CexmRw5Ks3lGOZGX2SQ5hNhYkIwpVv7Wab+2WVH8k7Dmg3q7B4oyTOMtRZE5K+EWOwY\/bETz82FyRMdJOlXlSBKKLR1aijwCHJptCfxzkJ4\/K+TAjFV\/uSDrD0xJWJD+rp\/yRXcPocU7UfitPOoB7q9yuhUbraJC+lj5R6B1LD\/eWPa1nmRNWnbMcwy6MI+wq7wkRiIglW\/VcDR5PFHbSoeuoY4hW5azANJl3hBk59wiqh3lvpd8jTCt\/FC\/hYetGCwyV27XQiMaq2iDsrZrtzobFwKy9tq0s7hcnYGSdkr3Dk4xsbFh8fVx1FfrnlS4EDiGQEcsjrED8xF5xDNlRR4+ENCFHw4y0jjoGOr9Fyh6T1mCZvYC2Y6R1B7Dr3qrnrLPVumy29bE1G\/ujferLZU7YtmvLqL70mwlVl3AXvjPtV9knQCAill2rvDPh2+EYsks7vxuxE3ElvuIYLIm0cGwR+kw\/tsg9stli17vviFbSLZuyZ727gd7qW2OdkDZ2LQAYL9HOkzas81d\/WKeU2ZrlW0dDv4yOk0xe5RcCIQJ24IoAHmEVssMxRETCBBcOu8IzHUOL0GdIwxNOz3a\/Qm85KF82HIgDmfY4KNIPHVpi7NtX9H3PoUVt+DzIPnMK6GIXGdrB6V5GDqqls3\/m+6lns69f6UJgCAEmiB\/spHet8oaUWCjkHZomnUR5x+FtzCalJq0vfyRtV9fSj7BFdKOk7onC6jkqQzrZuiNx1SO0q+Cobos8rZxW3BJ71AZ5rXasI9BLByMyo7Yg5FZb2OHnlsaoxu5s\/yBTdaWTZLZwq2eFwBICdlWjAXf1lUhvgvQcg7b1HjDsFga7wmzytnQcXWX3CNnb10pH46CFgd8JtezJnGNLH\/8MIm7pw7MMa8nSuLHju6V31B7lJa8V+qMqYaD2erpGsqW\/9JKDi8pWXiFwCIFs1dRbER1q9GBlP0H8JNN5siaQDyHUSIVePS9nJO11U7stIs7qqK4NWzrYcr14awcTteGdazaOqIutvfZHnrcwox2OQVvjVqt4u2PsOVdvu7c70pt2\/J2IHKnkrezK5VQkQzIjHSqvEDiEQLYSu\/JqpOcYNHGiMLtDEWlEdY7k2dWp7aiWzF2OIXOAVg\/FPaYt\/XgWkX3Lsc7oIp18OKJjb9xqV0h\/S75f3bdsH9kxeCerMWeP\/loOTHr50DvGFRleZqULgRQBTRY7IaKJnwq48QNPEJ5IrR0+nhF1a8XrZcykIyLJnLHkenta8KpOFM6sKC1pRbKiPEuu6Oj7xdbJcG\/Z5p+NrO7tbsDXJy07rQOhP\/wK3+pu4yL5SDZ50QsB6k85oNW5ZfUgnulQ+YXAFgQ0WfzA27HK26KgE+IJSBNPxbwdNp1t4f0qz9Y5Eo8cQ4a32tF5tOxphaoThZb8WjJ41nNWI\/JbMnqE2tNPz1u7EunYsxti9o5qZmEgXXwYycBucKGsVvwz\/as2\/I521blIXoWFwBAC0YTzk2dI0A0KHXEMmXqjK0aRz2gYEWLv7SccR6anz2\/p4R2mr+vT0RhoyY\/GB3lZnR5he32idEu+2o2csZWFHtHOgnqS0QqtLMUjp4AM9aUldjkK1R0J\/WKiZ+OIzCpTCHQRiAa2Xe10BdywQMsx+AlkJ3j2ts\/IEYWVMxv30Hj9vTyRia8XpX1dmx65KLUyR4lRbUROr4XlDjLrOVXp1sMQx+CPwlq6Sy6hxYx4NuasI9T8ipyplxel\/RHVrNOPZFZeIdBFgFVMtGpe2fZ2GztYwBOrnSTZJGVC24lqVfDyLAnsiHuS6h1b+fJWVx9v6TdLxCs4RMeNOjKJdPNk7O3ppVvHVba9bBEg+dgaHSu2dJd8yVDoHSoyPC7CNmpTclqh6kuHK87Llv717IER0OWYBh9htOW+t4l+ktjJ1nIM2RbeT2xr\/464d0g98pkhz5Z+s45hdDVu24wISqtjW07x2V1MNNZG+6uFI2OBcWTl+3ElnW3o5wNt2OfZjkA627Fq2+7FVV9tzSweerLreSHQRMAPcg3C1cHcbOzAQz+B7STxz2RDiyRVZlfIzstOZE+GvXZmoNkpK+v\/VhsZrtHuEzmeWGdsVVl\/rJLpl5G05FjH0VpQWPl+J2Lr4fAl24e6G8nw8uV9GtysHlZ3X7bShcB2BDSA7SBcHczblfumQL+zGXEM0coWcSurZItNFAdDq6PFb+Qcewa3qH2bNyOLsrbuaDxqI3PQyDy60BjBULpnu0SrM2U88aq+D\/04GnUMdhfVc1hWN8W9HsqvsBC4CQLZpLPkexNFGo1AtHai2PPc7Pw+W2FZArcyj8QhPu9wZI4liKwNlR0JMxnKt9iMyPPYSk4rjIi+tfvwq+4RvXyZUSLHQfm6Ph0thjJ7IzxtWe84bFv2CBGcszFp6xC3zoe2duy6fBuVLgS6CETkQF634o0KeP1ss\/4ZE6m1xbeT1U7w1bje1PHEKELpOaKWrtZOxXt6zjr0nn5Re9SRPjZsEe4oKVp5Nj6qJ\/3R2jX4forsU15GyH4xQjpqkzw73tCt5Uhkr19kXGkuSscKnwABv0LRxJglmbOg8uRv25GuNsyIi4lqy+2I22MCSwK6gPa6+zZnJ72v79Nq12LUio\/saHwbmTPLxhH1R1byLT09WXqdbLqFQct5WRnEMzmRnS3S98ds4KeFQ2SzL5+N56hu5RUCWxGICGyWtLYqZIQx6TRprU7Z6i+bdCskqHaz0JKHXdVqMmf1lG\/tMSanUdXLwlkCBqtMVis\/2wFkRz7Z6js1NHjQ0sc+a7VlnbetE8VbWNq+tnVp244JmQHOfo4hP9pp+B1JSw\/Jr7AQOAWBaBXEgL\/CrsFOPEukkc4tUphZLdo2W3E7sa0+6DlCurPn7y1deLZCIj2Z0fOI\/BiYLeeb1Rkd0J4wI72UF92DzO4YWZDgANA7Wmy0nAz9H80dZDFGpSdxX87L9c9H8apyhcAWBPyKhsFriXhLI5NC\/K7AEh9xTTCF9mjHN2UnpMofCSNS1+5GRws9+dYer2+U7slb6S9PRL02eJ7hDPkKAy9nRTeLAefzXmaWjvTbsTDABjmLkeMtykfE7h0EummR4W2KnJLFpeKFwKkIeBLWAI0G9qmKGOG0LT0I7aozWkFGK0XEZbZZ2bNxq4tUtuQDKfRkzjqGnnNbIV+rc09fPUcP2ezD7JiFutkRlJcRpWf7UERLP604P9m6I2SsRrYzXjVOtEPx7UVYVF4hcFMEIpJokcDZyvlVonVSniSZWJk+Xo6ffCtpEY9t0zuyntxZxyASyeS2MLB62vgqNtlKtkXgOA3b9mzc93mGA\/lgle1esnoQOH3Swzmr38tnfkUOgnETOS\/yZjGq8oXAdgQYtNFkgjy2NzYg0K8+VSUiHyadnvsw2l30JnHreWvCzpCXdXRe5yg9QlhRvVberDMTLq0xkeHN2Iocaks\/+yxauEifHaElbfRkRc8YnOnTET2ww+NA2jsH+tvaX\/FC4G4IsGLyg\/vohF41xhKhJWOOB7yO0dGO2o2cna8\/k26RYqRbJvsMx2DJTfa3Qggp06+VD\/lnclvOptVPmTzlj5zrt3RuPWstLGgfXJkbu8YScpBnHYS3j+eyvcJC4O4IRCuk3sQ5Q2k7kW37xO0z4naCWV1aJOVljKZb5Iseo+Qx6xj8DirSd1YmWEX9Hcn2eRZnH89kku\/LjqZXnZjVmwVG1D+tPrX6US6qb9uYiVsH4cdqawFidap4IXATBPwA1UBfIZ1Vhf3rnnal6Sdma\/U6QqaybyS0O5fMtowUvfysfpYf7ea8zJU+yo5+vGyfbrUFqfnySrfqZbYr3+4iJW80pO+iHd3skY1f2Y+23yrHmPG2HcFJeFVYCGxFICILBm+2Mt\/aePD\/6WpFF01K6zS8HqMk3Zq09hmOxrfh07Z8K+7r9dIjjmHl+GFEbmRHq63WzqnlyHsYtBxOpKPycAroFNm6sjKP5ofa2hXeaq71MK\/nhcA7CGQTe4QY3xFyIGInnl2lR8dIchq+OfJ3TVLJyd7GsW2rbCtk12PrjMQjUvNttMg6a4OVqZczkrb9EsmO+kpysz6L5Ng8v5OUvFbISlwkG+m0oks2P1p6zD6zdle8ELgMAtHqnMFN\/plKMunsJLLOyB8jUY7nmvhWr9XVpW3bxtl9WPlRfJS4Zo8vaGvEMaysxo840Ah34dKSa\/tU5UfDaAzYfrJxHIGV649rVhy05K06VKtfFl8ZH9KrwkLgdATsyl2DmMm0ssoaVdafA2uV7vOlDyGrV5VTO5Huts5sfITMRsliZeKPOIYVueA1Q7YWt94iwROx6tJey6moD6MwWvVLrg29U0CWr7uKl\/RiTNg2d8Uj3dVmhYXA3RFg8kbn9L1jhCOKWzKxq3TabE08yMYSVavsyrORy8BRxzDiZDyGLccoeyxevn4rbTGXrJGwZ0e260R2626opevITjAjVu9ce\/q39OBZNj9GsFMZFjDIYezo78yFV8+mel4IDCGQkV02+YaEJoX88YMuBjMdNLlsyOSfKW\/rZnGcTqLyu7I98WTyKPeuigOJUZsGRL2nyKpjGHFE0cICXEbqekVxJr3dTQtb3z+tsr7tLD3aL9lYGB1bWfuVXwjcDYFslbZjYlmj7FafCaPjBk9c7B56BJFNxJX8USfoiSdrSw7P2t6LjxJQT0703OOb6R3l91a3LUxmdg12bER6kNeT53cwR3cMwhI5mU4j+ZJTYSHwcAhkE7M3GUcN9bsFkbGfzEw08ijfO14amZQjZWhvxI4MI98GJD8iz5YZdQwrsr1+M+le\/+PcM3k4JGtjFKd+r59ZJPT0QLbH0LdPW1qMRLpkedTJdkaZ7TZ\/pc8yXSq\/ELgpAq0JOjIpe8r6VSvEH004ewTBc1\/PTrhd8Z7uej6qywoReFLLbFuRnckayZcDFwZR2HKYLX15oaBHuDgF\/+JBpIPyrE3UVT4hclZ3wdS1smfiLQysfhUvBC6JAEScHeGMEERmlD+q0uSMCCVyQlG5mYnZKjvzCmhvZat2wDHDIssfdQyzx1RHCA17rKPOdG+1kY0b+jkba8IRvHtHWV4n72jQzZZB9qxM1W8dm0nnKCzHIAQrfFgEmEjZhGXFPEt6EICdLExcZPh8yrRIyDsXK\/NIPHJEWeeNtpPVb+VDViPy5VRbsuyzUYfTanuESFu7KV9\/5Mx+Zaxht3+N2d8z4GxmFgMWS+KjiwOLp7ffy6x0IfAQCLScA05jlEwj8oeoshVm76yf55nTshNxJj7j6EblrnbyiPxsBZ61ubrKtbqM7FKivpYM6QxBjhCrymc2tfL9AsIvNpCNXqur+GzsytYobOlbzwqBh0Kg5RwY\/Ew4yCAiViZdtIKEpDJyH13FodcIuUQT1OeNtknHzRDCakd7\/aI0uM7IFxFGskbzRnFqOW0Iu\/VcuowuOjIMon6yTkAOzDuMTF6UP+Nsj7QTtV15hcDdEeg5B01miBrC4i+b\/BBUNqGoEzmYDADKQlZqfzWcISHIZbSdTO9e\/oh8sO7Jsc8jBz3Sji1D\/1iZWTzrXysri9OGJfCsjZF834bdgbBr0fORnVDW3ujiZNaRZ+1VfiFwKQRGt\/+abFHIqqk1kXBAK0YfISL0nDn71Uozss\/nrdhCHS8nS8\/Iz2TM5o\/0kSXdGfmMjZm+6NnvnaFfeGgs2nz6d0aPaGcS2cwY7elbzwuBh0SAFfqOI4lo4sys2iPwsqOpqC2bBwlE8rK8GSeUyejlW\/1a8Z4cPV8l6qjt0dX17Dixq3npfTT09wzYYwnaPmfnqZ3uiPOzuo2Mid69mZVX8ULgIRGAxFllRcSxknfUKQhECFCrwFE9RolObYyQgNpWndlQ9Xvh6JELpNSTNfp89J5h9MiNcbSr\/z3O2WqeN5RwRH4MM3ZmjjJte71xtyrXtlHxQuDyCOzYPXC0NLs6GwFm5DVIEeHs0YU\/npCcKBzRNSoz2saoY5hxZpEdNg8yjXS2eeg1YgNkekb\/W108+VtbiNvnR3YtmROiDbCwOlW8EHjxCECss8cGTEbI6sxV1OjRErrPOIcRwhP5jBK3HySjbYChrxulR+VJ716YkTn9OeqUwf3M\/hcOvbEJNtZxzowFtaHQHk1ZDGd3pZJXYSHw8AgwyZkAHDXYVZgmCHk8o8wtCAFAmeSjpDjqqCLbZKMPV8+VZ3QeGTgzOnsbonREdDhBdoBReZuHLmcdHUVY9I7R9OGbHAhhJGc0L8LgiLMZbbfKFQIPgwAryytMCrsitCTl4yOk5eu00qMret+ho45h5Ly\/dcTR0r31zLY7s0vg6OjW4wH9ZAvt+7FgnZycwxEd\/V0Dad+\/lS4ECoGLIABB+kkrwvAhxBwdl0AYvmwrjZwV80cdw4h8VuctHVee4UCxa3SXQBurTnIFP1+HXYPI3u8g\/HEfzsHneXlZOhoft9wdZXpVfiFQCDQQmFndQmYcM9hjLwhjlkht\/YZq73o06hhE0O+q7BKjZ\/6zdo3qyNHKKtE6U7Yk\/Y5BDmOHcI81tu+QWzIKgULgBghAVNFZcESOkK+OG\/xqMyrv81ZWjKOkS1s9uEZ3SV7vHWnvWHu63uK5xXbEsc7ohDyL2z13STN6V9lCoBD4JgKzuwccCWfrduKPxCGiWdD9qrbVTnTkZdtr1T3r2dV2CRkeK31jZdm4P7LDSazsFq3MihcChcCdEGD3cPaqevYoZcYxtGTz7Czyz+RecZegoeUv4tFVz46GftFQu4WjiFb9QuACCMyQcUaKWf7synRGFx1zRRDOyMl0H83HubacVKTfrfPAytqzi7z9pXPtFm7ds9VeIXAiAkxwewZtSeRonPuJUdVnCL1Fbn4Ve9SGqD4k2NJh1OZblPO47tLby925E7kFLtVGIVAIDCAAiY9eTkdkGeXNrCI90UTylGe\/KfCm0abKnRHiRHe+1eP135329wAt7Gba9mPlkTCZsbPKFgJPjwAXhzMEPUK8HLeMXEjOtIvMqLP88caIfqNlIMKZHVCk3z3y\/B0D9h49\/vJvqh39cvoeuFSbhUAhMInA7uOlEeKYcQyQW2SSP08fJf1WOR0bjTi3SKcr5PnVPTb13uxq6e2PHmu30EKrnhUCLwwBVpaeVFok2noGmbTIddYxRKv33W9a4dBeAun54yT1E5jPDlm\/Kxtx+rNtVPlCoBB4AAQglh1n9xB3tlKdvTT2hOSPN0R+KyFO7Ohxy9W6NXOaOP4ZW8HdYpr159XsL30KgULgBAR0\/3DUQVA\/IqKVnYl2Dcg7qhdkhw6SeQKEdxUJgbcwwjH3dkeMASsDB3pXo6rxQqAQuAYCuxwExxg6WsqOOuzKNIuvOBQvCxnocA2Ez9Oi5xzAxfaL18Qf90UO3tepdCFQCDwRAqwu\/bGCJ9xemtWnv8js1dn5nPZbH8u9xO7EOWTHSsIWXLyjrN3CSxwNZVMhcBICOxyECOlWIcTXWhmfBNVlxGrX18NbO6moj2u3cJnuLEUKgesiAHlAtpBuj3Du9VxEpyOs66J5G81W+wwcb6NhtVIIFAIvAgGtRq\/kIOQQXgTAJxgx22f+mOkElUpkIVAIvFQEIBBI+V47BO4vXupbRmeMmREHwf3EGW2XzEKgEHgyBCDnW14ycyle79cfG2SRU8cp1DHcMVyrdiFQCDgEONPmVzjPOGZiZ8IdB224Zit5AAEcBLjW8dEBEKtqIVAI9BFg1QnR9F6bHDmC4sOsOi7qY14lCoFCoBB4GAQ48pndRdTu4GG6txQtBAqBQuAYAqz8s99M4viJu4N6f\/4YxlW7ECgECoGHREBHTTiJOip6yC4spQuBQqAQKAQKgUKgECgECoFCoBAoBAqBQqAQKAQKgUKgECgECoFCoBAoBAqBQqAQKAQKgUKgECgECoFCoBAoBAqBQqAQKAQKgULgsRD4\/wCHx2uIgpp\/WAAAAABJRU5ErkJggg==\"><\/image><\/defs><\/svg>",
+            "column1_paragraph": "",
+            "use_column2": true,
+            "column2_true": true,
+            "column2_heading": "Other Brands",
+            "column2_paragraph": "",
+            "use_column3": false,
+            "column3_true": true,
+            "column3_heading": "",
+            "column3_paragraph": ""
+          }
+        },
+        "item_Pc7gnz": {
+          "type": "Item",
+          "settings": {
+            "row_heading": "Cooling + Heating",
+            "use_column1": true,
+            "column1_true": true,
+            "column1_heading": "",
+            "column1_paragraph": "<p> <\/p>",
+            "use_column2": true,
+            "column2_true": false,
+            "column2_heading": "",
+            "column2_paragraph": "<p> <\/p>",
+            "use_column3": false,
+            "column3_true": false,
+            "column3_heading": "",
+            "column3_paragraph": ""
+          }
+        },
+        "item_9KHx3J": {
+          "type": "Item",
+          "settings": {
+            "row_heading": "UV Disinfection",
+            "use_column1": true,
+            "column1_true": true,
+            "column1_heading": "",
+            "column1_paragraph": "<p> <\/p>",
+            "use_column2": true,
+            "column2_true": false,
+            "column2_heading": "",
+            "column2_paragraph": "<p> <\/p>",
+            "use_column3": false,
+            "column3_true": false,
+            "column3_heading": "",
+            "column3_paragraph": ""
+          }
+        },
+        "item_YYDmMd": {
+          "type": "Item",
+          "settings": {
+            "row_heading": "Waterproof",
+            "use_column1": true,
+            "column1_true": true,
+            "column1_heading": "",
+            "column1_paragraph": "<p> <\/p>",
+            "use_column2": true,
+            "column2_true": false,
+            "column2_heading": "",
+            "column2_paragraph": "<p> <\/p>",
+            "use_column3": false,
+            "column3_true": false,
+            "column3_heading": "",
+            "column3_paragraph": ""
+          }
+        },
+        "item_xRdVRq": {
+          "type": "Item",
+          "settings": {
+            "row_heading": "Filtration System",
+            "use_column1": true,
+            "column1_true": true,
+            "column1_heading": "Triple",
+            "column1_paragraph": "<p> <\/p>",
+            "use_column2": true,
+            "column2_true": false,
+            "column2_heading": "Single",
+            "column2_paragraph": "<p> <\/p>",
+            "use_column3": false,
+            "column3_true": false,
+            "column3_heading": "",
+            "column3_paragraph": ""
+          }
+        },
+        "item_rHdEXH": {
+          "type": "Item",
+          "settings": {
+            "row_heading": "Price",
+            "use_column1": true,
+            "column1_true": true,
+            "column1_heading": "$2000",
+            "column1_paragraph": "<p> <\/p>",
+            "use_column2": true,
+            "column2_true": false,
+            "column2_heading": "$3000+",
+            "column2_paragraph": "<p> <\/p>",
+            "use_column3": false,
+            "column3_true": false,
+            "column3_heading": "",
+            "column3_paragraph": ""
+          }
+        },
+        "item_z4DKY7": {
+          "type": "Item",
+          "settings": {
+            "row_heading": "Portable",
+            "use_column1": true,
+            "column1_true": true,
+            "column1_heading": "",
+            "column1_paragraph": "<p> <\/p>",
+            "use_column2": true,
+            "column2_true": false,
+            "column2_heading": "",
+            "column2_paragraph": "<p> <\/p>",
+            "use_column3": false,
+            "column3_true": false,
+            "column3_heading": "",
+            "column3_paragraph": ""
+          }
+        },
+        "item_yhkbBT": {
+          "type": "Item",
+          "settings": {
+            "row_heading": "Free & Fast Shipping",
+            "use_column1": true,
+            "column1_true": true,
+            "column1_heading": "",
+            "column1_paragraph": "<p> <\/p>",
+            "use_column2": true,
+            "column2_true": false,
+            "column2_heading": "",
+            "column2_paragraph": "<p> <\/p>",
+            "use_column3": false,
+            "column3_true": false,
+            "column3_heading": "",
+            "column3_paragraph": ""
+          }
+        },
+        "item_9QrpkP": {
+          "type": "Item",
+          "settings": {
+            "row_heading": "<x><\/x>",
+            "use_column1": true,
+            "column1_true": false,
+            "column1_heading": "",
+            "column1_paragraph": "",
+            "use_column2": true,
+            "column2_true": false,
+            "column2_heading": "",
+            "column2_paragraph": "",
+            "use_column3": false,
+            "column3_true": false,
+            "column3_heading": "",
+            "column3_paragraph": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_Y3gdBj",
+        "item_Pc7gnz",
+        "item_9KHx3J",
+        "item_YYDmMd",
+        "item_xRdVRq",
+        "item_rHdEXH",
+        "item_z4DKY7",
+        "item_yhkbBT",
+        "item_9QrpkP"
+      ],
+      "custom_css": [
+        "* > p,* > h3 {margin: 0;}",
+        ".c-cc-grid-row {border: none; grid-template-columns: 1fr 1fr 1fr;}",
+        "h2 {font-size: 24px;}",
+        ".c-cc-grid-wrap {grid-template-columns: 1fr;}",
+        ".c-cc-grid-cell {min-width: 100px;}",
+        ".c-cc-grid {min-width: 0px; overflow: auto;}",
+        ".c-buttons-div {margin-top: 32px;}",
+        "@media (max-width: 768px) {.c-cc-grid-cell p {font-size: 18px !important; } .c-first-row .c-col2 svg {width: 3.5em; }}",
+        "@media (min-width: 768px) {h2 {font-size: 48px; }}",
+        ".c-col3 img {width: 2.5em;}",
+        ".c-cc-grid-cell .c-col2:last-child {border-radius: 0 0 1em 1em !important;}"
+      ],
+      "settings": {
+        "use_grid": false,
+        "subheading": "subheading",
+        "heading": "",
+        "paragraph": "",
+        "show_button": false,
+        "button_text": "Buy Now",
+        "button_url": "",
+        "button_style": "c-b1",
+        "columns": 3,
+        "use_true_false_icon": true,
+        "icon_true_image": "shopify:\/\/shop_images\/check-circle-fill.svg",
+        "icon_false_image": "shopify:\/\/shop_images\/x-circle-fill.svg",
+        "active_bg_color": "#0e83f9",
+        "accent_color": "#000000",
+        "text_color": "#000000",
+        "section_top_subheading": "",
+        "section_top_heading": "How Does Warrior Willpower Compare?",
+        "section_top_paragraph": "<p>It's like comparing Porsche to Fiat<\/p>",
+        "section_top_alignment": "center",
+        "text_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "c_rich_text_GLfbJn": {
+      "type": "c-rich-text",
+      "settings": {
+        "button_text": "Get My Water Chiller",
+        "button_url": "#beta",
+        "button_style": "c-b1",
+        "blocks_alignment": "Center",
+        "section_width": 100,
+        "image": "shopify:\/\/shop_images\/iceberg.webp",
+        "overlay": 0,
+        "bg_color": "#ffffff",
+        "text_color": "#000000",
+        "section_top_heading": "Don’t wait, take control of your recovery today",
+        "section_top_paragraph": "<p>Invest in the Warrior Willpower Wi-Fi Water Chiller and experience the power of consistent cold plunges. If you don't feel any health benefits after cold plunging for 60 days, we will fully refund you!<\/p>",
+        "section_top_alignment": "center",
+        "text_alignment": "center",
+        "padding_top": 10,
+        "padding_bottom": 15
+      }
+    },
+    "c_blocks_two_columns_JwNG4F": {
+      "type": "c-blocks-two-columns",
+      "blocks": {
+        "item_LhqFqX": {
+          "type": "Item",
+          "settings": {
+            "block_heading": "Great investment for my health",
+            "block_paragraph": "<p>Keeps water at set temp with little to no maintenance. Water stays clear for 5+ weeks. I love using it every day.<\/p>",
+            "block_client": "Ned Z.",
+            "block_icon": "shopify:\/\/shop_images\/Vector.png"
+          }
+        },
+        "item_kKxaiQ": {
+          "type": "Item",
+          "settings": {
+            "block_heading": "Everything I hoped for!",
+            "block_paragraph": "<p>My cold plunge setup from Warrior Willpower is everything I hoped for. Like the ability to set the temperature to exactly what I want it to be.<\/p>",
+            "block_client": "Scott W.",
+            "block_icon": "shopify:\/\/shop_images\/Vector.png"
+          }
+        }
+      },
+      "block_order": [
+        "item_LhqFqX",
+        "item_kKxaiQ"
+      ],
+      "settings": {
+        "blocks_direction": "vertical",
+        "blocks_alignment": "left",
+        "columns": "3",
+        "mobile_columns": "2",
+        "icon_width": 3,
+        "section_container": "page-width",
+        "use_separator_boder": false,
+        "button_text": "Buy Now",
+        "button_url": "",
+        "button_style": "c-b1",
+        "accent_color": "#000000",
+        "text_color": "#000000",
+        "section_top_subheading": "",
+        "section_top_heading": "Customer testimonials",
+        "section_top_paragraph": "<p>See what others are saying about our product and how it has improved their recovery and overall health.<\/p>",
+        "section_top_alignment": "center",
+        "text_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 4
+      }
+    },
+    "c_logos_8AUVHJ": {
+      "type": "c-logos",
+      "blocks": {
+        "media_VKacPg": {
+          "type": "Media",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/image_318.png",
+            "block_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/52c1574295c845129bcb9c3c2347c96d.mp4",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "media_VKacPg"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_gap": 1,
+        "marquee_speed": 60
+      }
+    },
+    "17307651240e8f3979": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_AMnTmk": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_AMnTmk"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "c_custom_main_product_VnX3Pd": {
+      "type": "c-custom-main-product",
+      "blocks": {
+        "judge_me_reviews_preview_badge_fpP98C": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "title_mEgEwV": {
+          "type": "title",
+          "settings": {}
+        },
+        "price_LW8KeT": {
+          "type": "price",
+          "settings": {}
+        },
+        "buy_buttons_tPwQpz": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "logos_description_eFkUB7": {
+          "type": "logos_description",
+          "settings": {
+            "heading": "Trusted by athletes from",
+            "logo_image_1": "shopify:\/\/shop_images\/UFC_logo_1.svg",
+            "logo_image_2": "shopify:\/\/shop_images\/Olympic_rings_without_rims_2.svg",
+            "logo_image_3": "shopify:\/\/shop_images\/Logo_CrossFit_1.svg",
+            "logo_image_4": "shopify:\/\/shop_images\/nfl_1.svg",
+            "description_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_preview_badge_fpP98C",
+        "title_mEgEwV",
+        "price_LW8KeT",
+        "buy_buttons_tPwQpz",
+        "logos_description_eFkUB7"
+      ],
+      "custom_css": [
+        "{margin: 0 !important;}",
+        "@media (min-width: 768px) {.unified-section {margin-top: -32px; } h1 {font-size: 40px; }}",
+        ".price.price--large.price--on-sale.price--show-badge {display: flex; align-items: center; margin-bottom: 32px;}",
+        "#save-badge {text-transform: uppercase !important;}"
+      ],
+      "settings": {
+        "section_id": "",
+        "enable_sticky_info": true,
+        "overlay_width_d": 70,
+        "overlay_width_m": 50,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_VdaPhc": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "custom_css": [
+        "{display: none;}"
+      ],
+      "settings": {
+        "custom_liquid": "<style>\nsvg.svg-inline--fa.fa-lock.fa-w-14 {\n  height: 30px; \/* Set height to 16px *\/\n  width: auto;  \/* Automatically adjust width to maintain aspect ratio *\/\n  display: block;\npadding: 8px;\nmargin-right: 4px;\n}\n<\/style>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1771954603f04debf6": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "c_tailwind_wEGgk8",
+    "c_sticky_atc_W7EMfC",
+    "c_custom_main_product_nJA7ex",
+    "main",
+    "c_blocks_CUJkqP",
+    "c_content_blocks_MP7mjW",
+    "related-products",
+    "c_content_text_list_NHLNqm",
+    "c_faqs_dFDJKK",
+    "c_content_text_kUfhCd",
+    "c_product_blocks_x7KbXY",
+    "c_competitors_comparision_bj8mpn",
+    "c_rich_text_GLfbJn",
+    "c_blocks_two_columns_JwNG4F",
+    "c_logos_8AUVHJ",
+    "17307651240e8f3979",
+    "c_custom_main_product_VnX3Pd",
+    "custom_liquid_VdaPhc",
+    "1771954603f04debf6"
+  ]
+}

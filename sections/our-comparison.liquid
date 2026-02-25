@@ -1,0 +1,538 @@
+{% comment %}
+  Comparison Table Section for Shopify Dawn Theme
+  Based on user request to match reference screenshot
+{% endcomment %}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .comparison-section-wrapper {
+    background-color: {{ section.settings.bg_color }};
+  }
+
+  .comparison-container {
+    max-width: {{ section.settings.page_width }}px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .comparison-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .comparison-header h2 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #121212;
+    line-height: 1.2;
+    margin-top: 0;
+    font-family: 'TT Hoves Pro Trial Medium';
+    letter-spacing: 0;
+}
+
+  .comparison-header p {
+    font-size: 16px;
+    color: #000000;
+    margin: 0;
+}
+
+  .comparison-table-card {
+    background-color: {{ section.settings.card_bg_color }};
+    border-radius: 16px;
+    box-shadow: 0 4px 40px rgba(0,0,0,0.04);
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  .table-scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px; /* Ensures table doesn't squash on mobile */
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 15px;
+    vertical-align: top;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    color: {{ section.settings.text_color }};
+  }
+
+  .comparison-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* Column Widths */
+  .col-feature {
+    width: 25%;
+    vertical-align: middle !important;
+    font-weight: 500;
+    color: {{ section.settings.text_color }};
+    opacity: 0.75;
+    font-size: 14px;
+    letter-spacing: 0;
+  }
+
+  .col-product {
+    width: 37.5%;
+  }
+
+  /* Headers */
+  .table-head-cell {
+    vertical-align: bottom;
+    padding-bottom: 30px;
+  }
+  
+  .product-header-content {
+    text-align: left;
+  }
+
+  .product-image-wrapper {
+    margin-bottom: 20px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #f4f4f4;
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .product-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .product-header-content .product-title {
+    color: #101010;
+    font-family: 'TT Hoves Pro Trial Medium';
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+  /* Cell Content */
+  .cell-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .status-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin-top: 0;
+  }
+
+  .status-icon svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .icon-check {
+    color: #26D07C; /* Green from screenshot */
+  }
+
+  .icon-cross {
+    color: #FF4D4F; /* Red */
+  }
+
+  .cell-text {
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: 0;
+}
+.mob_hide_compare_heading{
+  display: none;
+    letter-spacing: 0;
+    font-weight: 500;
+    font-size: 12px;
+    font-family: 'TT Hoves Pro Trial Medium';
+}
+
+span.inner-cell-content {
+    display: flex;
+    gap: 0.5rem;
+}
+
+  @media screen and (max-width: 768px) {
+    .col-feature {
+    display: none !important;
+}
+    .comparison-table-card {
+      padding: 20px;
+      border-radius: 16px;
+    }
+    
+    .comparison-header h2 {
+      font-size: 28px;
+    }
+    
+    .col-feature {
+      position: sticky;
+      left: 0;
+      background: {{ section.settings.card_bg_color }};
+      z-index: 2;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+    }
+    .comparison-table {
+    display: block;
+    min-width: unset;
+}
+.mob_hide_compare_heading {
+    display: block;
+}
+.cell-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.comparison-table-card {
+    padding: 0;
+}
+.comparison-table th, .comparison-table td {
+    padding: 10px;
+}
+.product-header-content .product-title {
+    font-size: 12px;
+    letter-spacing: 0;
+}
+.cell-text {
+    font-size: 10px;
+}
+  }
+{%- endstyle -%}
+
+<div class="comparison-section-wrapper section-{{ section.id }}-padding">
+  <div class="comparison-container">
+    {%- if section.settings.heading != blank -%}
+      <div class="comparison-header">
+        <h2>{{ section.settings.heading }}</h2>
+        {%- if section.settings.subtext != blank -%}
+          <p>{{ section.settings.subtext }}</p>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div class="comparison-table-card">
+      <div class="table-scroll-container">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th class="col-feature table-head-cell"></th>
+              <th class="col-product table-head-cell">
+                <div class="product-header-content">
+                  {%- if section.settings.image_1 != blank -%}
+                    <div class="product-image-wrapper">
+                      {{ section.settings.image_1 | image_url: width: 600 | image_tag: loading: 'lazy' }}
+                    </div>
+                  {%- endif -%}
+                  <h3 class="product-title">{{ section.settings.title_1 }}</h3>
+                </div>
+              </th>
+              <th class="col-product table-head-cell">
+                <div class="product-header-content">
+                  {%- if section.settings.image_2 != blank -%}
+                    <div class="product-image-wrapper">
+                      {{ section.settings.image_2 | image_url: width: 600 | image_tag: loading: 'lazy' }}
+                    </div>
+                  {%- endif -%}
+                  <h3 class="product-title">{{ section.settings.title_2 }}</h3>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {%- for block in section.blocks -%}
+              <tr {{ block.shopify_attributes }}>
+                <td class="col-feature">
+                  {{ block.settings.feature_label }}
+                </td>
+                
+                <!-- Product 1 Cell -->
+                <td class="col-product">
+                  <div class="cell-content">
+                    <span class="mob_hide_compare_heading">{{ block.settings.feature_label }}</span>
+                    <span class="inner-cell-content">
+                    {%- if block.settings.icon_1 != 'none' -%}
+                      <span class="status-icon {% if block.settings.icon_1 == 'check' %}icon-check{% else %}icon-cross{% endif %}">
+                        {%- if block.settings.icon_1 == 'check' -%}
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        {%- else -%}
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        {%- endif -%}
+                      </span>
+                    {%- endif -%}
+                    <span class="cell-text">{{ block.settings.text_1 }}</span>
+                    </span>
+                  </div>
+                </td>
+
+                <!-- Product 2 Cell -->
+                <td class="col-product">
+                  <div class="cell-content">
+                    <span class="mob_hide_compare_heading">{{ block.settings.feature_label }}</span>
+                    <span class="inner-cell-content">
+                    {%- if block.settings.icon_2 != 'none' -%}
+                      <span class="status-icon {% if block.settings.icon_2 == 'check' %}icon-check{% else %}icon-cross{% endif %}">
+                        {%- if block.settings.icon_2 == 'check' -%}
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        {%- else -%}
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        {%- endif -%}
+                      </span>
+                    {%- endif -%}
+                    <span class="cell-text">{{ block.settings.text_2 }}</span>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            {%- endfor -%}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Our Comparison",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "A Clear Comparison"
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Subheading",
+      "default": "Hyperbaric Oxygen Chamber vs Other Recovery Methods"
+    },
+    {
+      "type": "range",
+      "id": "page_width",
+      "min": 1000,
+      "max": 1600,
+      "step": 50,
+      "unit": "px",
+      "label": "Page Width",
+      "default": 1200
+    },
+    {
+      "type": "header",
+      "content": "Product 1 (Middle Column)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Product Image"
+    },
+    {
+      "type": "text",
+      "id": "title_1",
+      "label": "Product Title",
+      "default": "Warrior will power"
+    },
+    {
+      "type": "header",
+      "content": "Product 2 (Right Column)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Product Image"
+    },
+    {
+      "type": "text",
+      "id": "title_2",
+      "label": "Product Title",
+      "default": "Other Brands"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Section Background",
+      "default": "#F9FAFB"
+    },
+    {
+      "type": "color",
+      "id": "card_bg_color",
+      "label": "Card Background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#111827"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "comparison_row",
+      "name": "Comparison Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "feature_label",
+          "label": "Feature Label (Col 1)",
+          "default": "Feature Name"
+        },
+        {
+          "type": "header",
+          "content": "Product 1 Settings"
+        },
+        {
+          "type": "select",
+          "id": "icon_1",
+          "label": "Icon",
+          "options": [
+            {
+              "value": "check",
+              "label": "Checkmark"
+            },
+            {
+              "value": "cross",
+              "label": "Cross"
+            },
+            {
+              "value": "none",
+              "label": "None"
+            }
+          ],
+          "default": "check"
+        },
+        {
+          "type": "textarea",
+          "id": "text_1",
+          "label": "Text",
+          "default": "Included feature description"
+        },
+        {
+          "type": "header",
+          "content": "Product 2 Settings"
+        },
+        {
+          "type": "select",
+          "id": "icon_2",
+          "label": "Icon",
+          "options": [
+            {
+              "value": "check",
+              "label": "Checkmark"
+            },
+            {
+              "value": "cross",
+              "label": "Cross"
+            },
+            {
+              "value": "none",
+              "label": "None"
+            }
+          ],
+          "default": "cross"
+        },
+        {
+          "type": "textarea",
+          "id": "text_2",
+          "label": "Text",
+          "default": "Missing feature description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Our Comparison",
+      "blocks": [
+        {
+          "type": "comparison_row",
+          "settings": {
+            "feature_label": "Oxygen Delivery System",
+            "icon_1": "check",
+            "text_1": "Built-in oxygen delivery system (up to 5 L/min)",
+            "icon_2": "check",
+            "text_2": "No integrated oxygen support"
+          }
+        },
+        {
+          "type": "comparison_row",
+          "settings": {
+            "feature_label": "Pressure Level (ATA)",
+            "icon_1": "check",
+            "text_1": "Mild hyperbaric therapy at 1.5 ATA",
+            "icon_2": "cross",
+            "text_2": "Normal atmospheric pressure"
+          }
+        },
+        {
+          "type": "comparison_row",
+          "settings": {
+            "feature_label": "Recovery Effectiveness",
+            "icon_1": "check",
+            "text_1": "Designed for frequent, repeatable use",
+            "icon_2": "cross",
+            "text_2": "Limited by cost or access"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

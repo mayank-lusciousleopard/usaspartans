@@ -1,0 +1,64 @@
+<div class="customer_review__container">
+  {% if block.settings.customer_image != blank %}
+    <div class="customer_review--media">
+      <img src="{{ block.settings.customer_image | img_url: '100x' }}">
+    </div>
+  {% endif %}
+  <div class="customer_review--details">
+    <div class="review__text">
+      {{ block.settings.customer_review }}<span class="verified__tag"><b>Verified Buyer</b></span>
+    </div>
+  </div>
+</div>
+<style>
+.customer_review__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background: {{block.settings.review_bg}};
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: 1px solid {{block.settings.review_border}};
+}
+
+.customer_review--media img {
+  max-width: 100px;
+  width: 100%;
+  border-radius: 50px;
+}
+
+.customer_review--details p {
+  margin: 0;
+  color: {{block.settings.text_color}};
+}
+
+.customer_review--details * {
+  font-size: 14px;
+}
+.customer_review--media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.customer_review--details .verified__tag {
+  color: {{block.settings.verified_color}};
+}
+@media (max-width: 749px) {
+  .customer_review--media img {
+    width: 80px;
+  }
+  .customer_review--details p {
+    line-height: normal;
+  }
+}
+@media (max-width: 576px) {
+  .customer_review--media img {
+    width: 60px;
+  }
+  .customer_review__container {
+    gap: 10px;
+  }
+}
+</style>

@@ -1,0 +1,15 @@
+{% if settings.redirections %}
+<script>
+function checkCountry(name)
+{
+if(name == "China")
+{
+document.querySelector("html").style.display="none";
+window.parent.location.href="https://www.google.com/";     
+}
+}
+fetch('{{ shop.url }}/browsing_context_suggestions.json')
+.then(res=>res.json())
+.then(r=> checkCountry(r.detected_values.country.name));
+</script>
+{% endif %}

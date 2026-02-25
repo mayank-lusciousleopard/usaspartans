@@ -1,0 +1,103 @@
+<section
+  id="{{ section.id }}"
+  class="tw-w-full tw-py-10 md:tw-py-20 tw-px-4 tw-flex tw-justify-center tw-items-center tw-text-center"
+  style="background-image: url('{{ section.settings.background_image | image_url }}'); background-size: cover; background-position: center;"
+>
+  <div class="tw-max-w-[1140px] tw-w-full tw-flex tw-flex-wrap tw-gap-5 tw-py-8 tw-px-6 tw-rounded-lg">
+    <div class="tw-w-full">
+      <div>
+        <h2 class="tw-text-3xl md:tw-text-4xl tw-font-bold tw-mb-2 tw-text-white">
+          {{ section.settings.title }}
+          <span
+            class="tw-bg-clip-text tw-text-transparent tw-bg-gradient-to-r tw-from-[#EC860E] tw-to-[#F0B36B]"
+          >
+            {{ section.settings.highlight }}
+          </span>
+        </h2>
+      </div>
+
+      <!-- Early Access Ends Soon Header -->
+      <div class="tw-w-full">
+        <h2 class="tw-text-3xl md:tw-text-4xl tw-font-bold tw-mb-2 tw-text-white">
+          {{ section.settings.secondary_title }}
+        </h2>
+      </div>
+    </div>
+
+    <div class="tw-w-full">
+      <p class="tw-text-lg tw-text-white">
+        {{ section.settings.subtitle }}
+      </p>
+    </div>
+
+    <div class="tw-w-full tw-my-5">
+      {%- if section.settings.show_button -%}
+        <a
+          href="{{ section.settings.button_link }}"
+          class="tw-text-black tw-px-6 tw-py-3 tw-font-bold tw-rounded-[10px] tw-bg-gradient-to-r tw-from-[#EC860E] tw-to-[#F0B36B]"
+        >
+          {{ section.settings.button_label | upcase }}
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "C TW Banner BF",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Secure Your VIP Bundle and"
+    },
+    {
+      "type": "text",
+      "id": "highlight",
+      "label": "Highlighted Text",
+      "default": "Save 20%"
+    },
+    {
+      "type": "text",
+      "id": "secondary_title",
+      "label": "Secondary Title",
+      "default": "Early Access Ends Soon"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Use the BFCM2024 code to guarantee your discount now!"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button",
+      "label": "Show Button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Shop Now & Save 20%"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C TW Banner BF"
+    }
+  ]
+}
+{% endschema %}

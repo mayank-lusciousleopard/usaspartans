@@ -1,0 +1,1016 @@
+{
+  "layout": "theme.petko-water-lpd",
+  "sections": {
+    "c_sticky_atc_Dkg3MV": {
+      "type": "c-sticky-atc",
+      "settings": {
+        "use_custom_product": false,
+        "product": "",
+        "padding_top": 2,
+        "padding_bottom": 2
+      }
+    },
+    "aff76ae0-349c-410a-b075-784d9083fc15": {
+      "type": "cover-main-product",
+      "blocks": {
+        "b4422261-813c-45e7-8fd6-d0e6ab7b1315": {
+          "type": "title",
+          "settings": {}
+        },
+        "judge_me_reviews_preview_badge_DJfLLU": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "1b44937d-3f3d-4ba0-9a4b-166b78b00a80": {
+          "type": "price",
+          "settings": {}
+        },
+        "afterpay_on_site_messaging_payments_messaging_YwCCrH": {
+          "type": "shopify:\/\/apps\/afterpay-on-site-messaging\/blocks\/payments-messaging\/f45a5524-d177-4475-bf59-281efd2215a8",
+          "settings": {
+            "text_align": "inherit",
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "color": "",
+            "size": "md",
+            "intro_text": "Or",
+            "show_interest_free": true,
+            "payment_amount_is_bold": true,
+            "show_with": true,
+            "logo_type": "compact-badge",
+            "logo_theme": "black-on-mint",
+            "modal_link_style": "learn-more-text",
+            "modal_theme": "mint",
+            "breakpoint": 749,
+            "text_align_mobile": "inherit",
+            "margin_top_mobile": 0,
+            "margin_bottom_mobile": 0,
+            "show_lower_limit": true,
+            "show_upper_limit": true,
+            "show_if_outside_limits": true,
+            "product": "{{product}}"
+          }
+        },
+        "4f88e2c7-2309-4513-bea2-0964726646aa": {
+          "type": "description",
+          "settings": {}
+        },
+        "8e63bec9-67d5-42a9-aa57-73f7536692db": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "8adf70cf-a183-47a6-9e5d-768b8dfd87fe": {
+          "type": "quantity_title",
+          "disabled": true,
+          "settings": {}
+        },
+        "30f42dd0-f8f5-4a71-b9d2-6faefeb46886": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+            "qt_img": "shopify:\/\/shop_images\/spartan_barrel_1.webp",
+            "discount_text": "",
+            "quantity": "1"
+          }
+        },
+        "e4b82172-609f-45d1-8743-6618031f2dfe": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+            "qt_img": "shopify:\/\/shop_images\/IMG_2431.webp",
+            "discount_text": "Save 15%",
+            "quantity": "2"
+          }
+        },
+        "1da5dd8e-f63b-43cc-bcba-26955186e3d4": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+            "qt_img": "shopify:\/\/shop_images\/3.webp",
+            "discount_text": "Save 20%",
+            "quantity": "3"
+          }
+        },
+        "9d24df4d-524b-47e5-8654-104e82e839aa": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+            "qt_img": "shopify:\/\/shop_images\/6.webp",
+            "discount_text": "Save 25%",
+            "quantity": "6"
+          }
+        },
+        "premium_info_PAKjhK": {
+          "type": "premium_info",
+          "settings": {
+            "heading": "HSA \/ FSA Eligible",
+            "text": "<p>save an average of 30% with pre tax funds Choose flex at checkout<\/p>",
+            "info_hover_text": "Use your HSA\/FSA card to pay for this item.",
+            "bg_color": "#f4f9f4",
+            "text_color": "#121212",
+            "icon_color": "#2e8b57",
+            "margin_top": 0,
+            "margin_bottom": 16
+          }
+        },
+        "c6468536-ee29-406c-b010-9846f659d408": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "f4e9e770-4cc5-4de0-bb3c-8488c63d6d7f": {
+          "type": "payment_icon",
+          "disabled": true,
+          "settings": {}
+        },
+        "11b8667c-8486-4268-82d2-7275fc38f93c": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "spartan-floating-chlorine-dispenser-100-tablets"
+          }
+        },
+        "32b382d2-a50b-4fd0-8df6-88f07fe79f05": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "big-cube-ice-tray-2-pack"
+          }
+        },
+        "8ede9dc5-cc9a-4fd0-a448-fd633babacf1": {
+          "type": "benefits-block",
+          "settings": {
+            "benefits-icon": "shopify:\/\/shop_images\/b2.svg",
+            "benefits-title": "60 Day Return"
+          }
+        },
+        "fece741d-9b67-41a7-8b83-efbc8122632e": {
+          "type": "benefits-block",
+          "settings": {
+            "benefits-icon": "shopify:\/\/shop_images\/b1.svg",
+            "benefits-title": "Free & Fast Shipping"
+          }
+        },
+        "451be1a8-6d83-4b40-b684-16ed48d658c1": {
+          "type": "benefits-block",
+          "settings": {
+            "benefits-icon": "shopify:\/\/shop_images\/b3.svg",
+            "benefits-title": "1 Year Warranty"
+          }
+        },
+        "f37d3a50-fbe2-46cd-a288-939426decfa7": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "What's Included",
+            "faq_ans": "<ul><li>Spartan Barrel<\/li><li>Spartan Barrel Insulated Lid<\/li><li>Double action pump<\/li><li>Backpack<\/li><li>Repair Kit<\/li><li>*Optional - Spartan Max 1 HP Water Chiller<\/li><\/ul>"
+          }
+        },
+        "d627fa16-2dcf-4b46-93f8-927dc9bf100c": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "Full Product Details",
+            "faq_ans": "<p>The Spartan Barrel is designed to provide a premium cold plunge experience. Whether used indoors or outdoors, the Spartan Barrel tub enhances your cold plunge sessions, ensuring unmatched convenience. Built using high quality materials with a thick rubber hardened-wall construction, the Spartan Barrel has a specious interior. Specially designed lid secured with sturdy clips.<\/p><p>Optionally you can get it with the chiller which offers rapid water cooling, low noise operation and water filtration. You can easily control it with our mobile app.<\/p>"
+          }
+        },
+        "d25a90a0-cd76-4bc0-bcbc-2acabdb2c2bd": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "Shipping and Returns",
+            "faq_ans": "<p>Shipping is <strong>FAST & FREE<\/strong> to the US (2 - 6 business days). <\/p><p>Shipping to Canada takes, between 7 - 14 business days after dispatch.<\/p><p>Should the Spartan Max Water Chiller or ice bath not meet your expectations, you can return it within 60 days for a refund. Easy returns with pre-paid labels.<\/p>"
+          }
+        },
+        "22dac0a3-2748-431f-8c30-c1cc30fd8d32": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "Satisfaction Guaranteed",
+            "faq_ans": "<p>Your satisfaction is our priority. If you are not happy with the product, we will take it back and refund you, no questions asked. We stand behind the integrity of our products and offer a 1-year warranty. In case of malfunction issues, you will get a free replacement. Additionally, we provide 24\/7 customer support, ready to assist you via email, live chat, and SMS.<\/p>"
+          }
+        },
+        "950649e6-a3aa-4c9e-be33-884d377a7fe5": {
+          "type": "variant_popup1",
+          "disabled": true,
+          "settings": {
+            "popup_heaing1": "",
+            "popup1": "",
+            "popup_image": "shopify:\/\/shop_images\/Popup.jpg",
+            "content_popup": ""
+          }
+        },
+        "c604fa9b-d84f-4731-a548-c7d19ac7cb85": {
+          "type": "variant_popup2",
+          "disabled": true,
+          "settings": {
+            "popup_heaing2": "Upgrade Your Experience",
+            "popup2": "Opt for the Spartan Ice Bath bundle and receive a complimentary lid. Dive deeper into cold therapy with added value."
+          }
+        }
+      },
+      "block_order": [
+        "b4422261-813c-45e7-8fd6-d0e6ab7b1315",
+        "judge_me_reviews_preview_badge_DJfLLU",
+        "1b44937d-3f3d-4ba0-9a4b-166b78b00a80",
+        "afterpay_on_site_messaging_payments_messaging_YwCCrH",
+        "4f88e2c7-2309-4513-bea2-0964726646aa",
+        "8e63bec9-67d5-42a9-aa57-73f7536692db",
+        "8adf70cf-a183-47a6-9e5d-768b8dfd87fe",
+        "30f42dd0-f8f5-4a71-b9d2-6faefeb46886",
+        "e4b82172-609f-45d1-8743-6618031f2dfe",
+        "1da5dd8e-f63b-43cc-bcba-26955186e3d4",
+        "9d24df4d-524b-47e5-8654-104e82e839aa",
+        "premium_info_PAKjhK",
+        "c6468536-ee29-406c-b010-9846f659d408",
+        "f4e9e770-4cc5-4de0-bb3c-8488c63d6d7f",
+        "11b8667c-8486-4268-82d2-7275fc38f93c",
+        "32b382d2-a50b-4fd0-8df6-88f07fe79f05",
+        "8ede9dc5-cc9a-4fd0-a448-fd633babacf1",
+        "fece741d-9b67-41a7-8b83-efbc8122632e",
+        "451be1a8-6d83-4b40-b684-16ed48d658c1",
+        "f37d3a50-fbe2-46cd-a288-939426decfa7",
+        "d627fa16-2dcf-4b46-93f8-927dc9bf100c",
+        "d25a90a0-cd76-4bc0-bcbc-2acabdb2c2bd",
+        "22dac0a3-2748-431f-8c30-c1cc30fd8d32",
+        "950649e6-a3aa-4c9e-be33-884d377a7fe5",
+        "c604fa9b-d84f-4731-a548-c7d19ac7cb85"
+      ],
+      "settings": {
+        "date": "",
+        "overlay_width_d": 70,
+        "overlay_width_m": 32,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "31209ae7-aad5-46e4-92e8-e808edc210be": {
+      "type": "customers-section",
+      "blocks": {
+        "df996ad5-aee9-44f5-a156-988b812ef73b": {
+          "type": "customers-review",
+          "settings": {
+            "star-ico": "shopify:\/\/shop_images\/stars.svg",
+            "text": "I was an athlete for more than 20 years, had many injuries. I been using the spartan barrel for a couple of weeks and do not have the same aches and pains anymore.",
+            "author-img": "shopify:\/\/shop_images\/c1.png",
+            "author": "- Thomas G.",
+            "location": "Austin, Texas"
+          }
+        },
+        "0e6fa25f-634a-47b7-9c82-9f555d284f7d": {
+          "type": "customers-review",
+          "settings": {
+            "star-ico": "shopify:\/\/shop_images\/stars.svg",
+            "text": "Game changer! With the chiller I have cold water without the hassle of freezing bottles or running to the store for ice!",
+            "author-img": "shopify:\/\/shop_images\/c2.png",
+            "author": "- Mike Duval",
+            "location": "Newport, California"
+          }
+        },
+        "8fcf4989-4d8c-40cd-9c04-780bad04b4e6": {
+          "type": "customers-review",
+          "settings": {
+            "star-ico": "shopify:\/\/shop_images\/stars.svg",
+            "text": "Helps me better my mind and to get rid of anxiety and depression. Once I hop in the ice bath all of that goes away.",
+            "author-img": "shopify:\/\/shop_images\/c3.png",
+            "author": "- Sarah Thompson",
+            "location": "Phoenix, Arizona"
+          }
+        }
+      },
+      "block_order": [
+        "df996ad5-aee9-44f5-a156-988b812ef73b",
+        "0e6fa25f-634a-47b7-9c82-9f555d284f7d",
+        "8fcf4989-4d8c-40cd-9c04-780bad04b4e6"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "why_choose_ice_bath_GdGhFD": {
+      "type": "why-choose-ice-bath",
+      "blocks": {
+        "benefit_bHkbQd": {
+          "type": "benefit",
+          "settings": {
+            "label": "Accelerates recovery",
+            "icon": "shopify:\/\/shop_images\/stars_8c539901-a52d-4b3a-89e6-d4e4f7a648da.svg"
+          }
+        },
+        "benefit_8wcwrB": {
+          "type": "benefit",
+          "settings": {
+            "label": "Builds mental resilience",
+            "icon": "shopify:\/\/shop_images\/smile.svg"
+          }
+        },
+        "benefit_EpWYkt": {
+          "type": "benefit",
+          "settings": {
+            "label": "Relieves muscle pain",
+            "icon": "shopify:\/\/shop_images\/heart.svg"
+          }
+        },
+        "benefit_8cQiYn": {
+          "type": "benefit",
+          "settings": {
+            "label": "Easy to use & maintain",
+            "icon": "shopify:\/\/shop_images\/like.svg"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_bHkbQd",
+        "benefit_8wcwrB",
+        "benefit_EpWYkt",
+        "benefit_8cQiYn"
+      ],
+      "name": "Why choose an ice bath",
+      "settings": {
+        "heading": "Why choose an ice bath?",
+        "text": "<p>Ice baths reduce inflammation, speed up recovery, and build mental toughness. A proven way to boost your health, fitness, and strength.<\/p>",
+        "cta_label": "Discover all benefits",
+        "cta_link": "",
+        "cta_new_tab": false,
+        "image": "shopify:\/\/shop_images\/ice-bath.png",
+        "image_alt": "",
+        "padding_top": 32,
+        "padding_bottom": 0,
+        "padding_top_desktop": 72,
+        "padding_bottom_desktop": 0
+      }
+    },
+    "8988bd47-f45d-4c76-a73a-7f4136f95f03": {
+      "type": "performance-section",
+      "blocks": {
+        "7a643778-41ea-4158-9aea-92abe052983d": {
+          "type": "performance-block",
+          "settings": {
+            "performance-img": "shopify:\/\/shop_images\/ice-bath-tub.webp",
+            "title": "Premium Quality",
+            "text": "<p>We understand the importance of reliability. That's why our product is engineered with the highest quality materials. Dive into an experience that's not just about durability but also about maximizing your potential.<\/p>"
+          }
+        },
+        "47fb17d2-d56c-42e4-af4b-146a85a5458e": {
+          "type": "performance-block",
+          "settings": {
+            "performance-img": "shopify:\/\/shop_images\/warrior-willpower-reviews.webp",
+            "title": "Ice Cold, Always Clean & Ready For You",
+            "text": "<p>Take the plunge on your terms - saving time, money, and effort. Wake up and jump in. Get on with your day feeling refreshed. No ice mess, no chemicals, no fuss.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "7a643778-41ea-4158-9aea-92abe052983d",
+        "47fb17d2-d56c-42e4-af4b-146a85a5458e"
+      ],
+      "settings": {
+        "title": "ICE CHILLING",
+        "heading": "Made For Durability, And Performance",
+        "btn-link": "#header-product",
+        "btn-text": ""
+      }
+    },
+    "b5b9b629-eeac-4541-b67c-63565825b1a0": {
+      "type": "compare-section",
+      "blocks": {
+        "035d21ff-e86f-455c-aa88-96c01342bf1c": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-symbol-1.png",
+            "content": "Other Brands"
+          }
+        },
+        "71dda345-4b45-46a2-bfd9-f545fbede758": {
+          "type": "compare",
+          "settings": {
+            "text": "Easy to Use & Maintain",
+            "select_option": "Yes",
+            "select_option1": "No"
+          }
+        },
+        "23977961-4584-4be2-b8d2-3234954969e8": {
+          "type": "compare",
+          "settings": {
+            "text": "Quiet Water Chiller",
+            "select_option": "Yes",
+            "select_option1": "No"
+          }
+        },
+        "190ea4e6-36d9-43a1-af35-3f72fcb985a5": {
+          "type": "compare",
+          "settings": {
+            "text": "High-Quality",
+            "select_option": "Yes",
+            "select_option1": "No"
+          }
+        },
+        "d27c8b7f-f0db-447e-b9dd-710af4e8e3a1": {
+          "type": "compare",
+          "settings": {
+            "text": "Portable",
+            "select_option": "Yes",
+            "select_option1": "No"
+          }
+        },
+        "a6a23be3-5ce6-4780-8a79-28b6d1f67cd4": {
+          "type": "compare",
+          "settings": {
+            "text": "Scheduling Functions",
+            "select_option": "Yes",
+            "select_option1": "No"
+          }
+        },
+        "e089e318-804e-4c1e-a36b-27721d4c3db2": {
+          "type": "compare",
+          "settings": {
+            "text": "5-Star After Sales Support",
+            "select_option": "Yes",
+            "select_option1": "No"
+          }
+        }
+      },
+      "block_order": [
+        "035d21ff-e86f-455c-aa88-96c01342bf1c",
+        "71dda345-4b45-46a2-bfd9-f545fbede758",
+        "23977961-4584-4be2-b8d2-3234954969e8",
+        "190ea4e6-36d9-43a1-af35-3f72fcb985a5",
+        "d27c8b7f-f0db-447e-b9dd-710af4e8e3a1",
+        "a6a23be3-5ce6-4780-8a79-28b6d1f67cd4",
+        "e089e318-804e-4c1e-a36b-27721d4c3db2"
+      ],
+      "settings": {
+        "title": "COMPARE US",
+        "heading": "We Are Better, This Is Sparta"
+      }
+    },
+    "be378f0c-cce8-4cdd-a680-e216412cdc6b": {
+      "type": "performance-section",
+      "blocks": {
+        "cd4bf186-8b6d-404e-9ab8-03e1ced250e9": {
+          "type": "performance-block",
+          "settings": {
+            "performance-img": "shopify:\/\/shop_images\/water_chiller_for_ice_bath.webp",
+            "title": "Convenient Temperature Control From Your Phone",
+            "text": "<p>Easily control the temperature from your phone via our app. Set a timer for the chiller on\/off hours to have <strong>crystal clean and cold water anytime.<\/strong><\/p>"
+          }
+        },
+        "c53d49f7-5ab5-402e-afdd-7bc54b95f4dc": {
+          "type": "performance-block",
+          "settings": {
+            "performance-img": "shopify:\/\/shop_images\/wifiwaterchiller.jpg",
+            "title": "Cold & Crystal Clean Water Anytime",
+            "text": "<p>The chiller cools water down to 37 F. No more buying ice or wasting time freezing bottles. Only for those <strong>who value their time <\/strong>and don't want to deal with ice or constantly replace the water.<\/p><p>The water chiller\/heater can also warm your water up to 104 F turning your tub into a home spa.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "cd4bf186-8b6d-404e-9ab8-03e1ced250e9",
+        "c53d49f7-5ab5-402e-afdd-7bc54b95f4dc"
+      ],
+      "settings": {
+        "title": "",
+        "heading": "No more dealing with annoying ice and maintenance",
+        "btn-link": "#header-product",
+        "btn-text": "BUY NOW"
+      }
+    },
+    "c1071597-ee8a-4383-85ef-97b4528e9299": {
+      "type": "video-section",
+      "blocks": {
+        "2561fd14-731c-4a21-a82a-f8bbaa204c06": {
+          "type": "video-block",
+          "settings": {
+            "play": "shopify:\/\/shop_images\/play-button.svg",
+            "main-img": "shopify:\/\/shop_images\/t1.jpg",
+            "video_url": "4FdwZK6pL1M"
+          }
+        },
+        "c6fac1be-540a-4906-a3a0-38dde8d2b8e3": {
+          "type": "video-block",
+          "settings": {
+            "play": "shopify:\/\/shop_images\/play-button.svg",
+            "main-img": "shopify:\/\/shop_images\/t1.jpg",
+            "video_url": "4FdwZK6pL1M"
+          }
+        },
+        "562024b2-ac13-48a2-b5c0-1b52f1e6ab06": {
+          "type": "video-block",
+          "settings": {
+            "play": "shopify:\/\/shop_images\/play-button.svg",
+            "main-img": "shopify:\/\/shop_images\/t1.jpg",
+            "video_url": "4FdwZK6pL1M"
+          }
+        },
+        "1fc4b231-5182-4da2-a315-885e78af483f": {
+          "type": "video-block",
+          "settings": {
+            "play": "shopify:\/\/shop_images\/play-button.svg",
+            "main-img": "shopify:\/\/shop_images\/t1.jpg",
+            "video_url": "4FdwZK6pL1M"
+          }
+        },
+        "45890473-ad35-4baf-96ea-2352b2668218": {
+          "type": "video-block",
+          "settings": {
+            "play": "shopify:\/\/shop_images\/play-button.svg",
+            "main-img": "shopify:\/\/shop_images\/t1.jpg",
+            "video_url": "4FdwZK6pL1M"
+          }
+        }
+      },
+      "block_order": [
+        "2561fd14-731c-4a21-a82a-f8bbaa204c06",
+        "c6fac1be-540a-4906-a3a0-38dde8d2b8e3",
+        "562024b2-ac13-48a2-b5c0-1b52f1e6ab06",
+        "1fc4b231-5182-4da2-a315-885e78af483f",
+        "45890473-ad35-4baf-96ea-2352b2668218"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "5,000+ CUSTOMERS",
+        "heading": "One Plunge a day, Every Day",
+        "star": "shopify:\/\/shop_images\/stars.svg"
+      }
+    },
+    "7207bec8-af1d-4f7e-a74a-f5a07e75c3fe": {
+      "type": "FAQ-section",
+      "blocks": {
+        "03f77bc4-b1a1-42b6-a6f6-b6bae7f16516": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "I am over 6ft, will I fit?",
+            "faq_ans": "<p>We've designed our bath to fit anyone up to 6'11\" \/ 300 lbs.<\/p>"
+          }
+        },
+        "8a40e6a7-7d73-44d0-b5cd-7994162fa9c6": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "How do I drain it?",
+            "faq_ans": "<p>The Spartan Barrel drain tap at the bottom, so you can easily drain it.<\/p>"
+          }
+        },
+        "6e7b97d7-00de-4a50-80b6-413770edbe08": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "Does it come with a lid?",
+            "faq_ans": "<p>Yes, it does!<\/p><p>It comes complete with a free insulated inflatable lid. You will find it carefully folded inside the box.<\/p>"
+          }
+        },
+        "75cf07cb-ccd5-4bb4-9f98-e2784415f48a": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "What temperatures can the Spartan\/Warrior Max Water Chiller achieve?",
+            "faq_ans": "<p>The Spartan Max 1 HP Water Chiller can cool water to an exhilarating 37 F - 43 F without any ice. It can also warm up to 104 F.<\/p>"
+          }
+        },
+        "c90713b5-b037-48ee-8291-865680675ae2": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "Is the water chiller suitable for both indoor and outdoor use?",
+            "faq_ans": "<p>Yes, the Spartan Max Water Chiller is versatile and designed for both indoor and outdoor usage.<\/p>"
+          }
+        },
+        "844c180f-588b-4167-a7fc-1cb0f9001c43": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "How long does it take to set up the chiller?",
+            "faq_ans": "<p>The chiller is user-friendly and can be set up in just 5 minutes. We include video instruction manual in the package.<\/p>"
+          }
+        },
+        "4d26d8eb-411b-4615-9d29-0b7083eb4597": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "How quiet is the Spartan Water Chiller during operation?",
+            "faq_ans": "<p>The Spartan Water Chiller is designed for whisper-quiet operation. We've prioritized ensuring that your cold plunge sessions are as peaceful as possible. Thanks to our advanced engineering, the chiller operates with minimal noise, allowing you to relax and rejuvenate without any disruptions, making it a top choice for both indoor and outdoor settings.<\/p>"
+          }
+        },
+        "5bfdf328-0605-4662-b660-ade3143a2f67": {
+          "type": "faq-block",
+          "settings": {
+            "faq_que": "How long does shipping take and is it free?",
+            "faq_ans": "<p>Shipping is <strong>FAST & FREE<\/strong> to the US (2 - 6 business days). <\/p><p>Shipping to Canada takes between 7 - 14 business days after dispatch.<\/p>"
+          }
+        },
+        "dff0c365-b2b2-47a3-a29b-413e04356aad": {
+          "type": "faq-reviews",
+          "settings": {
+            "reviews-title": "Game changer!",
+            "reviews-text": "<p>Cold water plunging has become our morning ritual before we start our day. It is invigorating as well as healing.<\/p>",
+            "author": "Christopher L."
+          }
+        },
+        "d5cf4aeb-d5c3-44bb-ae3c-d1bb62d58550": {
+          "type": "faq-reviews",
+          "settings": {
+            "reviews-title": "Love my Spartan Barrel",
+            "reviews-text": "<p>Been using it for 2 months every morning. Take away my coffee. Take away my tea. Take away my breakfast. But, don’t take away my pod. It is my morning routine. Love it!<\/p>",
+            "author": "Philip A."
+          }
+        }
+      },
+      "block_order": [
+        "03f77bc4-b1a1-42b6-a6f6-b6bae7f16516",
+        "8a40e6a7-7d73-44d0-b5cd-7994162fa9c6",
+        "6e7b97d7-00de-4a50-80b6-413770edbe08",
+        "75cf07cb-ccd5-4bb4-9f98-e2784415f48a",
+        "c90713b5-b037-48ee-8291-865680675ae2",
+        "844c180f-588b-4167-a7fc-1cb0f9001c43",
+        "4d26d8eb-411b-4615-9d29-0b7083eb4597",
+        "5bfdf328-0605-4662-b660-ade3143a2f67",
+        "dff0c365-b2b2-47a3-a29b-413e04356aad",
+        "d5cf4aeb-d5c3-44bb-ae3c-d1bb62d58550"
+      ],
+      "settings": {
+        "btn-link": "#header-product",
+        "btn-text": "BUY NOW",
+        "heading": "Frequently asked questions"
+      }
+    },
+    "c1b218cd-8b8c-40f7-8568-b9c2c77b6637": {
+      "type": "benefits-section",
+      "blocks": {
+        "38f1c8fc-1b83-474a-8dc2-7ac940e45d2a": {
+          "type": "benefits-faq",
+          "settings": {
+            "faq-icon": "shopify:\/\/shop_images\/smile-1.svg",
+            "faq_que": "Improves Recovery",
+            "faq_ans": "<p>Cold water immersion has been scientifically proven to enhance physical recovery. A meta-analysis of its effects found that cold exposure can be a highly effective recovery tool after high-intensity exercise or endurance training. Short intervals of cold water immersion can lead to positive outcomes for muscle power, perceived recovery, and decreased muscle soreness. With the Spartan Water Chiller, you can ensure consistent and optimal water temperatures for your recovery sessions.<\/p>"
+          }
+        },
+        "5abe8d42-b252-4f22-916e-24693c645663": {
+          "type": "benefits-faq",
+          "settings": {
+            "faq-icon": "shopify:\/\/shop_images\/flower-1.svg",
+            "faq_que": "Strengthens You Mentally",
+            "faq_ans": "<p>The immersion in cold water stimulates the body's natural response mechanisms, leading to enhanced mental clarity and focus. This practice helps in reducing mental fog and sharpening concentration, making it easier to tackle daily challenges with a more focused mind. Additionally, the experience can boost mood and resilience, fostering a sense of well-being and mental fortitude. Regular use also contributes to better stress management, promoting a calm and balanced mental state.<\/p>"
+          }
+        },
+        "f040f0d4-64d7-408c-affb-8dd7fb7109ee": {
+          "type": "benefits-faq",
+          "settings": {
+            "faq-icon": "shopify:\/\/shop_images\/thunderbolt-1.svg",
+            "faq_que": "Enhances overall health",
+            "faq_ans": "<p>The invigorating cold water immersion stimulates improved circulation, reducing inflammation and promoting efficient nutrient delivery to vital organs. This transformative experience aids in muscle recovery, alleviates stress, and contributes to a robust immune system. By embracing the myriad benefits of our ice baths, you not only invigorate your body but also cultivate a foundation for enduring overall health.<\/p>"
+          }
+        },
+        "695d3560-08b8-4766-bff9-bc1452e71909": {
+          "type": "benefits-faq",
+          "settings": {
+            "faq-icon": "shopify:\/\/shop_images\/sleep-mode-1.svg",
+            "faq_que": "Improve Sleep Quality",
+            "faq_ans": "<p>Cold exposure can significantly impact your circadian rhythm and sleep quality. The circadian rhythm is the body's internal clock regulating sleep and wakefulness. Cold exposure promotes the release of melatonin, a hormone critical for the sleep-wake cycle. Furthermore, cold temperatures can increase the amount of slow-wave sleep, the deep, restorative phase crucial for physical and mental health. Regular cold plunges using the Spartan Water Chiller can help regulate your sleep patterns and improve overall sleep quality.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "38f1c8fc-1b83-474a-8dc2-7ac940e45d2a",
+        "5abe8d42-b252-4f22-916e-24693c645663",
+        "f040f0d4-64d7-408c-affb-8dd7fb7109ee",
+        "695d3560-08b8-4766-bff9-bc1452e71909"
+      ],
+      "settings": {
+        "title": "THE BENEFITS",
+        "heading": "One Plunge A Day, A Few Times Per Week",
+        "text": "FOR INDOOR & OUTDOOR",
+        "benefit-img": "shopify:\/\/shop_images\/spartanbarrelsize_d738626e-abc2-4011-a98c-6b889504cdff.jpg",
+        "btn-link": "#header-product",
+        "btn-text": "ADD TO CART"
+      }
+    },
+    "023bd30b-e059-43e8-bd94-bbd32763a06a": {
+      "type": "science-section",
+      "blocks": {
+        "4e302bcc-dfc8-430b-ae5d-0ef6acc4d2fc": {
+          "type": "Science-Benefits",
+          "settings": {
+            "benefit-ico": "shopify:\/\/shop_images\/b1_1.svg",
+            "title": "Research-Driven Results"
+          }
+        },
+        "8aacb351-b3d4-43e0-8346-a132e8f3197a": {
+          "type": "Science-Benefits",
+          "settings": {
+            "benefit-ico": "shopify:\/\/shop_images\/b2_1.svg",
+            "title": "Neuroscience-Endorsed Benefits"
+          }
+        },
+        "838d1d89-03d0-4511-98ed-e5cc2e44b842": {
+          "type": "Science-Benefits",
+          "settings": {
+            "benefit-ico": "shopify:\/\/shop_images\/b3_1-1.svg",
+            "title": "Verified Health Boosts"
+          }
+        },
+        "baed60fb-8b36-45fb-a225-201998b11980": {
+          "type": "Science-Benefits",
+          "settings": {
+            "benefit-ico": "shopify:\/\/shop_images\/b4.svg",
+            "title": "Proven Performance Enhancements"
+          }
+        }
+      },
+      "block_order": [
+        "4e302bcc-dfc8-430b-ae5d-0ef6acc4d2fc",
+        "8aacb351-b3d4-43e0-8346-a132e8f3197a",
+        "838d1d89-03d0-4511-98ed-e5cc2e44b842",
+        "baed60fb-8b36-45fb-a225-201998b11980"
+      ],
+      "settings": {
+        "title": "THE ICE MAN",
+        "heading": "Ice Bath Therapy - The Ultimate Recovery Routine",
+        "text": "WIM HOF, 65-YRS OLD!",
+        "main-title": "Backed by science",
+        "main-text": "<p>The Spartan Water Chiller isn't just about the chill—it's a wellness tool grounded in scientific research. Numerous studies have validated the benefits of cold water immersion. It's been shown to trigger dopamine release, the \"feel-good\" neurotransmitter, enhancing mood and focus. Athletes and researchers alike vouch for its role in accelerating muscle recovery after intense workouts. Backed by neuroscience, it helps build resilience against stress. Dive in, and experience a scientifically-proven boost to your health and mood.<\/p>",
+        "number1": "93%",
+        "text1": "Users reported a boost in recovery speed and enhanced mood benefits.",
+        "number2": "4\/5",
+        "text2": "Was rated as top wellness tool",
+        "benefit-img": "shopify:\/\/shop_images\/science-img.jpg"
+      }
+    },
+    "c49caf58-3a7e-41f1-92ee-4386281598eb": {
+      "type": "risk-free-section",
+      "blocks": {
+        "aff4c6ea-06fd-42ca-85b9-da3f6643f954": {
+          "type": "risk-free-block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_382.png",
+            "title": "60 DAY TRIAL",
+            "text": "If you are not happy with our product we will take it back and refund you, no questions asked. Easy returns with pre-paid labels and home pick-up arranged."
+          }
+        },
+        "ca696368-2c36-40bb-abc1-5a3429d2bd07": {
+          "type": "risk-free-block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/warranty-1.svg",
+            "title": "1 YEAR WARRANTY",
+            "text": "If you are not happy with our product we will take it back and refund you, no questions asked. Easy returns with pre-paid labels and home pick-up arranged."
+          }
+        },
+        "3750a331-96a2-475e-9377-dad1650adcb7": {
+          "type": "risk-free-block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/b3_1.svg",
+            "title": "FREE & FAST US SHIPPING",
+            "text": "Fast shipping in 2 - 6 business days to US mainland. Best in class customer support, ready to help you via email, live chat and text message."
+          }
+        }
+      },
+      "block_order": [
+        "aff4c6ea-06fd-42ca-85b9-da3f6643f954",
+        "ca696368-2c36-40bb-abc1-5a3429d2bd07",
+        "3750a331-96a2-475e-9377-dad1650adcb7"
+      ],
+      "settings": {
+        "heading": "Try Risk-Free Today."
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "f1b619ef-8684-416a-b153-bbc831334606": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "Free Gift: \"Beginner's Guide To Cold Water Therapy\" E-book",
+            "text_style": "body"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "5ad6cb90-d947-461f-9eb9-a432fb4bdacd": {
+          "type": "iconic_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/check-symbol-4795.png",
+            "text": "Instantly recover after a workout"
+          }
+        },
+        "4be5a123-6886-4d77-baa1-ec6130051a7c": {
+          "type": "iconic_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/check-symbol-4795.png",
+            "text": "Boosts your energy and mood"
+          }
+        },
+        "52e7dbd4-d527-471f-abbd-4579f8377fca": {
+          "type": "iconic_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/check-symbol-4795.png",
+            "text": "Reduces stress & anxiety"
+          }
+        },
+        "839db4ea-0928-48cb-829a-7190e3e64182": {
+          "type": "iconic_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/check-symbol-4795.png",
+            "text": "Strengthens your immune system"
+          }
+        },
+        "d6440d0f-8107-4e73-a3fd-6c5560bca784": {
+          "type": "text",
+          "settings": {
+            "text": "Questions? Message us at 833-213-2115",
+            "text_style": "body"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "62950366-91e6-4329-853a-819a493380a1": {
+          "type": "payment_icon",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "19a58bcf-33df-40a3-bfcd-8e1ba687156c": {
+          "type": "icon-with-text",
+          "settings": {
+            "custom_class": "",
+            "layout": "horizontal",
+            "icon_1": "check_mark",
+            "heading_1": "1 Year Warranty",
+            "icon_2": "return",
+            "heading_2": "90 Day Return Policy",
+            "icon_3": "truck",
+            "heading_3": "Free Shipping"
+          }
+        },
+        "9e64bf03-e0c7-4091-99f1-5569ed2d8dcc": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Specifications",
+            "icon": "none",
+            "content": "<ul><li>29.5 inches diameter<\/li><li>29.5 inches in height<\/li><li>300-liter capacity<\/li><li>Suitable heights up to 6'7\"<\/li><li>3 x thermal insulated TPE layers<\/li><li>Polyester fabric strengthened layers<\/li><li>UV-resistant skin-friendly PVC inner lining<\/li><li>Lid to keep the water at a steady temperature<\/li><li>6.61 lbs \/ 3 kg empty weight<\/li><\/ul>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "e4b3bd11-239a-4d6e-b1fb-c008fb82cdb6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What's included?",
+            "icon": "none",
+            "content": "<ul><li>x 1 Spartan Willpower Ice Bath<\/li><li>x 1 Free Thermo Lid<\/li><li>x 6 Durable Support Legs<\/li><li>x 1 Hand Pump<\/li><li>x 1 Drain Hose \/ Drain Spout<\/li><li>x 1 Repair Patch<\/li><li>x 1 User Manual<\/li><li>x 1 Cushion<\/li><li>x 1 All Weather Cover (Optional)<\/li><\/ul>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "b63a9dcf-2828-4d7e-ba67-9fba4afb1b71": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How long should I stay in the cold water?",
+            "icon": "none",
+            "content": "<p>Consider doing deliberate cold exposure for 11 minutes per week in total. Not per session, but rather, 2-4 sessions lasting 1-5 mins each distributed across the week. Again, the water temperature should be uncomfortably cold yet safe to stay in for a few minutes. You can do more, but this should be the minimum to achieve the benefits of cold exposure. You can do very cold, very brief exposures for adrenaline release too, but the 11 minutes is based on a recent study that explored a range of effects and is a good solid, basic protocol for ongoing use.<\/p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "f1b619ef-8684-416a-b153-bbc831334606",
+        "title",
+        "vendor",
+        "price",
+        "5ad6cb90-d947-461f-9eb9-a432fb4bdacd",
+        "4be5a123-6886-4d77-baa1-ec6130051a7c",
+        "52e7dbd4-d527-471f-abbd-4579f8377fca",
+        "839db4ea-0928-48cb-829a-7190e3e64182",
+        "d6440d0f-8107-4e73-a3fd-6c5560bca784",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "62950366-91e6-4329-853a-819a493380a1",
+        "description",
+        "19a58bcf-33df-40a3-bfcd-8e1ba687156c",
+        "9e64bf03-e0c7-4091-99f1-5569ed2d8dcc",
+        "e4b3bd11-239a-4d6e-b1fb-c008fb82cdb6",
+        "b63a9dcf-2828-4d7e-ba67-9fba4afb1b71"
+      ],
+      "disabled": true,
+      "settings": {
+        "cstm_class": "",
+        "date": "",
+        "enable_sticky_info": true,
+        "overlay_width_d": 104,
+        "overlay_width_m": 80,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "collection_list_qnAcBt": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_X8Uz4W": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bundles"
+          }
+        },
+        "featured_collection_8kBQpq": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "water-chillers-for-ice-baths"
+          }
+        },
+        "featured_collection_RtKXd3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "inflatable-cold-plunge"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_X8Uz4W",
+        "featured_collection_8kBQpq",
+        "featured_collection_RtKXd3"
+      ],
+      "settings": {
+        "title": "Check Our Product Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You May Also Like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "c_sticky_atc_Dkg3MV",
+    "aff76ae0-349c-410a-b075-784d9083fc15",
+    "31209ae7-aad5-46e4-92e8-e808edc210be",
+    "why_choose_ice_bath_GdGhFD",
+    "8988bd47-f45d-4c76-a73a-7f4136f95f03",
+    "b5b9b629-eeac-4541-b67c-63565825b1a0",
+    "be378f0c-cce8-4cdd-a680-e216412cdc6b",
+    "c1071597-ee8a-4383-85ef-97b4528e9299",
+    "7207bec8-af1d-4f7e-a74a-f5a07e75c3fe",
+    "c1b218cd-8b8c-40f7-8568-b9c2c77b6637",
+    "023bd30b-e059-43e8-bd94-bbd32763a06a",
+    "c49caf58-3a7e-41f1-92ee-4386281598eb",
+    "main",
+    "collection_list_qnAcBt",
+    "related-products"
+  ]
+}

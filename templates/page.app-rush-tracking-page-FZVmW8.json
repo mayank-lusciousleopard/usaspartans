@@ -1,0 +1,73 @@
+{
+  "sections": {
+    "3fdceb08-9aba-4aba-8fc9-ad8e455c5bec": {
+      "type": "app-rush-container-grid",
+      "settings": {
+        "visibility": "all_the_time",
+        "columns_mobile": 1,
+        "columns_tablet": 1,
+        "columns_desktop": 1,
+        "columns_large": 1,
+        "columns_xlarge": 1,
+        "columns_2xlarge": 1,
+        "cssStyle": ""
+      }
+    },
+    "ac18cb4b-ab0f-4d1d-a476-9d7b5d41397d": {
+      "type": "app-rush-container-grid",
+      "settings": {
+        "visibility": "all_the_time",
+        "columns_mobile": 1,
+        "columns_tablet": 2,
+        "columns_desktop": 2,
+        "columns_large": 2,
+        "columns_xlarge": 2,
+        "columns_2xlarge": 2,
+        "cssStyle": ""
+      }
+    },
+    "16941951292d0b6a2e": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "f348b7e2-f366-4cf1-bbad-e018beebe91d": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_7C9e3U": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Ice baths, water chillers and accessories ship in separate packages!<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "template--19217708941651__f348b7e2-f366-4cf1-bbad-e018beebe91d-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>If you have questions, please email us at support@warriorwillpower.com<\/p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_7C9e3U",
+        "template--19217708941651__f348b7e2-f366-4cf1-bbad-e018beebe91d-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "3fdceb08-9aba-4aba-8fc9-ad8e455c5bec",
+    "ac18cb4b-ab0f-4d1d-a476-9d7b5d41397d",
+    "16941951292d0b6a2e",
+    "f348b7e2-f366-4cf1-bbad-e018beebe91d"
+  ]
+}

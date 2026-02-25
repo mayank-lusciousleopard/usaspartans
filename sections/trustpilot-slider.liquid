@@ -1,0 +1,504 @@
+{% comment %} Trustpilot Slider Section with Slick Carousel {% endcomment %}
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .tp-slider-section {
+    background-color: {{ section.settings.bg_color }};
+    overflow: hidden;
+  }
+  .tp-slider-section h2.h1.center {
+    font-size: 36px;
+    letter-spacing: 0;
+    font-family: 'TT Hoves Pro Trial Medium';
+    font-weight: 500;
+}
+
+  .tp-bar-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+
+  .tp-bar {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 100px;
+    padding: 12px 24px;
+    text-align: center;
+    gap: 0;
+    border: 1px solid #E7E7E7;
+}
+.tp-stars-wrapper img {
+    height: 18px;
+    width: auto;
+}
+.tp-logo-text span {
+    font-size: 12px !important;
+}
+  .tp-bar-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #000;
+    padding: 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .tp-bar-item:not(:last-child) {
+    border-right: 1px solid #e5e5e5;
+  }
+
+  .tp-bar-item:first-child {
+    padding-left: 0;
+  }
+  
+  .tp-bar-item:last-child {
+    padding-right: 0;
+  }
+
+  .tp-stars-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .tp-star-box {
+    background: #00b67a;
+    color: white;
+    padding: 2px 5px;
+    display: flex;
+    gap: 2px;
+  }
+  
+  .tp-star-icon {
+    width: 16px;
+    height: 16px;
+    fill: white;
+  }
+
+  .tp-logo-text {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .tp-card img.tp-card-image {
+    width: 100%;
+    height: auto;
+}
+
+  @media (max-width: 900px) {
+    .tp-bar {
+      flex-direction: column;
+      border-radius: 20px;
+      gap: 10px;
+      padding: 20px;
+      width: 90%;
+    }
+    .tp-bar-item {
+      width: 100%;
+      justify-content: center;
+      padding: 5px 0;
+    }
+    .tp-bar-item:not(:last-child) {
+      border-right: none;
+      border-bottom: 1px solid #e5e5e5;
+      padding-bottom: 15px;
+    }
+    .tp-bar-item:first-child, .tp-bar-item:last-child {
+      padding: 5px 0;
+    }
+  }
+
+  /* Slider Styles */
+  .tp-slider-wrapper {
+    padding: 0 20px;
+  }
+
+  .tp-slide {
+    padding: 10px;
+    height: 100%;
+  }
+
+  .tp-card {
+    background: #fff;
+    border-radius: 0 0 12px 12px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+
+  .tp-card-image {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .tp-card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* flex-grow: 1;
+    justify-content: space-between; */
+    background: #fff;
+  }
+
+  .tp-card-text {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .tp-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+  }
+
+  .tp-user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #f0f0f0;
+  }
+
+  .tp-user-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  .tp-user-name {
+    font-size: 14px;
+    color: #101010;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-weight: 500;
+    letter-spacing: 0;
+    font-family: 'TT Hoves Pro Trial Medium';
+}
+
+  .tp-verified-badge {
+    width: 16px;
+    height: 16px;
+    color: #4b6bfb;
+  }
+
+  .tp-verified-text {
+    font-size: 12px;
+    color: #101010;
+    opacity: 0.6;
+    letter-spacing: 0;
+}
+
+  /* Slick Customization */
+  .slick-track {
+    display: flex !important;
+  }
+  .slick-slide {
+    height: auto !important;
+    float: none !important;
+  }
+  .slick-prev:before, .slick-next:before {
+    color: #000;
+    font-size: 24px;
+  }
+  .slick-prev {
+    left: -10px;
+    z-index: 1;
+  }
+  .slick-next {
+    right: -10px;
+    z-index: 1;
+  }
+  .tp-card-text {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #101010;
+    letter-spacing: 0;
+}
+@media screen and (max-width: 767px){
+.tp-slider-wrapper {
+    padding: 0;
+}
+}
+{%- endstyle -%}
+
+<div class="tp-slider-section section-{{ section.id }}-padding">
+  <div class="page-width">
+    {% if section.settings.heading != blank %}
+      <h2 class="h1 center">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    <!-- Trustpilot Summary Bar -->
+    <div class="tp-bar-container">
+      <div class="tp-bar">
+        <div class="tp-bar-item">
+          <span style="text-transform: capitalize; font-size: 15px; margin-right: 5px; text-decoration: underline;">{{ section.settings.tp_text_1 }}</span>
+          <div class="tp-stars-wrapper">
+            {% if section.settings.tp_stars != blank %}
+              {{ section.settings.tp_stars | image_url: width: 120 | image_tag: loading: 'lazy' }}
+              <div class="tp-logo-text">
+                 <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.213 6.22063H10.6399L8.60965 0L6.57303 6.22063L0 6.21432L5.32314 10.0628L3.28651 16.2771L8.60965 12.4349L13.9264 16.2771L11.8962 10.0628L17.213 6.22063Z" fill="#00B67A"/>
+<path d="M12.353 11.4699L11.8962 10.063L8.60965 12.4352L12.353 11.4699Z" fill="#005128"/>
+</svg>
+
+                 <span style="font-weight:600; font-size: 14px; text-transform:none;">Trustpilot</span>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+        <div class="tp-bar-item">
+          <span>{{ section.settings.tp_text_2 }}</span>
+        </div>
+        <div class="tp-bar-item">
+          <span>{{ section.settings.tp_text_3 }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider -->
+    <div class="tp-slider-wrapper">
+      <div class="tp-slider" id="TpSlider-{{ section.id }}">
+        {% for block in section.blocks %}
+          <div class="tp-slide">
+            <div class="tp-card">
+              {% if block.settings.image != blank %}
+                {{ block.settings.image | image_url: width: 600, height: 600, crop: 'center' | image_tag: class: 'tp-card-image', loading: 'lazy' }}
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'tp-card-image placeholder-svg' }}
+              {% endif %}
+              
+              <div class="tp-card-content">
+                <div class="tp-card-text">
+                  {{ block.settings.text | newline_to_br }}
+                </div>
+                
+                <div class="tp-user">
+                  {% if block.settings.user_avatar != blank %}
+                    {{ block.settings.user_avatar | image_url: width: 80, height: 80, crop: 'center' | image_tag: class: 'tp-user-avatar', loading: 'lazy' }}
+                  {% else %}
+                     <div class="tp-user-avatar"></div>
+                  {% endif %}
+                  
+                  <div class="tp-user-info">
+                    <span class="tp-user-name">
+                      {{ block.settings.user_name }}
+                      {% if block.settings.verified %}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+  <path d="M5.75 8L7.25 9.5L10.625 6.125M4.50033 1.86402C5.1032 1.81591 5.67554 1.57884 6.13585 1.18656C7.21004 0.271147 8.78996 0.271147 9.8641 1.18656C10.3245 1.57884 10.8968 1.81591 11.4997 1.86402C12.9065 1.97629 14.0237 3.09346 14.136 4.50033C14.1841 5.1032 14.4212 5.67554 14.8134 6.13585C15.7289 7.21004 15.7289 8.78996 14.8134 9.8641C14.4212 10.3245 14.1841 10.8968 14.136 11.4997C14.0237 12.9065 12.9065 14.0237 11.4997 14.136C10.8968 14.1841 10.3245 14.4212 9.8641 14.8134C8.78996 15.7289 7.21004 15.7289 6.13585 14.8134C5.67554 14.4212 5.1032 14.1841 4.50033 14.136C3.09346 14.0237 1.97629 12.9065 1.86402 11.4997C1.81591 10.8968 1.57884 10.3245 1.18656 9.8641C0.271147 8.78996 0.271147 7.21004 1.18656 6.13585C1.57884 5.67554 1.81591 5.1032 1.86402 4.50033C1.97629 3.09346 3.09346 1.97629 4.50033 1.86402Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                      {% endif %}
+                    </span>
+                    {% if block.settings.verified %}
+                      <span class="tp-verified-text">Verified Customer</span>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slick JS deferred load to ensure jQuery is present -->
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    function initTpSlider() {
+      if (typeof jQuery === 'undefined' || !jQuery.fn.slick) {
+        setTimeout(initTpSlider, 100);
+        return;
+      }
+      var $slider = jQuery('#TpSlider-{{ section.id }}');
+      if ($slider.length > 0) {
+        $slider.slick({
+          dots: false,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          arrows: false,
+          responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 900,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false
+              }
+            }
+          ]
+        });
+      }
+    }
+    initTpSlider();
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Trustpilot Slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Thousands of trusted reviews"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#f8f9fa"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Trustpilot Bar"
+    },
+    {
+      "type": "text",
+      "id": "tp_text_1",
+      "label": "Label (e.g. Excellent)",
+      "default": "Excellent"
+    },
+    {
+      "type": "image_picker",
+      "id": "tp_stars",
+      "label": "Stars Image (Optional)",
+      "info": "Upload an image to replace the default stars/logo HTML construction."
+    },
+    {
+      "type": "text",
+      "id": "tp_text_2",
+      "label": "Middle Text",
+      "default": "RATED \"EXCELLENT\" 15,000+ 5-STAR REVIEWS"
+    },
+    {
+      "type": "text",
+      "id": "tp_text_3",
+      "label": "Right Text",
+      "default": "200K+ HAPPY CUSTOMERS"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Review Image"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Review Text",
+          "default": "I started using the oxygen chamber as part of my longevity and youth routine..."
+        },
+        {
+          "type": "image_picker",
+          "id": "user_avatar",
+          "label": "User Avatar"
+        },
+        {
+          "type": "text",
+          "id": "user_name",
+          "label": "User Name",
+          "default": "Craig S."
+        },
+        {
+          "type": "checkbox",
+          "id": "verified",
+          "label": "Verified Customer",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trustpilot Slider",
+      "blocks": [
+        {
+           "type": "testimonial"
+        },
+        {
+           "type": "testimonial"
+        },
+        {
+           "type": "testimonial"
+        },
+        {
+           "type": "testimonial"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,150 @@
+<div class="nws-three-box" style="background-color:{{ section.settings.main_clrr }}">
+      <div class="">
+        <div class="nws-three-box-content nws-same-section">
+          <h2 class="heading-nws">{{ section.settings.title_main }}</h2>
+          <div class="nws-three-box-body">
+           {% for block in section.blocks %}
+             <div class="nws-three-box-inner">
+               <div class="nws-three-box-iner">
+                  {% if block.settings.imagez != null %}
+                    <img src="{{ block.settings.imagez | img_url: '70x' }}" class="image-content__image">
+                  {% endif %}
+               </div>  
+             </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+</div> 
+
+{% schema %}
+{
+ "name": "Custom icons",
+ "class": "reviews",
+"settings": [
+   {
+      "type": "color",
+      "id": "main_clrr",
+      "label": "Section background color",
+      "default": "#FFFFFF"
+     },
+ {
+	"id": "title_main",
+	"type": "text",
+	"label": "Title"
+ }
+],
+     "blocks": [
+    {
+      "type": "text",
+      "name": "block",
+      "settings": [
+             {
+      "type": "image_picker",
+      "id": "imagez",
+      "label": "Select image"
+    }
+      ]
+    }
+  ], 
+  "presets": [
+ {
+	"name": "Custom icons",
+	"category": "Reviews"      
+ }
+]
+}
+
+{% endschema %}
+
+
+
+  <style>
+
+  .heading-nws {
+  font-size: 38px;
+  display: block;
+  line-height: normal;
+  font-weight: 400;
+  letter-spacing: -.3px;
+      text-align: center;
+}
+  .nws-three-box-content .nws-three-box-body {
+  padding: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+        justify-content: center;
+}
+  .nws-three-box-content .nws-three-box-body .nws-three-box-inner {
+  display: block;
+    padding: 0 20px;
+    width: calc(25% - var(--grid-desktop-horizontal-spacing)* 3 / 4);
+    /* max-width: calc(25% - var(--grid-desktop-horizontal-spacing)* 3 / 4); */
+        text-align: center;
+    display: flex;
+    justify-content: center;
+        margin-bottom: 25px;
+}
+.bottom__btn {
+    width: 100%;
+        text-align: center;
+}
+  .nws-three-box-content .nws-three-box-body .nws-three-box-inner .nws-three-box-iner {
+  display: block;
+  background: #fff;
+  text-align: center;
+    width: 50%;
+}
+  .nws-three-box-content .nws-three-box-body .nws-three-box-inner .nws-three-box-iner img {
+  display: block;
+  /* width: 55px; */
+  object-fit: contain;
+  object-position: bottom;
+  margin: 0 auto;
+  /* height: 55px; */
+}
+.nws-three-box-content .nws-three-box-body .nws-three-box-inner .nws-three-box-iner .nws-box-h {
+  display: block;
+  margin-top: 22px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.nws-three-box-content .nws-three-box-body .nws-three-box-inner .nws-three-box-iner .nws-box-p {
+  display: block;
+  line-height: normal;
+  font-size: 16px;
+  font-weight: 400;
+  color: #4a4a4a;
+}
+.btn-nws {
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 8px;
+  padding: 10px 39px;
+  border: 2px solid #f57e25;
+  display: inline-block;
+  text-transform: uppercase;
+  background: #f57e25;
+  line-height: normal;
+  color: #fff;
+}
+
+@media screen and (max-width: 991px) {
+  .nws-three-box-content .nws-three-box-body {
+    padding: 25px 0;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 575px) {
+
+    .heading-nws {
+    font-size: 23px;
+  }
+  .nws-three-box-content .nws-three-box-body .nws-three-box-inner {
+    width: 50%;
+  }
+}
+</style>

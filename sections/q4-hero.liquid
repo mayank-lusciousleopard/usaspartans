@@ -1,0 +1,178 @@
+{% comment %}
+  Q4 Hero Section
+  - Mobile-first, BEM classes
+  - All copy/images configurable via schema
+  - Styles live in assets/q4-hero.css
+{% endcomment %}
+
+{{ 'q4-hero.css' | asset_url | stylesheet_tag }}
+
+{% assign eyebrow = section.settings.eyebrow_text %}
+{% assign title = section.settings.title_text %}
+{% assign subtitle = section.settings.subtitle_text %}
+{% assign subtitle_highlighted = section.settings.subtitle_text_highlighted %}
+{% assign cta_label = section.settings.cta_label %}
+{% assign cta_link = section.settings.cta_link %}
+{% assign badge_label = section.settings.badge_label %}
+{% assign badge_value = section.settings.badge_value %}
+{% assign mobile_image = section.settings.mobile_image %}
+{% assign desktop_image = section.settings.desktop_image %}
+{% assign image_alt = section.settings.image_alt | default: title %}
+{% assign badge_background_image = section.settings.badge_background_image %}
+
+<section class="q4-hero" aria-label="{{ section.settings.aria_label | escape }}">
+  <div class="q4-hero__media">
+    <picture>
+      {% if desktop_image != blank %}
+        <source media="(min-width: 990px)" srcset="{{ desktop_image | image_url: width: 1688 }} 2x, {{ desktop_image | image_url: width: 1688 }} 1x">
+      {% endif %}
+      {% if mobile_image != blank %}
+        <img
+          class="q4-hero__media-img"
+          src="{{ mobile_image | image_url: width: 780 }}"
+          alt="{{ image_alt | escape }}"
+          loading="lazy"
+          width="780"
+          height="500"
+        >
+      {% else %}
+        <img
+          class="q4-hero__media-img"
+          src="{{ desktop_image | image_url: width: 844 }}"
+          alt="{{ image_alt | escape }}"
+          loading="lazy"
+          width="844"
+          height="393"
+        >
+      {% endif %}
+    </picture>
+  </div>
+
+  <div class="q4-hero__panel">
+    <div class="q4-hero__content">
+      <div class="q4-hero__heading">
+        {% if eyebrow != blank %}
+          <div class="q4-hero__eyebrow">{{ eyebrow }}</div>
+        {% endif %}
+        {% if title != blank %}
+          <h2 class="q4-hero__title">{{ title }}</h2>
+        {% endif %}
+
+        {% if subtitle != blank %}
+          <p class="q4-hero__subtitle">
+            {{ subtitle | newline_to_br }}
+            {% if subtitle_highlighted != blank %}
+              <span class="q4-hero__subtitle-highlighted">{{ subtitle_highlighted }}</span>
+            {% endif %}
+          </p>
+        {% endif %}
+      </div>
+
+      {% if cta_label != blank %}
+        <a
+          class="q4-hero__cta"
+          href="{{ cta_link | default: '#' }}"
+          aria-label="{{ cta_label | escape }}"
+        >{{ cta_label }}</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="q4-hero__strip q4-hero__strip--top" aria-hidden="true"></div>
+  <div class="q4-hero__strip q4-hero__strip--bottom" aria-hidden="true"></div>
+  <div class="q4-hero__badge" aria-hidden="true" {% if badge_background_image != blank %} style="background-image: url('{{ badge_background_image | image_url: width: 300 }}'); box-shadow: unset;" {% endif %}>
+    <span class="q4-hero__badge-label">{{ badge_label }}</span>
+    <span class="q4-hero__badge-value">{{ badge_value }}</span>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Q4 Hero",
+  "tag": "section",
+  "class": "section-q4-hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "aria_label",
+      "label": "ARIA label",
+      "default": "Promotional hero"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow_text",
+      "label": "Eyebrow heading",
+      "default": "Discount Season"
+    },
+    {
+      "type": "text",
+      "id": "title_text",
+      "label": "Main title",
+      "default": "Starts Now"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle_text",
+      "label": "Subtitle",
+      "default": "Tiered savings up to $300 — Ends Nov 10"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle_text_highlighted",
+      "label": "Subtitle highlighted",
+      "default": "EARLYBF"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Button label",
+      "default": "Unlock Your Savings"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "Button link"
+    },
+    {
+      "type": "image_picker",
+      "id": "badge_background_image",
+      "label": "Badge background image"
+    },
+    {
+      "type": "richtext",
+      "id": "badge_label",
+      "label": "Badge label",
+      "default": "<p>SAVE UP TO</p>"
+    },
+    {
+      "type": "text",
+      "id": "badge_value",
+      "label": "Badge value",
+      "default": "$100"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile image"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop image"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image alt text",
+      "default": "Product hero image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Q4 Hero"
+    }
+  ]
+}
+{% endschema %}
+
+

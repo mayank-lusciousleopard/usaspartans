@@ -1,0 +1,94 @@
+<section class="plunge">
+  <div class="w-layout-blockcontainer container w-container">
+    <div class="heading center">
+      <div class="subtitle-section">{{ section.settings.title }}</div>
+      <h2 class="title-section">{{ section.settings.heading }}</h2>
+      <img src="{{ section.settings.star | image_url }}" loading="lazy" alt="" class="plunge-stars">
+    </div>
+  </div>
+  <div class="w-layout-blockcontainer container full-width-mobile w-container">
+    <div class="plunge-slider">
+      {% for block in section.blocks %}
+      <div class="plunge-item">
+        <a href="#" class="plunge-lightbox-link w-inline-block w-lightbox">
+          <img src="{{ block.settings.play | image_url }}" loading="lazy" alt="" class="plunge-lightbox-play-button">
+          <img src="{{ block.settings.main-img | image_url }}" loading="lazy" alt="" class="plunge-lightbox-img">
+          <script type="application/json" class="w-json">
+            {
+            "items": [
+              {
+                "url": "{{ block.settings.video_url }}",
+                "originalUrl": "{{ block.settings.video_url }}",
+                "width": 940,
+                "height": 528,
+                "thumbnailUrl": "https://i.ytimg.com/vi/{{ block.settings.video_url }}/hqdefault.jpg",
+                "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2F{{ block.settings.video_url }}%3Fautoplay%3D1%26feature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D{{ block.settings.video_url }}&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2F{{ block.settings.video_url }}%2Fhqdefault.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&autoplay=1&type=text%2Fhtml&schema=youtube\" width=\"940\" height=\"528\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
+                "type": "video"
+              }
+            ],
+            "group": ""
+            }
+          </script>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %} 
+  { 
+    "name": "Video Section",
+    "settings": [
+      { 
+         "type": "text",
+         "id":"title",
+         "label": "Video Title" 
+      },
+      { 
+         "type": "text",
+         "id":"heading",
+         "label": "Video Heading" 
+      },
+      { 
+         "type": "image_picker",
+         "id":"star",
+         "label": "Video Star Icon" 
+       }
+    ],
+    "blocks": [ 
+       { 
+         "type": "video-block",
+         "name": "Video Block",
+         "settings": [ 
+           {
+              "type": "image_picker",
+              "id":   "play",
+              "label": "Video Play Icon"
+           },
+           {
+              "type": "image_picker",
+              "id":   "main-img",
+              "label": "Video Image"
+           },
+           {
+              "type": "text",
+              "id": "video_url",
+              "label": "Youtube Video ID"
+            }
+         ] 
+       } 
+     ], 
+    "presets":[
+      {
+        "name":"Video Section" 
+      } 
+    ] 
+  } 
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

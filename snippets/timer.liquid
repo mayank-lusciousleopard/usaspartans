@@ -1,0 +1,104 @@
+<div class="timer {{ timer_class }}">
+  <div class="timer__inner js-timer" data-timer-text="{{ timer_text }}" data-mode="{{ timer_mode }}">
+    <div class="timer__grid">
+      <p class="timer__item">
+        <span class="timer__num js-days">00</span>
+        <span class="timer__unit">d</span>
+      </p>
+      <span class="timer__separator">:</span>
+      <p class="timer__item">
+        <span class="timer__num js-hours">00</span>
+        <span class="timer__unit">h</span>
+      </p>
+      <span class="timer__separator">:</span>
+      <p class="timer__item">
+        <span class="timer__num js-minutes">00</span>
+        <span class="timer__unit">m</span>
+      </p>
+      <span class="timer__separator" style="display: none;">:</span>
+      <p class="timer__item" style="display: none;">
+        <span class="timer__num js-seconds">00</span>
+        <span class="timer__unit">s</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    function resolveTargetDate(now, mode, timerText) {
+      switch (mode) {
+        case 'day': {
+          const d = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+          d.setHours(0, 0, 0, 0);
+          return d;
+        }
+        case 'week': {
+          let daysUntilNextMonday = (7 - now.getDay() + 1) % 7;
+          if (daysUntilNextMonday === 0) daysUntilNextMonday = 7;
+          const d = new Date(now.getFullYear(), now.getMonth(), now.getDate() + daysUntilNextMonday);
+          d.setHours(0, 0, 0, 0);
+          return d;
+        }
+        case 'month':
+          return new Date(now.getFullYear(), now.getMonth() + 1, 1);
+        case 'date': {
+          const d = new Date(timerText);
+          if (isNaN(d.getTime()) || d <= now) {
+            const fallback = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+            fallback.setHours(0, 0, 0, 0);
+            return fallback;
+          }
+          return d;
+        }
+        default:
+          return new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+      }
+    }
+
+    function updateOneTimer(timerEl) {
+      const daysEl = timerEl.querySelector('.js-days');
+      const hoursEl = timerEl.querySelector('.js-hours');
+      const minutesEl = timerEl.querySelector('.js-minutes');
+      const secondsEl = timerEl.querySelector('.js-seconds');
+      const timerText = timerEl.dataset.timerText;
+      const mode = timerEl.dataset.mode;
+      if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+
+      const now = new Date();
+      const targetDate = resolveTargetDate(now, mode, timerText);
+      const diff = targetDate - now;
+
+      if (diff > 0) {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        daysEl.textContent = days < 10 ? `0${days}` : String(days);
+        hoursEl.textContent = hours < 10 ? `0${hours}` : String(hours);
+        minutesEl.textContent = minutes < 10 ? `0${minutes}` : String(minutes);
+        secondsEl.textContent = seconds < 10 ? `0${seconds}` : String(seconds);
+      } else {
+        daysEl.textContent = '00';
+        hoursEl.textContent = '00';
+        minutesEl.textContent = '00';
+        secondsEl.textContent = '00';
+      }
+    }
+
+    function initTimers() {
+      const timers = document.querySelectorAll('.js-timer');
+      if (!timers.length) return;
+      const tick = () => timers.forEach(updateOneTimer);
+      tick();
+      setInterval(tick, 1000);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initTimers);
+    } else {
+      initTimers();
+    }
+  })();
+</script>

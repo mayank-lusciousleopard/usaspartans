@@ -1,0 +1,129 @@
+.sale-announcement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(270deg, #187370 0%, #506CAD 100%), linear-gradient(270deg, #143549 0%, #065367 100%), #065367 !important;
+  color: var(--sale-announcement-text, #ffffff);
+  margin-right: -4px;
+  padding: 10px 16px;
+}
+
+.sale-announcement__top {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.sale-announcement__pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.20);
+  white-space: nowrap;
+}
+
+.sale-announcement__icon {
+  width: 12px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sale-announcement__pill-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+}
+
+.sale-announcement__heading {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.sale-announcement__heading-prefix,
+.sale-announcement__heading-suffix {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.sale-announcement__space { display: inline; }
+
+.sale-announcement__heading-suffix--desktop { display: none; }
+
+.sale-announcement__bottom {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+
+.sale-announcement__timer-label {
+  color: rgba(255, 255, 255, 0.80);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Timer overrides inside the announcement */
+.sale-announcement__timer .timer {
+  justify-content: flex-start;
+}
+
+.sale-announcement__timer .timer__grid {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.20);
+  border-radius: 999px;
+}
+
+.sale-announcement__timer .timer__item {
+  background: transparent;
+  padding: 0;
+  margin: 0 !important;
+}
+
+.sale-announcement__timer .timer__num,
+.sale-announcement__timer .timer__unit {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sale-announcement__timer .timer__separator {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Force seconds visible for this placement */
+.sale-announcement__timer .timer__separator:last-of-type,
+.sale-announcement__timer .timer__item:last-of-type {
+  display: inline-flex !important;
+}
+
+@media (min-width: 990px) {
+  .sale-announcement {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sale-announcement__top {
+    gap: 14px;
+    border-radius: 0 99px 99px 0;
+  }
+  .sale-announcement__heading-suffix--mobile { display: none; }
+  .sale-announcement__heading-suffix--desktop { display: inline; }
+  .sale-announcement__bottom {
+    margin-top: 0;
+  }
+}

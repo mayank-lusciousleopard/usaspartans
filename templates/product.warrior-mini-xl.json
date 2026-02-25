@@ -1,0 +1,762 @@
+{
+  "sections": {
+    "c_sticky_atc_Dkg3MV": {
+      "type": "c-sticky-atc",
+      "settings": {
+        "use_custom_product": false,
+        "product": "",
+        "padding_top": 2,
+        "padding_bottom": 2
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "9c311809-92f0-4edb-80cf-4608579e895f": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "text_VaF3ze": {
+          "type": "text",
+          "settings": {
+            "text": "Say goodbye to chronic pain, stress and anxiety! Improve your overall health and hit your peak performance with the Warrior Mini XL. Affordable, spacious ice bath with 120 gal. capacity, yet easily folds up for portability. It stays cold for several days with its 3-layer sub-zero insulation, while the integrated metal frame ensures unbeatable durability at an affordable price.",
+            "text_style": "body"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "premium_info_KyVbEE": {
+          "type": "premium_info",
+          "settings": {
+            "heading": "HSA \/ FSA Eligible",
+            "text": "<p>save an average of 30% with pre tax funds Choose flex at checkout<\/p>",
+            "info_hover_text": "Use your HSA\/FSA card to pay for this item.",
+            "bg_color": "#f5f8f0",
+            "text_color": "#000000",
+            "icon_color": "#39b856",
+            "margin_top": 0,
+            "margin_bottom": 16
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "62950366-91e6-4329-853a-819a493380a1": {
+          "type": "payment_icon",
+          "settings": {}
+        },
+        "19a58bcf-33df-40a3-bfcd-8e1ba687156c": {
+          "type": "icon-with-text",
+          "settings": {
+            "custom_class": "",
+            "layout": "horizontal",
+            "icon_1": "check_mark",
+            "heading_1": "1 Year Warranty",
+            "icon_2": "return",
+            "heading_2": "60 Days Money Back Guarantee",
+            "icon_3": "truck",
+            "heading_3": "Free Tracked Shipping"
+          }
+        },
+        "9e64bf03-e0c7-4091-99f1-5569ed2d8dcc": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Mini XL Bath Specifications",
+            "icon": "eye",
+            "content": "<p><strong>Capacity: <\/strong>120 gal. (450L)<\/p><p><strong>Dimensions:<\/strong><\/p><p><em>Length:<\/em> 49 inches<\/p><p><em>Width:<\/em> 25 inches<\/p><p><em>Height:<\/em> 24 inches<\/p><p><strong>Empty weight:<\/strong>13 lb<\/p><p><strong>Suitable for:<\/strong> People up to 6′3 foot and fits people weighing up to 300 lb comfortably.<\/p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "e4b3bd11-239a-4d6e-b1fb-c008fb82cdb6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "PRO Chiller Specifications",
+            "icon": "snowflake",
+            "content": "<p><strong>Power and decibel level:<\/strong> <\/p><p>1\/2 hp compressor, 500watt power consumption. Uses a regular 110V US plug. <\/p><p>∼55 decibel noise level (comparable to a dishwasher)<\/p><p><strong>Dimensions:<\/strong><\/p><p>Pro chiller: 13x13x14.5 inch<\/p><p><strong>Power usage: <\/strong><\/p><p>The chiller will not rack up high energy bills. It uses the same technology and compressor your fridge\/freezer at home uses, which is economical. The exact power usage varies based on climate but expect to spend around $0.5-$1.5 per day in electricity (10-20 times less than buying ice).<\/p><p><strong>Weight:<\/strong><\/p><p>Pro chiller: 49 lbs (22kg)<\/p><p><strong>Water pump & filtration:<\/strong> <\/p><p>20 micron filtration & 24\/7 water flow which maintains clean & clear water for weeks to months. The filter and pump is placed low on the side with easy access for filter replacement and in case repair is needed, covered by our warranty, naturally.<\/p><p><strong>Indoor\/Outdoor use:<\/strong> <\/p><p>The chiller can also be used outdoors, but be recommend setting it up under a covered\/shaded area to protect it from weather and environment to extend its lifespan as it is not waterproof.<\/p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "b63a9dcf-2828-4d7e-ba67-9fba4afb1b71": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What is included",
+            "icon": "box",
+            "content": "<ul><li>Warrior Mini XL Ice Bath<\/li><li>Insulated Lid<\/li><li>Waterproof Cover<\/li><li>Drain Valve<\/li><li>Drain Hose<\/li><li>Hand pump<\/li><li>Pillow<\/li><li>Carry bag<\/li><\/ul><p><strong>*Optional If You Add The PRO Chiller:<\/strong><\/p><ul><li>Warrior PRO 0.5 hp water chiller<\/li><li>Hoses and fittings for the ice bath<\/li><li>Water filter<\/li><li>Water pump<\/li><li>Standard US power cord<\/li><li>User manual (text and video instructions)<\/li><\/ul><p><strong>BONUSES TO THE CHILLER:<\/strong><\/p><ul><li>100 Chlorine Tablets with Dispenser<\/li><li>Warrior Water Absorbent Mat<\/li><li>x10 Water Chiller Filters<\/li><li>Water Thermometer<\/li><li>Ice Bath Beginner Guide<\/li><\/ul>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_PEwG6i": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "icon": "truck",
+            "content": "<p>We ship in <strong>2 - 6 business days <\/strong>from our US warehouse.<\/p><p>Shipping to Canada takes between 7 - 14 business days after dispatch. We dispatch in 2 - 5 business days.<\/p><p>Returns: Should the Warrior Water Chiller not meet your expectations, you can return it within 60 days for a refund. <\/p><p>The ice bath can be returned only if not used due to hygiene reasons.<\/p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "9c311809-92f0-4edb-80cf-4608579e895f",
+        "price",
+        "text_VaF3ze",
+        "variant_picker",
+        "premium_info_KyVbEE",
+        "buy_buttons",
+        "62950366-91e6-4329-853a-819a493380a1",
+        "19a58bcf-33df-40a3-bfcd-8e1ba687156c",
+        "9e64bf03-e0c7-4091-99f1-5569ed2d8dcc",
+        "e4b3bd11-239a-4d6e-b1fb-c008fb82cdb6",
+        "b63a9dcf-2828-4d7e-ba67-9fba4afb1b71",
+        "collapsible_tab_PEwG6i"
+      ],
+      "settings": {
+        "cstm_class": "",
+        "date": "",
+        "enable_sticky_info": true,
+        "overlay_width_d": 104,
+        "overlay_width_m": 80,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "671e1de3-4dcb-44d5-a6a6-9483b7b3bd88": {
+      "type": "image-with-text",
+      "blocks": {
+        "54d52f24-f598-4ed4-985d-9b3ea268b92e": {
+          "type": "heading",
+          "settings": {
+            "heading": "What Is Included",
+            "heading_size": "h1"
+          }
+        },
+        "9260f5bb-bf8f-47d3-9f6f-9b1d571567c8": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>1x<\/strong> Warrior Mini XL<\/p><p><strong>1x<\/strong> Insulated Lid<\/p><p><strong>1x<\/strong> Waterproof Cover<\/p><p><strong>1x<\/strong> Drain Valve<\/p><p><strong>1x<\/strong> Drainage Hose<\/p><p><strong>1x<\/strong> Pump<\/p><p><strong>1x<\/strong> Pillow<\/p><p><strong>1x <\/strong>12 Months Warranty<\/p><p><strong>1x<\/strong> Free Tracked Delivery<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "54d52f24-f598-4ed4-985d-9b3ea268b92e",
+        "9260f5bb-bf8f-47d3-9f6f-9b1d571567c8"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/warriorminixlicebathwhatisincluded.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "cfec8b9b-6450-44bd-bded-c8d9d613ab0f": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--18003130515744__cfec8b9b-6450-44bd-bded-c8d9d613ab0f-1677349302a9e347fd-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is your shipping time?",
+            "icon": "question_mark",
+            "row_content": "<p>The shipping is <strong>Fast & Free.<\/strong><\/p><p>We ship in <strong>2 - 6 business days <\/strong>from our US warehouse.<\/p><p>Shipping to Canada takes between 7 - 14 business days after dispatch. We dispatch in 2 - 5 business days.<\/p><p>Returns: Should the Warrior Water Chiller not meet your expectations, you can return it within 30 days for a refund. Please note that a restocking fee may apply.<\/p><p>The ice bath can be returned only if not used due to hygiene reasons.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_wdfEyp": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is this water chiller going to hike up my electricity bill?",
+            "icon": "question_mark",
+            "row_content": "<p>No, the chiller will not rack up high energy bills. It uses the same technology as your fridge\/freezer at home, which is extremely economical.<\/p><p>The exact power usage varies based on climate but expect to spend around $0.5-$1.5 per day in electricity <em>(<\/em>10  times less than buying ice if you plunge regularly!<em>).<\/em><\/p><p><strong>One of the best long term investments you can make for your health and your family.<\/strong><\/p>",
+            "page": ""
+          }
+        },
+        "1060d4b5-cb2c-48d1-b412-c855c34632f5": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is it easy to setup?",
+            "icon": "question_mark",
+            "row_content": "<p>The ice bath assembly takes less than 5 minutes. Just inflate it with the pump and that is it.<\/p><p>The chiller takes 5 minutes as well and we provide easy to follow video instructions with your order. All you have to do is connect the hoses.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_mjMdVj": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is the water chiller noisy?",
+            "icon": "question_mark",
+            "row_content": "<p>The Warrior Water Chiller is designed for quiet operation. We've prioritized ensuring that your cold plunge sessions are as peaceful as possible. Thanks to our advanced engineering, the chiller operates with minimal noise, allowing you to relax and rejuvenate without any disruptions, making it a top choice for both indoor and outdoor settings.<\/p>",
+            "page": ""
+          }
+        },
+        "33c9cfa5-8950-4f13-a486-fd6a8d2e5d0b": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use it outdoors?",
+            "icon": "question_mark",
+            "row_content": "<p>Definitely! We engineered the Warrior Mini XL Ice Bath to be weather and UV resistant, so you can set it up inside or outside, even in temperatures below freezing. <\/p><p>When the chiller is used outside, make sure to cover it with an umbrella, sunshade or similar as it is not waterproof.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_JaCD67": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How often I should change the water filter?",
+            "icon": "question_mark",
+            "row_content": "<p>We recommend changing the water filter once every month. Easy video instructions are included in the manual on how to do that. You can purchase extra filters from the Accessories page.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ay9K6n": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What temperatures can the chiller achieve?",
+            "icon": "question_mark",
+            "row_content": "<p>The water chiller can cool water to 39-45 without any ice. <\/p><p>*The temperatures depend on the climate and water volume.<\/p>",
+            "page": ""
+          }
+        },
+        "template--18003130515744__cfec8b9b-6450-44bd-bded-c8d9d613ab0f-1677349302a9e347fd-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I need to use ice when using the chiller?",
+            "icon": "question_mark",
+            "row_content": "<p>You don't have to use any ice whatsoever when using our ice bath water chiller.<\/p>",
+            "page": ""
+          }
+        },
+        "template--18003130515744__cfec8b9b-6450-44bd-bded-c8d9d613ab0f-1677349302a9e347fd-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How fast does it cool the water?",
+            "icon": "question_mark",
+            "row_content": "<p>The chiller cools down the water from 3 - 6 hours depending on the climate and the ambient temperature. It also depends how much water is inside the tub. Make sure that you don't overfill it.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_4wGaHe": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the ice bath size?",
+            "icon": "question_mark",
+            "row_content": "<p><strong>Dimensions:<\/strong><\/p><p><em>Length:<\/em> 49 inches<\/p><p><em>Width:<\/em> 25 inches<\/p><p><em>Height:<\/em> 24 inches<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_qpXVet": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does the ice bath come with a lid?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes, it does!<\/p><p>It comes complete with an insulated inflatable lid. You will find it carefully folded inside the box.<\/p>",
+            "page": ""
+          }
+        },
+        "3627007b-6243-42aa-b0fd-37c525df3b8b": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I am over 6ft, will I fit in the ice bath?",
+            "icon": "question_mark",
+            "row_content": "<p>We've designed our bath to fit anyone up to 6'3\".<\/p>",
+            "page": ""
+          }
+        },
+        "db9ceae5-e1eb-47a9-bd0e-16c6745c7370": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I drain the ice bath?",
+            "icon": "question_mark",
+            "row_content": "<p>The ice bath has a drain valve so you can easily drain it. We also include drain hose so you can easily empty it.<\/p>",
+            "page": ""
+          }
+        },
+        "2dbe76fe-e4ae-4e98-aecc-a2247f667bba": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How often should I change the water in the ice bath?",
+            "icon": "question_mark",
+            "row_content": "<p>Whenever you notice that it is dirty. Usually once every 3 - 6 weeks. We recommend washing the inside surfaces with warm soapy water or mild disinfectant after you drain it. <\/p>",
+            "page": ""
+          }
+        },
+        "template--18003130515744__cfec8b9b-6450-44bd-bded-c8d9d613ab0f-1677349302a9e347fd-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I keep the water clean for longer?",
+            "icon": "question_mark",
+            "row_content": "<p>Always keep the lid on when not in use, to help prevent any debris from falling in. <\/p><p>You can add water stabilizer, epsom salt or hydrogen peroxide if you want as well but it is not necessary.<\/p>",
+            "page": ""
+          }
+        },
+        "7e548cc5-42d0-4796-92cd-8d58fabff096": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the recommended water temperature for cold plunge?",
+            "icon": "question_mark",
+            "row_content": "<p>We recommend starting out at around 59º F if it's your first time, and then slowly lowering the temperature and duration for each session. That way your body will get acclimated to the cold.<\/p><p>1 - 3 minutes per session is sufficient to get the ice bath benefits 3 - 6 times per week.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18003130515744__cfec8b9b-6450-44bd-bded-c8d9d613ab0f-1677349302a9e347fd-0",
+        "collapsible_row_wdfEyp",
+        "1060d4b5-cb2c-48d1-b412-c855c34632f5",
+        "collapsible_row_mjMdVj",
+        "33c9cfa5-8950-4f13-a486-fd6a8d2e5d0b",
+        "collapsible_row_JaCD67",
+        "collapsible_row_ay9K6n",
+        "template--18003130515744__cfec8b9b-6450-44bd-bded-c8d9d613ab0f-1677349302a9e347fd-3",
+        "template--18003130515744__cfec8b9b-6450-44bd-bded-c8d9d613ab0f-1677349302a9e347fd-2",
+        "collapsible_row_4wGaHe",
+        "collapsible_row_qpXVet",
+        "3627007b-6243-42aa-b0fd-37c525df3b8b",
+        "db9ceae5-e1eb-47a9-bd0e-16c6745c7370",
+        "2dbe76fe-e4ae-4e98-aecc-a2247f667bba",
+        "template--18003130515744__cfec8b9b-6450-44bd-bded-c8d9d613ab0f-1677349302a9e347fd-1",
+        "7e548cc5-42d0-4796-92cd-8d58fabff096"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "a6934842-7238-4199-9035-8d64612a106e": {
+      "type": "custom-product-compare",
+      "blocks": {
+        "825b4444-0786-4774-994a-602b48d8e294": {
+          "type": "item_block",
+          "settings": {
+            "info": "Price",
+            "own_text": "$250",
+            "other_text": "$1000"
+          }
+        },
+        "5dc46a3c-2900-4191-a4aa-0697ba263c71": {
+          "type": "item_block",
+          "settings": {
+            "info": "Insulation",
+            "own_text": "Thick insulation with sub zero technology",
+            "other_text": "Little or no insulation"
+          }
+        },
+        "item_block_TVCr6e": {
+          "type": "item_block",
+          "settings": {
+            "info": "Portability",
+            "own_text": "Portable & light",
+            "other_text": "Heavy & bulky"
+          }
+        },
+        "item_block_9w4mKE": {
+          "type": "item_block",
+          "settings": {
+            "info": "Material",
+            "own_text": "BPA & phthalates free materials",
+            "other_text": "Cheap plastics with harmful BPA"
+          }
+        },
+        "item_block_zXtUMH": {
+          "type": "item_block",
+          "settings": {
+            "info": "UV Resistance",
+            "own_text": "UV-resistant nylon fabric",
+            "other_text": "Prone to leaks and punctures"
+          }
+        },
+        "item_block_GBnNPe": {
+          "type": "item_block",
+          "settings": {
+            "info": "Warranty",
+            "own_text": "Covered by 12 months warranty",
+            "other_text": "Limited warranty, doesn’t cover air leaks"
+          }
+        },
+        "item_block_cxfN8Q": {
+          "type": "item_block",
+          "settings": {
+            "info": "Ships From",
+            "own_text": "Proudly ships from the USA",
+            "other_text": "Ships from China, long shipping time"
+          }
+        }
+      },
+      "block_order": [
+        "825b4444-0786-4774-994a-602b48d8e294",
+        "5dc46a3c-2900-4191-a4aa-0697ba263c71",
+        "item_block_TVCr6e",
+        "item_block_9w4mKE",
+        "item_block_zXtUMH",
+        "item_block_GBnNPe",
+        "item_block_cxfN8Q"
+      ],
+      "settings": {
+        "heading": "Us Vs Them",
+        "description": "",
+        "logo": "shopify:\/\/shop_images\/warrior_willpower_logo_black_red.png",
+        "other_title": "<p>Other Guys<\/p>",
+        "heading_color": "#ffffff",
+        "desc_color": "#ffffff",
+        "info_color": "#ffffff",
+        "own_color": "#000000",
+        "other_color": "#ffffff",
+        "own_bg": "#ffffff",
+        "other_title_color": "#ffffff",
+        "border_color": "#ffffff"
+      }
+    },
+    "5bccb9a6-5dcc-4e38-b638-15033072bfa1": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18385956471097__5bccb9a6-5dcc-4e38-b638-15033072bfa1-1680259644d401e914-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Say goodbye to pain and inflammation!",
+            "heading_size": "h1"
+          }
+        },
+        "template--18385956471097__5bccb9a6-5dcc-4e38-b638-15033072bfa1-1680259644d401e914-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Cold immersion reduces muscle soreness, joint pain, and inflammation naturally. Experience natural high like no other. <\/p><p>If you don’t feel the difference, <strong>you get a full refund<\/strong>, no questions asked!<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--18385956471097__5bccb9a6-5dcc-4e38-b638-15033072bfa1-1680259644d401e914-0",
+        "template--18385956471097__5bccb9a6-5dcc-4e38-b638-15033072bfa1-1680259644d401e914-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/warrior_mini_xl.webp",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_MNMgGf": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_UD8MTr": {
+          "type": "heading",
+          "settings": {
+            "heading": "Upgraded Ice Bath With Pockets",
+            "heading_size": "h1"
+          }
+        },
+        "text_anbce9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Warrior Mini XL stands out with two exclusive built-in storage pockets, making it the only one of its kind! <\/p><p>Keep your essentials close - store your phone, water bottle, or anything else.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UD8MTr",
+        "text_anbce9"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/minixlicebath.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "8a29706a-4dde-42c4-b560-8ff1c3579da7": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18003130515744__8a29706a-4dde-42c4-b560-8ff1c3579da7-16773542141e3728c3-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Spacious & Durable",
+            "heading_size": "h1"
+          }
+        },
+        "template--18003130515744__8a29706a-4dde-42c4-b560-8ff1c3579da7-16773542141e3728c3-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Unmatched durability and spacious design, thanks to its sturdy metal frame. <\/p><p>Enjoy plenty of room for a comfortable cold immersion experience, while the robust construction ensures long-lasting performance and reliability.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--18003130515744__8a29706a-4dde-42c4-b560-8ff1c3579da7-16773542141e3728c3-0",
+        "template--18003130515744__8a29706a-4dde-42c4-b560-8ff1c3579da7-16773542141e3728c3-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/warriorminixlicebath.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "b1898b11-2c5a-413d-a902-c65c8b666dad": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18003130515744__b1898b11-2c5a-413d-a902-c65c8b666dad-167734931895fa7474-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "PRO Chiller Compatible",
+            "heading_size": "h1"
+          }
+        },
+        "template--18003130515744__b1898b11-2c5a-413d-a902-c65c8b666dad-167734931895fa7474-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Fully compatible with the Warrior PRO chiller, eliminating the need for ice. <\/p><p>The water chiller cools the water, circulates it for an even temperature, and keeps it clean—providing you with a hassle-free, refreshing cold therapy experience every time.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--18003130515744__b1898b11-2c5a-413d-a902-c65c8b666dad-167734931895fa7474-0",
+        "template--18003130515744__b1898b11-2c5a-413d-a902-c65c8b666dad-167734931895fa7474-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Warriorminixlbundle.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "169619951643a20f88": {
+      "type": "apps",
+      "blocks": {
+        "4d2b0362-61e7-45af-a31b-a7447a098c3e": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "4d2b0362-61e7-45af-a31b-a7447a098c3e"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "f74ea555-4d13-43f2-afa4-c52b2686e798": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_H9cKYk": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Health Benefits of Ice Baths<\/p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_H9cKYk"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 32,
+        "custom_class": ""
+      }
+    },
+    "e51462bf-052e-4a93-89f3-4fb4299dfbac": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--18385956471097__e51462bf-052e-4a93-89f3-4fb4299dfbac-168026041319a0bf04-0": {
+          "type": "column",
+          "settings": {
+            "title": "Overall Health",
+            "text": "<p>Reduces inflammation, speeds up muscle recovery, boosts circulation, and supports immune function through cold immersion.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18385956471097__e51462bf-052e-4a93-89f3-4fb4299dfbac-168026041319a0bf04-2": {
+          "type": "column",
+          "settings": {
+            "title": "Depression and Anxiety",
+            "text": "<p>Regulates mood, reduce stress, and lowers anxiety levels by stimulating the release of endorphins and improving overall mental well-being.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18385956471097__e51462bf-052e-4a93-89f3-4fb4299dfbac-168026041319a0bf04-1": {
+          "type": "column",
+          "settings": {
+            "title": "Productivity",
+            "text": "<p>Cold immersion therapy increases energy levels, enhances focus, and reduces fatigue, helping you stay sharp and perform at your best.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18385956471097__e51462bf-052e-4a93-89f3-4fb4299dfbac-168026041319a0bf04-0",
+        "template--18385956471097__e51462bf-052e-4a93-89f3-4fb4299dfbac-168026041319a0bf04-2",
+        "template--18385956471097__e51462bf-052e-4a93-89f3-4fb4299dfbac-168026041319a0bf04-1"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 32
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_jVtiPH": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_NgckLb": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Covered By Warranty<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_jexRdY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every Mini XL ice bath comes with a 12 month full warranty. If the ice bath leaks or has any manufacturing issue, you get a <strong>free replacement<\/strong> without returning it back to us!<\/p><p>We proudly cover all our products by our <strong>Satisfaction Guarantee<\/strong>. If you aren’t 100% satisfied, you have 30 days to return it for a full refund (in unused condition). <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NgckLb",
+        "text_jexRdY"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "accent-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom_class": ""
+      }
+    }
+  },
+  "order": [
+    "c_sticky_atc_Dkg3MV",
+    "main",
+    "671e1de3-4dcb-44d5-a6a6-9483b7b3bd88",
+    "cfec8b9b-6450-44bd-bded-c8d9d613ab0f",
+    "a6934842-7238-4199-9035-8d64612a106e",
+    "5bccb9a6-5dcc-4e38-b638-15033072bfa1",
+    "image_with_text_MNMgGf",
+    "8a29706a-4dde-42c4-b560-8ff1c3579da7",
+    "b1898b11-2c5a-413d-a902-c65c8b666dad",
+    "169619951643a20f88",
+    "f74ea555-4d13-43f2-afa4-c52b2686e798",
+    "e51462bf-052e-4a93-89f3-4fb4299dfbac",
+    "related-products",
+    "rich_text_jVtiPH"
+  ]
+}

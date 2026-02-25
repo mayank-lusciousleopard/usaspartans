@@ -1,0 +1,143 @@
+<style>
+  #{{section.id}} {
+    padding-top: {{section.settings.padding_top}}rem;
+    padding-bottom: {{section.settings.padding_bottom}}rem;
+  }
+
+  .bg-image-blur {
+    background-image: url('{{ section.settings.div_background_image | image_url: width: 2160 }}');
+    background-size: 115%;
+    filter: blur(47px);
+    z-index: 0;
+  }
+
+
+  @media (max-width: 768px) {
+    #{{section.id}} {
+      padding-top: 1.5em;
+      padding-bottom: 1.5em;
+    }
+
+    .bg-image-blur {
+      filter: none;
+      background-size: 100%;
+      background-image: url('{{ section.settings.section_background_image | image_url: width: 1260 }}');
+      background-size: cover;
+      background-position: 50%;
+
+    }
+  }
+</style>
+<section
+  id="{{ section.id }}"
+  class="tw-relative tw-bg-cover tw-bg-center tw-overflow-hidden collection-old-banner"
+  style="background-color: rgba(255, 255, 255, 0.1);"
+>
+  <div
+    class=" bg-image-blur tw-absolute tw-inset-0 tw-w-[100%] tw-h-auto tw-bg-cover tw-bg-bottom"
+    {% comment %}
+      style="background-image: url('{{ section.settings.image | image_url: width: 2160 }}');
+      background-size: 115%;
+      filter: blur(47px);
+      z-index: 0;"
+    {% endcomment %}
+  ></div>
+
+  {% if section.settings.div_background_image %}
+    <div
+      class="tw-hidden md:!tw-block tw-absolute tw-inset-0 tw-bg-cover tw-w-full md:tw-w-[90%] tw-h-auto tw-mx-auto tw-bg-center tw-rounded-[32px] tw-my-6"
+      style="
+        background-image: url('{{ section.settings.div_background_image | image_url: width: 2160 }}');
+        box-shadow: 0px 4px 6px 0px #00000017;
+        border: 1px solid #F4F4F4;
+        z-index: 1;
+      "
+    ></div>
+  {% endif %}
+
+  <div class="tw-relative tw-mx-auto md:tw-ml-20 tw-flex tw-flex-col tw-gap-6 tw-justify-start tw-items-start tw-max-w-[623px] tw-rounded-[24px] tw-p-5 tw-my-5 md:tw-my-24 tw-backdrop-blur-[50px] tw-bg-[rgba(255,255,255,0.1)] tw-z-10">
+    <p>
+      <a href="{{shop.url }}" class="tw-font-bold">Home / </a>
+      <a href="{{ collection.url }}">{{ collection.title }}</a>
+    </p>
+    <h2 class="tw-block tw-text-center tw-bg-custom-gradient tw-bg-clip-text tw-text-transparent tw-text-5xl tw-font-bold">
+      {% if section.settings.section_heading != empty %}
+        {{ section.settings.section_heading }}
+      {% else %}
+        {{ collection.title }}
+      {% endif %}
+    </h2>
+    <div class="tw-text-base tw-text-start tw-text-black ">
+      {% if section.settings.description_banner != empty %}
+        {{ section.settings.description_banner }}
+      {% else %}
+        {{ collection.description }}
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "C Banner Water Chiller",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "default": 4,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "default": 4,
+      "unit": "rem"
+    },
+    {
+      "type": "text",
+      "id": "section_span_heading_first_part",
+      "label": "Span Heading First Part"
+    },
+    {
+      "type": "text",
+      "id": "section_span_heading_second_part",
+      "label": "Span Heading Second Part"
+    },
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "description_banner",
+      "label": "Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "section_background_image",
+      "label": "Section Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "div_background_image",
+      "label": "Div Background Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Banner Water Chiller",
+      "category": "custom"
+    }
+  ]
+}
+{% endschema %}
+

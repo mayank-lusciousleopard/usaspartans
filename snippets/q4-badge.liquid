@@ -1,0 +1,68 @@
+<style>
+  .q4-sale-badge-container,
+  .q4-sale-badge-container--pdp {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .q4-sale-badge-container--pdp {
+    justify-content: flex-start;
+    padding-left: 10px;
+    bottom: 16px;
+    top: unset;
+  }
+  .product-new__save,
+  .header-product-price-badge,
+  .badge.price__badge-sale {
+    padding: 10px 13px !important;
+    border-radius: 16px !important;
+    background: linear-gradient(270deg, #187370 0%, #506CAD 100%), linear-gradient(270deg, #143549 0%, #065367 100%), #065367 !important;
+    border: none !important;
+  }
+
+  .q4-badge {
+    padding: 4px 9px;
+    background: linear-gradient(270deg, #187370 0%, #506CAD 100%), linear-gradient(270deg, #143549 0%, #065367 100%), #065367 !important;
+    border-radius: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    display: inline-flex;
+  }
+  .q4-badge__label {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 14px;
+    font-family: Open Sans;
+    font-weight: 700;
+    text-transform: uppercase;
+    word-wrap: break-word;
+  }
+
+  @media (max-width: 989px) {
+    .q4-sale-badge-container--pdp-gallery {
+      left: 20px;
+    }
+  }
+
+  @media (min-width: 990px) {
+    .q4-sale-badge-container--pdp {
+      top: 25px;
+      bottom: unset;
+    }
+    .q4-sale-badge-container {
+      justify-content: flex-start;
+      padding-left: 10px;
+    }
+  }
+</style>
+<div class="q4-badge">
+  <div class="q4-badge__label">{{ settings.sale_q4_badge_label }}</div>
+</div>

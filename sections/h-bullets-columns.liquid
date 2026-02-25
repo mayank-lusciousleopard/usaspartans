@@ -1,0 +1,117 @@
+<section class="two-col-bullets {{ section.settings.custom_class }}">
+  <div class="container">
+
+    <!-- MAIN HEADING + SUBHEADING -->
+    <div class="top-content" style="text-align:center; margin-bottom:35px;">
+      {% if section.settings.main_heading %}
+        <h2>{{ section.settings.main_heading }}</h2>
+      {% endif %}
+      {% if section.settings.main_subheading %}
+        <p style="opacity:0.8; margin-top:8px;">{{ section.settings.main_subheading }}</p>
+      {% endif %}
+    </div>
+
+    <!-- TWO COLUMNS -->
+    <div class="row" style="display:flex; gap:40px;">
+
+      <!-- LEFT COLUMN -->
+      <div class="col" style="flex:1;">
+        <h3>{{ section.settings.left_heading }}</h3>
+
+        {% for block in section.blocks %}
+          {% if block.type == 'left_item' %}
+            <div class="bullet-item" style="display:flex; align-items:center; margin-bottom:12px;">
+              {% if block.settings.icon %}
+                <span class="bullet-icon">
+                <img src="{{ block.settings.icon | image_url: width:40 }}" style="width:40px; margin-right:10px;" width="" height="">
+                </span>
+              {% endif %}
+              <span class="bullet-text">{{ block.settings.text }}</span>
+              <span class="bullet-textarea">
+              {{ block.settings.textarea }}</span>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="col" style="flex:1;">
+        <h3>{{ section.settings.right_heading }}</h3>
+
+        {% for block in section.blocks %}
+          {% if block.type == 'right_item' %}
+            <div class="bullet-item" style="display:flex; align-items:center; margin-bottom:12px;">
+              {% if block.settings.icon %}
+                <span class="bullet-icon">
+                <img src="{{ block.settings.icon | image_url: width:40 }}" style="width:40px; margin-right:10px;" width="" height="">
+                </span>
+              {% endif %}
+              <span class="bullet-text">{{ block.settings.text }}</span>
+              <span class="bullet-textarea">
+              {{ block.settings.textarea }}</span>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Two Column Bullet Lists",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Main Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "main_subheading",
+      "label": "Main Subheading"
+    },
+    {
+      "type": "text",
+      "id": "left_heading",
+      "label": "Left Column Heading"
+    },
+    {
+      "type": "text",
+      "id": "right_heading",
+      "label": "Right Column Heading"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom CSS Class"
+    }
+  ],
+  "blocks": [
+      {
+        "type": "left_item",
+        "name": "Left Column Bullet",
+        "settings": [
+          { "type": "image_picker", "id": "icon", "label": "Icon (optional)" },
+          { "type": "text", "id": "text", "label": "Text" },
+          { "type": "richtext", "id": "textarea", "label": "Text Editor" }
+        ]
+      },
+      {
+        "type": "right_item",
+        "name": "Right Column Bullet",
+        "settings": [
+          { "type": "image_picker", "id": "icon", "label": "Icon (optional)" },
+          { "type": "text", "id": "text", "label": "Text" },
+          { "type": "richtext", "id": "textarea", "label": "Text Editor" }
+        ]
+      }
+  ],
+  "max_blocks": 40,
+  "presets": [
+    { "name": "Two Column Bullet List" }
+  ]
+}
+{% endschema %}

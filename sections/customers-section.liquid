@@ -1,0 +1,71 @@
+<section class="customers">
+  <div class="w-layout-blockcontainer container w-container">
+    <div class="customers-slider">
+      {% for block in section.blocks %}
+      <div class="customer-item">
+        {% if block.settings.star-ico != blank %}
+        <img src="{{ block.settings.star-ico | image_url }}" loading="lazy" alt="" class="customer-stars">
+        {% endif %}
+        <div class="customer-desc">“{{ block.settings.text }}”</div>
+        <div class="customer-author-row">
+          <img src="{{ block.settings.author-img | image_url }}" loading="lazy" alt="" class="customer-author-img">
+          <div class="customer-author-inner">
+            <div class="customer-author-name">{{ block.settings.author }}</div>
+            <div>{{ block.settings.location }}</div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %} 
+  { 
+    "name": "Customers Section",
+    "blocks": [ 
+       { 
+         "type": "customers-review",
+         "name": "Customers Review Block",
+         "settings": [ 
+           { 
+             "type": "image_picker",
+             "id":"star-ico",
+             "label": "Review Star Icon" 
+           },
+           { 
+             "type": "text",
+             "id":"text",
+             "label": "Review Text" 
+           },
+           { 
+             "type": "image_picker",
+             "id":"author-img",
+             "label": "Review Author Image" 
+           },
+           { 
+             "type": "text",
+             "id":"author",
+             "label": "Review Author Name" 
+           },
+           { 
+             "type": "text",
+             "id":"location",
+             "label": "Review Country" 
+           }
+         ] 
+       } 
+    ], 
+    "presets":[
+      {
+        "name":"Customers Section" 
+      } 
+    ] 
+  } 
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

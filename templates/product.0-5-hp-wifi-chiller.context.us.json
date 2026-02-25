@@ -1,0 +1,7 @@
+{
+  "parent": "product.0-5-hp-wifi-chiller.json",
+  "context": {
+    "market": "us"
+  },
+  "sections": {}
+}

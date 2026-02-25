@@ -1,0 +1,206 @@
+{% comment %} 
+  Renders product variant-picker
+
+  Accepts:
+  - product: {Object} product object.
+  - block: {Object} passing the block information.
+  - product_form_id: {String} Id of the product form to which the variant picker is associated.
+  - update_url: {Boolean} whether or not to update url when changing variants. If false, the url isn't updated. Default: true (optional).
+  Usage:
+  {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+{% endcomment %}
+{%- unless product.has_only_default_variant -%}
+    {%- if block.settings.picker_type == 'button' -%}
+        <variant-radios
+            id="variant-radios-{{ section.id }}"
+            class="no-js-hidden header-product-option-wrap"
+            data-section="{{ section.id }}"
+            data-url="{{ product.url }}"
+            {% if update_url == false %}
+                data-update-url="false"
+            {% endif %}
+            {{ block.shopify_attributes }}
+        >
+            {%- for option in product.options_with_values -%}
+                {% assign op_name = option.name | replace: " ", "_"  %}
+                
+                <fieldset class="js product-form__input {{ op_name }}">
+                    <div class="header-product-title-row">
+                        <div class="header-product-content-title">{{ option.name }}</div>
+                        {% if option.name contains 'Select Chiller Option' %}
+                            <a data-w-id="b638cb3f-5603-20ca-5223-c73f3cef5a16" href="#" class="header-product-content-title-link w-inline-block">
+                                <img src="https://cdn.shopify.com/s/files/1/0740/3195/6281/files/info-icon.svg?v=1694607526" loading="lazy" alt="" class="header-product-info-icon">
+                                <div>Compare Chiller Type</div>
+                            </a>
+                        {% endif %}
+                        {% if option.name contains 'Add the Spartan Ice Bath + Free Lid?' %}
+                            <a data-w-id="f5f5c762-647d-7253-9da5-610ffa694c06" href="#" class="header-product-content-title-link w-inline-block">
+                                <img src="https://cdn.shopify.com/s/files/1/0740/3195/6281/files/info-icon.svg?v=1694607526" loading="lazy" alt="" class="header-product-info-icon">
+                            </a>
+                        {% endif %}
+                    </div>
+                    {% unless option.name contains 'Add Ice Bath?' %}
+                        {% render 'product-variant-options', product: product, option: option, block: block %}
+                    {% else %}
+                        {% liquid
+                            for block in section.blocks
+                                if block.type == 'bath'
+                                    assign bath_heading = block.settings.bath_heading
+                                    assign bath_image = block.settings.bath_image
+                                    assign compare_price = block.settings.compare_price
+                                    assign price = block.settings.price
+                                endif
+                            endfor
+                        %}
+                        <p class="product-new__bath-text">
+                            {{bath_heading}}
+                           
+                        </p>
+                        <div class="product-new__bath">
+                            <div class="product-new__bath-image">
+                                <img src="{{ bath_image | image_url: width: 100 }}" alt="{{ bath_heading }}" width="100" height="100">
+                            </div>
+                            <div class="product-new__bath-price">
+                                <s>{{ compare_price }}</s>
+                                {{ price }}
+                            </div>
+                           
+                            
+                            <div class="product-new__bath-checkbox">
+                                {%- assign first_value = option.values.first -%}
+                                {%- assign second_value = option.values.last -%}
+                                
+                                <input
+                                    type="radio"
+                                    id="{{ section.id }}-{{ option.position }}-yes"
+                                    name="{{ option.name }}"
+                                    value="{{ first_value | escape }}"
+                                    form="{{ product_form_id }}"
+                                    {% if option.selected_value == first_value %}checked{% endif %}
+                                    style="display: none;"
+                                >
+                                <input
+                                    type="radio"
+                                    id="{{ section.id }}-{{ option.position }}-no"
+                                    name="{{ option.name }}"
+                                    value="{{ second_value | escape }}"
+                                    form="{{ product_form_id }}"
+                                    {% if option.selected_value == second_value %}checked{% endif %}
+                                    style="display: none;"
+                                >
+                                
+                                <label class="product-new__bath-label">
+                                    <input
+                                        type="checkbox"
+                                        style="display: none;"
+                                        {% if option.selected_value == second_value %}checked{% endif %}
+                                        onclick="
+                                            if (this.checked) {
+                                             document.getElementById('{{ section.id }}-{{ option.position }}-no').click();
+                                               
+                                            } else {
+                                                document.getElementById('{{ section.id }}-{{ option.position }}-yes').click();
+                                            }
+                                        "
+                                    >
+                                    <div class="product-new__bath-label-circle"></div>
+                                    
+                                </label>
+                            </div>
+                        </div>
+                    {% endunless %}
+                </fieldset>
+            {%- endfor -%}
+            <script type="application/json">
+                {{ product.variants | json }}
+            </script>
+        </variant-radios>
+    {%- else -%}
+        <variant-selects
+        id="variant-selects-{{ section.id }}"
+        class="no-js-hidden"
+        data-section="{{ section.id }}"
+        data-url="{{ product.url }}"
+        {% if update_url == false %}
+            data-update-url="false"
+        {% endif %}
+        {{ block.shopify_attributes }}
+        >
+        {%- for option in product.options_with_values -%}
+            <div class="product-form__input product-form__input--dropdown">
+            <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
+                {{ option.name }}
+            </label>
+            <div class="select">
+                <select
+                id="Option-{{ section.id }}-{{ forloop.index0 }}"
+                class="select__select"
+                name="options[{{ option.name | escape }}]"
+                form="{{ product_form_id }}"
+                >
+                {% render 'product-variant-options', product: product, option: option, block: block %}
+                </select>
+                {% render 'icon-caret' %}
+            </div>
+            </div>
+        {%- endfor -%}
+
+        <script type="application/json">
+            {{ product.variants | json }}
+        </script>
+        </variant-selects>
+    {%- endif -%}
+{%- endunless -%}
+
+<noscript class="product-form__noscript-wrapper-{{ section.id }}">
+  <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
+    <label class="form__label" for="Variants-{{ section.id }}">
+      {{- 'products.product.product_variants' | t -}}
+    </label>
+    <div class="select">
+      <select
+        name="id"
+        id="Variants-{{ section.id }}"
+        class="select__select"
+        form="{{ product_form_id }}"
+      >
+        {%- for variant in product.variants -%}
+          <option
+            {% if variant == product.selected_or_first_available_variant %}
+              selected="selected"
+            {% endif %}
+            {% if variant.available == false %}
+              disabled
+            {% endif %}
+            value="{{ variant.id }}"
+          >
+            {%- liquid
+              echo variant.title
+              echo variant.price | money | strip_html | prepend: ' - '
+              if variant.available == false
+                echo 'products.product.sold_out' | t | prepend: ' - '
+              endif
+              if variant.quantity_rule.increment > 1
+                echo 'products.product.quantity.multiples_of' | t: quantity: variant.quantity_rule.increment | prepend: ' - '
+              endif
+              if variant.quantity_rule.min > 1
+                echo 'products.product.quantity.minimum_of' | t: quantity: variant.quantity_rule.min | prepend: ' - '
+              endif
+              if variant.quantity_rule.max != null
+                echo 'products.product.quantity.maximum_of' | t: quantity: variant.quantity_rule.max | prepend: ' - '
+              endif
+              # TODO: enable theme-check once `item_count_for_variant` is accepted as valid filter
+              # theme-check-disable
+              assign cart_quantity = cart | item_count_for_variant: variant.id
+              # theme-check-enable
+              if cart_quantity > 0
+                echo 'products.product.quantity.in_cart_html' | t: quantity: cart_quantity | prepend: ' - '
+              endif
+            -%}
+          </option>
+        {%- endfor -%}
+      </select>
+      {% render 'icon-caret' %}
+    </div>
+  </div>
+</noscript>

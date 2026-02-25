@@ -1,0 +1,891 @@
+{
+  "sections": {
+    "c_sticky_atc_Dkg3MV": {
+      "type": "c-sticky-atc",
+      "settings": {
+        "use_custom_product": false,
+        "product": "",
+        "padding_top": 2,
+        "padding_bottom": 2
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "f1b619ef-8684-416a-b153-bbc831334606": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "afterpay_on_site_messaging_payments_messaging_EXFFAQ": {
+          "type": "shopify:\/\/apps\/afterpay-on-site-messaging\/blocks\/payments-messaging\/f45a5524-d177-4475-bf59-281efd2215a8",
+          "settings": {
+            "text_align": "inherit",
+            "margin_top": 16,
+            "margin_bottom": 16,
+            "color": "",
+            "size": "md",
+            "intro_text": "Pay in",
+            "show_interest_free": true,
+            "payment_amount_is_bold": true,
+            "show_with": true,
+            "logo_type": "compact-badge",
+            "logo_theme": "black-on-mint",
+            "modal_link_style": "learn-more-text",
+            "modal_theme": "mint",
+            "breakpoint": 749,
+            "text_align_mobile": "inherit",
+            "margin_top_mobile": 16,
+            "margin_bottom_mobile": 16,
+            "show_lower_limit": true,
+            "show_upper_limit": true,
+            "show_if_outside_limits": true,
+            "product": "{{product}}"
+          }
+        },
+        "5ad6cb90-d947-461f-9eb9-a432fb4bdacd": {
+          "type": "iconic_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/check-symbol-4795.png",
+            "text": "Helps with muscle recovery"
+          }
+        },
+        "839db4ea-0928-48cb-829a-7190e3e64182": {
+          "type": "iconic_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/check-symbol-4795.png",
+            "text": "Strengthens your immune system"
+          }
+        },
+        "4be5a123-6886-4d77-baa1-ec6130051a7c": {
+          "type": "iconic_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/check-symbol-4795.png",
+            "text": "Boosts your energy and mood"
+          }
+        },
+        "52e7dbd4-d527-471f-abbd-4579f8377fca": {
+          "type": "iconic_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/check-symbol-4795.png",
+            "text": "Reduces stress & anxiety"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "easify_options_easify_product_options_8jE734": {
+          "type": "shopify:\/\/apps\/easify-options\/blocks\/easify-product-options\/d2288b18-c1ba-42f5-b3b3-26c75c8820bf",
+          "settings": {}
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "premium_info_adqHm8": {
+          "type": "premium_info",
+          "settings": {
+            "heading": "HSA \/ FSA Eligible",
+            "text": "<p>save an average of 30% with pre tax funds Choose flex at checkout<\/p>",
+            "info_hover_text": "Use your HSA\/FSA card to pay for this item.",
+            "bg_color": "#f5f8f0",
+            "text_color": "#000000",
+            "icon_color": "#39b856",
+            "margin_top": 0,
+            "margin_bottom": 16
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "62950366-91e6-4329-853a-819a493380a1": {
+          "type": "payment_icon",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "19a58bcf-33df-40a3-bfcd-8e1ba687156c": {
+          "type": "icon-with-text",
+          "settings": {
+            "custom_class": "",
+            "layout": "horizontal",
+            "icon_1": "check_mark",
+            "heading_1": "1 Year Warranty",
+            "icon_2": "return",
+            "heading_2": "60 Day Return Policy",
+            "icon_3": "truck",
+            "heading_3": "Free & Fast Shipping"
+          }
+        },
+        "9e64bf03-e0c7-4091-99f1-5569ed2d8dcc": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Specifications",
+            "icon": "none",
+            "content": "<ul><li>29.5 inches diameter<\/li><li>29.5 inches in height<\/li><li>80 gallons capacity<\/li><li>Suitable heights up to 6'7\"<\/li><li>3 x thermal insulated TPE layers<\/li><li>Polyester fabric strengthened layers<\/li><li>UV-resistant skin-friendly PVC inner lining<\/li><li>Lid to keep the water at a steady temperature<\/li><li>6.61 lbs \/ 3 kg empty weight<\/li><\/ul>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "e4b3bd11-239a-4d6e-b1fb-c008fb82cdb6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What's included?",
+            "icon": "none",
+            "content": "<ul><li>x 1 Spartan Willpower Ice Bath<\/li><li>x 1 Free Thermo Lid<\/li><li>x 6 Durable Support Legs<\/li><li>x 1 Hand Pump<\/li><li>x 1 Drain Hose \/ Drain Spout<\/li><li>x 1 Repair Patch<\/li><li>x 1 User Manual<\/li><li>x 1 Cushion<\/li><li>x 1 All Weather Cover (Optional)<\/li><\/ul>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_MTkTRG": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping info",
+            "icon": "none",
+            "content": "<p>Our delivery time to US mainland is 2 - 6 business days.<\/p><p><strong>Shipping is completely FREE to the US.<\/strong><\/p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "b63a9dcf-2828-4d7e-ba67-9fba4afb1b71": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How long should I stay in the cold water?",
+            "icon": "none",
+            "content": "<p>Consider doing deliberate cold exposure for 11 minutes per week in total. Not per session, but rather, 2-4 sessions per week lasting 1-3 mins each. Again, the water temperature should be uncomfortably cold yet safe to stay in for a few minutes. You can do more, but this should be the minimum to achieve the benefits of cold exposure. You can do very cold, very brief exposures for adrenaline release too, but the 11 minutes is based on a recent study that explored a range of effects and is a good solid, basic protocol for ongoing use.<\/p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "f1b619ef-8684-416a-b153-bbc831334606",
+        "price",
+        "afterpay_on_site_messaging_payments_messaging_EXFFAQ",
+        "5ad6cb90-d947-461f-9eb9-a432fb4bdacd",
+        "839db4ea-0928-48cb-829a-7190e3e64182",
+        "4be5a123-6886-4d77-baa1-ec6130051a7c",
+        "52e7dbd4-d527-471f-abbd-4579f8377fca",
+        "variant_picker",
+        "easify_options_easify_product_options_8jE734",
+        "quantity_selector",
+        "premium_info_adqHm8",
+        "buy_buttons",
+        "62950366-91e6-4329-853a-819a493380a1",
+        "description",
+        "19a58bcf-33df-40a3-bfcd-8e1ba687156c",
+        "9e64bf03-e0c7-4091-99f1-5569ed2d8dcc",
+        "e4b3bd11-239a-4d6e-b1fb-c008fb82cdb6",
+        "collapsible_tab_MTkTRG",
+        "b63a9dcf-2828-4d7e-ba67-9fba4afb1b71"
+      ],
+      "settings": {
+        "cstm_class": "",
+        "date": "",
+        "enable_sticky_info": true,
+        "overlay_width_d": 104,
+        "overlay_width_m": 80,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "why_choose_ice_bath_A4PPf9": {
+      "type": "why-choose-ice-bath",
+      "blocks": {
+        "benefit_aCUBfe": {
+          "type": "benefit",
+          "settings": {
+            "label": "Accelerates recovery",
+            "icon": "shopify:\/\/shop_images\/stars_8c539901-a52d-4b3a-89e6-d4e4f7a648da.svg"
+          }
+        },
+        "benefit_zMNEea": {
+          "type": "benefit",
+          "settings": {
+            "label": "Builds mental resilience",
+            "icon": "shopify:\/\/shop_images\/smile.svg"
+          }
+        },
+        "benefit_93dha7": {
+          "type": "benefit",
+          "settings": {
+            "label": "Relieves muscle pain",
+            "icon": "shopify:\/\/shop_images\/heart.svg"
+          }
+        },
+        "benefit_7G9WHK": {
+          "type": "benefit",
+          "settings": {
+            "label": "Easy to use & maintain",
+            "icon": "shopify:\/\/shop_images\/like.svg"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_aCUBfe",
+        "benefit_zMNEea",
+        "benefit_93dha7",
+        "benefit_7G9WHK"
+      ],
+      "name": "Why choose an ice bath",
+      "settings": {
+        "heading": "Why choose an ice bath?",
+        "text": "<p>Ice baths reduce inflammation, speed up recovery, and build mental toughness. A proven way to boost your health, fitness, and strength.<\/p>",
+        "cta_label": "Discover all benefits",
+        "cta_link": "",
+        "cta_new_tab": false,
+        "image": "shopify:\/\/shop_images\/ice-bath.png",
+        "image_alt": "",
+        "padding_top": 32,
+        "padding_bottom": 0,
+        "padding_top_desktop": 72,
+        "padding_bottom_desktop": 0
+      }
+    },
+    "249eaa46-f9d1-4e7d-b023-ecc43ec4e8b6": {
+      "type": "rich-text",
+      "blocks": {
+        "7b823985-31d7-47db-ab87-e7ca05013c23": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Recover faster in just 2 minutes per day in the ice bath<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "d55c155d-c38c-4984-a500-6a1b98d20f5d": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Feeling sore and struggle to recover quickly after workouts? It is time to try the best portable and affordable ice bath trusted by thousands of professional athletes.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "7b823985-31d7-47db-ab87-e7ca05013c23",
+        "d55c155d-c38c-4984-a500-6a1b98d20f5d"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 32,
+        "custom_class": ""
+      }
+    },
+    "671e1de3-4dcb-44d5-a6a6-9483b7b3bd88": {
+      "type": "image-with-text",
+      "blocks": {
+        "54d52f24-f598-4ed4-985d-9b3ea268b92e": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ice bath for entrepreneurs and athletes",
+            "heading_size": "h1"
+          }
+        },
+        "9260f5bb-bf8f-47d3-9f6f-9b1d571567c8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ice baths help you find inner peace and mental strength through exposure to the intense cold. By practicing stoicism in this way, you gain greater control over your mind and body, managing stress and discomfort more effectively. With regular use, ice baths help you develop mental resilience and achieve a greater sense of self-mastery.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "54d52f24-f598-4ed4-985d-9b3ea268b92e",
+        "9260f5bb-bf8f-47d3-9f6f-9b1d571567c8"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/spartan_ice_bath.webp",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "8a29706a-4dde-42c4-b560-8ff1c3579da7": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18003130515744__8a29706a-4dde-42c4-b560-8ff1c3579da7-16773542141e3728c3-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "What they say about us",
+            "heading_size": "h1"
+          }
+        },
+        "template--18003130515744__8a29706a-4dde-42c4-b560-8ff1c3579da7-16773542141e3728c3-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"The Spartan ice bath has been a game changer for me! As a pro fighter, fast recovery is essential after intense training sessions. Its portable design allows me to take it with me wherever I go, so I never have to miss out on the benefits of cold water therapy.\" Daniel - Fresno, CA<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--18003130515744__8a29706a-4dde-42c4-b560-8ff1c3579da7-16773542141e3728c3-0",
+        "template--18003130515744__8a29706a-4dde-42c4-b560-8ff1c3579da7-16773542141e3728c3-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Untitled_design_0de16400-782a-46ff-b611-2660f6cfdcfd.jpg",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "b1898b11-2c5a-413d-a902-c65c8b666dad": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18003130515744__b1898b11-2c5a-413d-a902-c65c8b666dad-167734931895fa7474-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "How Does It Work?",
+            "heading_size": "h1"
+          }
+        },
+        "template--18003130515744__b1898b11-2c5a-413d-a902-c65c8b666dad-167734931895fa7474-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>When you are exposed to cold water, your blood vessels constrict and get smaller. And when you get out of the water, the change in temperature causes them to rapidly re-open, which helps to flush the muscles metabolic waste products. The <strong>Spartan Willpower Ice Bath <\/strong>will help you harness the body's natural healing powers.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--18003130515744__b1898b11-2c5a-413d-a902-c65c8b666dad-167734931895fa7474-0",
+        "template--18003130515744__b1898b11-2c5a-413d-a902-c65c8b666dad-167734931895fa7474-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/spartan_ice_bath_tub.webp",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "5bccb9a6-5dcc-4e38-b638-15033072bfa1": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18385956471097__5bccb9a6-5dcc-4e38-b638-15033072bfa1-1680259644d401e914-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Competitive Advantage",
+            "heading_size": "h1"
+          }
+        },
+        "template--18385956471097__5bccb9a6-5dcc-4e38-b638-15033072bfa1-1680259644d401e914-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>When it comes to buying an ice bath tub, the Spartan Ice Bath tub is the most affordable with the most amount of functionality. So how do we compare to other ice baths on the market? See for yourself in the comparison chart.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--18385956471097__5bccb9a6-5dcc-4e38-b638-15033072bfa1-1680259644d401e914-0",
+        "template--18385956471097__5bccb9a6-5dcc-4e38-b638-15033072bfa1-1680259644d401e914-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/features_9c8726e2-5e79-4c6c-b466-5e5f1c66b916.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "549ef67a-45ec-4796-8171-9d6037ff6460": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--18003130515744__549ef67a-45ec-4796-8171-9d6037ff6460-1677349302a9e347fd-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Elevates Your Mood And Energy",
+            "icon": "eye",
+            "row_content": "<p>Cold exposure causes the prolonged release of <strong>dopamine<\/strong>. Dopamine is a powerful molecule capable of elevating mood, enhancing focus, attention, goal-directed behavior, etc. Even short bouts of cold exposure can cause a lasting increase in dopamine and sustained elevation of mood, energy, and focus.<\/p>",
+            "page": ""
+          }
+        },
+        "25824cbb-e74f-47fd-8867-ef2c2829c9e1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Increases Your Metabolism",
+            "icon": "fire",
+            "row_content": "<p>Cold exposure <strong>increases metabolism <\/strong>as the body has to burn calories to increase core body temperature. The conversion of white fat (energy storage) to beige or brown fat (which are highly metabolically active) can be beneficial for triggering further and more sustained increases in metabolism<\/p>",
+            "page": ""
+          }
+        },
+        "d656e7a4-9da6-491f-83a1-5522cf51bdd0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Enhances Your Physical Recovery",
+            "icon": "lightning_bolt",
+            "row_content": "<p>A meta-analysis of cold-water immersion effects on recovery found that cold exposure can be a highly effective recovery tool after high-intensity exercise or endurance training. Short interval (&lt; 5 mins), cold water immersion demonstrated positive outcomes for muscle power, perceived recovery, and decreased muscle soreness (in part due to a reduction in circulating creatine kinases).<\/p>",
+            "page": ""
+          }
+        },
+        "623334b9-a687-4fc3-bf7a-100420ee463e": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Reduces Stress",
+            "icon": "heart",
+            "row_content": "<p>By forcing yourself to embrace the stress of cold exposure as a meaningful self-directed challenge (i.e., stressor), you exert what is called 'top-down control' over deeper brain centers that regulate reflexive states. This top-down control process involves your prefrontal cortex – an area of your brain involved in planning and suppressing impulsivity. That 'top-down' control is the basis of what people refer to when they talk about \"resilience and grit.\" Importantly, it is a skill that carries over to situations outside of the deliberate cold environment, allowing you to cope better and maintain a calm, clear mind when confronted with real-world stressors. In other words, deliberate cold exposure is great training for the mind.<\/p>",
+            "page": ""
+          }
+        },
+        "009d1d81-bbf7-4295-9e02-b87329ab486d": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Improves The Quality Of Your Sleep",
+            "icon": "star",
+            "row_content": "<p>Cold exposure can have significant effects on your circadian rhythm and quality of sleep. The circadian rhythm is the body's natural internal clock that regulates sleep and wakefulness. Exposure to cold can help regulate the circadian rhythm by promoting the release of the hormone melatonin, which is critical for the sleep-wake cycle. In terms of sleep quality, exposure to cold temperatures can increase the amount of slow-wave sleep, which is the deep, restorative sleep that is critical for physical and mental health<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18003130515744__549ef67a-45ec-4796-8171-9d6037ff6460-1677349302a9e347fd-0",
+        "25824cbb-e74f-47fd-8867-ef2c2829c9e1",
+        "d656e7a4-9da6-491f-83a1-5522cf51bdd0",
+        "623334b9-a687-4fc3-bf7a-100420ee463e",
+        "009d1d81-bbf7-4295-9e02-b87329ab486d"
+      ],
+      "custom_css": [
+        ".color-accent-2.gradient {max-width: 1100px; margin: 0 auto;}"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Health Benefits of Ice Baths",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "accent-2",
+        "container_color_scheme": "accent-1",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "16962087405de8d22d": {
+      "type": "apps",
+      "blocks": {
+        "166553bd-5639-42a1-87d3-e3e3d8487bb7": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "166553bd-5639-42a1-87d3-e3e3d8487bb7"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "05b51449-68ce-4d84-8bb0-529243ce6f8c": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<!-- Start of Judge.me code -->\n      <div style='clear:both'><\/div>\n      <div id='judgeme_product_reviews' class='jdgm-widget jdgm-review-widget' data-product-title='{{ product.title | escape }}' data-id='{{ product.id }}' data-auto-install='false'>\n        {{ product.metafields.judgeme.widget }}\n      <\/div>\n      <!-- End of Judge.me code -->",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "cfec8b9b-6450-44bd-bded-c8d9d613ab0f": {
+      "type": "collapsible-content",
+      "blocks": {
+        "c7f823e2-62c3-4d1c-93cb-7da1d55a592d": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long should each ice bath session be?",
+            "icon": "question_mark",
+            "row_content": "<p>Consider doing deliberate cold exposure for 11 minutes per week in total. Not per session, but rather, 2-4 sessions lasting 1-5 mins each distributed across the week. Again, the water temperature should be uncomfortably cold yet safe to stay in for a few minutes. You can do more, but this should be the minimum to achieve the benefits of cold exposure. You can do very cold, very brief exposures for adrenaline release too, but the 11 minutes is based on a recent study that explored a range of effects and is a good solid, basic protocol for ongoing use.<\/p>",
+            "page": ""
+          }
+        },
+        "3627007b-6243-42aa-b0fd-37c525df3b8b": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I am over 6ft \/ 2m will I fit?",
+            "icon": "question_mark",
+            "row_content": "<p>We've designed our bath to fit anyone up to 6'7\"<\/p>",
+            "page": ""
+          }
+        },
+        "db9ceae5-e1eb-47a9-bd0e-16c6745c7370": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I drain it?",
+            "icon": "question_mark",
+            "row_content": "<p>The Spartan Ice Bath comes with a drain hose \/ drain spout at the bottom, so you can easily drain it.<\/p>",
+            "page": ""
+          }
+        },
+        "1060d4b5-cb2c-48d1-b412-c855c34632f5": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How to assemble the Spartan Ice Bath? Is it easy?",
+            "icon": "question_mark",
+            "row_content": "<p>The assembly takes less than 2 minutes and is super easy. Just insert the 6 support poles in the ice bath and inflate the rim (the top part) and you are ready.<\/p>",
+            "page": ""
+          }
+        },
+        "7e548cc5-42d0-4796-92cd-8d58fabff096": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the recommended water temperature?",
+            "icon": "question_mark",
+            "row_content": "<p>We recommend starting out at around 59º Fahrenheit (15°C) if it's your first time, and then slowly lowering the temperature and duration for each session. That way your body will get acclimated to the cold.<\/p>",
+            "page": ""
+          }
+        },
+        "2dbe76fe-e4ae-4e98-aecc-a2247f667bba": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How often should I change the water?",
+            "icon": "question_mark",
+            "row_content": "<p>Once every 2 weeks. We recommend washing the inside surfaces with warm soapy water or mild disinfectant after you drain it. Tablet cleaner (chlorine tablets) helps too.<\/p>",
+            "page": ""
+          }
+        },
+        "template--18003130515744__cfec8b9b-6450-44bd-bded-c8d9d613ab0f-1677349302a9e347fd-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does it come with a lid?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes, it does!<\/p><p>It comes complete with a Thermo insulated lid. You will find it carefully folded inside the box.<\/p>",
+            "page": ""
+          }
+        },
+        "template--18003130515744__cfec8b9b-6450-44bd-bded-c8d9d613ab0f-1677349302a9e347fd-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I keep the water clean?",
+            "icon": "question_mark",
+            "row_content": "<p>Always keep the lid on when not in use, to help prevent any debris from falling in.<\/p>",
+            "page": ""
+          }
+        },
+        "bf76dac8-4b28-4554-afd2-56dab87992a4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How much ice do I need to add?",
+            "icon": "question_mark",
+            "row_content": "<p>We recommend adding 13-26 lb (6-12 kg) of ice per session. The amount of ice needed depends on your water temperature and how cold you desire it to be. If you live in colder climates, adding ice may not even be needed.<\/p><p>Since the Spartan Ice Bath is insulated, it will keep the water cold for multiple days (considering that you don't reside in a warm climate city), and you may therefore not have to add as much ice after the first time.<\/p>",
+            "page": ""
+          }
+        },
+        "template--18003130515744__cfec8b9b-6450-44bd-bded-c8d9d613ab0f-1677349302a9e347fd-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How does it keep the water cold?",
+            "icon": "question_mark",
+            "row_content": "<p>The Spartan Willpower Ice Bath is integrated with thermal insulated TPE layers, and a Thermo Lid to lengthen the time at a given temperature. We recommend deploying your Ice Bath outside, under shade, to maximize the passive overnight cooling effect and then adding ice or ice blocks if needed.<\/p>",
+            "page": ""
+          }
+        },
+        "template--18003130515744__cfec8b9b-6450-44bd-bded-c8d9d613ab0f-1677349302a9e347fd-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is the product portable?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes the product is portable and you can easily carry it anywhere. The Spartan Willpower Ice Bath can be packed down into a small box with dimensions 27.16 x 14.17 x 4.33 inches and a total weight of 6.71 lbs \/ 3.5 kg<\/p>",
+            "page": ""
+          }
+        },
+        "495948ff-6caa-4f89-b4ce-135bf496d95b": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "When to take a cold plunge?",
+            "icon": "question_mark",
+            "row_content": "<p>After cold exposure, your body heats up—yes, HEATS up. Body temperature increases tend to wake us up, whereas body temperature decreases tend to shift us toward sleepy states. Thus, we suggest using deliberate cold early in the day and not too close to bedtime. Sometimes it's better to do it late than never, but not if it perturbs your sleep. If a deliberate cold affects your sleep, try doing it earlier in the day, or not at all.<\/p>",
+            "page": ""
+          }
+        },
+        "33c9cfa5-8950-4f13-a486-fd6a8d2e5d0b": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use the Spartan Ice Bath outside?",
+            "icon": "question_mark",
+            "row_content": "<p>Definitely! We engineered the Spartan Ice Bath to be weather and UV resistant, so you can set it up inside or outside, even in temperatures below freezing. The insulation layer makes the water turn to ice a lot slower, but we still recommend to stir the water at least once a day to keep the water from freezing completely solid.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "c7f823e2-62c3-4d1c-93cb-7da1d55a592d",
+        "3627007b-6243-42aa-b0fd-37c525df3b8b",
+        "db9ceae5-e1eb-47a9-bd0e-16c6745c7370",
+        "1060d4b5-cb2c-48d1-b412-c855c34632f5",
+        "7e548cc5-42d0-4796-92cd-8d58fabff096",
+        "2dbe76fe-e4ae-4e98-aecc-a2247f667bba",
+        "template--18003130515744__cfec8b9b-6450-44bd-bded-c8d9d613ab0f-1677349302a9e347fd-0",
+        "template--18003130515744__cfec8b9b-6450-44bd-bded-c8d9d613ab0f-1677349302a9e347fd-1",
+        "bf76dac8-4b28-4554-afd2-56dab87992a4",
+        "template--18003130515744__cfec8b9b-6450-44bd-bded-c8d9d613ab0f-1677349302a9e347fd-2",
+        "template--18003130515744__cfec8b9b-6450-44bd-bded-c8d9d613ab0f-1677349302a9e347fd-3",
+        "495948ff-6caa-4f89-b4ce-135bf496d95b",
+        "33c9cfa5-8950-4f13-a486-fd6a8d2e5d0b"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 20,
+        "padding_bottom": 32
+      }
+    },
+    "f74ea555-4d13-43f2-afa4-c52b2686e798": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18385956471097__f74ea555-4d13-43f2-afa4-c52b2686e798-168025963449b0275b-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h1>Why Choose Us<\/h1>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--18385956471097__f74ea555-4d13-43f2-afa4-c52b2686e798-168025963449b0275b-0"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 32,
+        "custom_class": ""
+      }
+    },
+    "e51462bf-052e-4a93-89f3-4fb4299dfbac": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--18385956471097__e51462bf-052e-4a93-89f3-4fb4299dfbac-168026041319a0bf04-0": {
+          "type": "column",
+          "settings": {
+            "title": "60 DAY MONEY BACK GUARANTEE",
+            "text": "<p>If the our doesn't completely redefine your recovery routine, we will fully refund you.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18385956471097__e51462bf-052e-4a93-89f3-4fb4299dfbac-168026041319a0bf04-1": {
+          "type": "column",
+          "settings": {
+            "title": "1 YEAR WARRANTY",
+            "text": "<p>We offer a warranty replacement guarantee for 1 year. You will get support even outside the warranty period.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18385956471097__e51462bf-052e-4a93-89f3-4fb4299dfbac-168026041319a0bf04-2": {
+          "type": "column",
+          "settings": {
+            "title": "FREE & FAST US SHIPPING",
+            "text": "<p>Free insured shipping and the best in class customer support team, ready to help you. <\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18385956471097__e51462bf-052e-4a93-89f3-4fb4299dfbac-168026041319a0bf04-0",
+        "template--18385956471097__e51462bf-052e-4a93-89f3-4fb4299dfbac-168026041319a0bf04-1",
+        "template--18385956471097__e51462bf-052e-4a93-89f3-4fb4299dfbac-168026041319a0bf04-2"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 32
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_xtDfeg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_XbrEtE": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Looking for XL ice bath tub + chiller? Check our best seller:<\/p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_XbrEtE"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class": ""
+      }
+    },
+    "featured_product_qeC4Wc": {
+      "type": "featured-product",
+      "blocks": {
+        "title_GYJTPV": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_WN7ncR": {
+          "type": "price",
+          "settings": {}
+        },
+        "quantity_selector_zHMFrT": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_8HxbB6": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        }
+      },
+      "block_order": [
+        "title_GYJTPV",
+        "price_WN7ncR",
+        "quantity_selector_zHMFrT",
+        "buy_buttons_8HxbB6"
+      ],
+      "settings": {
+        "product": "warrior-pro-chiller-xl-plunge-bath",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "none",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "17615567497f07d136": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "c_sticky_atc_Dkg3MV",
+    "main",
+    "why_choose_ice_bath_A4PPf9",
+    "249eaa46-f9d1-4e7d-b023-ecc43ec4e8b6",
+    "671e1de3-4dcb-44d5-a6a6-9483b7b3bd88",
+    "8a29706a-4dde-42c4-b560-8ff1c3579da7",
+    "b1898b11-2c5a-413d-a902-c65c8b666dad",
+    "5bccb9a6-5dcc-4e38-b638-15033072bfa1",
+    "549ef67a-45ec-4796-8171-9d6037ff6460",
+    "16962087405de8d22d",
+    "05b51449-68ce-4d84-8bb0-529243ce6f8c",
+    "cfec8b9b-6450-44bd-bded-c8d9d613ab0f",
+    "f74ea555-4d13-43f2-afa4-c52b2686e798",
+    "e51462bf-052e-4a93-89f3-4fb4299dfbac",
+    "related-products",
+    "rich_text_xtDfeg",
+    "featured_product_qeC4Wc",
+    "17615567497f07d136"
+  ]
+}

@@ -1,0 +1,33 @@
+<div class="tw-flex tw-flex-col tw-justify-between">
+  <div class="product-item {% if is_first %} first-product-item{% endif %} {% if is_last %} last-product-item{% endif %}">
+    <img src="{{ product.featured_image | image_url: width: 1250 }}" alt="{{ product.title }}" class="product-image">
+    <div class="info-container">
+      <div class='jdgm-widget jdgm-preview-badge !tw-pt-0 md:tw-pt-4 !tw-text-[10px] md:!tw-text-sm ' data-id='{{ card_product.id }}'> 
+          {{ product.metafields.judgeme.badge }} 
+      </div> 
+      <h2 class="product-title">
+        <a href="{{ product.url }}">{{ product.title }}</a>
+      </h2>
+      <div class="product-prices">
+        <div class="tw-mb-[20px] tw-flex tw-flex-col">
+          {% if product.compare_at_price > product.price %}
+            <span class="product-compare-at-price" style="text-decoration: line-through;">
+              {{ product.compare_at_price | money }}
+            </span>
+            <span class="product-price" style="color: black;">
+              {{ product.price | money }}
+            </span>
+          {% else %}
+            <span class="product-price">{{ product.price | money }}</span>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="button-container md:tw-py-4 md:tw-px-[40px] tw-p-2 tw-gap-2.5 tw-rounded-[10px] tw-opacity-100 tw-bg-custom-gradient tw-text-white md:tw-text-[18px] tw-text-base tw-font-bold tw-flex tw-items-center tw-justify-center md:tw-w-fit tw-w-full hover:!tw-bg-custom-gradient-hover">
+    <a href="{{ block.settings.button_url }}">
+      {{ block.settings.button_text }}
+    </a>
+  </div>
+</div>
+

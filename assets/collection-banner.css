@@ -1,0 +1,130 @@
+.shopify-section:has(.collection-banner-container) {
+  display: block !important;
+}
+
+.shopify-section:has(.collection-old-banner) {
+  display: none !important;
+}
+
+.collection-banner__background-mobile,
+.collection-banner__image-mobile {
+  display: none;
+}
+
+.collection-banner-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.collection-banner-container > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.collection-banner-wrapper {
+  z-index: 3;
+  position: relative;
+}
+
+.collection-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.collection-banner__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+
+.collection-banner__title {
+  color: #0F2F4F;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; 
+  letter-spacing: -0.8px;
+}
+
+.collection-banner__description {
+  color: #0F2F4F;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; 
+}
+
+.collection-banner__images { 
+  display: flex;
+  justify-content: center;
+}
+
+.collection-banner__images img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .collection-banner-container {
+    z-index: 2;
+  }
+
+  .test-plp-001 .shopify-section:has(> div .facets-vertical) {
+    z-index: 3;
+    position: relative;
+  }
+
+  .test-plp-001 .shopify-section div .facets-vertical .facets-container {
+    padding: 0 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: #FFF;
+    box-shadow: none;
+  }
+
+  .test-plp-001 .shopify-section div .facets-wrapper {
+    box-shadow: none;
+  }
+
+  .collection-banner {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
+
+  .collection-banner__image-desktop,
+  .collection-banner__background-desktop {
+    display: none;
+  }
+
+  .collection-banner__background-mobile,
+  .collection-banner__image-mobile {
+    display: block;
+  }
+
+  .collection-banner-wrapper {
+    padding: 24px 20px 48px;
+  }
+
+  .collection-banner__content {
+    gap: 16px;
+  }
+
+  .collection-banner__title {
+    font-size: 28px;
+    letter-spacing: -0.56px;
+  }
+
+  .collection-banner__description {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,381 @@
+<style>
+    #{{ section.id }} {
+      font-size: 16px;
+      padding-top: {{ section.settings.padding_top }}em;
+      padding-bottom: {{ section.settings.padding_bottom }}em;
+      background-color: {{ section.settings.bg_color }};
+    }
+
+    #{{ section.id }} .c-section-top-subheading,
+    #{{ section.id }} div,
+    #{{ section.id }} h2,
+    #{{ section.id }} h3 {
+      color: {{ section.settings.text_color }};
+    }
+
+    #{{ section.id }} .c-section-top {
+      align-items: {{ section.settings.section_top_alignment }};
+      text-align: {{ section.settings.text_alignment }};
+    }
+
+    #{{ section.id }} .f-rg-wrapper {
+      display: grid;
+      grid-template-columns:{% for i in (1..section.settings.columns) %} 1fr{% endfor %};
+      column-gap: 1.5em;
+      row-gap: 2em;
+    }
+
+    #{{ section.id }} .f-rg-card {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      padding: 1.5em;
+       
+      margin-bottom: auto;
+      border-radius: .5em;
+    }
+
+    .f-rg-card h2  {
+      font-size: clamp(24px, 5vw, 40px);
+      font-style: normal;
+      font-weight: 700;
+
+    }
+
+    #{{ section.id }} .f-rg-stars {
+      display: flex;
+      gap: 5px;
+    }
+
+    #{{ section.id }} .f-rg-stars svg {
+      width: 1em;
+    }
+
+    #{{ section.id }} .f-rg-card-bottom {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1em;
+    }
+
+    #{{ section.id }} .f-rg-image-div {
+      display: flex;
+    }
+
+    #{{ section.id }} .f-rg-card-bottom img {
+      width: 3em;
+      border-radius: 100px;
+    }
+
+    #{{ section.id }} .f-rg-card-bottom-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #{{ section.id }} .f-rg-card-name {
+      font-weight: bold;
+    }
+
+    #{{ section.id }} .f-rg-card-position {
+      font-size: 0.875em;
+    }
+
+    #{{ section.id }} .choose__men
+    {
+      font-size: clamp(16px, 2vw, 20px);
+  font-style: normal;
+  font-weight: 700;
+    }
+
+    @media (max-width: {{ settings.c_breakpoint3 }}px) {
+      #{{ section.id }} .f-rg-wrapper {
+        grid-template-columns:{% for i in (1..section.settings.grid_columns_mobile) %} 1fr{% endfor %};
+      }
+    }
+</style>
+
+<script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+<section id="{{ section.id }}" class="c-section tw-py-10 tw-bg-gradient-to-b tw-from-[#FFF] tw-to-[#F0F8FF]">
+  <div class="page-width">
+    <div class="c-section-top">
+      {%- if section.settings.section_top_subheading != empty -%}
+        <p class="c-section-top-subheading">{{ section.settings.section_top_subheading }}</p>
+      {%- endif -%}
+      {%- if section.settings.section_top_heading != empty -%}
+        <h2>{{ section.settings.section_top_heading }}</h2>
+      {%- endif -%}
+      {%- if section.settings.section_top_paragraph != empty -%}
+        <div class="c-t-80">{{ section.settings.section_top_paragraph }}</div>
+      {%- endif -%}
+    </div>
+    
+    <div class="f-rg-wrapper ">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'main-bundle' %}
+            <!-- Columna Izquierda -->
+            <div class="f-rg-card tw-flex tw-flex-col tw-gap-4" {{ block.shopify_attributes }}>
+              <!-- Título del Producto -->
+              <h2 class="tw-text-3xl tw-font-bold">{{ block.settings.product.title }}</h2>
+          
+              <!-- Reseñas -->
+              <div class="tw-flex tw-items-center tw-gap-1">
+                <span class="tw-text-blue-500">★★★★★</span>
+                <p class="tw-text-sm">126 Reviews</p>
+              </div>
+          
+              <!-- Precios -->
+              <div class="tw-flex tw-items-center tw-gap-4">
+                <s class="  tw-text-lg">{{ block.settings.product.compare_at_price | money }}</s>
+                <span class="tw-text-3xl tw-font-bold">{{ block.settings.product.price | money }}</span>
+              </div>
+          
+              <!-- Ahorro -->
+              <div class="tw-bg-orange-500 tw-rounded-lg !tw-p-2 md:tw-px-4 md:tw-py-2 tw-w-9/12 md:tw-w-7/12 !tw-text-white tw-font-bold tw-text-sm">
+                YOU SAVE {{ block.settings.product.compare_at_price | minus: block.settings.product.price | money }}
+              </div>
+          
+              <!-- Tabs de Información -->
+              <div>
+                <ul class="tw-flex tw-gap-4 tw-border-b tw-pb-2 tw-text-sm tw-font-medium">
+                  <li class="tw-cursor-pointer tw-border-b-2 tw-border-blue-500">Description</li>
+                  
+                </ul>
+              
+                <!-- Mostrar la descripción del producto seleccionado -->
+                {% assign product_description = block.settings.product.description | split: '</p>' %}
+                <p class="tw-mt-4">{{ product_description[0] | append: '</p>' }}</p>
+                
+              </div>
+              
+            </div>
+
+            <!-- Columna Central -->
+            <div class="f-rg-card tw-h-full" {{ block.shopify_attributes }}>
+              <a href="{{ block.settings.product.url }}" class="tw-flex tw-justify-center tw-h-full tw-items-center">
+                <img   class="tw-w-full tw-h-full tw-object-contain"
+                  src="{{ block.settings.product.featured_image | img_url: 'medium' }}" 
+                  alt="{{ block.settings.product.title }}" 
+                  >
+              </a>
+            </div>
+
+            <!-- Columna Derecha -->
+              <!-- Columna Derecha -->
+ <!-- Columna Derecha -->
+ <!-- Columna Derecha -->
+ <div class="f-rg-card tw-h-full" {{ block.shopify_attributes }}>
+  <p class="choose__men tw-font-bold">Choose a Variant:</p>
+
+  <div class="tw-flex tw-gap-2">
+    {% for variant in block.settings.product.variants %}
+      <button 
+        class="
+          variant-button tw-p-2 tw-rounded-xl tw-font-medium tw-border tw-min-w-[50px] 
+          {% if variant.title == 'Black' %}
+            tw-bg-black tw-text-white tw-border-black
+          {% else %}
+            tw-bg-white tw-text-black tw-border-black
+          {% endif %}
+          {% unless variant.available %} tw-opacity-50 tw-cursor-not-allowed {% endunless %}
+        "
+        data-variant-id="{{ variant.id }}"
+        onclick="selectVariant(this)"
+        {% unless variant.available %} disabled {% endunless %}
+      >
+        {{ variant.title }}
+      </button>
+    {% endfor %}
+  </div>
+
+  <a 
+    href="javascript:void(0);" 
+    class="
+      c-cta-button tw-inline-block tw-text-white tw-font-bold tw-px-6 tw-py-3 tw-rounded-lg
+      tw-bg-gradient-to-r tw-from-[#0E83F9] tw-to-[#084D93]
+      tw-text-center tw-uppercase tw-transition tw-duration-300
+      hover:tw-from-[#084D93] hover:tw-to-[#0E83F9]
+    "
+    id="add-to-cart-button"
+    onclick="addToCart()">
+    Add to Cart - {{ block.settings.product.price | money }}
+  </a>
+
+    <!-- Imagen Personalizada (debajo del botón) -->
+    {% if block.settings.custom_image != blank %}
+      <div class="tw-mt-4 tw-flex tw-justify-center md:tw-justify-start">
+        <img 
+          src="{{ block.settings.custom_image | img_url: 'medium' }}" 
+          alt="{{ block.settings.custom_image_alt }}" 
+          class="tw-max-w-full tw-object-contain tw-rounded-lg"
+        >
+      </div>
+    {% endif %}
+</div>
+
+
+
+
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<script>
+  let selectedVariantId = null;
+
+  // Función para seleccionar una variante
+  function selectVariant(button) {
+    // Quitar la clase activa de todos los botones
+    document.querySelectorAll('.variant-button').forEach(btn => {
+      btn.classList.remove('tw-ring-2', 'tw-ring-blue-500');
+    });
+  
+    // Añadir la clase activa al botón seleccionado
+    button.classList.add('tw-ring-2', 'tw-ring-blue-500');
+  
+    // Guardar el ID de la variante seleccionada
+    selectedVariantId = button.getAttribute('data-variant-id');
+  }
+  
+  // Función para añadir la variante al carrito
+  function addToCart() {
+    if (!selectedVariantId) {
+      alert('Please select a variant.');
+      return;
+    }
+  
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        id: selectedVariantId,
+        quantity: 1,
+      }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Product added to cart:', data);
+        alert('Product added to cart!');
+        window.location.href = '/cart'; // Redirecciona al carrito
+      })
+      .catch(error => {
+        console.error('Error adding product to cart:', error);
+        alert('There was an issue adding the product to the cart.');
+      });
+  }
+  
+</script>
+{% schema %}
+{
+  "name": "C Reviews Grid",
+  "blocks": [
+    {
+      "type": "main-bundle",
+      "name": "Main Bundle",
+      "settings": [
+        {
+          "type": "text",
+          "id": "left_title",
+          "label": "Left Column Title",
+          "default": "Warrior Max 1 HP Smart Water Chiller"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Select a Product",
+          "info": "Choose the product to display its name and image"
+        },
+        {
+          "type": "richtext",
+          "id": "left_content",
+          "label": "Left Column Content",
+          "default": "<p>Description of the product goes here.</p>"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Add to Cart"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_image",
+          "label": "Imagen personalizada",
+          "info": "Sube una imagen para mostrar debajo del botón"
+        },
+        {
+          "type": "text",
+          "id": "custom_image_alt",
+          "label": "Texto alternativo de la imagen",
+          "default": "Imagen personalizada"
+        }
+        
+
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "Columns",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "grid_columns_mobile",
+      "label": "Mobile Columns",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000"
+    },
+    {
+      "type": "text",
+      "id": "section_top_subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "section_top_heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "section_top_paragraph",
+      "label": "Paragraph"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Reviews Grid",
+      "blocks": [
+        {
+          "type": "main-bundle"
+        }
+      ]
+    }
+  ]
+}
+
+{% endschema %}

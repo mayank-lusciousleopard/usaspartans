@@ -1,0 +1,51 @@
+<section class="featured-logos">
+  <div class="w-layout-blockcontainer container w-container">
+    <div class="featured-logos-title">{{ section.settings.heading }}</div>
+    <div class="featured-logos-slider">
+      {% for block in section.blocks %}
+      <div class="featured-logo-item">
+        <div class="featured-logo-item-inner">
+          <img src="{{ block.settings.client-logo | image_url }}" loading="lazy" alt="" class="featured-logo-img">
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %} 
+  { 
+    "name": "Featured Logos Section",
+    "settings": [
+      { 
+       "type": "text",
+       "id":"heading",
+       "label": "Section Title" 
+      }
+    ],
+    "blocks": [ 
+       { 
+         "type": "featured-logo",
+         "name": "Featured logoe Block",
+         "settings": [ 
+           { 
+             "type": "image_picker",
+             "id":"client-logo",
+             "label": "Featured Logo" 
+           } 
+         ] 
+       } 
+     ], 
+    "presets":[
+      {
+        "name":"Featured Logos Section" 
+      } 
+    ] 
+  } 
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

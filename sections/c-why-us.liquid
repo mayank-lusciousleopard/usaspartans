@@ -1,0 +1,113 @@
+<section
+  id="{{ section.id }}"
+  class="tw-px-5 tw-py-10 md:tw-px-[64px] md:tw-py-14 lg:tw-py-20 tw-relative tw-bg-cover tw-bg-center tw-overflow-hidden tw-flex tw-flex-col tw-justify-center tw-items-center tw-gap-20"
+  style="background: linear-gradient(180deg, rgba(14, 131, 249, 0.10) 0%, rgba(14, 131, 249, 0.00) 100%);"
+>
+  <!-- Header container -->
+  <div class="tw-flex tw-flex-col tw-gap-6 tw-justify-center tw-items-center tw-mx-auto tw-max-w-[768px] tw-z-10">
+    {% if section.settings.section_heading != empty %}
+      <span class="tw-text-[#0E83F9] tw-font-bold tw-text-base">{{ section.settings.section_heading }}</span>
+    {% endif %}
+    {% if section.settings.heading_first_part != empty or section.settings.heading_second_part != empty %}
+      <h2 class="tw-text-center tw-flex tw-flex-col">
+        <span class="tw-text-center tw-text-[30px] md:tw-text-[48px] tw-font-bold tw-text-black tw-block">
+          {{- section.settings.heading_first_part -}}
+        </span>
+        <span class="tw-text-center tw-text-[30px] md:tw-text-[48px] tw-font-bold tw-bg-custom-gradient tw-bg-clip-text tw-text-transparent">
+          {{- section.settings.heading_second_part -}}
+        </span>
+      </h2>
+    {% endif %}
+    {% if section.settings.description_heading != empty %}
+      <p class="tw-font-[500] tw-text-base md:tw-text-lg tw-text-black !tw-text-center">
+        {{ section.settings.description_heading }}
+      </p>
+    {% endif %}
+  </div>
+
+  <!-- Reasons container -->
+  <div class="tw-grid tw-gap-2 md:tw-grid-cols-2 lg:tw-grid-cols-4 tw-grid-cols-1">
+    {% for block in section.blocks %}
+      <div
+        class="tw-flex tw-gap-4 tw-items-start tw-justify-start tw-rounded tw-py-4 tw-px-2"
+        style="background-color:rgba(14, 131, 249, 0.04);"
+      >
+        {% if block.settings.reason_icon != empty %}
+          <img
+            src="{{ block.settings.reason_icon | image_url: width: 400 }}"
+            alt="icon"
+            class="tw-w-[39px] tw-h-auto"
+          >
+        {% endif %}
+        <div class="tw-flex tw-flex-col tw-gap-4 tw-items-start">
+          {% if block.settings.reason_title != empty %}
+            <h3 class="tw-text-black tw-font-bold tw-text-base tw-uppercase">
+              {{ block.settings.reason_title }}
+            </h3>
+          {% endif %}
+          {% if block.settings.reason_description != empty %}
+            <p class="tw-font[500] tw-text-black tw-text-base">
+              {{ block.settings.reason_description }}
+            </p>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "C Why Us",
+  "blocks": [
+    {
+      "name": "Reason",
+      "type": "Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "reason_title",
+          "label": "Reason"
+        },
+        {
+          "type": "text",
+          "id": "reason_description",
+          "label": "Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "reason_icon",
+          "label": "Icon"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_first_part",
+      "label": "Title First Part"
+    },
+    {
+      "type": "text",
+      "id": "heading_second_part",
+      "label": "Title Second Part"
+    },
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "description_heading",
+      "label": "Description"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Why Us"
+    }
+  ]
+}
+{% endschema %}

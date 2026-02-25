@@ -1,0 +1,830 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "9bfcf0b5-6dfe-437f-a5c3-06659f792a3c": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "premium_info_PHhFGt": {
+          "type": "premium_info",
+          "settings": {
+            "heading": "HSA \/ FSA Eligible",
+            "text": "<p>save an average of 30% with pre tax funds Choose flex at checkout<\/p>",
+            "info_hover_text": "Use your HSA\/FSA card to pay for this item.",
+            "bg_color": "#f5f8f0",
+            "text_color": "#000000",
+            "icon_color": "#39b856",
+            "margin_top": 0,
+            "margin_bottom": 16
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "5d95a31e-cbd1-4408-97da-fecd07e8406f": {
+          "type": "payment_icon",
+          "settings": {}
+        },
+        "reelup_shoppable_videos_reels_reelup_product_slider_ViF8Wp": {
+          "type": "shopify:\/\/apps\/reelup-shoppable-videos-reels\/blocks\/reelup_product_slider\/a8ec9e4d-d192-44f7-9c23-595f9ee7dd5b",
+          "settings": {}
+        },
+        "collapsible_tab_qgkiLh": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Water Chiller Specifications",
+            "icon": "check_mark",
+            "content": "<p><strong>Specs:<\/strong><\/p><ul><li>1 HP compressor<\/li><li>Safety shut-off<\/li><li>UV disinfection<\/li><li>850 W input power<\/li><li>2600 W refrigerating power<\/li><li>3300 W heating power<\/li><li>Uses a regular 110V \/60 Hz US plug <\/li><li>50-60db noise level (comparable to a dishwasher)<\/li><li>10A minimum outlet<\/li><li>630 GPH pump flow<\/li><li>130 gallons max water volume<\/li><\/ul><p><strong>Temperature capability:<\/strong> <\/p><p>The Warrior Max chills water down to 38 degrees Fahrenheit (adjustable by 1 degree from 38 - 104) <\/p><p><strong>Dimensions:<\/strong><\/p><p>Size: 24.4 x 16.53 x 18.9 inches<\/p><p><strong>Weight:<\/strong> <\/p><p>100 lbs \/ 45 kg (<strong>easy to move<\/strong> with wheels)<\/p><p><strong>Water pump & filtration:<\/strong> <\/p><p>20 micron filtration and non stop water flow which maintains crystal clean water for weeks to months. The filter is in the front with easy access for replacement. The pump is built in inside the chiller.<\/p><p><strong>Power usage:<\/strong><\/p><p>Don't worry, the chiller will not hike up your energy bills. It uses the same technology and compressor your fridge\/freezer at home uses, which is economical.<\/p><p>The exact power usage varies based on climate but expect to spend around $0.5-$1.5 per day in electricity (10 - 20 times less than buying ice).<\/p><p><strong>Indoor and Outdoor use:<\/strong><\/p><p>The chiller is waterproof and can be used outdoors with no need of cover. It is recommend setting it up under a shaded area to protect it from weather and environment to extend its lifespan.<\/p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_HmWYET": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Included Bonuses",
+            "icon": "check_mark",
+            "content": "<p><strong>If you order today<\/strong>, you get the following bonuses ($100 worth of products for free):<\/p><ul><li>x5 Water chiller filters<\/li><li>Water thermometer<\/li><li>Waterproof timer to track your cold plunge time<\/li><\/ul>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_WY68LP": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What Is Included",
+            "icon": "check_mark",
+            "content": "<ul><li>1 HP Warrior Max Wi-Fi Enabled Water Chiller\/Heater<\/li><li>Filter 10 Microns<\/li><li>x2 Black Hoses 59\" Long Each<\/li><li>x4 Wheels With Brakes<\/li><li>x4 Clamps<\/li><li>x4 3\/4 Male Stainless Steel Connectors<\/li><li>x2 1\/2\" Male to 3\/4\" Female Stainless Steel Connectors<\/li><li>x2 1\/2\" Female to 3\/4\" Female Stainless Steel Connectors<\/li><\/ul>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_8k9CkR": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "icon": "check_mark",
+            "content": "<p>The shipping is <strong>fast and free.<\/strong><\/p><p><strong>The water chiller is located in a California warehouse with fast delivery in 2 - 6 business days to the US.<\/strong><\/p><p>Delivery to Canada, takes between 7 - 14 business days after dispatch. We dispatch in 2 - 5 business days to Canada.<\/p><p><strong>Returns:<\/strong><\/p><p>You can test and use the water chiller, but in case of returning it, we kindly ask that you return it in good condition, dry and in its original packaging.<\/p><p>After we receive it back at our warehouse, you'll get a refund minus restock fee within 3-5 business days. Please contact us at support@warriorwillpower.com for more information or to start your return.<\/p><p>Customers are responsible for covering return shipping costs.<\/p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "9bfcf0b5-6dfe-437f-a5c3-06659f792a3c",
+        "price",
+        "description",
+        "premium_info_PHhFGt",
+        "buy_buttons",
+        "5d95a31e-cbd1-4408-97da-fecd07e8406f",
+        "reelup_shoppable_videos_reels_reelup_product_slider_ViF8Wp",
+        "collapsible_tab_qgkiLh",
+        "collapsible_tab_HmWYET",
+        "collapsible_tab_WY68LP",
+        "collapsible_tab_8k9CkR"
+      ],
+      "settings": {
+        "cstm_class": "",
+        "date": "",
+        "enable_sticky_info": true,
+        "overlay_width_d": 70,
+        "overlay_width_m": 50,
+        "media_size": "medium",
+        "constrain_to_viewport": false,
+        "media_fit": "cover",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "show",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_CHwrrJ": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_9FCRkJ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Add_a_little_bit_of_body_text_74c3497a-a329-4656-9fc1-9c5d9bc4fccf.png",
+            "title": "POWERFUL COOLING",
+            "text": "<p>Submerge yourself in water down to 38°F even in hot climates. It does it 30% faster than other chillers. No more ice hassle.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_hyyVVp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/clean_water.png",
+            "title": "PURE CLEAN WATER",
+            "text": "<p>Constant 24\/7 circulation and 10-micron filtration, your water always stays crystal clean, ensuring longer periods between water changes.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_WyXLEy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/smart_chiller.png",
+            "title": "CONTROL FROM ANYWHERE",
+            "text": "<p>Control your plunge from anywhere with your smartphone. Schedule a timer, check temperature, turn on\/off. Compatible with IOS and Android.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Tfgjiz": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/easy_setup.png",
+            "title": "EASY SETUP",
+            "text": "<p>No plumbing required - simply connect the hoses to your ice bath and you are ready in 10 minutes. Video set up instructions included.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_jRdpDA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/waterproof_chiller.png",
+            "title": "ALL WEATHER RESILIENCE",
+            "text": "<p>Engineered to perform in any weather, ensuring your cold plunge routine is never interrupted. Completely waterproof.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_dGJ4x3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/high_quality_water_chiller.png",
+            "title": "BUILT TO LAST",
+            "text": "<p>Our chiller is built with the best and highest quality components, that will last for years to come.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_9FCRkJ",
+        "column_hyyVVp",
+        "column_WyXLEy",
+        "column_Tfgjiz",
+        "column_jRdpDA",
+        "column_dGJ4x3"
+      ],
+      "settings": {
+        "title": "Built Different To Perform Like No Other",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_kk7jFR": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_MBiyfF": {
+          "type": "heading",
+          "settings": {
+            "heading": "What is included",
+            "heading_size": "h1"
+          }
+        },
+        "text_76f9Mq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Each Warrior Max includes <strong>$100 worth of bonus accessories<\/strong><\/p><ul><li>Warrior Max 1 HP Water Chiller\/Heater<\/li><li>x5 Chiller Filters<\/li><li>Waterproof Thermometer<\/li><li>Waterproof Timer to easily track your plunge time<\/li><li>Hose Fittings<\/li><li>Hose Set<\/li><li>Power Cable (US 110V Plug)<\/li><li>Instruction Manual and Setup Videos<\/li><li>Free Tracked Delivery<\/li><li>1 Year Warranty<\/li><\/ul>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MBiyfF",
+        "text_76f9Mq"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/warrior_max_water_chiller_0b831a82-26e6-4692-aebf-9c6f7bbd5c2d.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "multi_columns_8NtRhp": {
+      "type": "multi-columns",
+      "blocks": {
+        "text_fLxKHa": {
+          "type": "text",
+          "settings": {
+            "imagez": "shopify:\/\/shop_images\/nfl_logo_2_1_783494f5-5786-4659-8f85-fe7ef9742056.webp"
+          }
+        },
+        "text_dbdJqY": {
+          "type": "text",
+          "settings": {
+            "imagez": "shopify:\/\/shop_images\/Logo-UFC_medium_d79d6104-1cd0-4a4c-98a8-e491db8b889f.webp"
+          }
+        },
+        "text_r7KtCP": {
+          "type": "text",
+          "settings": {
+            "imagez": "shopify:\/\/shop_images\/NBA-logo-png_b1516940-0db0-4009-a4a9-d7d723717df6.png"
+          }
+        },
+        "text_D4T6xG": {
+          "type": "text",
+          "settings": {
+            "imagez": "shopify:\/\/shop_images\/fifa-world-cup-qatar-2022-logo-32157477CB-seeklogo.com_1.webp"
+          }
+        }
+      },
+      "block_order": [
+        "text_fLxKHa",
+        "text_dbdJqY",
+        "text_r7KtCP",
+        "text_D4T6xG"
+      ],
+      "settings": {
+        "main_clrr": "#ffffff",
+        "title_main": "Trusted By Pro Athletes From"
+      }
+    },
+    "collapsible_content_QVRfD6": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_TyeLPg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is your shipping time?",
+            "icon": "question_mark",
+            "row_content": "<p>The shipping is <strong>fast and free.<\/strong><\/p><p><strong>The water chiller is located in a California warehouse with fast delivery in 2 - 6 business days to the US.<\/strong><\/p><p>Delivery to Canada, takes between 7 - 14 business days after dispatch. We dispatch in 2 - 5 business days to Canada.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_r8EeKH": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is this water chiller going to hike up my electricity bill?",
+            "icon": "question_mark",
+            "row_content": "<p>No, the chiller will not rack up high energy bills. It uses the same technology as your fridge\/freezer at home, which is extremely economical.<\/p><p>The exact power usage varies based on climate but expect to spend around $0.5-$1.5 per day in electricity <em>(<\/em>10  times less than buying ice if you plunge regularly!<em>).<\/em><\/p><p><strong>One of the best long term investments for your health and your family.<\/strong><\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Pb3G3P": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is it compatible with my current ice bath?",
+            "icon": "question_mark",
+            "row_content": "<p>The water chiller is compatible with all ice baths on the market!<\/p><p>If you have any questions please email us at support@warriorwillpower.com<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_WRxFK7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How often I should change the water filter?",
+            "icon": "question_mark",
+            "row_content": "<p>We recommend changing the water filter once every 1 - 2 months. You free filters with your order!<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6DYWDE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is it easy to setup?",
+            "icon": "question_mark",
+            "row_content": "<p>The chiller setup takes 10-20 minutes and is easy to setup. We provide easy to follow video instructions with your order. All you have to do is connect the hoses to your ice bath.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Mprm7V": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does it require a special outlet?",
+            "icon": "question_mark",
+            "row_content": "<p>Nope. The Warrior Chiller uses a standard 110V outlet.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_8UWKWN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is the water chiller noisy?",
+            "icon": "question_mark",
+            "row_content": "<p>The water chiller is designed for quiet operation. We've prioritized ensuring that your cold plunge sessions are as peaceful as possible. Thanks to our advanced engineering, the chiller operates with minimal noise, allowing you to relax and rejuvenate without any disruptions, making it a top choice for both indoor and outdoor settings.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_MQVn7A": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I run the chiller all the time (24\/7)?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes, you can let it run 24\/7 or schedule auto on a few hours before you cold plunge.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6LzCmy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use it outdoors? Is it waterproof?",
+            "icon": "question_mark",
+            "row_content": "<p>The chiller is waterproof, so you can freely use it outside and don't have to cover it with anything.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_g3CfGj": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How much will I save on ice?",
+            "icon": "question_mark",
+            "row_content": "<p>We have calculated that at 4 - 5 ice baths per week, the chiller cost is made back in 4 - 6 months. The chiller is a smart financial and time saving decision if you're a regular ice plunger, plus you skip the hassle of buying ice and you don't have to change the water frequently.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_BznjxX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use the chiller in a regular bathtub?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes, you can use the chiller with your home bathtub. Just put both hoses over the top and you are ready.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_kFHdU6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How fast does it cool the water?",
+            "icon": "question_mark",
+            "row_content": "<p>The chiller cools down the water from 2 - 4 hours depending on your climate and the ambient temperature of the water.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_LWtejE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What temperatures can the chiller achieve?",
+            "icon": "question_mark",
+            "row_content": "<p>This Wi-Fi chiller\/heater can keep the water at a steady 38 - 40 F whilst filtering and keeping your water clean. It can warm it up to 104 F.<\/p><p>Lowest and highest temps are not guaranteed due to variable conditions.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_kayLVw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I need to use ice when using the chiller?",
+            "icon": "question_mark",
+            "row_content": "<p>You don't have to use add ice whatsoever when using our water chiller.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_cEPcQb": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the size of the chiller?",
+            "icon": "question_mark",
+            "row_content": "<p>The size is 24.4 x 16.53 x 18.9 inches.<\/p><p>It comes with easy to move wheels with brakes and handles.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_3q3GCd": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I keep the water clean for longer?",
+            "icon": "question_mark",
+            "row_content": "<p>Always keep the lid on your ice bath when not in use, to help prevent any debris from falling in. <\/p><p>You can apply hydrogen peroxide, chlorine tablets or water sanitizer, in your ice bath if you prefer but that is not necessary.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_LG9CxP": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the recommended water temperature for cold plunge beginners?",
+            "icon": "question_mark",
+            "row_content": "<p>We recommend starting out at around 59º F \/ (15°C) if it's your first time, and then slowly lowering the temperature with each session.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_TyeLPg",
+        "collapsible_row_r8EeKH",
+        "collapsible_row_Pb3G3P",
+        "collapsible_row_WRxFK7",
+        "collapsible_row_6DYWDE",
+        "collapsible_row_Mprm7V",
+        "collapsible_row_8UWKWN",
+        "collapsible_row_MQVn7A",
+        "collapsible_row_6LzCmy",
+        "collapsible_row_g3CfGj",
+        "collapsible_row_BznjxX",
+        "collapsible_row_kFHdU6",
+        "collapsible_row_LWtejE",
+        "collapsible_row_kayLVw",
+        "collapsible_row_cEPcQb",
+        "collapsible_row_3q3GCd",
+        "collapsible_row_LG9CxP"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "FAQ",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "172115086929ba3723": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_LU3tAP": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_LU3tAP"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "custom_product_compare_pYwWPD": {
+      "type": "custom-product-compare",
+      "blocks": {
+        "item_block_Pd3jWw": {
+          "type": "item_block",
+          "settings": {
+            "info": "Cooling + Heating",
+            "own_text": "Yes",
+            "other_text": "No"
+          }
+        },
+        "item_block_dTYYiQ": {
+          "type": "item_block",
+          "settings": {
+            "info": "UV Disinfection",
+            "own_text": "Yes",
+            "other_text": "No"
+          }
+        },
+        "item_block_PARmeB": {
+          "type": "item_block",
+          "settings": {
+            "info": "Waterproof",
+            "own_text": "Yes",
+            "other_text": "No"
+          }
+        },
+        "item_block_Ba7DKU": {
+          "type": "item_block",
+          "settings": {
+            "info": "Filtration System",
+            "own_text": "Double filtration",
+            "other_text": "Single filtration"
+          }
+        },
+        "item_block_VQUjh7": {
+          "type": "item_block",
+          "settings": {
+            "info": "Price",
+            "own_text": "$2000",
+            "other_text": "$4000+"
+          }
+        },
+        "item_block_mi4jBV": {
+          "type": "item_block",
+          "settings": {
+            "info": "Shipping Cost",
+            "own_text": "Free & fast shipping",
+            "other_text": "Up to $200, slow shipping"
+          }
+        }
+      },
+      "block_order": [
+        "item_block_Pd3jWw",
+        "item_block_dTYYiQ",
+        "item_block_PARmeB",
+        "item_block_Ba7DKU",
+        "item_block_VQUjh7",
+        "item_block_mi4jBV"
+      ],
+      "settings": {
+        "heading": "The Warrior Max Vs Other Chillers",
+        "description": "<p>How do we compare to other ice bath chillers on the market? See for yourself in the comparison below.<\/p>",
+        "logo": "shopify:\/\/shop_images\/warrior_willpower_logo_black_red_2b97e691-fa9d-4c20-9c14-76448c169963.png",
+        "other_title": "<p>OTHER BRANDS<\/p>",
+        "heading_color": "#ffffff",
+        "desc_color": "#ffffff",
+        "info_color": "#ffffff",
+        "own_color": "#121212",
+        "other_color": "#ffffff",
+        "own_bg": "#ffffff",
+        "other_title_color": "#ffffff",
+        "border_color": "#ffffff"
+      }
+    },
+    "multirow_e3DmJj": {
+      "type": "multirow",
+      "blocks": {
+        "row_pQQirK": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/water_chiller_for_ice_bath.webp",
+            "caption": "",
+            "heading": "Control From Anywhere",
+            "text": "<p>Whether on your way home or waking up, ensure your ice bath water is ready at your ideal temperature. <strong>Easily control the temperature, add schedule and turn it on\/off remotely.<\/strong><\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_K9exzx": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/warrior-willpower-ice-bath-in-us.jpg",
+            "caption": "",
+            "heading": "Pure, Clean Water",
+            "text": "<p>Built-in <strong>UV disinfection<\/strong> and a <strong>certified 10-micron filter<\/strong> ensure your ice bath remains crystal clear. The easy-access filter makes maintenance a breeze. <strong>Double filtration<\/strong> filters out hair, skin cells, leaves, sand, and other debris 24\/7. <\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_E8cDP3": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/warrior_ice_bath.jpg",
+            "caption": "",
+            "heading": "Rapid Water Cooling",
+            "text": "<p>Our advanced cooling system rapidly chills the water, achieving desired temperatures <strong>50% faster than other chiller models. This saves you time and high energy bills.<\/strong><\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_mnVTtA": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/COMPATIBLE_WITH_ALL_ICE_BATH_MODELS.jpg",
+            "caption": "",
+            "heading": "Fits All Ice Bath Models",
+            "text": "<p><strong>Compatible with all ice bath models<\/strong> on the market like Ice Barrel, Pod company, Nurecover, and all others. If you face issues connecting to your ice bath, contact us to help. You can also use it with your regular home bathtub by putting both hoses over the top.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_pQQirK",
+        "row_K9exzx",
+        "row_E8cDP3",
+        "row_mnVTtA"
+      ],
+      "settings": {
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "background-1",
+        "row_color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_EgMX7z": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_NyYF7f": {
+          "type": "column",
+          "settings": {
+            "title": "1 YEAR WARRANTY",
+            "text": "<p>We stand behind the integrity of our products and offer a warranty for 1 year. You can purchase an extended warranty after completing your purchase.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_yj3W86": {
+          "type": "column",
+          "settings": {
+            "title": "EASY RETURNS WITHIN 30 DAYS",
+            "text": "<p>If you are not happy with your chiller we will take it back and refund you, no questions asked. Our return warehouse is located in California.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_U4Cxnf": {
+          "type": "column",
+          "settings": {
+            "title": "FREE SHIPPING & 24\/7 CUSTOMER SUPPORT (including weekends)",
+            "text": "<p>Free tracked shipping and the best in class customer support team, ready to help you via email, live chat and SMS.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_NyYF7f",
+        "column_yj3W86",
+        "column_U4Cxnf"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "contact_form_WDFLXf": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Have a question?",
+        "heading_size": "h1",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1696199604a7e05288": {
+      "type": "apps",
+      "blocks": {
+        "12358cd8-afcb-406a-842b-b2b027cd180c": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "12358cd8-afcb-406a-842b-b2b027cd180c"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_xBC3bG": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ayMwCi": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Get our bundle with the XL ice bath:<\/p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ayMwCi"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class": ""
+      }
+    },
+    "featured_product_pBqmiA": {
+      "type": "featured-product",
+      "blocks": {
+        "title_dwTDFz": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_nzyRKV": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_khiJTT": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "buy_buttons_p7X8VV": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        }
+      },
+      "block_order": [
+        "title_dwTDFz",
+        "price_nzyRKV",
+        "variant_picker_khiJTT",
+        "buy_buttons_p7X8VV"
+      ],
+      "settings": {
+        "product": "wifi-waterchiller-xl-tub-bundle",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "none",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multicolumn_CHwrrJ",
+    "image_with_text_kk7jFR",
+    "multi_columns_8NtRhp",
+    "collapsible_content_QVRfD6",
+    "172115086929ba3723",
+    "custom_product_compare_pYwWPD",
+    "multirow_e3DmJj",
+    "multicolumn_EgMX7z",
+    "contact_form_WDFLXf",
+    "1696199604a7e05288",
+    "related-products",
+    "rich_text_xBC3bG",
+    "featured_product_pBqmiA"
+  ]
+}

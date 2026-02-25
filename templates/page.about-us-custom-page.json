@@ -1,0 +1,413 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_UNQgzL": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xq439j": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><strong>The Shocking Truth About Overpriced Competitors<\/strong><\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_QqXgfB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Here’s what the big companies don’t want you to know - when you buy their overpriced products, you’re not just paying for the equipment - you’re funding their bloated teams, fancy offices, and flashy marketing campaigns. These businesses are built to maximize profits, not quality, and <strong>you’re the one left paying the high price.<\/strong><\/p><p><strong>Their chillers - overpriced.<\/strong> In fact, most are slapped together with the cheapest parts they can find<strong> to save money and increase their margins.<\/strong> Sure, they might look good in pictures and marketing campaigns, but the reality is these systems are likely to break down within a few months of regular use. And when that happens, good luck getting support - they’ve already made their money off you.<\/p><p>At Warrior Willpower, we do things differently. <strong>We’re a small, family-run business that puts quality and integrity first.<\/strong> We don’t cut corners or stuff our chillers with low-grade parts to make a quick buck. Instead, we invest in top-tier materials and advanced engineering so our products last for years, not months.<\/p><p><strong>You’re not funding greedy executives with overpriced catalogs when you choose us.<\/strong> You’re investing in products built to perform and supporting a company that genuinely cares about delivering real value to you. <\/p><p>We believe in building<strong> long-term relationships with our customers<\/strong>, which is why we’re committed to providing the most affordable cold plunges without sacrificing quality. Our goal is to earn your trust so you’ll come back to us again and again.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xq439j",
+        "text_QqXgfB"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom_class": ""
+      }
+    },
+    "rich_text_WBfjnH": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_qBRA4B": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><strong>We Believe in Hard Work Like You<\/strong><\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_Dx4NBT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Warrior Willpower, we believe in building products that last a lifetime - <strong>just like your commitment to growth, strength, focus, and hard work.<\/strong><\/p><p>Ice baths aren’t just trendy - they’re a proven way to sharpen your mind, boost your recovery, and crush the distractions of modern life.<\/p><p>But here’s the truth - <strong>most ice bath companies cut corners.<\/strong> They slap together basic equipment, skip real testing, and hope you won’t notice. <\/p><p>Their products break down, leaving you frustrated and out of luck. Worse, some of these companies go out of business, leaving you with useless warranties and no support.<\/p><p>From day one, we’ve focused on one thing - <strong>putting you first. <\/strong>If you are happy with our products, we believe you will return and stay with us for a long time.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_qBRA4B",
+        "text_Dx4NBT"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom_class": ""
+      }
+    },
+    "rich_text_9KVx88": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_brzEDf": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><strong>What Differentiates Us:<\/strong><\/p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_brzEDf"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom_class": ""
+      }
+    },
+    "multicolumn_ziyGAn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_nTLU4i": {
+          "type": "column",
+          "settings": {
+            "title": "1. Proprietary Technology",
+            "text": "<p>Our water chillers are built with a proprietary CryoBoost™ technology that offers rapid and <strong>energy efficient<\/strong> cooling system. This allowed us to offer <strong>the most affordable cold plunge<\/strong> in the US.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_jjnAJX": {
+          "type": "column",
+          "settings": {
+            "title": "2. Built to Last Materials",
+            "text": "<p>We use high-grade materials and professional-level components to ensure your ice bath and chillers are durable, reliable, and ready to work as hard as you do.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_CGRNi7": {
+          "type": "column",
+          "settings": {
+            "title": "3. Thorough Quality Testing",
+            "text": "<p>Every unit we make is tested for 200+ hours to guarantee performance and durability. Nothing ships until it passes all our checks.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_EjY6VP": {
+          "type": "column",
+          "settings": {
+            "title": "4. Real Warranty Coverage",
+            "text": "<p>If something goes wrong, we cover it - no hidden fees or fine print. We replace faulty parts or even the whole system at no cost to you. While others hide behind fine print, we stand behind our engineering with a straightforward guarantee. <strong>We provide full support even outside the warranty period!<\/strong><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_DyqPeF": {
+          "type": "column",
+          "settings": {
+            "title": "5. Risk-Free Trial",
+            "text": "<p>Try it for 60 days. If it’s not for you, send it back - no hassle. If ice baths don't redefine you mentally and physically - we will refund you. That's how confident we are in our products.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_dHrLVF": {
+          "type": "column",
+          "settings": {
+            "title": "6. Real Human Support",
+            "text": "<p>When you need help, our team is here for you 7 days a week. Just real people ready to solve your problems fast. <strong>Unlike other companies - you can contact us even during the weekend.<\/strong><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_nTLU4i",
+        "column_jjnAJX",
+        "column_CGRNi7",
+        "column_EjY6VP",
+        "column_DyqPeF",
+        "column_dHrLVF"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_gPKeAB": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_QKWiUV": {
+          "type": "heading",
+          "settings": {
+            "heading": "We Built the Most Affordable Cold Plunge",
+            "heading_size": "h1"
+          }
+        },
+        "text_y3hmLr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Warrior Willpower, we didn’t just copy what’s already out there - <strong>we worked hard to make something better and more affordable. <\/strong>After studying all the weak spots in other water chillers and ice bath systems, we made significant upgrades.<\/p><p><strong>Our most exciting innovation - the CryoBoost™ energy efficient, rapid cooling system.<\/strong> This technology boosts air exchange and water flow efficiency by up to 62%. With top-notch compressors, smart chipsets, and better materials, we’ve created a system that’s affordable, and built to last.<\/p><p>Here’s what makes our products stand out compared to similar looking products on the market:<\/p><ul><li><strong>Advanced Dual-Compatible Compressors<\/strong>: Perform up to 40% better and last 60% longer than standard ones.<\/li><li><strong>Titanium Heat Exchangers<\/strong>: Provide better heat transfer and are super resistant to corrosion.<\/li><li><strong>L-Shaped Condensers<\/strong>: Reduce energy loss, improve efficiency, and need less maintenance.<\/li><li><strong>Reinforced Hoses, Wheels & Handles<\/strong>: Make everything sturdier and easier to move.<\/li><li><strong>Upgraded Inner Components<\/strong>: Built with stronger, longer-lasting materials.<\/li><li><strong>Durable Powder-Coated Finish<\/strong>: Keeps your system looking sharp and resists scratches.<\/li><\/ul><p>We didn’t cut corners - we built these systems to give you the best experience every time you step into your ice bath. <strong>Because when you invest in yourself, you deserve equipment that works as hard as you do.<\/strong><\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QKWiUV",
+        "text_y3hmLr"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/water-chiller-ice-bath.webp",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_3x6QGK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_iE6zaU": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Our environmental and ethical choices<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_hC9Df9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are committed to making a positive impact on the planet by prioritizing sustainable materials and ethical practices in every step of our production process. Our mission is to inspire resilience, responsibly.<\/p><p>We've also adjusted our manufacturing processes and products for:<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_iE6zaU",
+        "text_hC9Df9"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "custom_class": ""
+      }
+    },
+    "multicolumn_TxQTXw": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_iPXayc": {
+          "type": "column",
+          "settings": {
+            "title": "Lower Energy Consumption",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_apnaXk": {
+          "type": "column",
+          "settings": {
+            "title": "Less Waste",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_GWTH3P": {
+          "type": "column",
+          "settings": {
+            "title": "Less CO2",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_RzELPF": {
+          "type": "column",
+          "settings": {
+            "title": "Recyclability",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_iPXayc",
+        "column_apnaXk",
+        "column_GWTH3P",
+        "column_RzELPF"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "video_c4RMpi": {
+      "type": "video",
+      "settings": {
+        "heading": "The Most Affordable Cold Plunge In the US Review:",
+        "heading_size": "h1",
+        "cover_image": "shopify:\/\/shop_images\/warrior-willpower-inflatable-pro-chiller-and-inflatable-tub.jpg",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=IVLSOaGuMU4",
+        "description": "affordable-cold-plunge",
+        "full_width": false,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "slideshow_RCqCGA": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_E83Lpn": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/spartan_water_chiller_reviews_dba29f34-2bfd-4937-bd3c-a5ecc8c1e4ab.jpg",
+            "heading": "More Than 20,000+ Happy Customers",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "READ REVIEWS",
+            "link": "shopify:\/\/pages\/reviews",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_E83Lpn"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "collection_list_mwYeFd": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_3XqJgD": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bundles"
+          }
+        },
+        "featured_collection_wHPTbi": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cold-plunge-barrels"
+          }
+        },
+        "featured_collection_MYUfxe": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "water-chillers-for-ice-baths"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_3XqJgD",
+        "featured_collection_wHPTbi",
+        "featured_collection_MYUfxe"
+      ],
+      "settings": {
+        "title": "Shop Product Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_UNQgzL",
+    "rich_text_WBfjnH",
+    "rich_text_9KVx88",
+    "multicolumn_ziyGAn",
+    "image_with_text_gPKeAB",
+    "rich_text_3x6QGK",
+    "multicolumn_TxQTXw",
+    "video_c4RMpi",
+    "slideshow_RCqCGA",
+    "collection_list_mwYeFd"
+  ]
+}

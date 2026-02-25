@@ -1,0 +1,425 @@
+{% assign chamber_option_index = null %}
+{% assign air_option_index = null %}
+
+{% for option in product.options_with_values %}
+  {% if option.name contains 'Chamber' %}
+    {% assign chamber_option_index = forloop.index0 %}
+  {% elsif option.name contains 'Air' %}
+    {% assign air_option_index = forloop.index0 %}
+  {% endif %}
+{% endfor %}
+
+{% assign cooler = all_products['hyperbaric-chamber-air-cooler'] %}
+{% assign cooler_variant = cooler.selected_or_first_available_variant %}
+
+<div
+class="variant-configurator-block"
+data-variants='{{ product.variants | json }}'
+data-options='{{ product.options | json }}'
+data-money-format="{{ shop.money_format }}"
+>
+
+{% if chamber_option_index != null %}
+<div class="config-group">
+<h3 class="config-label">Chamber Size</h3>
+
+<div class="chamber-grid">
+{% for value in product.options_with_values[chamber_option_index].values %}
+<div class="chamber-option {% if forloop.first %}active{% endif %}"
+data-option-index="{{ chamber_option_index }}"
+data-value="{{ value }}">
+<span class="custom-radio"></span>
+{{ value }}
+</div>
+{% endfor %}
+</div>
+</div>
+{% endif %}
+
+{% if air_option_index != null %}
+<div class="config-group">
+
+<h3 class="config-label">Add Air Cooling System</h3>
+
+<div class="air-wrapper">
+
+<div class="air-tabs-container">
+
+<div class="air-tab active"
+data-option-index="{{ air_option_index }}"
+data-value="No, use ambient airflow"
+data-is-upgrade="false">
+<div>No Use ambient airflow</div>
+</div>
+
+<div class="air-tab"
+data-option-index="{{ air_option_index }}"
+data-value="Yes - upgrade for performance"
+data-is-upgrade="true">
+<div>Yes – Upgrade for performance</div>
+</div>
+
+</div>
+
+<div class="air-info-box" id="air-info-box">
+
+<div class="box-content">
+
+<div class="box-image">
+<img src="{{ cooler.featured_image | image_url: width: 400 }}">
+</div>
+
+<div>
+
+<div class="price-line">
+<span class="old-price">{{ cooler_variant.compare_at_price | money }}</span>
+<span class="new-price">{{ cooler_variant.price | money }}</span>
+</div>
+
+<div class="product-name">{{ cooler.title }}</div>
+
+<div class="product-desc">
+{{ cooler.description | strip_html | truncate: 140 }}
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+{% endif %}
+
+</div>
+
+<style>
+.variant-configurator-block{
+  max-width:640px;
+}
+
+.config-label{
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:12px;
+}
+
+/* Layout */
+.chamber-grid,
+.air-tabs-container{
+  display:flex;
+  gap:12px;
+}
+
+/* Option cards */
+.chamber-option,
+.air-tab{
+  flex:1;
+  border:1px solid #569CFF;
+  border-radius:14px;
+  padding:18px;
+  cursor:pointer;
+  background:#fff;
+  transition:.2s ease;
+}
+
+.chamber-option.active,
+.air-tab.active{
+  background:#EFF6FF;
+}
+
+/* Connect YES tab to info card */
+.air-wrapper.active .air-tab[data-is-upgrade="true"]{
+  border-bottom-left-radius:0;
+  border-bottom-right-radius:0;
+  border-bottom-color:#EFF6FF;
+}
+/* Radio */
+.custom-radio{
+  width:18px;
+  height:18px;
+  border:2px solid #569CFF;
+  border-radius:50%;
+  display:inline-block;
+  margin-right:8px;
+  position:relative;
+}
+
+.chamber-option.active .custom-radio::after{
+  content:'';
+  width:8px;
+  height:8px;
+  background:#569CFF;
+  border-radius:50%;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+/* Info card */
+.air-info-box{
+  display:none;
+  border:1px solid #569CFF;
+  border-radius:14px;
+  padding:20px;
+  background:#EFF6FF;
+  margin-top:16px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.05);
+}
+
+.air-wrapper.active .air-info-box{
+  display:block;
+  margin-top:-1px; /* removes visual gap */
+}
+/* Content */
+.box-content{
+  display:flex;
+  gap:16px;
+  align-items:center;
+}
+
+.box-image img{
+  width:120px;
+  border-radius:10px;
+  background:#fff;
+  padding:4px;
+}
+
+.price-line{
+  display:flex;
+  gap:10px;
+}
+
+.old-price{
+  text-decoration:line-through;
+  color:#9ca3af;
+}
+
+.new-price{
+  font-weight:700;
+}
+
+.product-name{
+  font-weight:700;
+  margin-top:6px;
+}
+
+.product-desc{
+  font-size:14px;
+  color:#4b5563;
+}
+
+/* Mobile */
+@media(max-width:640px){
+  .chamber-grid,
+  .air-tabs-container{
+    flex-direction:column;
+  }
+
+  .box-content{
+    flex-direction:column;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  const root = document.querySelector('.variant-configurator-block');
+  if (!root) return;
+
+  const variants   = JSON.parse(root.dataset.variants);
+  const optionNames = JSON.parse(root.dataset.options);
+  const moneyFormat = root.dataset.moneyFormat;
+
+  let selections = {};
+
+  function formatMoney(cents) {
+    if (window.Shopify && Shopify.formatMoney) return Shopify.formatMoney(cents, moneyFormat);
+    return '$' + (cents / 100).toFixed(2);
+  }
+
+function updateVariant() {
+  const variant = variants.find(v =>
+    optionNames.every((name, i) => v['option' + (i + 1)] === selections[name])
+  );
+  if (!variant) return;
+
+  // ── 1. Update id inputs ───────────────────────────────────────────────
+  document.querySelectorAll('form[action*="/cart/add"] input[name="id"]').forEach(input => {
+    input.value = variant.id;
+  });
+
+  // ── 2. Update URL ─────────────────────────────────────────────────────
+  const url = new URL(window.location);
+  url.searchParams.set('variant', variant.id);
+  history.replaceState({}, '', url);
+
+  // ── 3. Find section ID ────────────────────────────────────────────────
+  const productInfoEl = document.querySelector('product-info');
+  const sectionId = productInfoEl?.dataset?.section || productInfoEl?.dataset?.originalSection;
+  if (!sectionId) {
+    console.warn('No sectionId found on product-info element');
+    return;
+  }
+
+  // ── 4. Fetch re-rendered section HTML from Shopify ────────────────────
+  const fetchUrl = `${window.location.pathname}?variant=${variant.id}&section_id=${sectionId}`;
+
+  fetch(fetchUrl)
+    .then(r => r.text())
+    .then(html => {
+      const parsed = new DOMParser().parseFromString(html, 'text/html');
+
+      // ── 5. Publish variantChange so theme subscribers update ──────────
+      publish(PUB_SUB_EVENTS.variantChange, {
+        data: {
+          sectionId: sectionId,
+          html: parsed,
+          variant: variant
+        }
+      });
+
+      // ── 6. Directly swap price elements ──────────────────────────────
+      const swapSelectors = [
+        '.price',
+        '.product-form__submit',
+        '[class*="product-price"]',
+        'span.product-price',
+        'span.product-compare-at-price',
+        'p.c-sa-normal-price',
+        'p.c-sa-compare-price',
+        '.product-new__save',
+        '.price__badge-sale'
+      ];
+
+      swapSelectors.forEach(sel => {
+        const newEl = parsed.querySelector(sel);
+        const oldEl = document.querySelector(sel);
+        if (newEl && oldEl) oldEl.innerHTML = newEl.innerHTML;
+      });
+
+      // ── 7. Swap main product image ────────────────────────────────────
+      const newImg = parsed.querySelector('img.image-magnify-none');
+      const oldImg = document.querySelector('img.image-magnify-none');
+      if (newImg && oldImg) {
+        oldImg.src = newImg.src;
+        oldImg.srcset = newImg.srcset || newImg.src;
+      }
+    })
+    .catch(e => console.error('Variant fetch error:', e));
+}
+
+  function forceUpdatePrice(variant) {
+    const isOnSale = variant.compare_at_price && variant.compare_at_price > variant.price;
+    const price     = formatMoney(variant.price);
+    const compare   = formatMoney(variant.compare_at_price || variant.price);
+    const savedAmt  = isOnSale ? formatMoney(variant.compare_at_price - variant.price) : null;
+
+    // Your theme's custom price spans
+    document.querySelectorAll('span.product-price').forEach(el => {
+      el.textContent = price;
+    });
+    document.querySelectorAll('span.product-compare-at-price').forEach(el => {
+      el.textContent = isOnSale ? compare : '';
+      el.style.display = isOnSale ? '' : 'none';
+    });
+
+    // Dawn-style price elements (also present on page)
+    document.querySelectorAll('s.price-item.price-item--regular').forEach(el => {
+      el.textContent = compare + ' USD';
+    });
+
+    // Save badge
+    document.querySelectorAll('[class*="save"], [class*="badge"][class*="sale"]').forEach(el => {
+      if (savedAmt && isOnSale) {
+        el.textContent = `You save ${savedAmt}`;
+        el.style.display = '';
+      } else {
+        el.style.display = 'none';
+      }
+    });
+
+    // c-sa price elements (appears in your output)
+    document.querySelectorAll('p.c-sa-normal-price').forEach(el => {
+      el.textContent = formatMoney(variant.price / 100); // these appear to be in dollars not cents
+    });
+    document.querySelectorAll('p.c-sa-compare-price').forEach(el => {
+      el.textContent = isOnSale ? formatMoney(variant.compare_at_price / 100) : '';
+    });
+
+    // Add to cart button state
+    document.querySelectorAll('form[action*="/cart/add"] [name="add"], form[action*="/cart/add"] [type="submit"]').forEach(btn => {
+      btn.disabled = !variant.available;
+      if (!variant.available) btn.textContent = 'Sold out';
+    });
+  }
+
+  function forceUpdateMedia(variant) {
+    if (!variant.featured_media) return;
+
+    // Your main product image class is: image-magnify-none
+    const mainImg = document.querySelector('img.image-magnify-none');
+    if (mainImg && variant.featured_media.preview_image) {
+      const newSrc = variant.featured_media.preview_image.src;
+      mainImg.src = newSrc;
+      mainImg.srcset = newSrc;
+
+      // Also update the parent <picture> source if present
+      const picture = mainImg.closest('picture');
+      if (picture) {
+        picture.querySelectorAll('source').forEach(source => {
+          source.srcset = newSrc;
+        });
+      }
+    }
+
+    // Try clicking a matching thumbnail as well
+    const thumb = document.querySelector(`[data-media-id="${variant.featured_media.id}"]`);
+    if (thumb) thumb.click();
+
+    // Slick slider support (your theme uses slick.min.js)
+    if (window.jQuery) {
+      const $sliders = jQuery('[class*="product"] .slick-slider');
+      $sliders.each(function() {
+        const $slide = jQuery(this).find(`[data-media-id="${variant.featured_media.id}"]`);
+        if ($slide.length) {
+          const index = $slide.closest('.slick-slide').data('slick-index');
+          if (index !== undefined) jQuery(this).slick('slickGoTo', index);
+        }
+      });
+    }
+  }
+
+  // ── Click handler ──────────────────────────────────────────────────────
+  root.addEventListener('click', e => {
+    const t = e.target.closest('.chamber-option, .air-tab');
+    if (!t) return;
+
+    t.parentElement.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
+    t.classList.add('active');
+
+    const name = optionNames[t.dataset.optionIndex];
+    selections[name] = t.dataset.value;
+
+    if (t.classList.contains('air-tab')) {
+      document.querySelector('.air-wrapper')
+        .classList.toggle('active', t.dataset.isUpgrade === 'true');
+    }
+
+    updateVariant();
+  });
+
+  // ── Init ───────────────────────────────────────────────────────────────
+  root.querySelectorAll('.active').forEach(el => {
+    if (el.dataset.optionIndex !== undefined) {
+      const name = optionNames[el.dataset.optionIndex];
+      selections[name] = el.dataset.value;
+    }
+  });
+
+  updateVariant();
+});
+</script>

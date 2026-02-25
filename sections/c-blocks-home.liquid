@@ -1,0 +1,461 @@
+<style>
+  #{{ section.id }} {
+    font-size: 16px;
+    padding-top: {{ section.settings.padding_top }}em;
+    padding-bottom: {{ section.settings.padding_bottom }}em;
+    background: {{ section.settings.bg_color_gradient }};
+  }
+
+  #{{ section.id }} .c-section-top-subheading,
+  #{{ section.id }} div,
+  #{{ section.id }} h2,
+  #{{ section.id }} h3 {
+    color: {{ section.settings.text_color }};
+  }
+
+  .new__header{
+    color: #000;
+
+
+font-size: clamp(32px, 4vw, 48px) !important;
+
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 57.6px */
+text-transform: capitalize;
+
+ margin: 1rem 0;
+
+  }
+
+     
+.text__lightblue{
+color: #0E83F9 !important; /* Color específico para el párrafo */
+}
+
+
+
+#{{ section.id }} .c-section-top .c-t-80 {
+
+font-size: clamp(16px, 1.8vw, 18px);
+
+
+line-height: 120%; /* 24px */
+text-transform: capitalize;
+margin-bottom: 1.5em;
+}
+
+
+
+  #{{ section.id }} h2 {
+    color: {{ section.settings.accent_color }};
+  }
+
+  #{{ section.id }} .c-section-top {
+    {% if section.settings.section_top_alignment == "flex-start" %}width: 100%;{% endif %}
+    align-items: {{ section.settings.section_top_alignment }};
+    text-align: {{ section.settings.text_alignment }};
+  }
+
+  #{{ section.id }} .c-b-grid {
+    grid-template-columns:{% for i in (1..section.settings.columns) %} 1fr{% endfor %};
+    gap: 1em;
+    display: grid;
+  }
+
+  #{{ section.id }} .c-b-item {
+    display: flex;
+    justify-content: center;
+    {% if section.settings.blocks_direction == "vertical" %}
+      flex-direction: column;
+    {% endif %}
+    {% if section.settings.blocks_alignment == "left" %}
+      align-items: flex-start;
+      text-align: left;
+    {% elsif section.settings.blocks_alignment == "center" %}
+      align-items: center;
+      text-align: center;
+    {% else %}
+      align-items: flex-end;
+      text-align: right;
+    {% endif %}
+  }
+
+
+  {% if section.settings.use_separator_boder == true %}
+    #{{ section.id }} .c-b-item {
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+      padding-right: 1em;
+    }
+
+    #{{ section.id }} .c-b-item:last-child {
+      border-right: none;
+      padding-right: 0em;
+    }
+  {% endif %}
+
+  #{{ section.id }} .c-b-item,
+  #{{ section.id }} .c-b-item-content {
+    gap: 1em;
+  }
+
+  #{{ section.id }} .c-b-item-image-div {
+    display: flex;
+  }
+
+  #{{ section.id }} .c-b-item-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  #{{ section.id }} .c-b-item-image {
+    width: 100%;
+  }
+
+  #{{ section.id }} .c-b-item-icon {
+    width: {{ section.settings.icon_width }}em;
+    min-width: {{ section.settings.icon_width }}em;
+  }
+
+  @media (min-width: 420px) {
+    #{{ section.id }} .c-bh-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px 40px
+    }
+  }
+
+  @media (min-width: 650px) and (max-width: 890px) {
+    #{{ section.id }} .c-bh-grid {
+      gap: 40px 68px;
+      padding: 0 40px;
+    }
+  }
+
+
+  @media (max-width: {{ settings.c_breakpoint3 }}px) {
+    #{{ section.id }} .c-b-grid {
+      grid-template-columns:{% for i in (1..section.settings.mobile_columns) %} 1fr{% endfor %};
+    }
+
+    {% if section.settings.use_separator_boder == true %}
+      #{{ section.id }} .c-b-item {
+        border-right: none;
+        padding-right: 0em;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding-bottom: 1em;
+      }
+
+      #{{ section.id }} .c-b-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0em;
+      }
+    {% endif %}
+  }
+</style>
+
+
+<section id="{{ section.id }}" class="c-section">
+  <div class="{{ section.settings.section_container }}">
+    <div class="c-section-top tw-flex tw-flex-wrap tw-justify-center tw--mx-2 tw-mb-[20px] md:tw-mb-[40px]">
+      <div class="tw-w-full md:tw-w-8/12"> {%- if section.settings.section_top_subheading != empty -%}<p class="c-section-top-subheading text__lightblue">{{ section.settings.section_top_subheading }}</p>{%- endif -%}</div>
+      <div class="tw-w-full md:tw-w-7/12">      {%- if section.settings.section_top_heading != empty -%}<h2 class="new__header">{{ section.settings.section_top_heading }}</h2>{%- endif -%}</div>
+      <div class="tw-w-full md:tw-w-7/12">   {%- if section.settings.section_top_paragraph != empty -%}<div class="c-t-80">{{ section.settings.section_top_paragraph }}</div>{%- endif -%}</div>
+    </div>
+    <div class="tw-grid tw-grid-cols-2 tw-justify-center md:tw-gap-[32px] tw--mx-2 tw-mt-[20px] md:tw-mt-[40px] c-bh-grid">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'Item' %}
+            <a href="{{ block.settings.block_link }}" class="c-b-item  {% if forloop.last %}tw-col-span-2 tw-justify-center{% endif %}" {{ block.shopify_attributes }}>
+              <div class="tw-flex">
+                {% if block.settings.block_image %}
+                  {{ block.settings.block_image | image_url: width: 118 | image_tag: loading: 'lazy', height: 'auto', class: 'c-b-item-image' }}
+                {% endif %}
+                {% if block.settings.block_icon %}
+                  {{ block.settings.block_icon | image_url: width: 500 | image_tag: loading: 'lazy', height: 'auto', class: 'c-b-item-icon' }}
+                {% endif %}
+              </div>
+              <div class="c-b-item-content tw-items-center">
+                <h3 class="tw-font-bold tw-text-center">{{ block.settings.block_heading }}</h3>
+                <div>{{ block.settings.block_paragraph }}</div>
+              </div>
+            </a>
+        {% endcase %}
+      {% endfor %}
+    </div>
+    
+ 
+  </div>
+</section>
+
+
+<script>
+  /*
+  gsap.timeline({scrollTrigger: {
+    trigger: "#{{ section.id }} .c-b-grid",
+    toggleActions: "restart none reverse none",
+    start: "10% 100%",
+    end: "100% 80%"
+    } })
+    .from("#{{ section.id }} .c-b-item", {y: gsap.utils.wrap(["100%", "-100%"]), duration: 0.8})
+  */
+</script>
+
+
+{% schema %}
+  {
+    "name": "C Blocks Home",
+    "blocks": [
+      {
+        "name": "Item",
+        "type": "Item",
+        "limit": 50,
+        "settings": [
+          {
+            "type": "text",
+            "id": "block_heading",
+            "label": "Heading",
+            "default": "My heading"
+          },
+          {
+            "type": "richtext",
+            "id": "block_paragraph",
+            "label": "Paragraph",
+            "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>"
+          },
+          {
+            "type": "image_picker",
+            "id": "block_image",
+            "label": "Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "block_icon",
+            "label": "Icon"
+          },
+          {
+            "type": "url",
+            "id": "block_link",
+            "label": "Link URL",
+          
+          }
+        ]
+      }
+    ],
+    "settings": [
+      {
+        "type": "select",
+        "id": "blocks_direction",
+        "label": "Blocks direction",
+        "default": "vertical",
+        "options": [
+          {
+            "value": "vertical",
+            "label": "Vertical"
+          },
+          {
+            "value": "horizontal",
+            "label": "Horizontal"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "blocks_alignment",
+        "label": "Blocks alignment",
+        "default": "left",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "range",
+        "id": "icon_width",
+        "label": "Icon width",
+        "min": 0.4,
+        "max": 10,
+        "step": 0.2,
+        "default": 3,
+        "unit": "rem"
+      },
+      {
+        "type": "select",
+        "id": "section_container",
+        "label": "Section container",
+        "default": "page-width",
+        "options": [
+          {
+            "value": "page-width",
+            "label": "Normal"
+          },
+          {
+            "value": "",
+            "label": "None"
+          },
+          {
+            "value": "page-width2",
+            "label": "Smaller"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "use_separator_boder",
+        "label": "Use separator border",
+        "default": false
+      },
+      {
+        "type": "range",
+        "id": "columns",
+        "label": "Columns",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "type": "range",
+        "id": "mobile_columns",
+        "label": "Mobile Columns",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "default": 2
+      },
+       
+      {
+        "type": "header",
+        "content": "Section Colors"
+      },
+      {
+        "type": "color",
+        "id": "accent_color",
+        "label": "Accent color",
+        "default": "#5d3be4"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background color",
+        "default": "#fff"
+      },
+      {
+        "type": "text",
+        "id": "bg_color_gradient",
+        "label": "Background color gradient",
+        "default": "linear-gradient(180deg, rgba(14, 131, 249, 0.10) 0%, rgba(14, 131, 249, 0.00) 100%)"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color",
+        "default": "#000"
+      },
+
+      {
+        "type": "header",
+        "content": "Section Top"
+      },
+      {
+        "type": "text",
+        "id": "section_top_subheading",
+        "label": "Subheading",
+        "default": "subheading"
+      },
+      {
+        "type": "text",
+        "id": "section_top_heading",
+        "label": "Heading",
+        "default": "My heading"
+      },
+      {
+        "type": "richtext",
+        "id": "section_top_paragraph",
+        "label": "Paragraph",
+        "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>"
+      },
+      {
+        "type": "select",
+        "id": "section_top_alignment",
+        "label": "Section Top Alignment",
+        "default": "center",
+        "options": [
+          {
+            "value": "flex-start",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "flex-end",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Text alignment",
+        "default": "center",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Section Padding"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "label": "Padding top",
+        "min": 0,
+        "max": 15,
+        "step": 1,
+        "default": 4,
+        "unit": "rem"
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "min": 0,
+        "max": 15,
+        "step": 1,
+        "default": 4,
+        "unit": "rem"
+      }
+    ],
+    "presets": [
+      {
+        "name": "C Blocks Home"
+      }
+    ]
+  }
+{% endschema %}
